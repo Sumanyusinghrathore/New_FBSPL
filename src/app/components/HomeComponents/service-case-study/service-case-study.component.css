@@ -1,0 +1,91 @@
+.image_thinking {
+  width: 100%;
+  height: 427px;
+  border-radius: 20px;
+}
+.thinking_mobile {
+  display: none;
+}
+
+.thinking_desktop {
+  background: unset;
+}
+.Thinking_section {
+  overflow-x: hidden;
+}
+.card {
+  border: none;
+}
+.image_podcast {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border-radius: none !important;
+  padding: 0px !important;
+}
+
+.podcast_img {
+  width: 100%;
+  height: 72%;
+}
+
+.card-img {
+  height: 200px;
+  border-radius: 20px;
+}
+
+.card-img-overlay {
+  border-radius: 20px;
+}
+
+.hover_text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: right;
+  transform: translateX(110%);
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.case_text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: right;
+  transform: translateX(110%);
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.image_podcast:hover .hover_text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.card-body:hover .case_text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media only screen and (max-width: 991px) {
+  .hover_text {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .case_text {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .card-img {
+    height: 100%;
+  }
+  .thinking_mobile {
+    display: block;
+  }
+
+  .thinking_desktop {
+    background: none;
+  }
+}

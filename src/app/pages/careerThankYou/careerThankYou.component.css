@@ -1,0 +1,33 @@
+.center-right-float {
+  position: absolute;
+  top: 9%;
+  right: 0;
+  height: 5.5rem;
+}
+.left-bottom-float {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1.5rem !important;
+}
+
+.error-section {
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+@media (max-width: 768px) {
+  .center-right-float {
+    height: 4rem;
+    top: 6%;
+  }
+}
+#Animationthankyou {
+  max-width: 350px;
+  margin-inline: auto;
+}
+.clipIcon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}

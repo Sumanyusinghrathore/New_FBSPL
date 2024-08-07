@@ -1,0 +1,195 @@
+.about-banner {
+  position: relative;
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Icon/circle-vector.png");
+  background-repeat: no-repeat;
+  background-position: top 1% right -12%;
+}
+
+.bg-trans {
+  background-color: transparent !important;
+}
+.card-title {
+  margin-bottom: 0;
+}
+
+.video-wrapper {
+  max-width: 80%;
+  border-radius: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.font-36-32 {
+  font-size: 36px;
+  font-weight: 450;
+  /* line-height: 100px; */
+}
+
+@media only screen and (max-width: 768px) {
+  .font-36-32 {
+    font-size: 32px;
+    font-weight: 450;
+    /* line-height: 100px; */
+  }
+  .about-infograph {
+    background-position: bottom 1% left, top right calc(0% - -1%) !important;
+    background-size: 150px, 90px;
+  }
+  .mission-section {
+    background-size: 175px;
+  }
+  .about-banner {
+    background-position: top 10% right -28%;
+    background-size: 50%;
+  }
+}
+.square-back {
+  position: relative;
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Icon/blue-square.svg");
+  background-repeat: no-repeat;
+  background-position: top 1% right;
+  background-size: 11%;
+}
+
+.mission-section {
+  position: relative;
+  width: 100%;
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Icon/grey-sq-vector.svg");
+  background-repeat: no-repeat;
+  background-position: top 1% left;
+}
+
+rect {
+  cursor: pointer;
+}
+
+.our_mission_aboutus_img {
+  width: 100%;
+}
+.svg-background {
+  position: absolute;
+  z-index: -9;
+  height: 12rem;
+}
+.our_mission_aboutus_textblock {
+  padding-left: 40px;
+}
+.slider {
+  flex-wrap: nowrap;
+  display: flex;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: hidden;
+  height: 190px;
+}
+.slider-card {
+  min-width: 280px !important;
+  height: 160px;
+}
+@media (min-width: 769px) and (max-width: 990px) {
+  .slider {
+    height: 235px;
+  }
+  .slider-card {
+    min-width: 280px !important;
+    height: 220px;
+  }
+}
+.top-right-float {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 6rem;
+}
+.float-right {
+  top: 15%;
+  /* left: 97%; */
+}
+.bottom-right-float {
+  position: absolute;
+  bottom: 15%;
+  right: 0;
+  height: 3rem !important;
+}
+@media (max-width: 870px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .svg-background {
+    height: 7rem;
+  }
+  .bottom-right-float {
+    bottom: 0;
+    left: 0;
+  }
+}
+.bottom-left-float {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1.5rem !important;
+}
+.center-left-float {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.ul-li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.ul-li li {
+  background: url("https://d1585q1wairh36.cloudfront.net/assets/Icon/Arrow-blue.svg")
+    no-repeat left center;
+  padding-left: 23px;
+  background-size: 10px;
+  background-position: left top 6px;
+}
+
+.container-above {
+  display: flex;
+ justify-content: center;
+  align-items: center;
+}
+
+.video-text {
+  margin-bottom: 120px; 
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  color:#fff;
+}
+
+.player-wrapper {
+  width: 100%;
+  max-width: 800px; 
+  margin-inline: auto;
+  
+}
+
+@media (min-width: 768px) {
+  .player-wrapper {
+    max-width: 80%;
+  }
+
+}
+@media only screen and (max-width: 760px) {
+  .svg-background {
+    height: 10rem;
+  }
+  .video-text {
+    margin-bottom: 80px; 
+  }
+}
+.hover-path {
+  transition: fill-opacity 0.3s ease;
+}
+
+.hover-path:hover {
+  cursor: pointer;
+  fill-opacity: 1;
+}
+.filled {
+  fill-opacity: 1;
+}

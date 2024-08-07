@@ -1,0 +1,1554 @@
+<ngx-slick-carousel
+  class="service_slider carousel d-none d-lg-block container-fluid"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+>
+  <div
+    class="container-fluid text-dark"
+    ngxSlickItem
+    *ngFor="let slides of slides"
+  >
+    <div class="container gradientBanner">
+      <img
+        src="{{ slides.img }}"
+        alt="{{ slides.alt }}"
+        class="card-img-desktop desktop-banner"
+      />
+      <div class="card-img-overlay overlay-text bannerText">
+        <div class="main_bannar my-4 ms-3" data-aos="fade-up">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="./">Home</a></li>
+              <li class="breadcrumb-item" aria-current="page">
+                <a href="/bpm-and-bpo-services">Services</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                <a href="/services/insurance-agency-optimization-services"
+                  >Agency Optimization Services</a
+                >
+              </li>
+            </ol>
+          </nav>
+          <a
+            routerLink="{{ slides.Link }}"
+            fragment="{{ slides.fragment }}"
+            class="CTA-Zindex anchorCTA"
+          >
+            <h3
+              *ngIf="!slides.banner"
+              class="text-primary font-34-19 my-auto clickable-heading"
+            >
+              {{ slides.Title }}
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+            <h3 *ngIf="slides.banner" class="text-primary font-34-19 my-auto">
+              {{ slides.Title }}
+            </h3>
+          </a>
+          <p class="card-text font-20-16 pt-4">{{ slides.Description }}</p>
+          <a
+            routerLink="/book-free-consultation-call"
+            class="CTA-Zindex anchorCTA"
+          >
+            <h3
+              *ngIf="slides.banner"
+              class="text-primary font-24-16 my-auto clickable-heading"
+            >
+              Book A Consultation
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>
+<!-- Mobile View -->
+<ngx-slick-carousel
+  class="container carousel d-block d-lg-none pb-5"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+>
+  <div class="text-dark slide" ngxSlickItem *ngFor="let slidesmob of slides">
+    <div class="gradientBannerMob d-flex justify-content-center">
+      <img
+        src="{{ slidesmob.img_mob }}"
+        alt="{{ slidesmob.alt }}"
+        class="card-img-mob"
+      />
+      <div class="overlay-text-Mob bannerTextMob">
+        <div data-aos="fade-up">
+          <a
+            routerLink="{{ slidesmob.Link }}"
+            fragment="{{ slidesmob.fragment }}"
+            class="CTA-Zindex anchorCTA mb-3"
+          >
+            <h3
+              *ngIf="!slidesmob.banner"
+              class="text-primary font-34-19 my-auto clickable-heading"
+            >
+              {{ slidesmob.Title }}
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+            <h3
+              *ngIf="slidesmob.banner"
+              class="text-primary font-34-19 my-auto"
+            >
+              {{ slidesmob.Title }}
+            </h3>
+          </a>
+          <p class="card-text font-20-16">{{ slidesmob.Description }}</p>
+          <a
+            routerLink="/book-free-consultation-call"
+            class="CTA-Zindex anchorCTA"
+          >
+            <h3
+              *ngIf="slidesmob.banner"
+              class="text-primary font-34-19 my-auto clickable-heading"
+            >
+              Book A Consultation
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>
+<!-- Our Assets -->
+<app-ourAssets></app-ourAssets>
+<section class="bg-primary text-white py-6">
+  <div class="container px-4">
+    <h4 class="font-48-30 mb-3 text-white" data-aos="fade-up">
+      Insurance Agencies Now
+    </h4>
+    <div class="row">
+      <div class="row text-center d-none d-md-flex">
+        <div class="col-lg-3 col-6" data-aos="fade-right" data-aos-delay="0">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">60%</p>
+            <p class="">
+              Insurance agencies admit the lack of consistent customer
+              experience in their organization.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6" data-aos="fade-right" data-aos-delay="200">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">70%</p>
+            <p class="">
+              Respondents cited rising operational costs as a significant
+              concern, impacting profitability and competitiveness.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6" data-aos="fade-right" data-aos-delay="400">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">37%</p>
+            <p class="">
+              Insurance agencies report that client acquisition is one of the
+              major challenges they face.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6" data-aos="fade-right" data-aos-delay="600">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">60%</p>
+            <p class="">
+              North American Insurance agencies struggle with client data
+              organization and consistent servicing procedures, hindering
+              productivity and increasing errors.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="d-md-none">
+        <div
+          class="text-white text-start"
+          data-aos="fade-right"
+          data-aos-delay="0"
+        >
+          <p class="font-48-30 fw-bolder mb-1">60%</p>
+          <p class="">
+            Insurance agencies admit the lack of consistent customer experience
+            in their organization.
+          </p>
+        </div>
+
+        <div
+          class="text-white text-start"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
+          <p class="font-48-30 fw-bolder mb-1">70%</p>
+          <p class="">
+            Respondents cited rising operational costs as a significant concern,
+            impacting profitability and competitiveness.
+          </p>
+        </div>
+        <div
+          class="text-white text-start"
+          data-aos="fade-right"
+          data-aos-delay="400"
+        >
+          <p class="font-48-30 fw-bolder mb-1">37%</p>
+          <p class="">
+            Insurance agencies report that client acquisition is one of the
+            major challenges they face.
+          </p>
+        </div>
+        <div
+          class="text-white text-start"
+          data-aos="fade-right"
+          data-aos-delay="600"
+        >
+          <p class="font-48-30 fw-bolder mb-1">60%</p>
+          <p class="">
+            North American Insurance agencies struggle with client data
+            organization and consistent servicing procedures, hindering
+            productivity and increasing errors.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid policy-process-service">
+  <div class="container py-3 pt-5">
+    <div class="container_emp ps-lg-3">
+      <h2 class="text-primary font-48-30 py-lg-3" data-aos="fade-up">
+        Empower Change with Insurance Agency Optimization Services
+      </h2>
+    </div>
+    <div class="d-none d-lg-block">
+      <div class="row py-3 px-2">
+        <div class="col-sm-12 col-lg-4 col-md-6 py-3">
+          <div
+            class="card insurance-card policy-process-card Policy_Issuance p-3"
+            data-aos="zoom-in"
+          >
+            <a
+              class="CTA-Zindex anchorCTA mb-3 p-2"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <h3 class="text-black font-34-19 clickable-heading">
+                Efficiency Optimization Consultation
+                <div class="headingCTA">
+                  <button class="blueCTA btn_hover"></button>
+                </div>
+              </h3>
+            </a>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal Policy-Processing fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog pt-0 mt-0">
+              <div class="modal-content">
+                <div class="modal-header policy-header">
+                  <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card mx-5">
+                  <div class="details ms-4">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">
+                        Efficiency Optimization Consultation
+                      </h3>
+                      <p class="text-dark font-20-16">
+                        Drive your agency towards operational excellence. We
+                        offer expert consultation services providing
+                        recommendations and solutions to optimize your business
+                        productivity and efficiency.
+                      </p>
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Client relationship management
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Client data analysis
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Performance reporting
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Training and development
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Document management
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Client onboarding
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Escalation and Issue Resolution Protocols
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="imgBx d-none d-lg-block">
+                    <img
+                      appCdnUrl="assets/insurance-agency/Group 34.png"
+                      alt="FBSPL Efficiency Optimization Consultation"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 col-md-6 py-3">
+          <div
+            class="card insurance-card policy-process-card Policy-Checking p-3"
+            data-aos="zoom-in"
+          >
+            <a
+              class="CTA-Zindex anchorCTA mb-3 p-2"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal1"
+            >
+              <h3 class="text-black font-34-19 clickable-heading">
+                Technology Automation Solutions
+                <div class="headingCTA">
+                  <button class="blueCTA btn_hover"></button>
+                </div>
+              </h3>
+            </a>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="exampleModal1"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel1"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog pt-0 mt-0">
+              <div class="modal-content">
+                <div class="modal-header policy-header">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card mx-5">
+                  <div class="details ms-4">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">
+                        Technology Automation Solutions
+                      </h3>
+                      <p class="text-dark font-20-16">
+                        Simplify your agency’s workflow with technology
+                        automation solutions. We thoroughly assess your current
+                        Agency Management System usage, data organization and
+                        help identify automation opportunities to increase
+                        productivity.
+                      </p>
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Automated client communication
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Automated task triggers
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Reporting and analytics
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Centralized database
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />AMS utilization
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Standardized email templates
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />AMS document handling
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="imgBx d-none d-lg-block">
+                    <img
+                      appCdnUrl="assets/insurance-agency/Group 35.png"
+                      alt="Insurance Technology Automation Solutions"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 col-md-6 py-3">
+          <div
+            class="card insurance-card policy-process-card Loss_Runs_Processing p-3"
+            data-aos="zoom-in"
+          >
+            <a
+              class="CTA-Zindex anchorCTA mb-3 p-2"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal2"
+            >
+              <h3 class="text-black font-34-19 clickable-heading">
+                Client Servicing Consultation
+                <div class="headingCTA">
+                  <button class="blueCTA btn_hover"></button>
+                </div>
+              </h3>
+            </a>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="exampleModal2"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel2"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog pt-0 mt-0">
+              <div class="modal-content">
+                <div class="modal-header policy-header">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card mx-5">
+                  <div class="details ms-4">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">
+                        Client Servicing Consultation
+                      </h3>
+                      <p class="text-dark font-20-16">
+                        Make stronger client relationships by providing
+                        consistent quality of service. Our client servicing
+                        consultation helps you to create step-by-step procedures
+                        and automated checklists for each client servicing
+                        activity and workflow.
+                      </p>
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />
+
+                          Lead management
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Policy management
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Document handling
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Renewal and closure
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="imgBx d-none d-lg-block">
+                    <img
+                      appCdnUrl="assets/insurance-agency/Group 36.png"
+                      alt="Client Servicing Consultation "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 col-md-6 py-3">
+          <div
+            class="card insurance-card policy-process-card Policy_Renewals p-3"
+            data-aos="zoom-in"
+          >
+            <a
+              class="CTA-Zindex anchorCTA mb-3 p-2"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal3"
+            >
+              <h3 class="text-black font-34-19 clickable-heading">
+                Agency Staff Training
+                <div class="headingCTA">
+                  <button class="blueCTA btn_hover"></button>
+                </div>
+              </h3>
+            </a>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="exampleModal3"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel3"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog pt-0 mt-0">
+              <div class="modal-content">
+                <div class="modal-header policy-header">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card mx-5">
+                  <div class="details ms-4">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">
+                        Agency Staff Training
+                      </h3>
+                      <p class="text-dark font-20-16">
+                        Enhance the skills and capabilities of your insurance
+                        agency staff with our professional training programs. We
+                        design automated training solutions and resources for
+                        your staff to refer to in real time.
+                      </p>
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Skill development and training
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Software and tool training
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Regulatory and compliance training
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Performance management and KPI training
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Continuous professional training
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="imgBx d-none d-lg-block">
+                    <img
+                      appCdnUrl="assets/insurance-agency/Group 38.png"
+                      alt="Agency Staff Training Services "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile View -->
+  <div class="container d-block d-lg-none">
+    <div class="row">
+      <div class="col-12 mt-0 mt-sm-4">
+        <div class="accordion" id="ServicePage">
+          <div class="policy-processing" data-aos="zoom-in">
+            <div
+              data-bs-toggle="collapse"
+              data-bs-target="#Policy_Processing"
+              aria-expanded="true"
+              aria-controls="Policy_Processing"
+              id="headingOne"
+              class="headingCTA CTA-Zindex d-flex p-3"
+              data-bs-toggle="modal"
+              data-bs-target="#MobModal"
+            >
+              <h3 class="CTAs text-black fs-24 me-3">
+                Efficiency Optimization Consultation
+              </h3>
+              <img
+                class="service_btn"
+                data-bs-toggle="modal"
+                data-bs-target="#MobModal"
+                appCdnUrl="assets/Icon/Accord-close.svg"
+              />
+            </div>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="MobModal"
+            tabindex="-1"
+            aria-labelledby="MobModalModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog">
+              <div class="modal-content">
+                <div class="modal-header policy-header mt-3">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card-mob mx-3 py-3">
+                  <div class="details ms-2">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">
+                        Efficiency Optimization Consultation
+                      </h3>
+                      <p class="text-dark font-20-16">
+                        Drive your agency towards operational excellence. We
+                        offer expert consultation services providing
+                        recommendations and solutions to optimize your business
+                        productivity and efficiency.
+                      </p>
+                      <ul class="ul-policy">
+                        <li
+                          class="list-item list-item pt-2 text-dark font-20-16"
+                        >
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Client relationship management
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Client data analysis
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Performance reporting
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Training and development
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Document management
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Client onboarding
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Escalation and Issue Resolution Protocols
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="policy-processing mt-4" data-aos="zoom-in">
+            <div
+              data-bs-toggle="collapse"
+              data-bs-target="#Claims_Management"
+              aria-expanded="true"
+              aria-controls="Claims_Management"
+              id="headingOne"
+              class="headingCTA CTA-Zindex d-flex p-3"
+              data-bs-toggle="modal"
+              data-bs-target="#MobModal1"
+            >
+              <h3 class="CTAs text-black fs-24 me-3">
+                Technology Automation Solutions
+              </h3>
+              <img
+                class="service_btn"
+                data-bs-toggle="modal"
+                data-bs-target="#MobModal1"
+                appCdnUrl="assets/Icon/Accord-close.svg"
+              />
+            </div>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="MobModal1"
+            tabindex="-1"
+            aria-labelledby="MobModal1Lable1"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog">
+              <div class="modal-content">
+                <div class="modal-header policy-header mt-3">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card-mob mx-3 py-3">
+                  <div class="details ms-2">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">
+                        Technology Automation Solutions
+                      </h3>
+                      <p class="text-dark font-20-16">
+                        Simplify your agency’s workflow with technology
+                        automation solutions. We thoroughly assess your current
+                        Agency Management System usage, data organization and
+                        help identify automation opportunities to increase
+                        productivity.
+                      </p>
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Automated client communication
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Automated task triggers
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Reporting and analytics
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Centralized database
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />AMS utilization
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Standardized email templates
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />AMS document handling
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="policy-processing mt-4" data-aos="zoom-in">
+            <div
+              class="d-flex p-3"
+              data-bs-toggle="modal"
+              data-bs-target="#MobModal2"
+            >
+              <h3 class="CTAs text-black fs-24 me-3">
+                Client Servicing Consultation
+              </h3>
+              <img
+                class="service_btn"
+                data-bs-toggle="modal"
+                data-bs-target="#MobModal2"
+                appCdnUrl="assets/Icon/Accord-close.svg"
+              />
+            </div>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="MobModal2"
+            tabindex="-1"
+            aria-labelledby="MobModalLabel2"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog">
+              <div class="modal-content">
+                <div class="modal-header policy-header mt-3">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card-mob mx-3 py-3">
+                  <div class="details ms-2">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">
+                        Client Servicing Consultation
+                      </h3>
+                      <p class="text-dark font-20-16">
+                        Make stronger client relationships by providing
+                        consistent quality of service. Our client servicing
+                        consultation helps you to create step-by-step procedures
+                        and automated checklists for each client servicing
+                        activity and workflow.
+                      </p>
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Lead management
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Policy management
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Document handling
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Renewal and closure
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="policy-processing mt-4" data-aos="zoom-in">
+            <div
+              class="d-flex p-3"
+              data-bs-toggle="modal"
+              data-bs-target="#MobModal3"
+            >
+              <h3 class="CTAs text-black fs-24 me-3">Agency Staff Training</h3>
+              <img
+                class="service_btn"
+                data-bs-toggle="modal"
+                data-bs-target="#MobModal3"
+                appCdnUrl="assets/Icon/Accord-close.svg"
+              />
+            </div>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="MobModal3"
+            tabindex="-1"
+            aria-labelledby="MobModalLabel3"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog">
+              <div class="modal-content">
+                <div class="modal-header policy-header mt-3">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card-mob mx-3 py-3">
+                  <div class="details ms-2">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">
+                        Agency Staff Training
+                      </h3>
+                      <p class="text-dark font-20-16">
+                        Enhance the skills and capabilities of your insurance
+                        agency staff with our professional training programs. We
+                        design automated training solutions and resources for
+                        your staff to refer to in real time.
+                      </p>
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Skill development and training
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Software and tool training
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Regulatory and compliance training
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Performance management and KPI training
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Continuous professional training
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tools Section -->
+<section class="container py-5">
+  <h2 class="text-primary font-48-30 mb-4" data-aos="fade-up">
+    Tools That Drive Excellence
+  </h2>
+  <div class="d-none d-xl-flex">
+    <div class="row g-5">
+      <div class="col-2" data-aos="fade-right" data-aos-delay="0">
+        <img
+          class="img-fluid"
+          alt="Insurance tool Applied System  "
+          appCdnUrl="assets/Tools/applied.svg"
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="100">
+        <img
+          class="img-fluid"
+          alt="Insurance tool Hawksoft   "
+          appCdnUrl="assets/Tools/hawksoft.svg"
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="200">
+        <img
+          class="img-fluid"
+          alt="Insurance tool PL Rating "
+          appCdnUrl="assets/Tools/pl rating.svg"
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="300">
+        <img
+          class="img-fluid"
+          alt="Insurance tool QQCatalyst "
+          appCdnUrl="assets/Tools/catalyst.svg"
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="400">
+        <img
+          class="img-fluid"
+          alt="Insurance tool AMS 360 "
+          appCdnUrl="assets/Tools/ams360.svg"
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="500">
+        <img
+          class="img-fluid"
+          alt="Insurance tool EZLynx "
+          appCdnUrl="assets/Tools/ezlynx.svg"
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="600">
+        <img
+          class="img-fluid"
+          alt="Insurance tool CSR24"
+          appCdnUrl="assets/Tools/csr27.svg"
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="700">
+        <img
+          class="img-fluid"
+          alt="Insurance tool NowCerts"
+          appCdnUrl="assets/Tools/nowcerts.svg"
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="800">
+        <img
+          alt="Insurance tool Power Broker "
+          class="img-fluid"
+          appCdnUrl="assets/Tools/powerbroker.svg"
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="800">
+        <img
+          alt="Insurance tool AgencyMatrix "
+          class="img-fluid"
+          appCdnUrl="assets/Tools/agencymatrix.svg"
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="900">
+        <img
+          alt="Insurance tool employeeNavigator "
+          class="img-fluid"
+          appCdnUrl="assets/Tools/employeeNavigator.svg"
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="1000">
+        <img
+          class="img-fluid"
+          alt=" Insurance tool indio "
+          appCdnUrl="assets/Tools/indio.svg"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="d-flex d-xl-none">
+    <div class="trusted-slider-logo">
+      <div class="trusted-slide-track">
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            alt="Insurance tool Applied System  "
+            appCdnUrl="assets/Tools/applied.svg"
+            data-aos="fade-right"
+            data-aos-delay="0"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            data-aos="fade-right"
+            data-aos-delay="100"
+            class="img-fluid"
+            alt="Insurance tool Hawksoft  "
+            appCdnUrl="assets/Tools/hawksoft.svg"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            data-aos="fade-right"
+            data-aos-delay="200"
+            class="img-fluid"
+            alt="Insurance tool PL Rating "
+            appCdnUrl="assets/Tools/pl rating.svg"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            alt="Insurance tool QQCatalyst "
+            data-aos="fade-right"
+            data-aos-delay="300"
+            appCdnUrl="assets/Tools/catalyst.svg"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            alt=" Insurance tool AMS 360 "
+            appCdnUrl="assets/Tools/ams360.svg"
+            data-aos="fade-right"
+            data-aos-delay="400"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            alt=" Insurance tool EZLynx "
+            appCdnUrl="assets/Tools/ezlynx.svg"
+            data-aos="fade-right"
+            data-aos-delay="500"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            alt="Insurance tool CSR24  "
+            appCdnUrl="assets/Tools/csr27.svg"
+            data-aos="fade-right"
+            data-aos-delay="600"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            alt="Insurance tool NowCerts "
+            appCdnUrl="assets/Tools/nowcerts.svg"
+            data-aos="fade-right"
+            data-aos-delay="700"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            alt=" Insurance tool Power Broker"
+            data-aos="fade-right"
+            data-aos-delay="800"
+            appCdnUrl="assets/Tools/powerbroker.svg"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            data-aos="fade-right"
+            data-aos-delay="900"
+            class="img-fluid"
+            alt="Insurance tool AgencyMatrix "
+            appCdnUrl="assets/Tools/agencymatrix.svg"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            data-aos="fade-right"
+            data-aos-delay="1000"
+            class="img-fluid"
+            aria-multiline=" Insurance tool employeeNavigator "
+            appCdnUrl="assets/Tools/employeeNavigator.svg"
+            alt="Employee Navigator"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            aria-multiline=" Insurance tool indio "
+            data-aos="fade-right"
+            data-aos-delay="1100"
+            appCdnUrl="assets/Tools/indio.svg"
+            alt="Indio"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            alt=" Insurance tool Applied System"
+            appCdnUrl="assets/Tools/applied.svg"
+            data-aos="fade-right"
+            data-aos-delay="0"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            data-aos="fade-right"
+            data-aos-delay="100"
+            class="img-fluid"
+            alt="Insurance tool Hawksoft   "
+            appCdnUrl="assets/Tools/hawksoft.svg"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            data-aos="fade-right"
+            data-aos-delay="200"
+            class="img-fluid"
+            alt="Insurance tool PL Rating "
+            appCdnUrl="assets/Tools/pl rating.svg"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            alt="Insurance tool QQCatalyst "
+            data-aos="fade-right"
+            data-aos-delay="300"
+            appCdnUrl="assets/Tools/catalyst.svg"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            alt="Insurance tool AMS 360 "
+            appCdnUrl="assets/Tools/ams360.svg"
+            data-aos="fade-right"
+            data-aos-delay="400"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            alt="Insurance tool EZLynx "
+            appCdnUrl="assets/Tools/ezlynx.svg"
+            data-aos="fade-right"
+            data-aos-delay="500"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            alt="Insurance tool CSR24  "
+            appCdnUrl="assets/Tools/csr27.svg"
+            data-aos="fade-right"
+            data-aos-delay="600"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            alt=" Insurance tool NowCerts  "
+            appCdnUrl="assets/Tools/nowcerts.svg"
+            data-aos="fade-right"
+            data-aos-delay="700"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            data-aos="fade-right"
+            data-aos-delay="800"
+            appCdnUrl="assets/Tools/powerbroker.svg"
+            alt="Insurance tool Power Broker "
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            data-aos="fade-right"
+            data-aos-delay="900"
+            class="img-fluid"
+            alt="Insurance tool AgencyMatrix "
+            appCdnUrl="assets/Tools/agencymatrix.svg"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            data-aos="fade-right"
+            data-aos-delay="1000"
+            class="img-fluid"
+            alt="Insurance tool employeeNavigator "
+            appCdnUrl="assets/Tools/employeeNavigator.svg"
+            alt="Employee Navigator"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            alt=" Insurance tool indio "
+            data-aos="fade-right"
+            data-aos-delay="1100"
+            appCdnUrl="assets/Tools/indio.svg"
+            alt="Indio"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Thinking -->
+<app-service-case-study
+  [category]="[{ category: 'insurance' }]"
+></app-service-case-study>
+<!-- Know best -->
+<app-know-best
+  [cards]="[
+    {
+      description:
+        'I must say that our partnership with Fusion Business Solutions (FBSPL) has been truly exceptional. What sets FBSPL apart is their remarkable ability to not only grasp our ever-evolving business needs but also their genuine curiosity to understand our culture. Their flexibility and agility have been invaluable. FBSPL’s proactive approach, coupled with their rigorous processes and scalability, has significantly enhanced our customer experiences and AI operations.',
+      name: 'Chin Ma',
+      designation: 'Founder & President'
+    },
+    {
+      description:
+        'We reached out to Fusion in the Fall of 2022 as we were having issues recruiting a skilled and motivated workforce locally to fill back-office roles in our organization. What started as a simple documentation validation exercise quickly grew into the team supporting more strategic review and reconciliation activities. The team has shown repeatedly that they are willing to take on more and more complicated tasks, and the leadership team is quick to rally and support their employees when things fall off track.',
+      name: 'James Oickle',
+      designation: 'President & CEO'
+    },
+    {
+      description:
+        'Fusion Business Solutions has been a game-changer for our company. Their responsive team, seamless onboarding, and commitment to excellence have significantly reduced our stress levels, allowing us to focus on what matters most – our clients. We\'ve experienced measurable improvements in client retention and employee satisfaction since partnering with Fusion, making them the top choice for any business seeking efficient virtual assistant services.',
+      name: 'Isom Rigell M. Ed.',
+      designation: 'Chief People Officer'
+    }
+  ]"
+  [videos]="[
+    {
+      videoUrl: 'https://player.vimeo.com/video/969702390',
+      thumbnail:
+        'assets/thumbnail-know-best/Client Testimonials YT 01 Chin Ma.jpg',
+      alt: 'Listen to our client '
+    },
+    {
+      thumbnail:
+        'assets/thumbnail-know-best/Client Testimonials YT 10  James Oickle.jpg',
+      alt: 'Our Success Stories '
+    },
+    {
+      videoUrl: 'https://player.vimeo.com/video/962238538',
+      thumbnail:
+        'assets/thumbnail-know-best/Client Testimonials YT 07 Stacey DiSpigno copy.jpg',
+      alt: 'FBSPL Client Testimonial '
+    }
+  ]"
+>
+</app-know-best>
+
+<section class="py-6" data-aos="fade-up">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6" data-aos="fade-right">
+        <app-faq></app-faq>
+      </div>
+      <div class="col-12 col-md-6 mt-3 mt-md-0" data-aos="fade-left">
+        <div class="accordion" id="accordionFAQ">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button font-28-20"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Industries"
+                aria-expanded="true"
+                aria-controls="Industries"
+              >
+                How does an insurance Agency Optimization Services benefit my
+                agency?
+              </button>
+            </h2>
+            <div
+              id="Industries"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Our insurance agency optimization services can significantly
+                enhance your agency’s efficiency and effectiveness. These
+                services streamline lead conversion, automate tasks, and improve
+                client satisfaction, all while providing valuable data-driven
+                insights and reducing human errors. Partnering with a leading
+                insurance consulting agency can drive business growth and
+                success by creating scalable processes that reduce dependency on
+                individual staff members.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Services"
+                aria-expanded="false"
+                aria-controls="Services"
+              >
+                What is the process for insurance Agency Optimization?
+              </button>
+            </h2>
+            <div
+              id="Services"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                We follow a very streamlined and transparent insurance agency
+                optimization process. Here’s how we do it.
+                <ul class="pt-3">
+                  <li>
+                    Our team conducts a thorough audit of the agency’s current
+                    procedures, agency management system and overall operations.
+                  </li>
+                  <li>
+                    We analyze the agency workflows, processes, workflow, data
+                    integrity, redundancy, bottlenecks, communication, agency
+                    management system and interview staff members to understand
+                    their pain point points.
+                  </li>
+                  <li>
+                    Based on the analysis and understanding, we prepare an audit
+                    report with our health check findings and recommendations to
+                    improve.
+                  </li>
+                  <li>
+                    It is up to the agencies to work on the recommendations or
+                    if they want, our expert team can implement those for you.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#About"
+                aria-expanded="false"
+                aria-controls="About"
+              >
+                How do you ensure smooth client servicing workflows?
+              </button>
+            </h2>
+            <div
+              id="About"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Our team reviews all insurance agency workflows, current
+                procedures for processing client servicing tasks. We prepare
+                written workflow task procedures and automations to ensure
+                consistent and efficient processing customized to fit the
+                agency’s current practices.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Resources"
+                aria-expanded="false"
+                aria-controls="Resources"
+              >
+                How does Agency Optimization Services help to reduce my agency's
+                E&O liability?
+              </button>
+            </h2>
+            <div
+              id="Resources"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Agency Optimization services help reduce agency E&O (Errors and
+                Omissions) exposure by implementing standardized procedures,
+                automating routine tasks, and ensuring accurate documentation.
+                These measures enhance consistency and accuracy in client
+                servicing, minimizing the risk of errors and omissions.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#differentiators"
+                aria-expanded="false"
+                aria-controls="differentiators"
+              >
+                How is FBSPL different from others?
+              </button>
+            </h2>
+            <div
+              id="differentiators"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                <a class="anchor" href="./">FBSPL</a> focuses on offering
+                innovative solutions specifically crafted as per the needs of
+                insurance professionals. Here's what sets us apart -
+                <ul class="pt-3">
+                  <li>Dedicated team of industry experts</li>
+                  <li>Data-driven approach</li>
+                  <li>Scalable and flexible solutions</li>
+                  <li>Commitment to client success</li>
+                  <li>Technological innovation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

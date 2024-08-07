@@ -1,0 +1,188 @@
+.overlay-text {
+  position: absolute;
+  top: 38%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+.ifarme_container {
+  padding: 0;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+.o-video {
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-top: 56.25%; /* 9 / 16 * 100 */
+}
+.o-video > iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  box-shadow: 0px 3px 5px #0000000f;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+}
+
+.card.insurance-card.policy-process-card {
+  position: relative;
+  max-height: 290px;
+  overflow: hidden;
+  height: 300px;
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #e6e6ff;
+}
+
+.card.insurance-card.policy-process-card img {
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+.card.insurance-card.policy-process-card .card-body-policy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(228, 228, 255, 0.70);
+  opacity: 0;  /* Adjusted the opacity to 15% visibility */
+  padding: 20px;
+  transition: opacity 0.3s ease;
+}
+.Policy_Processing {
+  background-image: url(../../../assets/Service-slider/policy\ process\ 1.png);
+}
+
+.Claims_Management {
+  background-image: url(../../../assets/Service-slider/Claims\ Management\ 1.png);
+}
+.Insurance_Accounting {
+  background-image: url(../../../assets/Service-slider/Accounting\ 1.png);
+}
+.Agency_Management {
+  background-image: url(../../../assets/Service-slider/Agency\ Management\ 1.png);
+}
+.New_Business {
+  background-image: url(../../../assets/Service-slider/Recruitment\ Support\ 1.png);
+}
+.Customer_Support {
+  background-image: url(../../../assets/Service-slider/Customer\ Support.png);
+}
+
+.card.insurance-card.policy-process-card:hover .card-body-policy {
+  opacity: 1;
+}
+
+.slides-best {
+  width: 100%;
+  height: 400px;
+  border: 1px solid;
+}
+.PaddingCTA {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.policy-processing {
+  background-color: #e6e6ff;
+  border-radius: 25px;
+  position: static;
+}
+
+.CTA-Zindex {
+  z-index: 11111;
+}
+
+.service_btn{
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+}
+/* Thinking */
+
+
+
+.case-study-card {
+  background-image: url("../../../assets/home/case\ study\ background.png");
+  border: none;
+}
+.blog-card {
+  border: 1px solid #e8e8ff !important;
+  background-image: url("../../../assets/home/Blog\ background.png");
+  border: none;
+}
+.news-card {
+  background-image: url("../../../assets/home/NewsRoom.png");
+  border: none;
+}
+.podcast-card {
+  border: 1px solid #e8e8ff !important;
+  background-image: url("../../../assets/home/Podcast\ background.png");
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+  transition: background-size 0.5s ease-in-out;
+}
+.podcast-card:hover {
+  background-size: 71%;
+}
+/* Thinking */
+
+@media screen and (min-width: 992px) {
+  .ifarme_container {
+    padding: 0 145px;
+  }
+}
+@keyframes trustedScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.trusted-slider-logo {
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.trusted-slider-logo .trusted-slide-track {
+  animation: trustedScroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.trusted-slider-logo .trust-slide {
+  height: 150px;
+  min-width: 240px;
+}
+.trust-slide {
+  margin: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.3s ease;
+}
+.trust-slide img {
+  height: fit-content;
+}
+
+@media (min-width: 992px) {
+  .trust-slide {
+    filter: grayscale(100%);
+  }
+}
+.trust-slide:hover {
+  filter: grayscale(0%);
+}

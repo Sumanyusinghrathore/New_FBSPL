@@ -1,0 +1,271 @@
+.fs-16 {
+  font-size: 16px;
+}
+.fs-18 {
+  font-size: 18px;
+}
+.font-20 {
+  font-size: 20px;
+}
+.fs-24 {
+  font-size: 24px;
+}
+.fs-26 {
+  font-size: 26px;
+}
+.fs-32 {
+  font-size: 32px;
+}
+.font-34 {
+  font-size: 34px;
+}
+.font-36 {
+  font-size: 36px;
+}
+.fs-48 {
+  font-size: 48px;
+}
+
+/* Default (Desktop - Full HD) */
+body {
+  font-size: 20px; /* Base font size for body text */
+  font-weight: 400;
+}
+
+.font-128-64 {
+  font-size: 128px;
+  font-weight: 450;
+}
+.font-96-30 {
+  font-size: 96px;
+  font-weight: 400;
+}
+
+.font-48-30 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.font-36-24 {
+  font-size: 40px;
+  font-weight: 450;
+}
+
+.font-34-19 {
+  font-size: 34px;
+  font-weight: 450;
+}
+
+.font-28-20 {
+  font-size: 30px;
+  font-weight: 450;
+}
+
+.font-24-16 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.font-20-16 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.cta {
+  height: 64px;
+}
+
+.menu {
+  height: 80px;
+  font-size: 22px;
+}
+
+.lets-form {
+  height: 60px;
+}
+
+/* Laptop */
+@media (max-width: 1366px) {
+  .font-128-64 {
+    font-size: 100px;
+  }
+
+  .font-96-30 {
+    font-size: 72px;
+  }
+
+  .font-48-30 {
+    font-size: 42px;
+  }
+
+  .font-36-24 {
+    font-size: 36px;
+  }
+
+  .font-34-19 {
+    font-size: 30px;
+  }
+
+  .font-28-20 {
+    font-size: 24px;
+  }
+
+  .font-24-16 {
+    font-size: 20px;
+  }
+
+  .font-20-16 {
+    font-size: 18px;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .cta {
+    height: 60px;
+  }
+
+  .menu {
+    height: 72px;
+    font-size: 20px;
+  }
+
+  .lets-form {
+    height: 56px;
+  }
+}
+
+/* iPad */
+@media (max-width: 1280px) {
+  .vector {
+    height: 5rem !important;
+  }
+  .font-128-64 {
+    font-size: 88px;
+  }
+
+  .font-96-30 {
+    font-size: 54px;
+  }
+
+  .font-48-30 {
+    font-size: 36px;
+  }
+
+  .font-36-24 {
+    font-size: 30px;
+  }
+
+  .font-34-19 {
+    font-size: 26px;
+  }
+
+  .font-28-20 {
+    font-size: 22px;
+  }
+
+  .font-24-16 {
+    font-size: 18px;
+  }
+
+  .font-20-16 {
+    font-size: 16px;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cta {
+    height: 56px;
+  }
+
+  .menu {
+    height: 64px;
+    font-size: 22px;
+  }
+
+  .lets-form {
+    height: 50px;
+    padding: 0.7rem 1.6rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .vector {
+    height: 3rem !important;
+  }
+
+  .font-128-64 {
+    font-size: 55px;
+  }
+
+  .font-96-30 {
+    font-size: 38px;
+  }
+
+  .font-48-30 {
+    font-size: 28px;
+  }
+
+  .font-36-24 {
+    font-size: 24px;
+  }
+
+  .font-34-19 {
+    font-size: 20px;
+  }
+
+  .font-28-20 {
+    font-size: 18px;
+  }
+
+  .font-24-16 {
+    font-size: 16px;
+  }
+
+  .font-20-16 {
+    font-size: 14px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cta {
+    height: 48px;
+  }
+
+  .menu {
+    height: 56px;
+    font-size: 18px;
+  }
+
+  .lets-form {
+    height: 44px;
+    padding: 0.4rem 1.6rem;
+  }
+}
+
+.fw-bold {
+  font-weight: 450 !important;
+}
+.fw-bolder {
+  font-weight: 600 !important;
+}
+.fw-500 {
+  font-weight: 500 !important;
+}
+.fw-700 {
+  font-weight: 700 !important;
+}

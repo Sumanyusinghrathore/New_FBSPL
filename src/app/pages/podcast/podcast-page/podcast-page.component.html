@@ -1,0 +1,560 @@
+<main *ngIf="hasApiData()">
+  <div class="container d-none d-lg-block">
+    <div class="gradientBanner">
+      <img
+        appCdnUrl="assets/podcast/DetailPagePodcastBanner.png"
+        class="desktop-banner"
+        alt="{{ PodcastData.banner_alt_tag }}"
+      />
+      <div class="bannerText d-flex flex-column" data-aos="fade-up">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="./">Home</a></li>
+            <li class="breadcrumb-item" aria-current="page">
+              <a routerLink="/podcast">Podcast</a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              <a href="/podcast#BusinessTransformationSeries"
+                >Insurance Edition</a
+              >
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Episode {{ PodcastData.episode_number }}
+            </li>
+          </ol>
+        </nav>
+        <h3 class="font-48-30 pt-1 fw-bold">
+          {{ PodcastData.title }}
+        </h3>
+        <div class="text-md-start my-auto">
+          <a
+            href="https://podcasts.apple.com/lv/podcast/business-transformation-with-fbspl-insurance-edition/id1673857459"
+            target="_blank"
+            rel="nofollow noopener"
+            title="Listen on Apple Podcasts"
+          >
+            <img
+              appCdnUrl="assets/Icon/applePodcast.svg"
+              class="img-fluid podcast-shareicon upTranslate"
+            />
+          </a>
+          <a
+            href="https://business-transformation-with-fbspl.simplecast.com/"
+            target="_blank"
+            rel="nofollow noopener"
+            title="Listen on Simplecast"
+          >
+            <img
+              appCdnUrl="assets/Icon/simplecast.svg"
+              class="img-fluid podcast-shareicon upTranslate"
+            />
+          </a>
+          <a
+            href="https://www.youtube.com/@FBSPLTeam/podcasts"
+            target="_blank"
+            rel="nofollow noopener"
+            title="Watch on YouTube"
+          >
+            <img
+              appCdnUrl="assets/Icon/youtubePodcast.svg"
+              class="img-fluid podcast-shareicon upTranslate"
+            />
+          </a>
+          <a
+            href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zaW1wbGVjYXN0LmNvbS9WTERYWG9LdA"
+            target="_blank"
+            rel="nofollow noopener"
+            title="Listen on Google Podcasts"
+          >
+            <img
+              appCdnUrl="assets/Icon/googlePodcast.svg"
+              class="img-fluid podcast-shareicon upTranslate"
+            />
+          </a>
+          <a
+            href="https://open.spotify.com/show/0sTBGPYjmACbtZ7c1aWVzL"
+            target="_blank"
+            rel="nofollow noopener"
+            title="Listen on Spotify"
+          >
+            <img
+              appCdnUrl="assets/Icon/spotify.svg"
+              class="img-fluid podcast-shareicon upTranslate"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile View -->
+  <div class="container text-dark slide d-block d-lg-none pt-5">
+    <div class="gradientBannerMob">
+      <img
+        appCdnUrl="assets/podcast/MobilePodcastBanner(2).png"
+        class="card-img-mob"
+        alt="{{ PodcastData.banner_alt_tag }}"
+      />
+      <div class="bannerTextMob">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="./">Home</a></li>
+            <li class="breadcrumb-item" aria-current="page">
+              <a routerLink="/podcast">Podcast</a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              <a href="/podcast#BusinessTransformationSeries"
+                >Insurance Edition</a
+              >
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Episode {{ PodcastData.episode_number }}
+            </li>
+          </ol>
+        </nav>
+        <h3 class="font-48-30 text-primary">
+          {{ PodcastData.title }}
+        </h3>
+        <div class="text-md-start">
+          <a
+            href="https://podcasts.apple.com/lv/podcast/business-transformation-with-fbspl-insurance-edition/id1673857459"
+            target="_blank"
+            rel="nofollow noopener"
+            title="Listen on Apple Podcasts"
+          >
+            <img
+              appCdnUrl="assets/Icon/applePodcast.svg"
+              class="img-fluid podcast-shareicon upTranslate"
+            />
+          </a>
+          <a
+            href="https://business-transformation-with-fbspl.simplecast.com/"
+            target="_blank"
+            rel="nofollow noopener"
+            title="Listen on Simplecast"
+          >
+            <img
+              appCdnUrl="assets/Icon/simplecast.svg"
+              class="img-fluid podcast-shareicon upTranslate"
+            />
+          </a>
+          <a
+            href="https://www.youtube.com/@FBSPLTeam/podcasts"
+            target="_blank"
+            rel="nofollow noopener"
+            title="Watch on YouTube"
+          >
+            <img
+              appCdnUrl="assets/Icon/youtubePodcast.svg"
+              class="img-fluid podcast-shareicon upTranslate"
+            />
+          </a>
+          <a
+            href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zaW1wbGVjYXN0LmNvbS9WTERYWG9LdA"
+            target="_blank"
+            rel="nofollow noopener"
+            title="Listen on Google Podcasts"
+          >
+            <img
+              appCdnUrl="assets/Icon/googlePodcast.svg"
+              class="img-fluid podcast-shareicon upTranslate"
+            />
+          </a>
+          <a
+            href="https://open.spotify.com/show/0sTBGPYjmACbtZ7c1aWVzL"
+            target="_blank"
+            rel="nofollow noopener"
+            title="Listen on Spotify"
+          >
+            <img
+              appCdnUrl="assets/Icon/spotify.svg"
+              class="img-fluid podcast-shareicon upTranslate"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-12 col-xl-2 d-flex justify-content-center my-4 flex-lg-wrap place-start"
+        >
+          <button
+            type="button"
+            class="PossibilitiesBtn me-2 me-xl-0 mb-lg-4"
+            [class.active]="activeButton === 'AboutTheEpisodes'"
+            (click)="showDiv('AboutTheEpisodes')"
+            id="AboutTheEpisodes"
+            data-aos="zoom-out"
+          >
+            About The Episodes
+          </button>
+          <button
+            type="button"
+            class="PossibilitiesBtn ms-2 ms-lg-0"
+            [class.active]="activeButton === 'InsightsQuickRecap'"
+            (click)="showDiv('InsightsQuickRecap')"
+            id="InsightsQuickRecap"
+            data-aos="zoom-out"
+          >
+            Insights: Quick Recap
+          </button>
+        </div>
+        <div class="col-12 col-xl-10 d-flex my-4 my-md-4">
+          <div
+            class="font20-16"
+            *ngIf="activeButton === 'AboutTheEpisodes'"
+            [innerHTML]="PodcastData.about_episode"
+            data-aos="fade-left"
+          ></div>
+          <div
+            class="font20-16"
+            *ngIf="activeButton === 'InsightsQuickRecap'"
+            [innerHTML]="PodcastData.insight_quick_recap"
+            data-aos="fade-left"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-secondary-20 py-6">
+    <div class="container whiteNoteDiv w-100" data-aos="zoom-in">
+      <div class="row p-3">
+        <iframe
+          *ngIf="safeUrl"
+          [src]="safeUrl"
+          width="100%"
+          height="152"
+          frameBorder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          class="p-0"
+        ></iframe>
+      </div>
+      <div class="p-4">
+        <h4 class="me-4 mt-1 mb-4 text-primary fw-bolder">Show Notes</h4>
+        <div
+          class="scrollbar p-2"
+          id="style-2"
+          [innerHTML]="PodcastData.transcript_sort_description"
+        ></div>
+        <!-- <div class="scrollbar p-2" id="style-2">
+        <div class="">
+          <p class="trRow text-align fs-18p active" id="00:00">
+            <b>Marco Warner: </b>&nbsp;I learned a lot there as well, about how
+            to manage an Insurance Agency.
+          </p>
+        </div>
+        <div class="">
+          <p class="trRow text-align fs-18p" id="06:45">
+            <b>Marco Warner: </b>&nbsp;I mean simple things like that to
+            motivate yourself, to do the things that you don’t really want to
+            do.
+          </p>
+        </div>
+        <div class="">
+          <p class="trRow text-align fs-18p" id="08:06">
+            <b>Kuldeep Bhatnagar: </b>Aging workforce is one of the biggest
+            challenges, and the associated part is when the most experienced
+            workforce is leaving the industry.
+          </p>
+        </div>
+        <div class="">
+          <p class="trRow text-align fs-18p" id="11:40">
+            <b>Marco Warner: </b>From the retail side though, I think it is a
+            little different, it is forward facing.
+          </p>
+        </div>
+        <div class="">
+          <p class="trRow text-align fs-18p" id="14:57">
+            <b>Marco Warner: </b>What are people facing that are sitting on the
+            other side of the table? What are some of those things that are
+            going on?
+          </p>
+        </div>
+        <div class="">
+          <p class="trRow text-align fs-18p" id="25:30">
+            <b>Kuldeep Bhatnagar: </b>So, as you could go back in time and give
+            your younger self one piece of advice, what would that be?
+          </p>
+        </div>
+      </div> -->
+      </div>
+      <div class="d-flex p-4">
+        <p
+          class="cursor-pointer fw-bolder fs-24 text-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#TranscriptModel"
+        >
+          View Transcript
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-primary font-48-30 pb-5" data-aos="slide-up">
+        Unravel New Possibilities
+      </h2>
+      <div class="row">
+        <div
+          class="col-12 col-xl-2 d-flex justify-content-center my-4 flex-lg-wrap place-start"
+        >
+          <button
+            type="button"
+            class="PossibilitiesBtn me-2 me-xl-0 mb-lg-4"
+            [class.active]="activePosiblityBtn === 'ourGuest'"
+            (click)="showPossiblityDiv('ourGuest')"
+            data-aos="zoom-out"
+          >
+            Our Guest
+          </button>
+          <button
+            type="button"
+            class="PossibilitiesBtn ms-2 ms-lg-0"
+            [class.active]="activePosiblityBtn === 'ourSpeaker'"
+            (click)="showPossiblityDiv('ourSpeaker')"
+            *ngIf="PodcastData.speaker_name"
+            data-aos="zoom-out"
+          >
+            Our Speaker
+          </button>
+        </div>
+        <div class="col-12 col-xl-10 d-flex my-4 my-md-4">
+          <div
+            class="newPossibilitiesDiv d-flex flex-fill"
+            *ngIf="activePosiblityBtn === 'ourGuest'"
+            data-aos="fade-left"
+          >
+            <div class="row w-100 p-3 p-md-4 mx-auto">
+              <div class="col-12 col-lg-3">
+                <img
+                  [src]="PodcastData.guest_image"
+                  class="w-100 PossibilitiesImage"
+                />
+              </div>
+              <div
+                class="col-12 col-lg-9 ps-md-4 d-flex flex-column py-3 py-lg-0"
+              >
+                <h4 class="text-primary mb-0 font-36-24">
+                  {{ PodcastData.guest_name }}
+                  <span class="float-end"
+                    ><a
+                      [href]="PodcastData.guest_linkedin_id"
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <img
+                        appCdnUrl="assets/Icon/linkedin.svg"
+                        alt="linkedin"
+                        class="upTranslate linkedInIcon"
+                      /> </a
+                  ></span>
+                </h4>
+                <h4 class="text-light mb-2 fw-bold font-28-20">
+                  {{ PodcastData.guest_position }},
+                  <a
+                    [href]="PodcastData.guest_company_url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-decoration-underline"
+                    >{{ PodcastData.guest_company }}</a
+                  >
+                </h4>
+                <div
+                  class="text-start font-24-16 text-light"
+                  [innerHTML]="PodcastData.guest_description"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="newPossibilitiesDiv d-flex flex-fill"
+            *ngIf="
+              activePosiblityBtn === 'ourSpeaker' && PodcastData.speaker_name
+            "
+            data-aos="fade-left"
+          >
+            <div class="row w-100 p-3 p-md-4 mx-auto">
+              <div class="col-12 col-lg-3">
+                <img
+                  [src]="PodcastData.speaker_image"
+                  class="w-100 PossibilitiesImage"
+                />
+              </div>
+              <div
+                class="col-12 col-lg-9 ps-md-4 d-flex flex-column py-3 py-lg-0"
+              >
+                <h4 class="text-primary mb-0 font-36-24">
+                  {{ PodcastData.speaker_name }}
+                  <span class="float-end"
+                    ><a
+                      [href]="PodcastData.speaker_linkedin_id"
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <img
+                        appCdnUrl="assets/Icon/linkedin.svg"
+                        alt="linkedin"
+                        class="upTranslate linkedInIcon"
+                      /> </a
+                  ></span>
+                </h4>
+                <h4 class="text-light mb-2 fw-bold font-28-20">
+                  {{ PodcastData.speaker_position }},
+                  <a
+                    [href]="PodcastData.speaker_company_url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-decoration-underline"
+                    >{{ PodcastData.speaker_company }}</a
+                  >
+                </h4>
+                <div
+                  class="text-start font-24-16 text-light"
+                  [innerHTML]="PodcastData.speaker_description"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="text-primary font-48-30" data-aos="slide-up">
+        FBPSL's Podcast
+      </h2>
+      <ngx-slick-carousel
+        class="carousel pt-3 blog_slider"
+        #slickModal="slick-carousel"
+        [config]="slideConfig"
+      >
+        <div
+          class="m-3 text-dark"
+          ngxSlickItem
+          *ngFor="let slide of otherPodcasts"
+        >
+          <div class="podcast-inner-card p-4">
+            <a
+              [routerLink]="['/podcast', slide.slug]"
+              class="d-flex flex-column h-100"
+            >
+              <div class="d-flex justify-content-center mb-4">
+                <img
+                  [src]="slide.main_page_banner"
+                  class="img-fluid guest-image"
+                />
+              </div>
+              <div
+                class="card-body flex-grow-1 d-flex flex-column align-items-center justify-content-center"
+              >
+                <p class="font-24-16 lh-1 text-center w-100">
+                  Episode {{ slide.episode_number }} : {{ slide.title }}
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </ngx-slick-carousel>
+    </div>
+  </section>
+  <section class="container py-6 overflow-x-hidden">
+    <div class="row text-center" data-aos="zoom-out">
+      <div class="col-12 col-md-6 align-content-center mb-4">
+        <h2 class="text-primary font-48 text-md-end mb-0">Subscribe us on</h2>
+      </div>
+      <div class="col-12 col-md-6 text-md-start mb-4">
+        <a
+          href="https://podcasts.apple.com/lv/podcast/business-transformation-with-fbspl-insurance-edition/id1673857459"
+          target="_blank"
+          rel="nofollow noopener"
+        >
+          <img
+            appCdnUrl="assets/Icon/applePodcast.svg"
+            class="img-fluid podcast-shareicon upTranslate"
+          />
+        </a>
+        <a
+          href="https://business-transformation-with-fbspl.simplecast.com/"
+          target="_blank"
+          rel="nofollow noopener"
+        >
+          <img
+            appCdnUrl="assets/Icon/simplecast.svg"
+            class="img-fluid podcast-shareicon upTranslate"
+          />
+        </a>
+        <a
+          href="https://www.youtube.com/@FBSPLTeam/podcasts"
+          target="_blank"
+          rel="nofollow noopener"
+        >
+          <img
+            appCdnUrl="assets/Icon/youtubePodcast.svg"
+            class="img-fluid podcast-shareicon upTranslate"
+          />
+        </a>
+        <a
+          href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zaW1wbGVjYXN0LmNvbS9WTERYWG9LdA"
+          target="_blank"
+          rel="nofollow noopener"
+        >
+          <img
+            appCdnUrl="assets/Icon/googlePodcast.svg"
+            class="img-fluid podcast-shareicon upTranslate"
+          />
+        </a>
+        <a
+          href="https://open.spotify.com/show/0sTBGPYjmACbtZ7c1aWVzL"
+          target="_blank"
+          rel="nofollow noopener"
+        >
+          <img
+            appCdnUrl="assets/Icon/spotify.svg"
+            class="img-fluid podcast-shareicon upTranslate"
+          />
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- modal.component.html -->
+
+  <div
+    class="modal fade"
+    id="TranscriptModel"
+    tabindex="-1"
+    aria-labelledby="TranscriptModel1"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content bordered p-4">
+        <div class="modal-header pb-0">
+          <h5 class="modal-title font-48-30 text-primary" id="TranscriptModel1">
+            Transcript
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body mb-4">
+          <div
+            class="ModalTrans"
+            [innerHTML]="PodcastData.transcript_long_description"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

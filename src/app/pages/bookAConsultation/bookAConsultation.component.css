@@ -1,0 +1,12 @@
+.center-right-float {
+  position: absolute;
+  top: 9%;
+  right: 0;
+  height: 5.5rem;
+}
+@media (max-width: 768px) {
+  .center-right-float {
+    height: 4rem;
+    top: 6%;
+  }
+}

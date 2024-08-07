@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "module": "es2022",  // This can also be es2022, esnext, system, node16, or nodenext based on your Node.js version
+    "target": "es2022",  // Ensure the target is modern enough to support ES2020 features
+    "moduleResolution": "node",
+    "outDir": "./out-tsc/server",
+    "baseUrl": "./",
+    "types": ["node"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "files": [
+    "src/main.server.ts",
+     "server.ts"
+  ],
+  "angularCompilerOptions": {
+    "entryModule": "src/app/app.server.module#AppServerModule"
+  }
+}

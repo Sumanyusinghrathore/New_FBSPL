@@ -1,0 +1,39 @@
+.logo-wrapper {
+  height: 105px;
+  width: 105px;
+  background-color: var(--tertiary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-wrapper.active {
+  background-color: var(--primary);
+  .svg-logo {
+    filter: invert(101%) saturate(0) brightness(122%);
+  }
+}
+.logo-wrapper.active ~ .text-center {
+  color: var(--primary) !important;
+}
+.sm-logo-wrapper {
+  height: 80px;
+  width: 80px;
+  .svg-logo {
+    transform: scale(0.75);
+  }
+}
+.progress {
+  --bs-progress-bg: var(--tertiary);
+  --bs-progress-height: 3px;
+  --bs-progress-bar-bg: var(--primary);
+  position: absolute;
+  top: 104px;
+  right: 10%;
+  width: 77%;
+}
+.PreviousBtn {
+  .headingCTA {
+    visibility: hidden !important;
+  }
+}

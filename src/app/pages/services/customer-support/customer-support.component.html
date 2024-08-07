@@ -1,0 +1,1274 @@
+<ngx-slick-carousel
+  class="service_slider carousel d-none d-lg-block container-fluid"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+>
+  <div
+    class="container-fluid text-dark"
+    ngxSlickItem
+    *ngFor="let slides of slides"
+  >
+    <div class="container gradientBanner">
+      <img
+        src="{{ slides.img }}"
+        alt="{{ slides.alt }}"
+        class="card-img-desktop desktop-banner"
+      />
+      <div class="card-img-overlay overlay-text bannerText">
+        <div class="main_bannar my-4 ms-3" data-aos="fade-up">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item" aria-current="page">
+                <a href="/bpm-and-bpo-services">Services</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                <a aria-current="page">Customer Support</a>
+              </li>
+            </ol>
+          </nav>
+          <a href="{{ slides.Link }}" class="CTA-Zindex anchorCTA">
+            <h3
+              *ngIf="!slides.banner"
+              class="text-primary font-34-19 my-auto clickable-heading"
+            >
+              {{ slides.Title }}
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+            <h3 *ngIf="slides.banner" class="text-primary font-34-19 my-auto">
+              {{ slides.Title }}
+            </h3>
+          </a>
+          <p class="card-text font-20-16 pt-4">{{ slides.Description }}</p>
+          <a
+            *ngIf="slides.banner"
+            href="{{ slides.Link }}"
+            class="CTA-Zindex anchorCTA"
+          >
+            <h3 class="text-primary font-24-16 clickable-heading">
+              {{ slides.customersupport }}
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>
+<!-- Mobile View -->
+<ngx-slick-carousel
+  class="container carousel d-block d-lg-none pb-5"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+>
+  <div class="text-dark slide" ngxSlickItem *ngFor="let slidesmob of slides">
+    <div class="gradientBannerMob d-flex justify-content-center">
+      <img
+        alt="{{ slidesmob.alt }}"
+        src="{{ slidesmob.img_mob }}"
+        class="card-img-mob"
+      />
+      <div class="overlay-text-Mob bannerTextMob">
+        <div data-aos="fade-up">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item" aria-current="page">
+                <a href="/bpm-and-bpo-services">Services</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                <a aria-current="page">Customer Support</a>
+              </li>
+            </ol>
+          </nav>
+          <a href="{{ slidesmob.Link }}" class="CTA-Zindex anchorCTA pt-5">
+            <h3
+              *ngIf="!slidesmob.banner"
+              class="text-primary font-34-19 my-auto clickable-heading"
+            >
+              {{ slidesmob.Title }}
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+            <h3
+              *ngIf="slidesmob.banner"
+              class="text-primary font-34-19 my-auto"
+            >
+              {{ slidesmob.Title }}
+            </h3>
+          </a>
+          <p class="card-text font-20-16 pt-4">{{ slidesmob.Description }}</p>
+          <a
+            *ngIf="slidesmob.banner"
+            [routerLink]="slidesmob.Link"
+            class="CTA-Zindex anchorCTA"
+          >
+            <h3 class="text-primary font-24-16 clickable-heading">
+              {{ slidesmob.customersupport }}
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>
+<app-ourAssets></app-ourAssets>
+
+<section class="bg-primary text-white py-6">
+  <div class="container px-4">
+    <h4 class="font-48-30 mb-3 text-white" data-aos="fade-up">
+      In Customer Support Outsourcing
+    </h4>
+    <div class="row">
+      <div class="row text-center d-none d-md-flex">
+        <div class="col-lg-4 col-4" data-aos="fade-right" data-aos-delay="0">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">85%</p>
+            <p class="">
+              Avoid companies where they have experienced poor customer service
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-4" data-aos="fade-right" data-aos-delay="200">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">80%</p>
+            <p class="">
+              Spend more with companies where they have experienced good
+              customer service
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-4" data-aos="fade-right" data-aos-delay="400">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">62%</p>
+            <p class="">
+              Neglect companies with a reputation for poor customer service
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="d-md-none">
+        <div
+          class="text-white text-start"
+          data-aos="fade-right"
+          data-aos-delay="0"
+        >
+          <p class="font-48-30 fw-bolder mb-1">85%</p>
+          <p class="">
+            Avoid companies where they have experienced poor customer service
+          </p>
+        </div>
+        <div
+          class="text-white text-start"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
+          <p class="font-48-30 fw-bolder mb-1">80%</p>
+          <p class="">
+            Spend more with companies where they have experienced good customer
+            service
+          </p>
+        </div>
+        <div
+          class="text-white text-start"
+          data-aos="fade-right"
+          data-aos-delay="400"
+        >
+          <p class="font-48-30 fw-bolder mb-1">62%</p>
+          <p class="">
+            Neglect companies with a reputation for poor customer service
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container-fluid pt-5">
+  <div class="container">
+    <h2 class="text-primary font-48-30 py-3" data-aos="fade-up">
+      How Are We Driving Change with Our Customer Support Outsourcing Services?
+    </h2>
+    <div class="d-none d-lg-block">
+      <div class="row py-3">
+        <div class="col-sm-12 col-lg-4 col-md-6 py-3">
+          <div
+            class="card insurance-card policy-process-card Policy_Issuance p-3"
+            data-aos="zoom-in"
+          >
+            <a
+              class="CTA-Zindex anchorCTA mb-3 p-2"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <h3 class="text-black font-34-19 my-auto clickable-heading">
+                Inbound Calls
+                <div class="headingCTA">
+                  <button class="blueCTA btn_hover"></button>
+                </div>
+              </h3>
+            </a>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal Policy-Processing fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog pt-0 mt-0">
+              <div class="modal-content">
+                <div class="modal-header policy-header">
+                  <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card mx-5">
+                  <div class="details ms-4">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">Inbound Calls</h3>
+                      <p class="text-dark font-20-16">
+                        Whether it is a complaint from an existing customer or
+                        engaging in a sales call, our team makes your buyers
+                        feel valued and heard .
+                      </p>
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Escalation Handling
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Order Processing Queries
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Product/Services Information
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Inbound Sales Calls and more
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="imgBx d-none d-lg-block">
+                    <img
+                      appCdnUrl="assets/Customer Support/Detail Page/Inbound Calls.webp"
+                      class="bordered"
+                      alt="Inbound Calls Services "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 col-md-6 py-3">
+          <div
+            class="card insurance-card policy-process-card Policy-Checking p-3"
+            data-aos="zoom-in"
+          >
+            <a
+              class="CTA-Zindex anchorCTA mb-3 p-2"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal1"
+            >
+              <h3 class="text-black font-34-19 my-auto clickable-heading">
+                Outbound Calls
+                <div class="headingCTA">
+                  <button class="blueCTA btn_hover"></button>
+                </div>
+              </h3>
+            </a>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="exampleModal1"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel1"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog pt-0 mt-0">
+              <div class="modal-content">
+                <div class="modal-header policy-header">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card mx-5">
+                  <div class="details ms-4">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">Outbound Calls</h3>
+                      <p class="text-dark font-20-16">
+                        From generating new leads to expanding your business
+                        contact list, our customer service strategies
+                        continually evolve to deliver the finest results.
+                      </p>
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Lead Generation Calls
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Lead Follow-Up
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Customer Satisfaction Surveys
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Renewal Reminders
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Cross-Selling
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Promotional Offers
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Follow-Up on Pending Requests
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="imgBx d-none d-lg-block">
+                    <img
+                      appCdnUrl="assets/Customer Support/Detail Page/Outbound Call.webp"
+                      class="bordered"
+                      alt="Outbound Calls Services "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 col-md-6 py-3">
+          <div
+            class="card insurance-card policy-process-card Loss_Runs_Processing p-3"
+            data-aos="zoom-in"
+          >
+            <a
+              class="CTA-Zindex anchorCTA mb-3 p-2"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal2"
+            >
+              <h3 class="text-black font-34-19 my-auto clickable-heading">
+                E-mail Support
+                <div class="headingCTA">
+                  <button class="blueCTA btn_hover"></button>
+                </div>
+              </h3>
+            </a>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="exampleModal2"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel2"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog pt-0 mt-0">
+              <div class="modal-content">
+                <div class="modal-header policy-header">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card mx-5">
+                  <div class="details ms-4">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">E-mail Support</h3>
+                      <p class="text-dark font-20-16">
+                        Maintaining a balance between personalized and automated
+                        e-mail responses, our professionals are specifically
+                        trained to run targeted e-mail campaigns and handle
+                        complex queries.
+                      </p>
+
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Promotional E-mails
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Follow-Up
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Onboarding E-mails
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Feedback and Surveys
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Addressing General Queries
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Sales Support and more
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="imgBx d-none d-lg-block">
+                    <img
+                      appCdnUrl="assets/Customer Support/Detail Page/E-mail Support.webp"
+                      class="bordered"
+                      alt="E-mail Support Services  "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 col-md-6 py-3">
+          <div
+            class="card insurance-card policy-process-card Policy_Renewals p-3"
+            data-aos="zoom-in"
+          >
+            <a
+              class="CTA-Zindex anchorCTA mb-3 p-2"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal3"
+            >
+              <h3 class="text-black font-34-19 my-auto clickable-heading">
+                Live Chat Support
+                <div class="headingCTA">
+                  <button class="blueCTA btn_hover"></button>
+                </div>
+              </h3>
+            </a>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="exampleModal3"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel3"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog pt-0 mt-0">
+              <div class="modal-content">
+                <div class="modal-header policy-header">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card mx-5">
+                  <div class="details ms-4">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">Live Chat Support</h3>
+                      <p class="text-dark font-20-16">
+                        Experience the advantage of 24/7 availability, improved
+                        analytics and reporting, multilingual support, reduced
+                        cost, enhanced efficiency, and more with our proven
+                        proficiency in live chat support.
+                      </p>
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Issue Resolution
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Onboarding Assistance
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Lead Generation
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Feedback and Surveys
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Technical Support and more
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="imgBx d-none d-lg-block">
+                    <img
+                      appCdnUrl="assets/Customer Support/Detail Page/Live Chat Support.webp"
+                      class="bordered"
+                      alt="Live Chat Support Services"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile View -->
+  <div class="container p-3 d-block d-lg-none">
+    <div class="row">
+      <div class="col-12 mt-0 mt-sm-4">
+        <div class="accordion" id="ServicePage">
+          <div
+            class="policy-processing"
+            data-aos="zoom-in"
+            data-bs-toggle="modal"
+            data-bs-target="#MobModal"
+          >
+            <div
+              data-bs-toggle="collapse"
+              data-bs-target="#Policy_Processing"
+              aria-expanded="true"
+              aria-controls="Policy_Processing"
+              id="headingOne"
+              class="headingCTA CTA-Zindex d-flex p-3"
+            >
+              <h3 class="CTAs text-black fs-24 me-3">Inbound Calls</h3>
+              <img
+                class="service_btn"
+                appCdnUrl="assets/Icon/Accord-close.svg"
+              />
+            </div>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="MobModal"
+            tabindex="-1"
+            aria-labelledby="MobModalModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog">
+              <div class="modal-content">
+                <div class="modal-header policy-header mt-3">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card-mob mx-3 py-3">
+                  <div class="details ms-2">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">Inbound Calls</h3>
+                      <p class="text-dark font-20-16">
+                        Whether it is a complaint from an existing customer or
+                        engaging in a sales call, our team makes your buyers
+                        feel valued and heard by understanding their pain points
+                        and keeping a positive attitude throughout the
+                        conversation.
+                      </p>
+                      <ul class="ul-policy">
+                        <li
+                          class="list-item list-item pt-2 text-dark font-20-16"
+                        >
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Escalation Handling
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Order Processing Queries
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Product/Services Information
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Inbound Sales Calls and more
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="policy-processing mt-4"
+            data-aos="zoom-in"
+            data-bs-toggle="modal"
+            data-bs-target="#MobModal1"
+          >
+            <div
+              data-bs-toggle="collapse"
+              data-bs-target="#Claims_Management"
+              aria-expanded="true"
+              aria-controls="Claims_Management"
+              id="headingOne"
+              class="headingCTA CTA-Zindex d-flex p-3"
+            >
+              <h3 class="CTAs text-black fs-24 me-3">Outbound Calls</h3>
+              <img
+                class="service_btn"
+                appCdnUrl="assets/Icon/Accord-close.svg"
+              />
+            </div>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="MobModal1"
+            tabindex="-1"
+            aria-labelledby="MobModal1Lable1"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog">
+              <div class="modal-content">
+                <div class="modal-header policy-header mt-3">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card-mob mx-3 py-3">
+                  <div class="details ms-2">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">Outbound Calls</h3>
+                      <p class="text-dark font-20-16">
+                        From generating new leads to expanding your business
+                        contact list, our customer service strategies
+                        continually evolve with regular training sessions, call
+                        recording analysis, and pre-call planning to deliver the
+                        finest results.
+                      </p>
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Lead Generation Calls
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Lead Follow-Up
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Customer Satisfaction Surveys
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Renewal Reminders
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Cross-Selling
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Promotional Offers
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Follow-Up on Pending Requests
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="policy-processing mt-4"
+            data-aos="zoom-in"
+            data-bs-toggle="modal"
+            data-bs-target="#MobModal2"
+          >
+            <div class="d-flex p-3">
+              <h3 class="CTAs text-black fs-24 me-3">E-mail Support</h3>
+              <img
+                class="service_btn"
+                appCdnUrl="assets/Icon/Accord-close.svg"
+              />
+            </div>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="MobModal2"
+            tabindex="-1"
+            aria-labelledby="MobModalLabel2"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog">
+              <div class="modal-content">
+                <div class="modal-header policy-header mt-3">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card-mob mx-3 py-3">
+                  <div class="details ms-2">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">E-mail Support</h3>
+                      <p class="text-dark font-20-16">
+                        Maintaining a balance between personalized and automated
+                        e-mail responses, our professionals are specifically
+                        trained to run targeted e-mail campaigns and handle
+                        complex queries that require meticulous attention and
+                        expertise.
+                      </p>
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Promotional E-mails
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Follow-Up
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Onboarding E-mails 
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Feedback and Surveys
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Addressing General Queries
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Sales Support and more
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="policy-processing mt-4"
+            data-aos="zoom-in"
+            data-bs-toggle="modal"
+            data-bs-target="#MobModal3"
+          >
+            <div class="d-flex p-3">
+              <h3 class="CTAs text-black fs-24 me-3">Live Chat Support</h3>
+              <img
+                class="service_btn"
+                appCdnUrl="assets/Icon/Accord-close.svg"
+              />
+            </div>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="MobModal3"
+            tabindex="-1"
+            aria-labelledby="MobModalLabel3"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog">
+              <div class="modal-content">
+                <div class="modal-header policy-header mt-3">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card-mob mx-3 py-3">
+                  <div class="details ms-2">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">Live Chat Support</h3>
+                      <p class="text-dark font-20-16">
+                        Experience the advantage of 24/7 availability, improved
+                        analytics and reporting, multilingual support, reduced
+                        cost, enhanced efficiency, and more with our proven
+                        proficiency in live chat support.
+                      </p>
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Issue Resolution
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Onboarding Assistance
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Lead Generation
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Feedback and Surveys
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Technical Support and more
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-5">
+  <h2 class="text-primary font-48-30 mb-4" data-aos="fade-up">
+    Tools That Drive Excellence
+  </h2>
+  <div class="d-none d-xl-flex">
+    <div class="row">
+      <div class="col-3" data-aos="fade-right" data-aos-delay="0">
+        <img
+          class="img-fluid"
+          alt="Customer Support tool Jira"
+          appCdnUrl="assets/Tools/jira.svg"
+          width="196px"
+        />
+      </div>
+      <div class="col-3" data-aos="fade-right" data-aos-delay="100">
+        <img
+          class="img-fluid"
+          alt="Customer Support tool HubSpot   "
+          appCdnUrl="assets/Tools/hubspot.svg"
+          width="196px"
+        />
+      </div>
+      <div class="col-3" data-aos="fade-right" data-aos-delay="200">
+        <img
+          class="img-fluid"
+          alt="Customer Support tool Zendesk "
+          appCdnUrl="assets/Tools/zendesk.svg"
+          width="196px"
+        />
+      </div>
+      <div class="col-3" data-aos="fade-right" data-aos-delay="300">
+        <img
+          class="img-fluid"
+          alt="Customer Support tool Zoho "
+          appCdnUrl="assets/Tools/zoho.svg"
+          width="196px"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="d-flex d-xl-none">
+    <div class="trusted-slider-logo">
+      <div class="trusted-slide-track">
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="0">
+          <img
+            alt="Customer Support tool Jira"
+            class="img-fluid"
+            appCdnUrl="assets/Tools/jira.svg"
+          />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="100">
+          <img
+            alt="Customer Support tool HubSpot   "
+            class="img-fluid"
+            appCdnUrl="assets/Tools/hubspot.svg"
+          />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="200">
+          <img
+            alt="Customer Support tool Zendesk "
+            class="img-fluid"
+            appCdnUrl="assets/Tools/zendesk.svg"
+          />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="300">
+          <img
+            alt="Customer Support tool Zoho "
+            class="img-fluid"
+            appCdnUrl="assets/Tools/zoho.svg"
+          />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="0">
+          <img
+            alt="Customer Support tool Jira  "
+            class="img-fluid"
+            appCdnUrl="assets/Tools/jira.svg"
+          />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="100">
+          <img
+            alt=" Customer Support tool HubSpot"
+            class="img-fluid"
+            appCdnUrl="assets/Tools/hubspot.svg"
+          />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="200">
+          <img
+            alt="Customer Support tool Zendesk"
+            class="img-fluid"
+            appCdnUrl="assets/Tools/zendesk.svg"
+          />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="300">
+          <img
+            alt="Customer Support tool Zoho"
+            class="img-fluid"
+            appCdnUrl="assets/Tools/zoho.svg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Thinking -->
+<app-service-case-study
+  [category]="[{ category: 'customerSupport' }]"
+></app-service-case-study>
+<!-- Know best -->
+<app-know-best
+  [cards]="[
+    {
+      description:
+        'Fusion Business Solutions has been a game-changer for our company. Their responsive team, seamless onboarding, and commitment to excellence have significantly reduced our stress levels, allowing us to focus on what matters most – our clients. We\'ve experienced measurable improvements in client retention and employee satisfaction since partnering with Fusion, making them the top choice for any business seeking efficient virtual assistant services.',
+      name: 'Isom Rigell M. Ed.',
+      designation: 'Chief People Officer'
+    }
+  ]"
+  [videos]="[
+    {
+      videoUrl: 'https://player.vimeo.com/video/962238538',
+      thumbnail:
+        'assets/thumbnail-know-best/Client Testimonials YT 07 Stacey DiSpigno copy.jpg',
+      alt: 'Listen to our client- new insurance business servicing '
+    }
+  ]"
+>
+</app-know-best>
+<section class="py-6">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6" data-aos="fade-right">
+        <app-faq></app-faq>
+      </div>
+      <div class="col-12 col-md-6 mt-3 mt-md-0" data-aos="fade-left">
+        <div class="accordion" id="accordionFAQ">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button font-28-20"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Industries"
+                aria-expanded="true"
+                aria-controls="Industries"
+              >
+                How does your customer support management team handle situations
+                where customers point out gaps or shortcomings in our offerings?
+              </button>
+            </h2>
+            <div
+              id="Industries"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Our professionals handle such situations by:
+                <ul class="pt-3">
+                  <li>Actively listening to and acknowledging the feedback.</li>
+                  <li>
+                    Providing alternative services or features that enhance the
+                    customer experience.
+                  </li>
+                  <li>
+                    Thoughtfully analyze bulk feedback to identify areas for
+                    improvement.
+                  </li>
+                  <li>
+                    Collecting real-time insights on products using surveys and
+                    feedback tools.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Services"
+                aria-expanded="false"
+                aria-controls="Services"
+              >
+                How do you ensure consistency in customer experience across
+                various channels such as phone, e-mail, and chat?
+              </button>
+            </h2>
+            <div
+              id="Services"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                To ensure consistency, we:
+                <ul class="pt-3">
+                  <li>
+                    Conduct regular training sessions on comprehensive brand
+                    guidelines for customer-facing teams, irrespective of
+                    channels.
+                  </li>
+                  <li>
+                    Use integrated platforms to ensure customer information and
+                    interaction history are accessible across all channels.
+                  </li>
+                  <li>
+                    Regularly review customers' feedback from various channels
+                    to identify inconsistencies and implement necessary
+                    solutions.
+                  </li>
+                  <li>
+                    Consistently update our centralized information base with
+                    FAQs, troubleshooting guides, and best practices to maintain
+                    a unified viewpoint of interactions.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#About"
+                aria-expanded="false"
+                aria-controls="About"
+              >
+                How does your customer support service team manage a large
+                volume of inquiries?
+              </button>
+            </h2>
+            <div
+              id="About"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                To manage a large volume of inquiries, we:
+                <ul class="pt-3">
+                  <li>
+                    Invest in advanced and scalable technologies such as
+                    customer relationship management (CRM) systems, ticketing
+                    systems, automation tools, etc.
+                  </li>
+                  <li>
+                    Prioritize inquiries based on their urgency and impact.
+                  </li>
+                  <li>
+                    Follow a tiered support structure, where each team is
+                    specialized to handle a pre-defined inquiry group.
+                  </li>
+                  <li>
+                    Continuously identify trends and patterns in inquiry volume
+                    to align our efforts and resources in the right direction.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Resources"
+                aria-expanded="false"
+                aria-controls="Resources"
+              >
+                How do you deal with confused, frustrated customers with vague
+                expectations?
+              </button>
+            </h2>
+            <div
+              id="Resources"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                We understand that customers may feel frustrated before or after
+                purchasing a product. Therefore, before offering any
+                recommendations, our team puts themselves in their position. The
+                goal is to present solutions and foster a situation that
+                benefits both parties.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#differentiators"
+                aria-expanded="false"
+                aria-controls="differentiators"
+              >
+                Why should I choose you as my right ecommerce outsourcing
+                service provider?
+              </button>
+            </h2>
+            <div
+              id="differentiators"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                You should partner with us if you are looking for:
+                <ul class="pt-3">
+                  <li>
+                    360-degree assistance that meets your dynamic business needs
+                    round the clock
+                  </li>
+                  <li>Professionally trained employees</li>
+                  <li>Buck-up services at zero additional cost</li>
+                  <li>
+                    Dedicated customer support, vendor management, and much more
+                  </li>
+                </ul>
+                Partnering with us means aligning with the industry excellence.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

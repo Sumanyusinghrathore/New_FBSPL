@@ -1,0 +1,1646 @@
+<main>
+  <nav
+    class="navbar navbar-expand-lg navbar-dark fixed-top fixed-top nga-navbar"
+    id="navbarCollapse"
+  >
+    <div class="container">
+      <a routerLink="/" class="navbar-brand">
+        <img
+          appCdnUrl="assets/Logo/Logo.svg"
+          alt="FBSPL Logo"
+          class="header-logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#sidebar"
+        aria-controls="sidebar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main_nav" style="z-index: 9999">
+        <ul class="navbar-nav ms-auto me-2 align-items-baseline">
+          <li
+            class="nav-item dropdown has-megamenu me-4"
+            (mouseenter)="openMenu('services')"
+            (mouseleave)="closeMenu('services')">
+            <a
+              class="nav-link-item dropdown-toggle font-24-16"
+              id="services"
+              role="button"
+              aria-expanded="false"
+              (click)="megamenu('services')"
+              >Services
+            </a>
+            <div
+              class="container dropdown-menu megamenu bg-secondary mx-5 mt-4" 
+              role="menu"
+              [class.show]="menuOpen === 'services'"
+              aria-labelledby="services"
+            >
+              <div class="">
+                <div class="d-flex flex-row justify-content-around">
+                  <div class="">
+                    <div class="col-megamenu">
+                      <a
+                        (click)="toggleMenu(menu)"
+                        routerLink="/services/insurance-bpo-outsourcing"
+                        class="CTA-Zindex anchorCTA mb-2"
+                      >
+                        <h3
+                          class="text-primary font-24-16 clickable-heading mb-2"
+                        >
+                          Insurance
+                          <div class="headingCTA btn_hide">
+                            <button class="blueCTA Header-card-cta"></button>
+                          </div>
+                        </h3>
+                      </a>
+                      <ul class="list-unstyled mt-1">
+                        <li class="header_padding">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            class="font-20-16 mb-3"
+                            routerLink="/services/insurance-policy-processing"
+                            routerLinkActive="active_main"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                          >
+                            Policy Processing
+                          </a>
+                        </li>
+                        <li class="header_padding">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            class="font-20-16 mb-3"
+                            routerLink="/services/insurance-claim-management"
+                            routerLinkActive="active_main"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            >Claims Management</a
+                          >
+                        </li>
+                        <li class="header_padding">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            class="font-20-16 mb-3"
+                            routerLinkActive="active_main"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            routerLink="/services/insurance-agency-optimization-services"
+                            >Agency Optimization</a
+                          >
+                        </li>
+                        <li class="header_padding">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            class="font-20-16 mb-3"
+                            routerLinkActive="active_main"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            routerLink="/services/insurance-new-business-servicing"
+                            >New Business</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="col-megamenu">
+                      <a
+                        (click)="toggleMenu(menu)"
+                        routerLink="/services/accounting-bookkeeping-services"
+                        class="CTA-Zindex anchorCTA mb-2"
+                      >
+                        <h3
+                          class="text-primary font-24-16 clickable-heading mb-2"
+                        >
+                          Accounting & Bookkeeping
+                          <div class="headingCTA btn_hide">
+                            <button class="blueCTA Header-card-cta"></button>
+                          </div>
+                        </h3>
+                      </a>
+                      <ul class="list-unstyled mt-1">
+                        <li class="header_padding" class="header_padding">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            class="font-20-16 mb-3"
+                            [routerLink]="[
+                              '/services/accounts-payable-management'
+                            ]"
+                            routerLinkActive="active_main"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            >Payable Management</a
+                          >
+                        </li>
+                        <li class="header_padding">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            class="font-20-16 mb-3"
+                            [routerLink]="[
+                              '/services/accounts-receivable-management'
+                            ]"
+                            routerLinkActive="active_main"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            >Receivable Management</a
+                          >
+                        </li>
+                        <li class="header_padding">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            class="font-20-16 mb-3"
+                            [routerLink]="[
+                              '/services/accounting-and-financial-reporting-services'
+                            ]"
+                            routerLinkActive="active_main"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            >Financial Reporting</a
+                          >
+                        </li>
+                        <li class="header_padding">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            class="font-20-16 mb-3"
+                            [routerLink]="[
+                              '/services/payroll-processing-services'
+                            ]"
+                            routerLinkActive="active_main"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            >Payroll Processing</a
+                          >
+                        </li>
+                        <li class="header_padding">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            class="font-20-16 mb-3"
+                            [routerLink]="[
+                              '/services/accounts-reconciliation-services'
+                            ]"
+                            routerLinkActive="active_main"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            >Reconciliation</a
+                          >
+                        </li>
+                        <li class="header_padding">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            class="font-20-16 mb-3"
+                            [routerLink]="[
+                              '/services/general-ledger-accounting-services'
+                            ]"
+                            routerLinkActive="active_main"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            >General Ledger Accounting</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="col-megamenu d-flex flex-column">
+                      <h3 class="font-28-20 text-primary">Other Services</h3>
+                      <ul class="list-unstyled">
+                        
+                        <li class="header_padding">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            class="font-20-16 mb-3"
+                            [routerLink]="[
+                              '/services/data-annotation-services'
+                            ]"
+                            routerLinkActive="active_main"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            >Data Annotation</a
+                          >
+                        </li>
+                        <li class="header_padding">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            class="font-20-16 mb-3"
+                            [routerLink]="[
+                              '/services/recruitment-process-outsourcing-services'
+                            ]"
+                            routerLinkActive="active_main"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            >Recruitment</a
+                          >
+                        </li>
+                        <li class="header_padding">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            class="font-20-16 mb-3"
+                            [routerLink]="[
+                              '/services/customer-support-outsourcing'
+                            ]"
+                            routerLinkActive="active_main"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            >Customer Support</a
+                          >
+                        </li>
+                       
+                        <li class="header_padding">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            class="font-20-16 mb-3"
+                            [routerLink]="['/services/digital-marketing']"
+                            routerLinkActive="active_main"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            >Digital Marketing</a
+                          >
+                        </li>
+                        <li class="header_padding">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            class="font-20-16 mb-3"
+                            [routerLink]="['/services/e-commerce-outsourcing-services']"
+                            routerLinkActive="active_main"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            >E-commerce</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="view">
+                  <a
+                    (click)="toggleMenu(menu)"
+                    [routerLink]="['/bpm-and-bpo-services']"
+                    class="CTA-Zindex anchorCTA mb-2"
+                  >
+                    <h3 class="text-primary font-24-16 clickable-heading">
+                      View All Services
+                      <div class="headingCTA">
+                        <button class="blueCTA"></button>
+                      </div>
+                    </h3>
+                  </a>
+                  <img
+                    appCdnUrl="assets/Mega_menu/Menu_Vector.svg"
+                    class="top-right-float vector header_img"
+                  />
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="nav-item dropdown has-megamenu me-4"
+            (mouseenter)="openMenu('thinkingDropdown')"
+            (mouseleave)="closeMenu('thinkingDropdown')"
+          >
+            <a
+              class="nav-link-item dropdown-toggle font-24-16"
+              (click)="megamenu('thinkingDropdown')"
+              id="thinkingDropdown"
+              role="button"
+              aria-expanded="false"
+              >Thinking
+            </a>
+            <div
+              class="container dropdown-menu megamenu bg-secondary mx-5 mt-4"
+              role="menu"
+              [class.show]="menuOpen === 'thinkingDropdown'"
+              aria-labelledby="thinkingDropdown"
+            >
+              <div class="">
+                <div class="row">
+                  <div class="col-lg-2 col-md-3 nav-border">
+                    <div
+                      class="nav flex-column nav-pills"
+                      id="v-pills-tab-thinking"
+                      role="tablist"
+                      aria-orientation="vertical"
+                    >
+                      <a
+                        class="nav-link active font-24-16 fit_content"
+                        id="v-pills-home-tab-thinking"
+                        data-bs-toggle="pill"
+                        role="tab"
+                        aria-controls="v-pills-home-thinking"
+                        aria-selected="true"
+                        (mouseenter)="activateTab('tab1')"
+                        [ngClass]="{ active: activeTab === 'tab1' }"
+                        [routerLink]="['/blogs']"
+                        >Blog</a
+                      >
+                      <a
+                        class="nav-link font-24-16 fit_content"
+                        id="v-pills-profile-tab-thinking"
+                        data-bs-toggle="pill"
+                        role="tab"
+                        aria-controls="v-pills-profile-thinking"
+                        aria-selected="false"
+                        (mouseenter)="activateTab('tab2')"
+                        [ngClass]="{ active: activeTab === 'tab2' }"
+                        [routerLink]="['/case-studies']"
+                        >Client Stories</a
+                      >
+                      <a
+                        class="nav-link font-24-16 fit_content"
+                        id="v-pills-messages-tab-thinking"
+                        data-bs-toggle="pill"
+                        role="tab"
+                        aria-controls="v-pills-messages-thinking"
+                        aria-selected="false"
+                        (mouseenter)="activateTab('tab3')"
+                        [ngClass]="{ active: activeTab === 'tab3' }"
+                        [routerLink]="['/podcast']"
+                        >Podcast</a
+                      >
+                      <!-- <a class="nav-link font-24-16" id="v-pills-text-tab-thinking" data-bs-toggle="pill" href="/" role="tab" aria-controls="v-pills-text-thinking" aria-selected="false" (mouseenter)="activateTab('tab4')">FBSPL Talks</a> -->
+                      <a
+                        class="nav-link font-24-16 fit_content"
+                        id="v-pills-video-tab-thinking"
+                        data-bs-toggle="pill"
+                        href="/"
+                        role="tab"
+                        aria-controls="v-pills-video-thinking"
+                        aria-selected="false"
+                        (mouseenter)="activateTab('tab5')"
+                        [ngClass]="{ active: activeTab === 'tab5' }"
+                        [routerLink]="['/client-testimonial-reviews']"
+                        >Videos</a
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-10 col-md-9">
+                    <div class="tab-content" id="v-pills-tabContent-thinking">
+                      <div
+                        [class.show]="activeTab === 'tab1'"
+                        class="tab-pane fade show mx-3"
+                        id="v-pills-home-thinking"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-home-tab-thinking"
+                      >
+                        <h2 class="text-primary font-24-16 py-3">
+                          Featured and Trending
+                        </h2>
+                        <div class="row">
+                          <div
+                            class="col-xl-4 col-lg-6 col-md-4 col-6"
+                            *ngFor="let blog of blogs"
+                          >
+                            <div class="card blog_card">
+                              <a
+                                (click)="toggleMenu(menu)"
+                                [routerLink]="['/blogs', blog.slug]"
+                                class="stretched-link"
+                              >
+                                <img
+                                  [src]="blog.feature_image"
+                                  class="card-img-top image_blog"
+                                />
+                                <div class="card-body card_blog pt-2">
+                                  <p class="font-24-16 text-primary mb-2">
+                                    {{ blog.blog_category.name }}
+                                  </p>
+                                  <p
+                                    class="card-text font-20-16 text_highlight"
+                                  >
+                                    {{ blog.title }}
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-lg-12 col-md-4 col-6 p-0">
+                            <div class="d-flex flex-wrap mt-lg-3">
+                              <div class="div_btn" (click)="toggleMenu(menu)">
+                                <p class="font-20-16 text-primary div_text">
+                                  <a [routerLink]="['/blogs']"> Real Estate </a>
+                                </p>
+                              </div>
+                              <div class="div_btn" (click)="toggleMenu(menu)">
+                                <p class="font-20-16 text-primary div_text">
+                                  <a [routerLink]="['/blogs']">Insurtech</a>
+                                </p>
+                              </div>
+                              <div class="div_btn" (click)="toggleMenu(menu)">
+                                <p class="font-20-16 text-primary div_text">
+                                  <a
+                                    [routerLink]="['/blogs']"
+                                    fragment="ecommerce"
+                                    >E-commerce</a
+                                  >
+                                </p>
+                              </div>
+                              <div class="div_btn" (click)="toggleMenu(menu)">
+                                <p class="font-20-16 text-primary div_text">
+                                  <a [routerLink]="['/blogs']"
+                                    >Retail Business</a
+                                  >
+                                </p>
+                              </div>
+                              <div class="div_btn" (click)="toggleMenu(menu)">
+                                <p class="font-20-16 text-primary div_text">
+                                  <a [routerLink]="['/blogs']"
+                                    >Operational Excellence</a
+                                  >
+                                </p>
+                              </div>
+                              <div class="div_btn" (click)="toggleMenu(menu)">
+                                <p class="font-20-16 text-primary div_text">
+                                  <a [routerLink]="['/blogs']"
+                                    >Consumer Behaviour</a
+                                  >
+                                </p>
+                              </div> 
+                              <div class="div_btn" (click)="toggleMenu(menu)">
+                                <p class="font-20-16 text-primary div_text">
+                                  <a [routerLink]="['/blogs']">Trending</a>
+                                </p>
+                              </div>
+                              <div class="div_btn" (click)="toggleMenu(menu)">
+                                <p class="font-20-16 text-primary div_text">
+                                  <a [routerLink]="['/blogs']"
+                                    >Artificial Intelligence</a
+                                  >
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="view">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            routerLink="/blogs"
+                            class="CTA-Zindex anchorCTA mb-2"
+                          >
+                            <h3
+                              class="text-primary font-24-16 clickable-heading"
+                            >
+                              View All
+                              <div class="headingCTA">
+                                <button class="blueCTA"></button>
+                              </div>
+                            </h3>
+                          </a>
+                          <img
+                            appCdnUrl="assets/Mega_menu/Menu_Vector.svg"
+                            class="top-right-float vector header_img"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        [class.show]="activeTab === 'tab2'"
+                        class="tab-pane fade mx-3"
+                        id="v-pills-profile-thinking"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab-thinking"
+                      >
+                        <h2 class="text-primary font-24-16 py-3">
+                          Featured and Trending
+                        </h2>
+                        <div class="row d-flex">
+                          <div
+                            class="col-lg-4 col-md-3 col-6 flex-fill"
+                            *ngFor="let casestudy of casestudy"
+                          >
+                            <div class="card blog_card h-100">
+                              <img
+                                [src]="casestudy.feature_image"
+                                class="card-img-top image_blog"
+                              />
+                              <div class="card-body card_blog pt-2">
+                                <a
+                                  [routerLink]="[
+                                    '/case-studies',
+                                    casestudy.slug
+                                  ]"
+                                  class="stretched-link"
+                                >
+                                  <p
+                                    class="card-text font-20-16 text_highlight"
+                                  >
+                                    {{ casestudy.title }}
+                                  </p>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="view">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            routerLink="/case-studies"
+                            class="CTA-Zindex anchorCTA mb-2"
+                          >
+                            <h3
+                              class="text-primary font-24-16 clickable-heading"
+                            >
+                              View All
+                              <div class="headingCTA">
+                                <button class="blueCTA"></button>
+                              </div>
+                            </h3>
+                          </a>
+                          <img
+                            appCdnUrl="assets/Mega_menu/Menu_Vector.svg"
+                            class="top-right-float vector header_img"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        [class.show]="activeTab === 'tab3'"
+                        class="tab-pane fade mx-3"
+                        id="v-pills-messages-thinking"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab-thinking"
+                      >
+                        <h2 class="text-primary font-24-16 py-3">
+                          Featured and Trending
+                        </h2>
+                        <div class="row">
+                          <div
+                            class="col-xl-4 col-lg-6 col-md-4 col-6"
+                            *ngFor="let podcast of podcasts"
+                          >
+                            <div class="card podcast_card">
+                              <img
+                                [src]="podcast.megamenu_image"
+                                class="card-img-top image_blog"
+                              />
+                              <div class="card-body pt-2">
+                                <a
+                                  (click)="toggleMenu(menu)"
+                                  [routerLink]="['/podcast', podcast.slug]"
+                                  class="stretched-link"
+                                >
+                                  <p class="font-20-16 text_highlight">
+                                    {{ podcast.title }}
+                                  </p>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-lg-12 col-md-4 col-6">
+                            <div class="d-flex flex-wrap">
+                              <div class="div_btn">
+                                <p class="font-24-16 text-primary">
+                                  <a
+                                    (click)="toggleMenu(menu)"
+                                    [routerLink]="['/podcast']"
+                                    >Business Transformation with FBSPL</a
+                                  >
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="view">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            routerLink="/podcast"
+                            class="CTA-Zindex anchorCTA mb-2"
+                          >
+                            <h3
+                              class="text-primary font-24-16 clickable-heading"
+                            >
+                              View All
+                              <div class="headingCTA">
+                                <button class="blueCTA"></button>
+                              </div>
+                            </h3>
+                          </a>
+                          <img
+                            appCdnUrl="assets/Mega_menu/Menu_Vector.svg"
+                            class="top-right-float vector header_img"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        [class.show]="activeTab === 'tab5'"
+                        class="tab-pane fade mx-3"
+                        id="v-pills-video-thinking"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-video-tab-thinking"
+                      >
+                        <h2 class="text-primary font-24-16 py-3">
+                          Featured and Trending
+                        </h2>
+                        <div class="row">
+                          <div
+                            class="col-lg-4 col-md-3 col-6 flex-fill"
+                            *ngFor="let video of videos"
+                          >
+                            <div
+                              class="bg-image"
+                              style="max-width: 22rem; position: relative;"
+                              (click)="openVideo(video.videoUrl)"
+                            >
+                              <img
+                                [src]="video.thumbnail"
+                                class="w-100 bordered"
+                                
+                              />
+                              <div
+                                class="d-flex justify-content-center align-items-center img_icon"
+                              >
+                                <img
+                                  style="width: 10%"
+                                  src="https://d1585q1wairh36.cloudfront.net/assets/Icon/blue-playicon.svg"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="view">
+                          <a
+                            (click)="toggleMenu(menu)"
+                            routerLink="/client-testimonial-reviews"
+                            class="CTA-Zindex anchorCTA mb-2"
+                          >
+                            <h3
+                              class="text-primary font-24-16 clickable-heading"
+                            >
+                              View All
+                              <div class="headingCTA">
+                                <button class="blueCTA"></button>
+                              </div>
+                            </h3>
+                          </a>
+                          <img
+                            appCdnUrl="assets/Mega_menu/Menu_Vector.svg"
+                            class="top-right-float vector header_img"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="nav-item dropdown has-megamenu me-4"
+            (mouseenter)="openMenu('About')"
+            (mouseleave)="closeMenu('About')"
+          >
+            <a
+              class="nav-link-item dropdown-toggle font-24-16"
+              id="aboutDropdown"
+              role="button"
+              aria-expanded="false"
+              (click)="megamenu('About')"
+              >About
+            </a>
+            <div
+              class="container dropdown-menu megamenu bg-secondary mx-5 mt-4 show"
+              role="menu"
+              [class.show]="menuOpen === 'About'"
+              aria-labelledby="aboutDropdown"
+            >
+              <!-- Dropdown content here -->
+              <div class="">
+                <div class="row">
+                  <div class="col-lg-2 col-md-3 nav-border">
+                    <div
+                      class="nav flex-column nav-pills"
+                      id="v-pills-tab-about"
+                      role="tablist"
+                      aria-orientation="vertical"
+                    >
+                      <a
+                        class="nav-link font-24-16 fit_content"
+                        id="v-pills-home-tab-about"
+                        data-bs-toggle="pill"
+                        role="tab"
+                        aria-controls="v-pills-home-about"
+                        aria-selected="true"
+                        (mouseenter)="activateTab('tab1')"
+                        [ngClass]="{ active: activeTab === 'tab1' }"
+                        [routerLink]="['/about-who-we-are']"
+                      >
+                        Who we are
+                      </a>
+                      <a
+                        class="nav-link font-24-16 fit_content"
+                        id="v-pills-profile-tab-about"
+                        data-bs-toggle="pill"
+                        role="tab"
+                        aria-controls="v-pills-profile-about"
+                        aria-selected="false"
+                        (mouseenter)="activateTab('tab2')"
+                        [ngClass]="{ active: activeTab === 'tab2' }"
+                        [routerLink]="['/our-leadership']"
+                      >
+                        Leadership
+                      </a>
+                      <a
+                        class="nav-link font-24-16 fit_content"
+                        id="v-pills-messages-tab-about"
+                        data-bs-toggle="pill"
+                        role="tab"
+                        aria-controls="v-pills-messages-about"
+                        aria-selected="false"
+                        (mouseenter)="activateTab('tab3')"
+                        [ngClass]="{ active: activeTab === 'tab3' }"
+                        [routerLink]="['/csr-social-responsibilities']"
+                      >
+                        Social Responsibility
+                      </a>
+                      <a
+                        class="nav-link font-24-16 fit_content"
+                        id="v-pills-text-tab-about"
+                        data-bs-toggle="pill"
+                        role="tab"
+                        aria-controls="v-pills-text-about"
+                        aria-selected="false"
+                        (mouseenter)="activateTab('tab4')"
+                        [ngClass]="{ active: activeTab === 'tab4' }"
+                        [routerLink]="['/life-at-fbspl']"
+                      >
+                        Life at FBSPL
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-10 col-md-9">
+                    <div class="tab-content" id="v-pills-tabContent-about">
+                      <div
+                        [class.show]="activeTab === 'tab1'"
+                        class="tab-pane fade show mx-3"
+                        id="v-pills-home-about"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-home-tab-about"
+                      >
+                        <div class="row ms-3">
+                          <div class="col-lg-8 col-12 col-md-8 my-3">
+                            <h4 class="font-24-16 fw-500">
+                              The catalysts of change
+                            </h4>
+                            <p class="font-20-16">
+                              Guiding businesses toward excellence for more than
+                              two decades with our business process management
+                              and IT solutions.
+                            </p>
+                            <div class="know-more my-5">
+                              <a
+                                (click)="toggleMenu(menu)"
+                                [routerLink]="['/about-who-we-are']"
+                                class="CTA-Zindex anchorCTA mb-2"
+                              >
+                                <h3
+                                  class="text-primary font-24-16 clickable-heading"
+                                >
+                                  Know More
+                                  <div class="headingCTA">
+                                    <button class="blueCTA"></button>
+                                  </div>
+                                </h3>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="megamenu-image-about col-lg-4">
+                            <img
+                              class="img_header img-fluid"
+                              appCdnUrl="assets/Mega_menu/About.png"
+                              alt=""
+                            />
+                            <img
+                              appCdnUrl="assets/Mega_menu/Menu_Vector.svg"
+                              class="top-right-float vector img_vector"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        [class.show]="activeTab === 'tab2'"
+                        class="tab-pane fade mx-3"
+                        id="v-pills-profile-about"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab-about"
+                      >
+                        <div class="row ms-3">
+                          <div class="col-lg-8 col-12 col-md-8 my-4">
+                            <h4 class="font-24-16 fw-500">
+                              Driving the real difference
+                            </h4>
+                            <p class="font-20-16">
+                              Introducing our experts, who bring our vision to
+                              life and are committed to delivering lasting
+                              value.
+                            </p>
+                            <div class="know-more my-5">
+                              <a
+                                (click)="toggleMenu(menu)"
+                                [routerLink]="['/our-leadership']"
+                                class="CTA-Zindex anchorCTA mb-2"
+                              >
+                                <h3
+                                  class="text-primary font-24-16 clickable-heading"
+                                >
+                                  Know More
+                                  <div class="headingCTA">
+                                    <button class="blueCTA"></button>
+                                  </div>
+                                </h3>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="megamenu-image-about col-lg-4">
+                            <img
+                              class="img_header img-fluid"
+                              appCdnUrl="assets/Mega_menu/Mega Menu leadership.png"
+                              alt=""
+                            />
+                            <img
+                              appCdnUrl="assets/Mega_menu/Menu_Vector.svg"
+                              class="top-right-float vector img_vector"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        [class.show]="activeTab === 'tab3'"
+                        class="tab-pane fade mx-3"
+                        id="v-pills-messages-about"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab-about"
+                      >
+                        <div class="row ms-3">
+                          <div class="col-lg-8 col-12 col-md-8 my-4">
+                            <h4 class="font-24-16 fw-500">
+                              Doing what is right
+                            </h4>
+                            <p class="font-20-16">
+                              This is our small effort to make the world a
+                              better place for everyone around us to live.
+                            </p>
+                            <div class="know-more my-5">
+                              <a
+                                (click)="toggleMenu(menu)"
+                                [routerLink]="['/csr-social-responsibilities']"
+                                class="CTA-Zindex anchorCTA mb-2"
+                              >
+                                <h3
+                                  class="text-primary font-24-16 clickable-heading"
+                                >
+                                  Know More
+                                  <div class="headingCTA">
+                                    <button class="blueCTA"></button>
+                                  </div>
+                                </h3>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="megamenu-image-about col-lg-4">
+                            <img
+                              class="img_header img-fluid"
+                              appCdnUrl="assets/Mega_menu/Mega Menu CSR.png"
+                              alt=""
+                            />
+                            <img
+                              appCdnUrl="assets/Mega_menu/Menu_Vector.svg"
+                              class="top-right-float vector img_vector"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        [class.show]="activeTab === 'tab4'"
+                        class="tab-pane fade mx-3"
+                        id="v-pills-text-about"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-text-tab-about"
+                      >
+                        <div class="row ms-3">
+                          <div class="col-lg-8 col-12 col-md-8 my-4">
+                            <h4 class="font-24-16 fw-500">
+                              More than just a workplace
+                            </h4>
+                            <p class="font-20-16">
+                              We believe that people contribute more when they
+                              are emotionally invested. Discover why we are
+                              called the great place to work.
+                            </p>
+                            <div class="know-more my-5">
+                              <a
+                                (click)="toggleMenu(menu)"
+                                [routerLink]="['/life-at-fbspl']"
+                                class="CTA-Zindex anchorCTA mb-2"
+                              >
+                                <h3
+                                  class="text-primary font-24-16 clickable-heading"
+                                >
+                                  Know More
+                                  <div class="headingCTA">
+                                    <button class="blueCTA"></button>
+                                  </div>
+                                </h3>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="megamenu-image-about col-lg-4">
+                            <img
+                              class="img_header img-fluid"
+                              appCdnUrl="assets/Mega_menu/Mega Menu life@fbspl.png"
+                              alt=""
+                            />
+                            <img
+                              appCdnUrl="assets/Mega_menu/Menu_Vector.svg"
+                              class="top-right-float vector img_vector"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="nav-item dropdown has-megamenu me-4"
+            (mouseleave)="closeMenu('Career')"
+            (mouseenter)="openMenu('Career')"
+          >
+            <a
+              class="nav-link-item dropdown-toggle font-24-16 fit_content"
+              id="careerDropdown"
+              role="button"
+              aria-expanded="false"
+              (click)="megamenu('Career')"
+              [ngClass]="{ active: activeTab === 'tab1' }"
+              [routerLink]="['/careers/current-openings']"
+              >Career
+            </a>
+            <div
+              class="container dropdown-menu megamenu bg-secondary mx-5 mt-4 show"
+              role="menu"
+              [class.show]="menuOpen === 'Career'"
+              aria-labelledby="careerDropdown"
+            >
+              <!-- Dropdown content here -->
+              <div class="">
+                <div class="row">
+                  <div class="col-lg-2 col-md-3 nav-border">
+                    <div
+                      class="nav flex-column nav-pills"
+                      id="v-pills-tab-career"
+                      role="tablist"
+                      aria-orientation="vertical"
+                    >
+                      <a
+                        class="nav-link active font-24-16"
+                        id="v-pills-home-tab-career"
+                        data-bs-toggle="pill"
+                        role="tab"
+                        aria-controls="v-pills-home-career"
+                        aria-selected="true"
+                        (mouseenter)="activateTab('tab1')"
+                        [routerLink]="['/careers/current-openings']"
+                        >Current Opening</a
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-10 col-md-9">
+                    <div class="tab-content" id="v-pills-tabContent-career">
+                      <div
+                        [class.show]="activeTab === 'tab1'"
+                        class="tab-pane fade show mx-3"
+                        id="v-pills-home-career"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-home-tab-career"
+                      >
+                        <div class="row ms-3">
+                          <div class="col-lg-8 col-12 col-md-8 my-3">
+                            <h4 class="font-24-16 fw-500">Dreams with FBSPL</h4>
+                            <p class="font-20-16">
+                              Your brilliance has a home here. At FBSPL, you can
+                              do more than join; you can add something and leave
+                              a mark. Explore our current openings and discover
+                              where you fit best.
+                            </p>
+                            <div class="know-more my-5">
+                              <a
+                                (click)="toggleMenu(menu)"
+                                [routerLink]="['/careers/current-openings']"
+                                class="CTA-Zindex anchorCTA mb-2"
+                              >
+                                <h3
+                                  class="text-primary font-24-16 clickable-heading"
+                                >
+                                  Know More
+                                  <div class="headingCTA">
+                                    <button class="blueCTA"></button>
+                                  </div>
+                                </h3>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="megamenu-image-about col-lg-4">
+                            <img
+                              class="img_header img-fluid"
+                              appCdnUrl="assets/Mega_menu/Current Opening.jpg"
+                              alt=""
+                            />
+                            <img
+                              appCdnUrl="assets/Mega_menu/Menu_Vector.svg"
+                              class="top-right-float vector img_vector"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a
+              (click)="toggleMenu(menu)"
+              routerLink="/book-free-consultation-call"
+              class="CTA-Zindex anchorCTA mb-2"
+            >
+              <h3 class="text-primary font-24-16 clickable-heading">
+                Get in touch
+                <div class="headingCTA">
+                  <button class="blueCTA"></button>
+                </div>
+              </h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <app-header-modal [headerUrl]="currentheaderUrl"></app-header-modal>
+</main>
+
+<!-- app.component.html -->
+<!-- Mobile View -->
+<nav class="navbar navbar-expand-lg d-lg-none img_header">
+  <div class="container-fluid">
+    <div
+      class="offcanvas offcanvas-end offcanvas_scroll"
+      tabindex="-1"
+      id="sidebar"
+      aria-labelledby="sidebarLabel"
+    >
+      <div class="offcanvas-header">
+        <a
+          class="align-items-center rounded font-24-16"
+          [routerLink]="['/book-free-consultation-call']"
+          data-bs-dismiss="offcanvas"
+        >
+          <h3 class="text-primary font-24-16 clickable-heading">
+            Get in touch
+            <div class="headingCTA">
+              <button class="blueCTA"></button>
+            </div>
+          </h3>
+        </a>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <hr />
+      <div class="offcanvas-body">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header mx-4" id="flush-headingOne">
+              <button
+                class="accordion-button collapsed font-28-20"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                <div>Services</div>
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body p-0">
+                <!-- Service Section -->
+                <div class="accordion accordion-flush" id="accordionServices">
+                  <div class="accordion-item-Insurance" style="background: rgba(228, 228, 255, 1);">
+                    <h2 class="accordion-header mx-4" id="flush-Insurance">
+                      <button
+                        class="accordion-button collapsed font-28-20"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#Insurance"
+                        aria-expanded="false"
+                        aria-controls="Insurance"
+                      >
+                        <div>Insurance</div>
+                      </button>
+                    </h2>
+                    <div
+                      id="Insurance"
+                      class="accordion-collapse collapse bg-white"
+                      aria-labelledby="flush-Insurance"
+                      data-bs-parent="#accordionServices"
+                    >
+                      <div class="accordion-body p-0 mx-2">
+                        <ul
+                          class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                        >
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#Insurance"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="[
+                                '/services/insurance-bpo-outsourcing'
+                              ]"
+                              data-bs-dismiss="offcanvas"
+                              >Insurance BPO</a
+                            >
+                          </li>
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#Insurance"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="[
+                                '/services/insurance-policy-processing'
+                              ]"
+                              data-bs-dismiss="offcanvas"
+                              >Policy Processing</a
+                            >
+                          </li>
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#Insurance"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="[
+                                '/services/insurance-claim-management'
+                              ]"
+                              data-bs-dismiss="offcanvas"
+                              >Claims Management</a
+                            >
+                          </li>
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#Insurance"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="[
+                                '/services/insurance-agency-optimization-services'
+                              ]"
+                              data-bs-dismiss="offcanvas"
+                              >Agency Optimization</a
+                            >
+                          </li>
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#Insurance"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="[
+                                '/services/insurance-new-business-servicing'
+                              ]"
+                              data-bs-dismiss="offcanvas"
+                              >New Business</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item-Insurance" style="background: rgba(228, 228, 255, 0.5);">
+                    <h2 class="accordion-header mx-4" id="flush_Accounting">
+                      <button
+                        class="accordion-button collapsed font-28-20"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-Accounting"
+                        aria-expanded="false"
+                        aria-controls="Accounting"
+                      >
+                        <div>Accounting</div>
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-Accounting"
+                      class="accordion-collapse collapse bg-white"
+                      aria-labelledby="flush-E_commerce"
+                      data-bs-parent="#accordionServices"
+                    >
+                      <div class="accordion-body p-0 mx-2">
+                        <ul
+                          class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                        >
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-Accounting"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="[
+                                '/services/accounting-bookkeeping-services'
+                              ]"
+                              data-bs-dismiss="offcanvas"
+                              >Accounting & Bookkeeping</a
+                            >
+                          </li>
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-Accounting"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="[
+                                '/services/accounts-payable-management'
+                              ]"
+                              data-bs-dismiss="offcanvas"
+                              >Payable Management</a
+                            >
+                          </li>
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-Accounting"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="[
+                                '/services/accounts-receivable-management'
+                              ]"
+                              data-bs-dismiss="offcanvas"
+                              >Receivable Management</a
+                            >
+                          </li>
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-Accounting"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="[
+                                '/services/accounting-and-financial-reporting-services'
+                              ]"
+                              data-bs-dismiss="offcanvas"
+                              >Financial Reporting</a
+                            >
+                          </li>
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-Accounting"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="[
+                                '/services/payroll-processing-services'
+                              ]"
+                              data-bs-dismiss="offcanvas"
+                              >Payroll Processing</a
+                            >
+                          </li>
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-Accounting"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="[
+                                '/services/accounts-reconciliation-services'
+                              ]"
+                              data-bs-dismiss="offcanvas"
+                              >Reconciliation</a
+                            >
+                          </li>
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-Accounting"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="[
+                                '/services/general-ledger-accounting-services'
+                              ]"
+                              data-bs-dismiss="offcanvas"
+                              >General Ledger Accounting</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item-Insurance" style="background: rgba(228, 228, 255, 0.3);">
+                    <h2 class="accordion-header mx-4" id="flush_Other">
+                      <button
+                        class="accordion-button collapsed font-28-20"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-Other"
+                        aria-expanded="false"
+                        aria-controls="Other"
+                      >
+                        <div>Other Service</div>
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-Other"
+                      class="accordion-collapse collapse bg-white"
+                      aria-labelledby="flush-Other"
+                      data-bs-parent="#accordionServices"
+                    >
+                      <div class="accordion-body p-0 mx-2">
+                        <ul
+                          class="btn-toggle-nav fw-normal pb-1 small list-unstyled"
+                        >
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-Other"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="['/bpm-and-bpo-services']"
+                              data-bs-dismiss="offcanvas"
+                              >Bpm-and-Bpo-Services</a
+                            >
+                          </li>
+                          
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-Other"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="[
+                                '/services/data-annotation-services'
+                              ]"
+                              data-bs-dismiss="offcanvas"
+                              >Data Annotation</a
+                            >
+                          </li>
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-Other"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="[
+                                '/services/recruitment-process-outsourcing-services'
+                              ]"
+                              data-bs-dismiss="offcanvas"
+                              >Recruitment</a
+                            >
+                          </li>
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-Other"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="[
+                                '/services/customer-support-outsourcing'
+                              ]"
+                              data-bs-dismiss="offcanvas"
+                              >Customer Support</a
+                            >
+                          </li>
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-Other"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="['/services/digital-marketing']"
+                              data-bs-dismiss="offcanvas"
+                              >Digital Marketing</a
+                            >
+                          </li>
+                          <li
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-Other"
+                            aria-expanded="false"
+                          >
+                            <a
+                              class="btn btn-toggle align-items-center rounded font-24-16"
+                              [routerLink]="['/services/e-commerce-outsourcing-services']"
+                              data-bs-dismiss="offcanvas"
+                              >E-Commerce</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-Accounting"
+              aria-expanded="false"
+              aria-controls="Accounting"
+            >
+              <h2 class="accordion-header mx-4" id="Thinking">
+                <button
+                  class="accordion-button collapsed font-28-20"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-Thinking"
+                  aria-expanded="false"
+                  aria-controls="flush-Thinking"
+                >
+                  <div>Thinking</div>
+                </button>
+              </h2>
+            </div>
+            <div
+              id="flush-Thinking"
+              class="accordion-collapse collapse bg-white"
+              aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body p-0 mx-3">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-Thinking"
+                    aria-expanded="false"
+                  >
+                    <a
+                      class="btn btn-toggle align-items-center rounded font-24-16"
+                      [routerLink]="['/blogs']"
+                      data-bs-dismiss="offcanvas"
+                      >Blog</a
+                    >
+                  </li>
+                  <li
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-Thinking"
+                    aria-expanded="false"
+                  >
+                    <a
+                      class="btn btn-toggle align-items-center rounded font-24-16"
+                      [routerLink]="['/case-studies']"
+                      data-bs-dismiss="offcanvas"
+                      >Client Stories</a
+                    >
+                  </li>
+                  <li
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-Thinking"
+                    aria-expanded="false"
+                  >
+                    <a
+                      class="btn btn-toggle align-items-center rounded font-24-16"
+                      [routerLink]="['/podcast']"
+                      data-bs-dismiss="offcanvas"
+                      >Podcast</a
+                    >
+                  </li>
+                  <li
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-Thinking"
+                    aria-expanded="false"
+                  >
+                    <a
+                      class="btn btn-toggle align-items-center rounded font-24-16"
+                      [routerLink]="['/news']"
+                      data-bs-dismiss="offcanvas"
+                      >In the news</a
+                    >
+                  </li>
+                  <li
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-Thinking"
+                    aria-expanded="false"
+                  >
+                    <a
+                      class="btn btn-toggle align-items-center rounded font-24-16"
+                      [routerLink]="['/client-testimonial-reviews']"
+                      data-bs-dismiss="offcanvas"
+                      >Videos</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header mx-4" id="flush_About">
+              <button
+                class="accordion-button collapsed font-28-20"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-About"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                <div>About</div>
+              </button>
+            </h2>
+            <div
+              id="flush-About"
+              class="accordion-collapse collapse bg-white"
+              aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body p-0 mx-3">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-About"
+                    aria-expanded="false"
+                  >
+                    <a
+                      class="btn btn-toggle align-items-center rounded font-24-16"
+                      [routerLink]="['/about-who-we-are']"
+                      data-bs-dismiss="offcanvas"
+                      >Who we are</a
+                    >
+                  </li>
+                  <li
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-About"
+                    aria-expanded="false"
+                  >
+                    <a
+                      class="btn btn-toggle align-items-center rounded font-24-16"
+                      [routerLink]="['/our-leadership']"
+                      data-bs-dismiss="offcanvas"
+                      >Leadership</a
+                    >
+                  </li>
+                  <li
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-About"
+                    aria-expanded="false"
+                  >
+                    <a
+                      class="btn btn-toggle align-items-center rounded font-24-16"
+                      [routerLink]="['/csr-social-responsibilities']"
+                      data-bs-dismiss="offcanvas"
+                      >Social Responsibility</a
+                    >
+                  </li>
+                  <li
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-About"
+                    aria-expanded="false"
+                  >
+                    <a
+                      class="btn btn-toggle align-items-center rounded font-24-16"
+                      [routerLink]="['/life-at-fbspl']"
+                      data-bs-dismiss="offcanvas"
+                      >Life at FBSPL</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <!-- <ul class="list-unstyled fw-normal mx-4 py-2">
+            <li>
+              <a
+                class="align-items-center rounded font-28-20 ms-md-3"
+                [routerLink]="['/careers/current-openings']"
+                data-bs-dismiss="offcanvas"
+                >Career</a
+              >
+            </li>
+          </ul> -->
+          <h2 class="accordion-header py-2 career_margin" id="Thinking">
+            <a
+            class="font-24-16"
+            [routerLink]="['/careers/current-openings']"
+            data-bs-dismiss="offcanvas"
+            >Career</a
+          >
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

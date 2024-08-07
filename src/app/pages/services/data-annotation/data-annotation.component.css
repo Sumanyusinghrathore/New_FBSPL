@@ -1,0 +1,257 @@
+.overlay-text {
+    position: absolute;
+    top: 38%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+  }
+  .policy-process-service {
+    background-color: var(--primary);
+  }
+  
+  .ul-policy {
+    list-style: none;
+    padding-left: 0px;
+  }
+  
+  .service_btn{
+    margin-left: auto;
+    padding: 0.5rem 1rem;
+  }
+  
+  .policy-processing {
+    background-color: #e6e6ff;
+    border-radius: 25px;
+  }
+  
+  .Policy-Processing {
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(100%);
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  
+  .Policy-Processing.show {
+    transform: translateX(0%);
+    padding-right: 0px !important;
+  }
+  
+  @keyframes trustedScroll {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  
+  .trusted-slider-logo {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+  }
+  
+  .trusted-slider-logo .trusted-slide-track {
+    animation: trustedScroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+  
+  .trusted-slider-logo .trust-slide {
+    height: 150px;
+    min-width: 240px;
+    border: none;
+  }
+  
+  .trust-slide {
+    margin: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 0.3s ease;
+  }
+  
+  .trust-slide img {
+    height: fit-content;
+  }
+  
+  .card.insurance-card.policy-process-card {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--secondary);
+    border-radius: 20px;
+  }
+  
+  .Policy_Issuance {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Data Annotation/Text Annotation.webp");
+    background-position: bottom right 0rem !important;
+    background-size: 70% !important;
+  }
+  
+  .Policy-Checking {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Data Annotation/Video Annotation.webp");
+    background-position: bottom right 0rem !important;
+    background-size: 70% !important;
+  }
+  .Loss_Runs_Processing {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Data Annotation/Image Annotation.webp");
+    background-position: bottom right 0rem !important;
+    background-size: 70% !important;
+  }
+  
+  /* .Policy_Renewals {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Sub-service-Pages/Policy-Renewals.png");
+  }
+  
+  .Policy_Management {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Sub-service-Pages/Policy-Management.png");
+  }
+  
+  .Policy_Endorsements {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Sub-service-Pages/Policy-Endorsements.png");
+  }
+   */
+  
+  .policy-dialog {
+    max-width: inherit;
+  }
+  
+  .modal-content {
+    border: none;
+    border-radius: 10px;
+    background-color: #f3f3ff;
+  }
+  
+  .arrow-img {
+    padding-right: 10px;
+  }
+  
+  .card.insurance-card.policy-process-card .card-body-policy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#e6e6ff 15%, transparent);
+    opacity: 0;
+    padding: 20px;
+    transition: opacity 0.3s ease;
+  }
+  .policy-header {
+    border: none;
+    justify-content: end;
+    place-content: flex-end;
+  }
+
+  .close_btn{
+    cursor: pointer;
+  }
+
+  .vector{
+    position: absolute;
+    right: -5%;
+  }
+
+  .policy-processing-services-card {
+    position: relative;
+    min-height: 100vh;
+    background-color: #f3f3ff;
+    margin: 10px;
+    box-sizing: border-box;
+    border: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  
+  
+  .btn_hover{
+    display: none;
+  }
+  
+  .insurance-card:hover .btn_hover {
+    display: block; /* Show the button on card hover */
+  }
+  
+  .policy-processing-services-card-mob {
+    position: relative;
+    min-height: 85vh;
+    background-color: #f3f3ff;
+    margin: 10px;
+    box-sizing: border-box;
+    border: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 90%;
+  }
+  
+  .policy-processing-services-card .imgBx {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    right: 0;
+  }
+  
+  .policy-processing-services-card .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    object-fit: cover;
+  }
+  
+  .policy-processing-services-card .details {
+    position: absolute;
+    left: 0; /* Changed from right: 0 */
+    width: 65%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .policy-processing-services-card .details .content {
+    box-sizing: border-box;
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+
+  
+    .policy-processing-services-card .imgBx {
+      position: relative;
+      width: 50%;
+      height: 200px;
+      right: auto; /* Reset right property */
+      left: auto; /* Reset left property */
+    }
+  
+    .policy-processing-services-card .details {
+      position: relative;
+      width: 100%;
+      right: auto; /* Reset right property */
+      left: auto; /* Reset left property */
+    }
+   
+    .trusted-slider-logo .trust-slide {
+      min-width:180px !important;
+      width:180px !important;
+    }
+    .trust-slide {
+      margin: 10px;
+    }
+  }
+  .image_img {
+    max-width: 100%;
+    height: auto;
+  }
+  .list-item {
+    display: flex;
+    align-items: center; /* Vertically center the image and text */
+  }

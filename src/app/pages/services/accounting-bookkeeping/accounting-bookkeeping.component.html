@@ -1,0 +1,591 @@
+<ngx-slick-carousel class="service_slider carousel d-none d-lg-block container-fluid" #slickModal="slick-carousel"
+  [config]="slideConfig">
+  <div class="container-fluid text-dark" ngxSlickItem *ngFor="let slides of slides">
+    <div class="container gradientBanner">
+      <img  src="{{ slides.img }}" alt="{{slides.alt}}" class="desktop-banner" />
+      <div class="card-img-overlay overlay-text bannerText">
+          <div class="main_bannar my-4 ms-3"  data-aos="fade-up" >
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                <li class="breadcrumb-item"><a routerLink="/bpm-and-bpo-services">Services</a></li>
+                <li class="breadcrumb-item active"><a aria-current="page">Accounting & Bookkeeping</a></li>
+              </ol>
+            </nav>
+            <a href={{slides.Link}} class="CTA-Zindex anchorCTA">
+              <h3 *ngIf="!slides.banner" class="text-primary font-34-19 my-auto clickable-heading">
+                {{ slides.Title }}
+                <div class="headingCTA">
+                  <button class="blueCTA"></button>
+                </div>
+              </h3>
+              <h3 *ngIf="slides.banner" class="text-primary font-34-19 my-auto">
+                {{ slides.Title }}
+              </h3>
+            </a>
+            <p class="card-text font-20-16 mt-4">{{ slides.Description }}</p>
+            <a *ngIf="slides.banner" [routerLink]="slides.Link" class="CTA-Zindex anchorCTA ">
+              <h3 class="text-primary font-24-16 clickable-heading">
+                {{ slides.accounting }}
+                <div class="headingCTA">
+                  <button class="blueCTA"></button>
+                </div>
+              </h3>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>
+<!-- Mobile View -->
+<ngx-slick-carousel class="container carousel  d-block d-lg-none pb-5 mb-5 blog_slider" #slickModal="slick-carousel"
+  [config]="slideConfig">
+  <div class="text-dark slide" ngxSlickItem *ngFor="let slidesmob of slides">
+    <div class="gradientBannerMob d-flex justify-content-center">
+      <img  src="{{ slidesmob.img_mob }}" alt="{{slidesmob.alt}}" class="card-img-mob" />
+      <div class="overlay-text-Mob bannerTextMob">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+            <li class="breadcrumb-item"><a routerLink="/bpm-and-bpo-services">Services</a></li>
+            <li class="breadcrumb-item active"><a aria-current="page">Accounting & Bookkeeping</a></li>
+          </ol>
+        </nav>
+        <a href={{slidesmob.Link}} class="CTA-Zindex anchorCTA">
+          <h3 *ngIf="!slidesmob.banner" class="text-primary font-34-19 my-auto clickable-heading">
+            {{ slidesmob.Title }}
+            <div class="headingCTA">
+              <button class="blueCTA"></button>
+            </div>
+          </h3>
+          <h3 *ngIf="slidesmob.banner" class="text-primary font-34-19 my-auto">
+            {{ slidesmob.Title }}
+          </h3>
+        </a>
+        <p class="card-text font-20-16">{{ slidesmob.Description }}</p>
+        <a *ngIf="slidesmob.banner" [routerLink]="slidesmob.Link" class="CTA-Zindex anchorCTA">
+          <h3 class="text-primary font-24-16 clickable-heading">
+            {{ slidesmob.accounting }}
+            <div class="headingCTA">
+              <button class="blueCTA"></button>
+            </div>
+          </h3>
+        </a>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>
+<app-ourAssets></app-ourAssets>
+
+
+<section class="bg-primary text-white py-6">
+  <div class="container px-4">
+    <h4 class="font-48-30 mb-3 text-white" data-aos="fade-up">Current Accounting & Bookkeeping Challenges </h4>
+    <div class="row">
+      <div class="row text-center d-none d-md-flex" >
+        <div class="col-lg-3 col-6" data-aos="fade-right" data-aos-delay="0">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">20%</p>
+            <p class="">
+              CFOs consider budgeting and forecasting among their top challenges in financial management.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6" data-aos="fade-right"  data-aos-delay="200">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">61%</p>
+            <p class="">
+              Small businesses struggle with cash flow management, which leads to challenges in paying bills.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6" data-aos="fade-right"  data-aos-delay="400">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">54%</p>
+            <p class="">
+              Survey respondents say the reporting involves huge amounts of manual checking on every change.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6" data-aos="fade-right"  data-aos-delay="600">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">60%</p>
+            <p class="">
+              Respondents say they spend too much time cleaning and manipulating accounting and bookkeeping data.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="d-md-none">
+        <div class="text-white text-start"  data-aos="fade-right">
+          <p class="font-48-30 fw-bolder mb-1">20%</p>
+          <p class="">
+            CFOs consider budgeting and forecasting among their top challenges in financial management.
+          </p>
+        </div>
+        <div class="text-white text-start"  data-aos="fade-right">
+          <p class="font-48-30 fw-bolder mb-1">61%</p>
+          <p class="">
+            Small businesses struggle with cash flow management, which leads to challenges in paying bills.
+          </p>
+        </div>
+        <div class="text-white text-start"  data-aos="fade-right">
+          <p class="font-48-30 fw-bolder mb-1">54%</p>
+          <p class="">
+            Survey respondents say the reporting involves huge amounts of manual checking on every change.
+          </p>
+        </div>
+        <div class="text-white text-start"  data-aos="fade-right">
+          <p class="font-48-30 fw-bolder mb-1">60%</p>
+          <p class="">
+            Respondents say they spend too much time cleaning and manipulating accounting and bookkeeping data.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-2 pt-5">
+  <h2 class="text-primary font-48-30 mb-4"  data-aos="fade-up">
+    Experience Precision with Accounting & Bookkeeping Services
+  </h2>
+  <div class="d-none d-lg-block">
+    <div class="row">
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3"  data-aos="zoom-in">
+        <div class="card insurance-card policy-process-card p-3 Policy_Processing">
+          <a routerLink="/services/accounts-payable-management" class="CTA-Zindex anchorCTA mb-3 p-2">
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Account Payable
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <p class="card-body-policy text-black font-20-16 ms-2">
+            Improve cashflows, boost compliance, and transform your customer experiences with <a class="anchor"
+              target="_blank"  routerLink="/services/accounts-payable-management">our account payable services.</a> Get
+            superior accounting payable outcomes.
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div class="card insurance-card policy-process-card p-3 Claims_Management">
+          <a routerLink="/services/accounts-receivable-management" class="CTA-Zindex anchorCTA mb-3 p-2">
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Account Receivable
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <p class="card-body-policy text-black font-20-16 ms-2">
+            Increase your working capital with <a class="anchor" target="_blank"
+            routerLink="/services/accounts-receivable-management">account receivable management services</a>. Our
+            standardized workflows and streamlined solutions help businesses thrive.
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div class="card insurance-card policy-process-card p-3 Insurance_Accounting">
+          <a routerLink="/services/accounting-and-financial-reporting-services" class="CTA-Zindex anchorCTA mb-3 p-2">
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Financial Reporting
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <p class="card-body-policy text-black font-20-16 ms-2">
+            Say goodbye to accounting errors! Let us manage your insurance accounting services and <a class="anchor"
+              target="_blank" routerLink="/services/accounting-and-financial-reporting-services">financial reporting</a>
+            while you focus on strategic growth initiatives.
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div class="card insurance-card policy-process-card p-3 Agency_Management">
+          <a routerLink="/services/payroll-processing-services" class="CTA-Zindex anchorCTA mb-3 p-2">
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Payroll Processing
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <p class="card-body-policy text-black font-20-16 ms-2">
+            Ensure accurate and timely disbursements with the best <a class="anchor" target="_blank"
+              routerLink="/services/payroll-processing-services">payroll processing outsourcing services</a>. With us at
+            your service, you attain 99% payroll accuracy.
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div class="card insurance-card policy-process-card p-3 New_Business">
+          <a routerLink="/services/accounts-reconciliation-services" class="CTA-Zindex anchorCTA mb-3 p-2">
+            <div class="d-flex align-items-center">
+              <h3 class="text-black font-28-20 my-auto clickable-heading">
+                Account Reconciliation
+                <div class="headingCTA">
+                  <button class="blueCTA"></button>
+                </div>
+              </h3>
+            </div>
+          </a>
+          <p class="card-body-policy text-black font-20-16 ms-2">
+            Experience seamless and accurate financial management with our <a class="anchor" target="_blank"
+              routerLink="/services/accounts-reconciliation-services">account reconciliation services</a>. We maintain 100%
+            accuracy in financial statements.
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div class="card insurance-card policy-process-card p-3 Customer_Support">
+          <a routerLink="/services/general-ledger-accounting-services" class="CTA-Zindex anchorCTA mb-3 p-2">
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              General Ledger Accounting
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <p class="card-body-policy text-black font-20-16 ms-2">
+            Take strategic decisions, meet compliance and generate accurate reports with our exceptional <a
+              class="anchor" target="_blank" routerLink="/services/general-ledger-accounting-services">outsourced general
+              ledger accounting services. </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Mobile View -->
+<div class="container d-block d-lg-none">
+  <div class="row">
+    <div class="col-12 mt-0 mt-sm-4">
+      <div class="accordion" id="AccountPage">
+        <div class="policy-processing" data-aos="zoom-in">
+          <div data-bs-toggle="collapse" data-bs-target="#Account_Payable" aria-expanded="true"
+            aria-controls="Account_Payable" id="headingOne" class="headingCTA CTA-Zindex d-flex p-3">
+            <h3 class="CTAs text-black fs-24">Account Payable </h3>
+            <button class="blueCTA service_btn"><a routerLink="/services/accounts-payable-management"
+                class="CTA-Zindex anchorCTA mb-3 p-3">
+              </a></button>
+          </div>
+          <div id="Account_Payable" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-bs-parent="#AccountPage">
+            <div class="accordion-body pt-0">
+              <p class="text-black fs-16 ">
+                Improve cashflows, boost compliance, and transform your customer experiences with <a class="anchor"
+                  target="_blank" routerLink="/services/accounts-payable-management">our account payable services.</a> Get
+                superior accounting payable outcomes.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div data-bs-toggle="collapse" data-bs-target="#Account_Receivable" aria-expanded="true"
+            aria-controls="Account_Receivable" id="headingOne" class="headingCTA CTA-Zindex d-flex p-3">
+            <h3 class="CTAs text-black fs-24">Account Receivable </h3>
+            <button class="blueCTA service_btn"><a routerLink="/services/accounts-receivable-management"
+                class="CTA-Zindex anchorCTA mb-3 p-3">
+              </a></button>
+          </div>
+          <div id="Account_Receivable" class="accordion-collapse collapse" aria-labelledby="headingtwo"
+            data-bs-parent="#AccountPage">
+            <div class="accordion-body pt-0">
+              <p class="text-black fs-16 ">
+                Increase your working capital with <a class="anchor" target="_blank"
+                  routerLink="/services/accounts-receivable-management">account receivable management services</a>. Our
+                standardized workflows and streamlined solutions help businesses thrive.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div data-bs-toggle="collapse" data-bs-target="#Financial" aria-expanded="true" aria-controls="Financial"
+            id="headingOne" class="headingCTA CTA-Zindex d-flex p-3">
+            <h3 class="CTAs text-black fs-24">
+              Financial Reporting
+            </h3>
+            <button class="blueCTA service_btn"><a routerLink="/services/accounting-and-financial-reporting-services"
+                class="CTA-Zindex anchorCTA mb-3 p-3">
+              </a></button>
+          </div>
+          <div id="Financial" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#AccountPage">
+            <div class="accordion-body pt-0">
+              <p class="text-black fs-16 ">
+                Say goodbye to accounting errors! Let us manage your insurance accounting services and <a class="anchor"
+                  target="_blank" routerLink="/services/accounting-and-financial-reporting-services">financial reporting</a>
+                while you focus on strategic growth initiatives.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div data-bs-toggle="collapse" data-bs-target="#Payroll" aria-expanded="true" aria-controls="Payroll"
+            id="headingOne" class="headingCTA CTA-Zindex d-flex p-3">
+            <h3 class="CTAs text-black fs-24">Payroll Processing</h3>
+            <button class="blueCTA service_btn"><a routerLink="/services/payroll-processing-services"
+                class="CTA-Zindex anchorCTA mb-3 p-3">
+              </a></button>
+          </div>
+          <div id="Payroll" class="accordion-collapse collapse" aria-labelledby="headingfour"
+            data-bs-parent="#AccountPage">
+            <div class="accordion-body pt-0">
+              <p class="text-black fs-16 ">
+                Ensure accurate and timely disbursements with the best <a class="anchor" target="_blank"
+                  routerLink="/services/payroll-processing-services">payroll processing outsourcing services</a>. With us at
+                your service, you attain 99% payroll accuracy.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div data-bs-toggle="collapse" data-bs-target="#Account" aria-expanded="true" aria-controls="Account"
+            id="headingOne" class="headingCTA CTA-Zindex d-flex p-3">
+            <h3 class="CTAs text-black fs-24">Account Reconciliation</h3>
+            <button class="blueCTA service_btn"><a routerLink="/services/accounts-reconciliation-services"
+                class="CTA-Zindex anchorCTA mb-3 p-3">
+              </a></button>
+          </div>
+          <div id="Account" class="accordion-collapse collapse" aria-labelledby="headingfour"
+            data-bs-parent="#AccountPage">
+            <div class="accordion-body pt-0">
+              <p class="text-black fs-16 ">
+                Experience seamless and accurate financial management with our <a class="anchor" target="_blank"
+                routerLink="/services/accounts-reconciliation-services">account reconciliation services</a>. We maintain
+                100% accuracy in financial statements.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div data-bs-toggle="collapse" data-bs-target="#Customer" aria-expanded="true" aria-controls="Customer"
+            id="headingOne" class="headingCTA CTA-Zindex d-flex p-3">
+            <h3 class="CTAs text-black fs-24">General Ledger Accounting</h3>
+            <button class="blueCTA service_btn"><a routerLink="/services/general-ledger-accounting-services"
+                class="CTA-Zindex anchorCTA mb-3 p-3">
+              </a></button>
+          </div>
+          <div id="Customer" class="accordion-collapse collapse" aria-labelledby="headingfour"
+            data-bs-parent="#AccountPage">
+            <div class="accordion-body pt-0">
+              <p class="text-black fs-16 ">
+                Take strategic decisions, meet compliance and generate accurate reports with our exceptional <a
+                  class="anchor" target="_blank" routerLink="/services/general-ledger-accounting-services">outsourced general
+                  ledger accounting services</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="container py-5">
+  <h2 class="text-primary font-48-30 mb-4" data-aos="fade-up">Tools That Drive Excellence</h2>
+  <div class="d-none d-xl-flex">
+    <div class="row">
+      <div class="col-lg-2 col-md-3" data-aos="fade-right" data-aos-delay="0">
+        <img class="img-fluid" alt="Accounting & Bookkeeping tool Zoho  " appCdnUrl="assets/Tools/zoho.svg" />
+      </div>
+      <div class="col-lg-2 col-md-3" data-aos="fade-right" data-aos-delay="100">
+        <img class="img-fluid" alt="Accounting & Bookkeeping tool QuickBooks "  appCdnUrl="assets/Tools/quickbooks.svg" />
+      </div>
+      <div class="col-lg-2 col-md-3" data-aos="fade-right" data-aos-delay="200">
+        <img class="img-fluid" alt="Accounting & Bookkeeping tool NetSuite " appCdnUrl="assets/Tools/netsuite.svg" />
+      </div>
+      <div class="col-lg-2 col-md-3" data-aos="fade-right" data-aos-delay="300">
+        <img class="img-fluid" alt="Accounting & Bookkeeping tool odoo " appCdnUrl="assets/Tools/odoo.svg"/>
+      </div>
+      <div class="col-lg-2 col-md-3" data-aos="fade-right" data-aos-delay="400">
+        <img class="img-fluid" alt="Accounting & Bookkeeping tool xero " appCdnUrl="assets/Tools/xero.svg" />
+      </div>
+    </div>
+  </div>
+  <div class="d-flex d-xl-none">
+    <div class="trusted-slider-logo">
+      <div class="trusted-slide-track">
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="0">
+          <img class="img-fluid" alt="Accounting & Bookkeeping tool Zoho  " appCdnUrl="assets/Tools/zoho.svg" />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="100">
+          <img class="img-fluid" alt=" Accounting & Bookkeeping tool QuickBooks   " appCdnUrl="assets/Tools/quickbooks.svg" />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="200">
+          <img class="img-fluid" alt=" Accounting & Bookkeeping tool NetSuite " appCdnUrl="assets/Tools/netsuite.svg"  />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="300">
+          <img class="img-fluid" alt="Accounting & Bookkeeping tool odoo " appCdnUrl="assets/Tools/odoo.svg"  />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="400">
+          <img class="img-fluid" alt="Accounting & Bookkeeping tool xero " appCdnUrl="assets/Tools/xero.svg" />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="0">
+          <img class="img-fluid" alt="Accounting & Bookkeeping tool Zoho  " appCdnUrl="assets/Tools/zoho.svg" />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="100">
+          <img class="img-fluid" alt=" Accounting & Bookkeeping tool QuickBooks   " appCdnUrl="assets/Tools/quickbooks.svg" />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="200">
+          <img class="img-fluid" alt=" Accounting & Bookkeeping tool NetSuite " appCdnUrl="assets/Tools/netsuite.svg"  />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="300">
+          <img class="img-fluid" alt="Accounting & Bookkeeping tool odoo " appCdnUrl="assets/Tools/odoo.svg"  />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="400">
+          <img class="img-fluid" alt="Accounting & Bookkeeping tool xero " appCdnUrl="assets/Tools/xero.svg" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Thinking -->
+<app-service-case-study [category]="[{ category: 'accountingandbookkeeping' }]"></app-service-case-study>
+<!-- Know best -->
+<app-know-best
+  [cards]="[
+    { description: 'FBSPL transformed our operations quickly. Their exceptional administrative support, bookkeeping, and recruiting services significantly improved our processes and boosted lead conversion rates. Their integrity, professionalism, and tailored approach set them apart, making them valuable partners in our growth. ',
+    name: 'Francesca Furlanetto', designation: 'Director Owner'
+   },
+    { description: 'As the Director of Accounting for an E&S Insurance Company, I connected with FBSPL to support our monthly manual processes. Their team has been a game-changer, enabling us to meet deadlines and improve workflows. The team quickly adapted and delivered high-quality work with over 95% accuracy. Their dedication and service-oriented approach have been invaluable to our growing company. ',
+    name: 'Monica Spivey', designation: 'Directory of Accounting'
+   },
+ 
+  ]"
+  [videos]="[
+    { 
+     thumbnail: 'assets/thumbnail-know-best/Client Testimonials YT 10 Francesca Furlanetto.jpg',
+     alt:'Listen to our client '
+     },
+     {
+     
+      thumbnail: 'assets/thumbnail-know-best/Client Testimonials YT 09 Monica Spivey.jpg',
+      alt:'Our Success Stories '
+    },
+  ]">
+</app-know-best>
+
+<section class="py-6">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6" data-aos="fade-right">
+        <app-faq></app-faq>
+      </div>
+      <div class="col-12 col-md-6 mt-3 mt-md-0"  data-aos="fade-left">
+        <div class="accordion" id="accordionFAQ">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button font-28-20" type="button" data-bs-toggle="collapse"
+                data-bs-target="#Industries" aria-expanded="true" aria-controls="Industries">
+                What are the benefits of our accounting & bookkeeping outsourcing services?
+              </button>
+            </h2>
+            <div id="Industries" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+              data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                If you are wondering whether we will be the best fit for your accounting and bookkeeping needs, here’s
+                what you should know. While choosing us, you can get ample benefits, including -
+                <ul class="pt-3">
+                  <li>Multi-currency accounting </li>
+                  <li>Hourly services</li>
+                  <li>Centralized accounting</li>
+                  <li>Intercompany reconciliations </li>
+                  <li>Tailor-made solutions </li>
+                  <li>All-in-one expertise </li>
+                  <li>99% accuracy </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button font-28-20 collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#Services" aria-expanded="false" aria-controls="Services">
+                What are the major tools or software you have worked on?
+              </button>
+            </h2>
+            <div id="Services" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                Although our accounting and bookkeeping experts are well-versed in working on any tool or software, here
+                is a set of tools we have worked on so far -
+                <ul class="pt-3">
+                  <li><a class="anchor" target="_blank" href="/blogs/how-to-use-quickbooks-for-your-business-and-how-is-it-different-from-other-accounting-software">QuickBooks</a> </li>
+                  <li>Zoho </li>
+                  <li>Oddo </li>
+                  <li>Sage </li>
+                  <li>NetSuite </li>
+                  <li>Xero </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button font-28-20 collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#About" aria-expanded="false" aria-controls="About">
+                What are the industries where you can avail our outsourcing accounting and bookkeeping services?
+              </button>
+            </h2>
+            <div id="About" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                Here are the major industries to whom we cater accounting and bookkeeping services.
+                <ul class="pt-3">
+                  <li>Consulting </li>
+                  <li>Healthcare </li>
+                  <li>Hospitality </li>
+                  <li><a class="anchor" target="_blank" href="/services/insurance-bpo-outsourcing">Insurance</a> </li>
+                  <li><a class="anchor" target="_blank" href="/services/e-commerce-outsourcing-services">E-commerce </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button font-28-20 collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#Resources" aria-expanded="false" aria-controls="Resources">
+                Will outsourcing accounting and bookkeeping help cut operational costs?
+              </button>
+            </h2>
+            <div id="Resources" class="accordion-collapse collapse" aria-labelledby="headingFour"
+              data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                Yes, you can save huge costs with our outsourced bookkeeping and accounting solutions. We hold years of
+                expertise, and our professionals can ensure 99% accuracy with tailor-made solutions. Discuss your
+                project requirements with our experts and let us assist you with the best and most reasonable
+                  outsourcing services.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button font-28-20 collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#differentiators" aria-expanded="false" aria-controls="differentiators">
+                What are your key differentiators?
+              </button>
+            </h2>
+            <div id="differentiators" class="accordion-collapse collapse" aria-labelledby="headingFive"
+              data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                <ul class="pt-3">
+                  <li>Availability As Per Your Time Zone</li>
+                  <li>All-in-One Expertise</li>
+                  <li>Dedicated Staff</li>
+                  <li>99% Accuracy</li>
+                  <li>Tailor-Made Solutions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,824 @@
+<!-- <ngx-slick-carousel
+  class="service_slider carousel pt-5 d-none d-lg-block container-fluid"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+>
+  <div
+    class="container-fluid text-dark"
+    ngxSlickItem
+    *ngFor="let slides of slides"
+  >
+    <div class="container gradientBanner">
+      <img  appCdnUrl="{{ slides.img }}" class="card-img-desktop" />
+      <div class="card-img-overlay overlay-text">
+        <div class="row">
+          <div class="col-9">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page">
+                  <a href="/bpm-and-bpo-services">Services</a>
+                </li>
+                <li class="breadcrumb-item active">
+                  <a aria-current="page">Digital Marketing</a>
+                </li>
+              </ol>
+            </nav>
+            <a  [routerLink]="slides.Link" class="CTA-Zindex anchorCTA ">
+              <h3 *ngIf="!slides.banner" class="text-primary font-34-19 my-auto clickable-heading">
+                {{ slides.Title }}
+                <div class="headingCTA">
+                  <button class="blueCTA"></button>
+                </div>
+              </h3>
+              <h3 *ngIf="slides.banner" class="text-primary font-34-19 my-auto">
+                {{ slides.Title }}
+              </h3>
+            </a>
+            <p class="card-text font-20-16">{{ slides.Description }}</p>
+            <a *ngIf="slides.banner" [routerLink]="slides.Link" class="CTA-Zindex anchorCTA">
+              <h3 class="text-primary font-24-16 clickable-heading">
+                {{ slides.digitalmarketing }}
+                <div class="headingCTA">
+                  <button class="blueCTA"></button>
+                </div>
+              </h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>
+
+<ngx-slick-carousel
+  class="container carousel pt-5 d-block d-lg-none pb-5 mb-5"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+>
+  <div class="text-dark slide" ngxSlickItem *ngFor="let slidesmob of slides">
+    <div class="gradientBanner d-flex justify-content-center">
+      <img  appCdnUrl="{{ slidesmob.img_mob }}" class="card-img-mob" />
+      <div class="overlay-text-Mob">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Home</a></li>
+            <li class="breadcrumb-item" aria-current="page">
+              <a href="/bpm-and-bpo-services">Services</a>
+            </li>
+            <li class="breadcrumb-item active">
+              <a aria-current="page">Digital Marketing</a>
+            </li>
+          </ol>
+        </nav>
+        <a  [routerLink]="slidesmob.Link" class="CTA-Zindex anchorCTA">
+          <h3 *ngIf="!slidesmob.banner" class="text-primary font-34-19 my-auto clickable-heading">
+            {{ slidesmob.Title }}
+            <div class="headingCTA">
+              <button class="blueCTA"></button>
+            </div>
+          </h3>
+          <h3 *ngIf="slidesmob.banner" class="text-primary font-34-19 my-auto">
+            {{ slidesmob.Title }}
+          </h3>
+        </a>
+        <p class="card-text font-20-16">{{ slidesmob.Description }}</p>
+        <a *ngIf="slidesmob.banner" [routerLink]="slidesmob.Link" class="CTA-Zindex anchorCTA">
+          <h3 class="text-primary font-24-16 clickable-heading">
+            {{ slidesmob.digitalmarketing }}
+            <div class="headingCTA">
+              <button class="blueCTA ms-0"></button>
+            </div>
+          </h3>
+        </a>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel> -->
+<div class="container text-dark  d-none d-lg-block">
+  <div class="gradientBanner">
+    <img alt="B2B Digital Marketing Services"
+       appCdnUrl="assets/digital marketing/DM Main Banner 1.jpg"
+      class="card-img-desktop desktop-banner"
+    
+    />
+    <div class="card-img-overlay overlay-text bannerText">
+        <div class="main_bannar pt-3" >
+          <div data-aos="fade-up">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page">
+                  <a href="/bpm-and-bpo-services">Services</a>
+                </li>
+                <li class="breadcrumb-item active">
+                  <a aria-current="page">Digital Marketing</a>
+                </li>
+              </ol>
+            </nav>
+            <h1 class="card-text font-36-24 text-primary pt-3">
+              B2B Digital Marketing Services 
+            </h1>
+            <p class="card-text font-20-16 pt-3">
+             
+  
+  Create a digital experience that lasts longer! Overcome your growth stagnation, and witness increased ROI with our bespoke digital marketing services. We are not just about quick fixes; our digital marketing solutions aim for sustainable success.  
+            </p>
+            <a href="/book-free-consultation-call"class="CTA-Zindex anchorCTA">
+              <h3 class="text-primary font-24-16 clickable-heading">
+                Connect with Marketing Experts
+                <div class="headingCTA">
+                  <button class="blueCTA"></button>
+                </div>
+              </h3>
+            </a>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- Mobile View -->
+<div class="container text-dark slide d-block d-lg-none">
+  <div class="gradientBannerMob d-flex justify-content-center">
+    <img alt="B2B Digital Marketing Services"
+       appCdnUrl="assets/digital marketing/DM Main Banner Mobile copy.jpg"
+      class="card-img-mob"
+     
+    />
+    <div class="card-img-overlay overlay-text-Mob bannerTextMob">
+      <div data-aos="fade-up">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item" aria-current="page">
+            <a href="/bpm-and-bpo-services">Services</a>
+          </li>
+          <li class="breadcrumb-item active">
+            <a aria-current="page">Digital Marketing</a>
+          </li>
+        </ol>
+      </nav>
+      <h1 class="card-text font-36-24 text-primary">B2B Digital Marketing Services </h1>
+      <p class="card-text font-20-16">
+       Create a digital experience that lasts longer! Overcome your growth stagnation,
+ and witness increased ROI with our bespoke digital marketing services.
+ We are not just about quick fixes; our digital marketing solutions aim for sustainable success.  
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Our Assets -->
+<app-ourAssets></app-ourAssets>
+
+<section class="bg-primary text-white py-6">
+  <div class="container px-4">
+    <h4 class="font-48-30 mb-3 text-white" data-aos="fade-up">
+      Current Marketing Obstacles These Days
+    </h4>
+    <div class="row">
+      <div class="row text-center d-none d-md-flex">
+        <div class="col-lg-3 col-6" data-aos="fade-right" data-aos-delay="0">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">90%</p>
+            <p class="">
+              Organizations and businesses struggle to adapt quickly to market
+              changes.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6" data-aos="fade-right" data-aos-delay="200">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">16%</p>
+            <p class="">
+              Marketers agree it is very challenging to brainstorm new content
+              ideas for their business.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6" data-aos="fade-right" data-aos-delay="400">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">73%</p>
+            <p class="">
+              Businesses aren’t sure that their marketing strategy contributes
+              to their business goals.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6" data-aos="fade-right" data-aos-delay="600">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">54%</p>
+            <p class="">
+              SMBs need professional assistance with social media marketing
+              strategies.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="d-md-none">
+        <div class="text-white text-start" data-aos="fade-right" data-aos-delay="0">
+          <p class="font-48-30 fw-bolder mb-1">90%</p>
+          <p class="">
+            Organizations and businesses struggle to adapt quickly to market
+            changes.
+          </p>
+        </div>
+        <div class="text-white text-start" data-aos="fade-right" data-aos-delay="200">
+          <p class="font-48-30 fw-bolder mb-1">16%</p>
+          <p class="">
+            Marketers agree it is very challenging to brainstorm new content
+            ideas for their business.
+          </p>
+        </div>
+        <div class="text-white text-start" data-aos="fade-right" data-aos-delay="400">
+          <p class="font-48-30 fw-bolder mb-1">73%</p>
+          <p class="">
+            Businesses aren’t sure that their marketing strategy contributes to
+            their business goals.
+          </p>
+        </div>
+        <div class="text-white text-start" data-aos="fade-right" data-aos-delay="600">
+          <p class="font-48-30 fw-bolder mb-1">54%</p>
+          <p class="">
+            SMBs need professional assistance with social media marketing
+            strategies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-2 pt-5">
+  <h2 class="text-primary font-48-30 mb-4" id="Next-Gen-Digital-Marketing-Services" data-aos="fade-up" >
+    Next-Gen Digital Marketing Services
+  </h2>
+  <div class="d-none d-lg-block">
+    <div class="row">
+      <div class="col-sm-4 col-lg-4 col-md-4 py-3"  data-aos="zoom-in">
+        <div
+          class="card insurance-card policy-process-card p-3 Policy_Processing"
+        >
+          <h3
+            class="text-black font-28-20 clickable-heading CTA-Zindex"
+          >
+            Content Marketing
+          </h3>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Let the content be your brand voice! From writing SEO-optimized
+              web pages and blogs to interactive social media posts and banners,
+              get access to a complete package of content writing when you
+              outsource content marketing services to us.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-lg-4 col-md-4 py-3"  data-aos="zoom-in">
+        <div
+          class="card insurance-card policy-process-card p-3 Claims_Management"
+        >
+          <h3 class="text-black font-28-20 clickable-heading CTA-Zindex">
+            Graphic Designing
+          </h3>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Grab your customers' attention with attractive visuals! From
+              innovative social media creatives to interactive videos and
+              carousels, our designers draft creatives that never fail to grab
+              the user's attention. Get the best graphic design services.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-lg-4 col-md-4 py-3"  data-aos="zoom-in">
+        <div
+          class="card insurance-card policy-process-card p-3 Insurance_Accounting"
+        >
+          <h3 class="text-black font-28-20 clickable-heading CTA-Zindex">
+            SEO Services
+          </h3>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Mark your spot on the first page of search engine results! We
+              perform on-page & off-page seo activities and in-depth keyword
+              analysis to help businesses develop strong brand visibility and
+              traffic. Avail our result-oriented seo services now.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-lg-4 col-md-4 py-3"  data-aos="zoom-in">
+        <div
+          class="card insurance-card policy-process-card p-3 Agency_Management"
+        >
+          <h3 class="text-black font-28-20 clickable-heading CTA-Zindex">
+            UI/UX Designing
+          </h3>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Create a seamless user experience like never before! Whether you
+              need a website or mobile app design, our UI/UX designers can
+              create it all. Get user-centric designs aligned with your business
+              goals. Choose our UX/UI design services.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-sm-6 col-lg-4 col-md-6 py-3">
+        <div class="card insurance-card policy-process-card p-3 New_Business">
+          <a routerLink="/services/accounts-reconciliation-services" class="CTA-Zindex anchorCTA mb-3 p-2">
+            <h3 class="text-black me-3 font-36-24 my-auto clickable-heading">
+                Account Reconciliation
+              <div class="headingCTA">
+                <button class="blueCTA ms-0"></button>
+              </div>
+            </h3>
+          </a>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2 pt-5 mt-4">
+                Experience seamless and accurate financial management with our <a href="/services/accounts-reconciliation-services">account reconciliation services</a>. We maintain 100% accuracy in financial statements. 
+            </p>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="col-sm-12 col-lg-4 col-md-6 py-3">
+        <div
+          class="card insurance-card policy-process-card p-3 Customer_Support"
+        >
+          <a routerLink="/services/general-ledger-accounting-services" class="CTA-Zindex anchorCTA mb-3 p-2">
+            <h3 class="text-black me-3 font-36-24 my-auto clickable-heading">
+                General Ledger Accounting 
+              <div class="headingCTA">
+                <button class="blueCTA ms-0"></button>
+              </div>
+            </h3>
+          </a>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2 pt-5 mt-4">
+                Take strategic decisions, meet compliance and generate accurate reports with our exceptional <a href="/services/general-ledger-accounting-services">outsourced general ledger accounting services. </a>
+            </p>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+<!-- Mobile View -->
+<div class="container d-block d-lg-none">
+  <div class="row">
+    <div class="col-12 mt-0 mt-sm-4">
+      <div class="accordion" id="AccountPage">
+        <div class="policy-processing"  data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#Account_Payable"
+            aria-expanded="true"
+            aria-controls="Account_Payable"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">Content Marketing</h3>
+          </div>
+          <div
+            id="Account_Payable"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#AccountPage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Let the content be your brand voice! From writing SEO-optimized
+                web pages and blogs to interactive social media posts and
+                banners, get access to a complete package of content writing
+                when you outsource content marketing services to us.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4"  data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#Account_Receivable"
+            aria-expanded="true"
+            aria-controls="Account_Receivable"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">Graphic Designing </h3>
+          </div>
+          <div
+            id="Account_Receivable"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingtwo"
+            data-bs-parent="#AccountPage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Grab your customers' attention with attractive visuals! From
+                innovative social media creatives to interactive videos and
+                carousels, our designers draft creatives that never fail to grab
+                the user's attention. Get the best graphic design services.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4"  data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#Financial"
+            aria-expanded="true"
+            aria-controls="Financial"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">SEO Services</h3>
+          </div>
+          <div
+            id="Financial"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#AccountPage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Mark your spot on the first page of search engine results! We
+                perform on-page & off-page seo activities and in-depth keyword
+                analysis to help businesses develop strong brand visibility and
+                traffic. Avail our result-oriented seo services now.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4"  data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#Payroll"
+            aria-expanded="true"
+            aria-controls="Payroll"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">UI/UX Designing</h3>
+          </div>
+          <div
+            id="Payroll"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingfour"
+            data-bs-parent="#AccountPage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Create a seamless user experience like never before! Whether you
+                need a website or mobile app design, our UI/UX designers can
+                create it all. Get user-centric designs aligned with your
+                business goals. Choose our UX/UI design services.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="policy-processing mt-4">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#Account"
+            aria-expanded="true"
+            aria-controls="Account"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black me-3  font-34-19">Account Reconciliation</h3>
+            <button class="blueCTA service_btn"><a routerLink="/services/accounts-reconciliation-services" class="CTA-Zindex anchorCTA mb-3 p-3">
+            </a></button>
+          </div>
+          <div
+            id="Account"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingfour"
+            data-bs-parent="#AccountPage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Experience seamless and accurate financial management with our <a href="/services/accounts-reconciliation-services">account reconciliation services</a>. We maintain 100% accuracy in financial statements. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#Customer"
+            aria-expanded="true"
+            aria-controls="Customer"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black me-3  font-34-19">General Ledger Accounting</h3>
+            <button class="blueCTA service_btn"><a routerLink="/services/general-ledger-accounting-services" class="CTA-Zindex anchorCTA mb-3 p-3">
+            </a></button>
+          </div>
+          <div
+            id="Customer"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingfour"
+            data-bs-parent="#AccountPage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Take strategic decisions, meet compliance and generate accurate reports with our exceptional <a href="/services/general-ledger-accounting-services">outsourced general ledger accounting services</a>. 
+              </p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Tools Section -->
+<section class="container py-5" >
+  <h2 class="text-primary font-48-30 mb-4"  data-aos="fade-up">Tools That Drive Excellence</h2>
+  <div class="d-none d-xl-flex">
+    <div class="row">
+      <div class="col-2" data-aos="fade-right" data-aos-delay="0">
+        <img class="img-fluid" alt="Digital Marketing Tool Grammarly  "  appCdnUrl="assets/Tools/grammarly.svg"/>
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="100">
+        <img class="img-fluid" alt="Digital Marketing Tool  Adobe Creative Cloud"  appCdnUrl="assets/Tools/creativeCloud.svg" />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="200">
+        <img class="img-fluid" alt="Digital Marketing Tool Figma" appCdnUrl="assets/Tools/figma.svg" />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="300">
+        <img class="img-fluid" alt="Digital Marketing Tool Marvel"  appCdnUrl="assets/Tools/marvel.svg" />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="400">
+        <img class="img-fluid" alt="Digital Marketing Tool Semrush"  appCdnUrl="assets/Tools/semrush.svg"/>
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="500">
+        <img class="img-fluid" alt="Digital Marketing Tool RankTracker "  appCdnUrl="assets/Tools/sound.svg" />
+      </div>
+    </div>
+  </div>
+  <div class="d-flex d-xl-none">
+    <div class="trusted-slider-logo">
+      <div class="trusted-slide-track">
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="0">
+          <img class="img-fluid" alt="Digital Marketing Tool Grammarly  "  appCdnUrl="assets/Tools/grammarly.svg" />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="100">
+          <img class="img-fluid" alt="Digital Marketing Tool  Adobe Creative Cloud   "  appCdnUrl="assets/Tools/creativeCloud.svg" />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="200">
+          <img class="img-fluid" alt="Digital Marketing Tool Figma "  appCdnUrl="assets/Tools/figma.svg" />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="300">
+          <img class="img-fluid" alt="Digital Marketing Tool Marvel "  appCdnUrl="assets/Tools/marvel.svg"/>
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="400">
+          <img class="img-fluid" alt="Digital Marketing Tool Semrush "  appCdnUrl="assets/Tools/semrush.svg" />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="500">
+          <img class="img-fluid" alt="Digital Marketing Tool RankTracker"  appCdnUrl="assets/Tools/sound.svg"/>
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="0">
+          <img class="img-fluid" alt="Digital Marketing Tool Grammarly" appCdnUrl="assets/Tools/grammarly.svg" />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="100">
+          <img class="img-fluid" alt="Digital Marketing Tool  Adobe Creative Cloud"  appCdnUrl="assets/Tools/creativeCloud.svg" />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="200">
+          <img class="img-fluid" alt="Digital Marketing Tool Figma "  appCdnUrl="assets/Tools/figma.svg" />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="300">
+          <img class="img-fluid" alt="Digital Marketing Tool Marvel "  appCdnUrl="assets/Tools/marvel.svg"/>
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="400">
+          <img class="img-fluid" alt=" Digital Marketing Tool Semrush "  appCdnUrl="assets/Tools/semrush.svg" />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="500">
+          <img class="img-fluid" alt="Digital Marketing Tool RankTracker"  appCdnUrl="assets/Tools/sound.svg"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Thinking -->
+<app-service-case-study  [category]="[{ category: 'insurance' }]"></app-service-case-study>
+<!-- Know best -->
+<app-know-best
+  [cards]="[
+    {
+      description:
+        'I must say that our partnership with Fusion Business Solutions (FBSPL) has been truly exceptional. What sets FBSPL apart is their remarkable ability to not only grasp our ever-evolving business needs but also their genuine curiosity to understand our culture. Their flexibility and agility have been invaluable. FBSPL’s proactive approach, coupled with their rigorous processes and scalability, has significantly enhanced our customer experiences and AI operations.',
+      name: 'Chin Ma',
+      designation: 'Founder & President'
+    },
+    {
+      description:
+        'We reached out to Fusion in the Fall of 2022 as we were having issues recruiting a skilled and motivated workforce locally to fill back-office roles in our organization. What started as a simple documentation validation exercise quickly grew into the team supporting more strategic review and reconciliation activities. The team has shown repeatedly that they are willing to take on more and more complicated tasks, and the leadership team is quick to rally and support their employees when things fall off track.',
+      name: 'James Oickle',
+      designation: 'President & CEO'
+    },
+    {
+      description:
+        'Fusion Business Solutions has been a game-changer for our company. Their responsive team, seamless onboarding, and commitment to excellence have significantly reduced our stress levels, allowing us to focus on what matters most – our clients. We\'ve experienced measurable improvements in client retention and employee satisfaction since partnering with Fusion, making them the top choice for any business seeking efficient virtual assistant services.',
+      name: 'Isom Rigell M. Ed.',
+      designation: 'Chief People Officer'
+    }
+  ]"
+ [videos]="[
+    {
+      videoUrl:
+        'https://player.vimeo.com/video/969702390',
+      thumbnail:
+        'assets/thumbnail-know-best/Client Testimonials YT 01 Chin Ma.jpg',
+        alt:' Listen to our client '
+    },
+    {
+      
+      thumbnail:
+        'assets/thumbnail-know-best/Client Testimonials YT 10  James Oickle.jpg',
+        alt:'Our Success Stories '
+    },
+    {
+      videoUrl:
+        'https://player.vimeo.com/video/962238538',
+      thumbnail:
+        'assets/thumbnail-know-best/Client Testimonials YT 07 Stacey DiSpigno copy.jpg',
+        alt:'FBSPL Client Testimonial '
+    },
+   
+  ]"
+>
+</app-know-best>
+
+<section class="py-6"  data-aos="fade-up">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6"  data-aos="fade-right">
+        <app-faq></app-faq>
+      </div>
+      <div class="col-12 col-md-6 mt-3 mt-md-0"  data-aos="fade-left">
+        <div class="accordion" id="accordionFAQ">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button font-28-20"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Industries"
+                aria-expanded="true"
+                aria-controls="Industries"
+              >
+                Would my business benefit from digital marketing?
+              </button>
+            </h2>
+            <div
+              id="Industries"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Today, having a robust online presence is a must to withstand
+                this highly competitive market. So, when you avail digital
+                marketing services and solutions from a leading firm like FBSPL,
+                you can ensure increased business growth, better performance,
+                high ROI, measurable results, and more.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Services"
+                aria-expanded="false"
+                aria-controls="Services"
+              >
+                How do you ensure that your digital marketing strategies are
+                aligned with our business goals?
+              </button>
+            </h2>
+            <div
+              id="Services"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                First, our digital marketing experts fully understand your brand
+                identity and goals. Based on that, we prepare tailored
+                strategies based on the current business needs and requirements.
+                Our aim is to help businesses grow and maintain a robust brand
+                presence and we leave no stone unturned to ensure that.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#About"
+                aria-expanded="false"
+                aria-controls="About"
+              >
+                What are the types of outsourcing digital marketing solutions
+                you offer?
+              </button>
+            </h2>
+            <div
+              id="About"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                We offer four major types of digital marketing outsourcing
+                services, including -
+                <ul class="pt-3">
+                  <li>Content marketing</li>
+                  <li>Search engine optimization</li>
+                  <li>Graphic Designing</li>
+                  <li>UX/UI designing services</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Resources"
+                aria-expanded="false"
+                aria-controls="Resources"
+              >
+                I need content marketing services for my business? Can you help
+                me with that?
+              </button>
+            </h2>
+            <div
+              id="Resources"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Yes, we can help you offer the best content marketing services
+                to help your business generate more leads while educating your
+                potential audience and customers correctly. Our team of
+                experienced content writers will help you deliver 100%
+                error-free and non-plagiarized content.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#differentiators"
+                aria-expanded="false"
+                aria-controls="differentiators"
+              >
+                How can FBSPL be a trusted partner for outsourcing digital
+                marketing?
+              </button>
+            </h2>
+            <div
+              id="differentiators"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Our focus is to offer innovative and result-oriented <a class="anchor"href="/services/digital-marketing#Next-Gen-Digital-Marketing-Services">digital
+                  marketing solutions</a>. So, when you choose us for digital
+                marketing, here’s what you get.
+                <ul class="pt-3">
+                  <li>Industrial expertise</li>
+                  <li>Data-driven approach</li>
+                  <li>Scalable and flexible solutions</li>
+                  <li>Latest tools implementation</li>
+                  <li>Improved business growth</li>
+                  <li>Better ROI</li>
+                  <li>Availability as per your time zone</li>
+                  <li>Tailor-made solutions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

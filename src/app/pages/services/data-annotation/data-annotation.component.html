@@ -1,0 +1,1067 @@
+<ngx-slick-carousel
+  class="service_slider carousel d-none d-lg-block container-fluid"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+>
+  <div
+    class="container-fluid text-dark"
+    ngxSlickItem
+    *ngFor="let slides of slides"
+  >
+    <div class="container gradientBanner">
+      <img
+        alt="{{ slides.alt }}"
+        src="{{ slides.img }}"
+        class="card-img-desktop desktop-banner"
+      />
+      <div class="card-img-overlay overlay-text bannerText">
+        <div class="main_bannar my-4 ms-3" data-aos="fade-up">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item" aria-current="page">
+                <a href="/bpm-and-bpo-services">Services</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                <a href="Data Annotation">Data Annotation</a>
+              </li>
+            </ol>
+          </nav>
+          <a href="{{ slides.Link }}" class="CTA-Zindex anchorCTA">
+            <h3
+              *ngIf="!slides.banner"
+              class="text-primary font-34-19 my-auto clickable-heading"
+            >
+              {{ slides.Title }}
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+            <h3
+              *ngIf="slides.banner"
+              class="text-primary font-34-19 my-auto pt-1"
+            >
+              {{ slides.Title }}
+            </h3>
+          </a>
+          <p class="card-text font-20-16 mt-3">{{ slides.Description }}</p>
+          <a
+            *ngIf="slides.banner"
+            [routerLink]="slides.Link"
+            class="CTA-Zindex anchorCTA"
+          >
+            <h3 class="text-primary font-24-16 clickable-heading mt-3">
+              {{ slides.Dataannotation }}
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>
+<!-- Mobile View -->
+<ngx-slick-carousel
+  class="container carousel d-block d-lg-none pb-5"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+>
+  <div class="text-dark slide" ngxSlickItem *ngFor="let slidesmob of slides">
+    <div class="gradientBannerMob d-flex justify-content-center">
+      <img
+        alt="{{ slidesmob.alt }}"
+        src="{{ slidesmob.img_mob }}"
+        class="card-img-mob"
+      />
+      <div class="overlay-text-Mob bannerTextMob">
+        <div data-aos="fade-up">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="./">Home</a></li>
+              <li class="breadcrumb-item" aria-current="page">
+                <a href="/bpm-and-bpo-services">Services</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                <a href="Data Annotation">Data Annotation</a>
+              </li>
+            </ol>
+          </nav>
+          <a href="{{ slidesmob.Link }}" class="CTA-Zindex anchorCTA">
+            <h3
+              *ngIf="!slidesmob.banner"
+              class="text-primary font-34-19 my-auto clickable-heading"
+            >
+              {{ slidesmob.Title }}
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+            <h3
+              *ngIf="slidesmob.banner"
+              class="text-primary font-34-19 my-auto"
+            >
+              {{ slidesmob.Title }}
+            </h3>
+          </a>
+          <p class="card-text font-20-16 mt-3">{{ slidesmob.Description }}</p>
+          <a
+            *ngIf="slidesmob.banner"
+            [routerLink]="slidesmob.Link"
+            class="CTA-Zindex anchorCTA"
+          >
+            <h3 class="text-primary font-24-16 clickable-heading">
+              {{ slidesmob.Dataannotation }}
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>
+<app-ourAssets></app-ourAssets>
+
+<section class="bg-primary text-white py-6">
+  <div class="container px-4">
+    <h4 class="font-48-30 mb-3 text-white" data-aos="fade-up">
+      Currently in Data Annotation Outsourcing
+    </h4>
+    <div class="row">
+      <div class="row text-center d-none d-md-flex">
+        <div class="col-lg-4 col-6" data-aos="fade-right" data-aos-delay="0">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">35%</p>
+            <p class="">See data quality as the biggest challenges</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-6" data-aos="fade-right" data-aos-delay="200">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">29%</p>
+            <p class="">Count data security as an urgent priority</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-6" data-aos="fade-right" data-aos-delay="400">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">18%</p>
+            <p class="">
+              Consider the outsourcing cost to be a critical deciding factor
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="d-md-none">
+        <div
+          class="text-white text-start"
+          data-aos="fade-right"
+          data-aos-delay="0"
+        >
+          <p class="font-48-30 fw-bolder mb-1">35%</p>
+          <p class="">See data quality as the biggest challenges</p>
+        </div>
+        <div
+          class="text-white text-start"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
+          <p class="font-48-30 fw-bolder mb-1">29%</p>
+          <p class="">Count data security as an urgent priority</p>
+        </div>
+        <div
+          class="text-white text-start"
+          data-aos="fade-right"
+          data-aos-delay="400"
+        >
+          <p class="font-48-30 fw-bolder mb-1">18%</p>
+          <p class="">
+            Consider the outsourcing cost to be a critical deciding factor
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container-fluid pt-5">
+  <div class="container">
+    <h2 class="text-primary font-48-30 py-3" data-aos="fade-up">
+      How Are We Driving Change with AI Data Annotation Outsourcing Services?
+    </h2>
+    <div class="d-none d-lg-block">
+      <div class="row py-3">
+        <div class="col-sm-12 col-lg-4 col-md-6 py-3">
+          <div
+            class="card insurance-card policy-process-card Policy_Issuance p-3"
+            data-aos="zoom-in"
+          >
+            <a
+              class="CTA-Zindex anchorCTA mb-3 p-2"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <h3 class="text-black font-34-19 my-auto clickable-heading">
+                Text Annotation
+                <div class="headingCTA">
+                  <button class="blueCTA btn_hover"></button>
+                </div>
+              </h3>
+            </a>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal Policy-Processing fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog pt-0 mt-0">
+              <div class="modal-content">
+                <div class="modal-header policy-header">
+                  <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card mx-5">
+                  <div class="details ms-4">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">Text Annotation</h3>
+                      <p class="text-dark font-20-16">
+                        From manual annotation to automated and semi-automated
+                        methods, our text annotation services are specialized to
+                        accommodate your evolving project requirements with
+                        accuracy.
+                      </p>
+
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Entity recognition
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Keywords
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Relations
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Categorization
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Sentiment for text analysis
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="imgBx d-none d-lg-block">
+                    <img
+                      appCdnUrl="assets/Data Annotation/Text_Anotation.webp"
+                      alt="Text Annotation Services "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 col-md-6 py-3">
+          <div
+            class="card insurance-card policy-process-card Policy-Checking p-3"
+            data-aos="zoom-in"
+          >
+            <a
+              class="CTA-Zindex anchorCTA mb-3 p-2"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal1"
+            >
+              <h3 class="text-black font-34-19 my-auto clickable-heading">
+                Video Annotation
+                <div class="headingCTA">
+                  <button class="blueCTA btn_hover"></button>
+                </div>
+              </h3>
+            </a>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="exampleModal1"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel1"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog pt-0 mt-0">
+              <div class="modal-content">
+                <div class="modal-header policy-header">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card mx-5">
+                  <div class="details ms-4">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">Video Annotation</h3>
+                      <p class="text-dark font-20-16">
+                        Complex videos? We claim attention to detail.
+                        Prioritizing quality alongside a decent quantity, we
+                        continuously refine annotations by identifying rooms for
+                        improvement and rectifying problematic frame content.
+                      </p>
+
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />3D/2D boxes
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Polygons
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />
+                          Tagging
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />
+                          Classification
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Tracking for motion and context.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="imgBx d-none d-lg-block">
+                    <img
+                      appCdnUrl="assets/Data Annotation/Group 149.webp"
+                      alt="Video Annotation Services "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 col-md-6 py-3">
+          <div
+            class="card insurance-card policy-process-card Loss_Runs_Processing p-3"
+            data-aos="zoom-in"
+          >
+            <a
+              class="CTA-Zindex anchorCTA mb-3 p-2"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal2"
+            >
+              <h3 class="text-black font-34-19 my-auto clickable-heading">
+                Image Annotation
+                <div class="headingCTA">
+                  <button class="blueCTA btn_hover"></button>
+                </div>
+              </h3>
+            </a>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="exampleModal2"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel2"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog pt-0 mt-0">
+              <div class="modal-content">
+                <div class="modal-header policy-header">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card mx-5">
+                  <div class="details ms-4">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">Image Annotation</h3>
+                      <p class="text-dark font-20-16">
+                        If data is the new oil, then images constitute a
+                        significant part of this asset. With a blend of
+                        innovation and practical applications, our image
+                        annotation solutions lie at the core of accuracy,
+                        cost-effectiveness, quality, and data protection.
+                      </p>
+
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Semantic
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />2D boxes
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Labels
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Points/landmarks for detailed object identification.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="imgBx d-none d-lg-block">
+                    <img
+                      appCdnUrl="assets/Data Annotation/Group 147.webp"
+                      alt="Image Annotation Services "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile View -->
+  <div class="container p-3 d-block d-lg-none">
+    <div class="row">
+      <div class="col-12 mt-0 mt-sm-4">
+        <div class="accordion" id="ServicePage">
+          <div class="policy-processing" data-aos="zoom-in">
+            <div
+              data-bs-toggle="collapse"
+              data-bs-target="#Policy_Processing"
+              aria-expanded="true"
+              aria-controls="Policy_Processing"
+              id="headingOne"
+              class="headingCTA CTA-Zindex d-flex p-3"
+              data-bs-toggle="modal"
+              data-bs-target="#MobModal"
+            >
+              <h3 class="CTAs text-black fs-24 me-3">Text Annotation</h3>
+              <img
+                class="service_btn"
+                data-bs-toggle="modal"
+                data-bs-target="#MobModal"
+                appCdnUrl="assets/Icon/Accord-close.svg"
+              />
+            </div>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="MobModal"
+            tabindex="-1"
+            aria-labelledby="MobModalModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog">
+              <div class="modal-content">
+                <div class="modal-header policy-header mt-3">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card mx-5 py-3">
+                  <div class="details ms-2">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">Text Annotation</h3>
+
+                      <p class="text-dark font-20-16">
+                        From manual annotation to automated and semi-automated
+                        methods, our text annotation services are specialized to
+                        accommodate your evolving project requirements with
+                        accuracy.
+                      </p>
+                      <ul class="ul-policy">
+                        <li
+                          class="list-item list-item pt-2 text-dark font-20-16"
+                        >
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Entity recognition
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Keywords
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Relations
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Categorization
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />
+                          Sentiment for text analysis.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="policy-processing mt-4" data-aos="zoom-in">
+            <div
+              data-bs-toggle="collapse"
+              data-bs-target="#Claims_Management"
+              aria-expanded="true"
+              aria-controls="Claims_Management"
+              id="headingOne"
+              class="headingCTA CTA-Zindex d-flex p-3"
+              data-bs-toggle="modal"
+              data-bs-target="#MobModal1"
+            >
+              <h3 class="CTAs text-black fs-24 me-3">Video Annotation</h3>
+              <img
+                class="service_btn"
+                data-bs-toggle="modal"
+                data-bs-target="#MobModal1"
+                appCdnUrl="assets/Icon/Accord-close.svg"
+              />
+            </div>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="MobModal1"
+            tabindex="-1"
+            aria-labelledby="MobModal1Lable1"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog">
+              <div class="modal-content">
+                <div class="modal-header policy-header mt-3">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card mx-5 py-3">
+                  <div class="details ms-2">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">Video Annotation</h3>
+
+                      <p class="text-dark font-20-16">
+                        Complex videos? We claim attention to detail.
+                        Prioritizing quality alongside a decent quantity, we
+                        continuously refine annotations by identifying rooms for
+                        improvement and rectifying problematic frame content.
+                      </p>
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />3D/2D boxes
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Polygons
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />
+                          Tagging
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Classification
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Tracking for motion and context.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="policy-processing mt-4" data-aos="zoom-in">
+            <div
+              class="d-flex p-3"
+              data-bs-toggle="modal"
+              data-bs-target="#MobModal2"
+            >
+              <h3 class="CTAs text-black fs-24 me-3">Image Annotation</h3>
+              <img
+                class="service_btn"
+                data-bs-toggle="modal"
+                data-bs-target="#MobModal2"
+                appCdnUrl="assets/Icon/Accord-close.svg"
+              />
+            </div>
+          </div>
+          <div
+            class="modal Policy-Processing fade"
+            id="MobModal2"
+            tabindex="-1"
+            aria-labelledby="MobModalLabel2"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog policy-dialog">
+              <div class="modal-content">
+                <div class="modal-header policy-header mt-3">
+                  <img
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    appCdnUrl="assets/Icon/Accord-open.svg"
+                    class="close_btn"
+                  />
+                </div>
+                <div class="card policy-processing-services-card mx-5 py-3">
+                  <div class="details ms-2">
+                    <div class="content">
+                      <h3 class="font-48-30 text-dark">Image Annotation</h3>
+
+                      <p class="text-dark font-20-16">
+                        If data is the new oil, then images constitute a
+                        significant part of this asset. With a blend of
+                        innovation and practical applications, our image
+                        annotation solutions lie at the core of accuracy,
+                        cost-effectiveness, quality, and data protection.
+                      </p>
+                      <ul class="ul-policy">
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />
+                          Semantic
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />2D boxes
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />
+                          Labels
+                        </li>
+                        <li class="list-item pt-2 text-dark font-20-16">
+                          <img
+                            class="arrow-img"
+                            appCdnUrl="assets/Icon/Arrow-blue.svg"
+                          />Points/landmarks for detailed object identification.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-5">
+  <h2 class="text-primary font-48-30 mb-4" data-aos="fade-up">
+    Tools That Drive Excellence
+  </h2>
+  <div class="d-none d-xl-flex">
+    <div class="row">
+      <div class="col-2" data-aos="fade-right" data-aos-delay="0">
+        <img
+          class="img-fluid"
+          alt="SuperAnnotate "
+          appCdnUrl="assets/Tools/superAnnotate.svg"
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="100">
+        <img
+          class="img-fluid"
+          alt="Adobe Acrobate  "
+          appCdnUrl="assets/Tools/adobeacrobat.svg"
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="200">
+        <img class="img-fluid" alt="nitro" appCdnUrl="assets/Tools/Nitro.svg" />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="300">
+        <img
+          class="img-fluid"
+          alt="labelme"
+          appCdnUrl="assets/Tools/Labelme.svg"
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="400">
+        <img class="img-fluid" alt="cvat" appCdnUrl="assets/Tools/cvat.svg" />
+      </div>
+    </div>
+  </div>
+  <div class="d-flex d-xl-none">
+    <div class="trusted-slider-logo">
+      <div class="trusted-slide-track">
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="0">
+          <img
+            class="img-fluid"
+            alt="SuperAnnotate  "
+            appCdnUrl="assets/Tools/superAnnotate.svg"
+          />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="100">
+          <img
+            class="img-fluid"
+            alt="Adobe Acrobate   "
+            appCdnUrl="assets/Tools/adobeacrobat.svg"
+          />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="200">
+          <img
+            class="img-fluid"
+            alt="nitro"
+            appCdnUrl="assets/Tools/Nitro.svg"
+          />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="300">
+          <img
+            class="img-fluid"
+            alt="labelme"
+            appCdnUrl="assets/Tools/Labelme.svg"
+          />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="400">
+          <img class="img-fluid" alt="cvat" appCdnUrl="assets/Tools/cvat.svg" />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="0">
+          <img
+            class="img-fluid"
+            alt="SuperAnnotate  "
+            appCdnUrl="assets/Tools/superAnnotate.svg"
+          />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="100">
+          <img
+            class="img-fluid"
+            alt="Adobe Acrobate   "
+            appCdnUrl="assets/Tools/adobeacrobat.svg"
+          />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="200">
+          <img
+            class="img-fluid"
+            alt="nitro"
+            appCdnUrl="assets/Tools/Nitro.svg"
+          />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="300">
+          <img
+            class="img-fluid"
+            alt="labelme"
+            appCdnUrl="assets/Tools/Labelme.svg"
+          />
+        </div>
+        <div class="trust-slide" data-aos="fade-right" data-aos-delay="400">
+          <img class="img-fluid" alt="cvat" appCdnUrl="assets/Tools/cvat.svg" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Thinking -->
+<app-service-case-study
+  [category]="[{ category: 'dataannotation' }]"
+></app-service-case-study>
+<!-- Know best -->
+<app-know-best
+  [cards]="[
+    {
+      description:
+        'I must say that our partnership with Fusion Business Solutions (FBSPL) has been truly exceptional. What sets FBSPL apart is their remarkable ability to not only grasp our ever-evolving business needs but also their genuine curiosity to understand our culture. Their flexibility and agility have been invaluable. FBSPL’s proactive approach, coupled with their rigorous processes and scalability, has significantly enhanced our customer experiences and AI operations.',
+      name: 'Chin Ma',
+      designation: 'Founder & President'
+    }
+  ]"
+  [videos]="[
+    {
+      videoUrl: 'https://player.vimeo.com/video/969702390',
+      thumbnail:
+        'assets/thumbnail-know-best/Client Testimonials YT 01 Chin Ma.jpg',
+      alt: 'Listen to our client '
+    }
+  ]"
+>
+</app-know-best>
+<section class="py-6" data-aos="fade-up">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6" data-aos="fade-right">
+        <app-faq></app-faq>
+      </div>
+      <div class="col-12 col-md-6 mt-3 mt-md-0" data-aos="fade-left">
+        <div class="accordion" id="accordionFAQ">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button font-28-20"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Industries"
+                aria-expanded="true"
+                aria-controls="Industries"
+              >
+                What is your turnaround time?
+              </button>
+            </h2>
+            <div
+              id="Industries"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                The approximate timing varies from 30 seconds to 15 minutes, and
+                heavily depends on:
+                <ul class="pt-3">
+                  <li>Project size</li>
+                  <li>Complexity of the project</li>
+                  <li>Annotation type  </li>
+                </ul>
+                However, we are dedicated to providing high-quality annotated
+                data within a reasonable timeframe.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Services"
+                aria-expanded="false"
+                aria-controls="Services"
+              >
+                Do I get customer support that addresses my concerns throughout
+                the data annotation outsourcing partnership?
+              </button>
+            </h2>
+            <div
+              id="Services"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Certainly, with us, you have:
+                <ul class="pt-3">
+                  <li>
+                    A dedicated person who acts as your main point of contact
+                    and ensures your expectations are met throughout the
+                    partnership.
+                  </li>
+                  <li>
+                    Various communication channels, including e-mail, phone, and
+                    Teams chat. You can contact us through any of these
+                    channels.
+                  </li>
+                  <li>Regular updates on your project's progress and more.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#About"
+                aria-expanded="false"
+                aria-controls="About"
+              >
+                How does your team ensure data diversity in data annotation
+                services?
+              </button>
+            </h2>
+            <div
+              id="About"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                To ensure data diversity, we have a set of guidelines in place,
+                which include but are not limited to the following:
+                <ul class="pt-3">
+                  <li>
+                    Identifying and annotating a wide range of features that
+                    capture different aspects of the data
+                  </li>
+                  <li>
+                    Applying changes like rotation, cropping, and noise to
+                    enhance the existing dataset
+                  </li>
+                  <li>
+                    Engaging annotators from diverse backgrounds and
+                    demographics to bring a range of perspectives to the dataset
+                  </li>
+                  <li>Eliminating human biases or discriminatory outcomes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Resources"
+                aria-expanded="false"
+                aria-controls="Resources"
+              >
+                Can you explain your strategy for eliminating human biases from
+                data annotation?
+              </button>
+            </h2>
+            <div
+              id="Resources"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                To eliminate human biases, we have:
+                <ul class="pt-3">
+                  <li>
+                    Well-defined, clear, and comprehensive guidelines and
+                    Standard Operating Procedures (SOPs)
+                  </li>
+                  <li>
+                    Ongoing knowledge transfer training to maintain team
+                    alignment with the importance of impartiality and
+                    consistency in data labeling services.
+                  </li>
+                  <li>
+                    Frequent quality check sessions to verify compliance with
+                    established SOPs and guidelines.
+                  </li>
+                  <li>
+                    Recurring discussions on critical aspects such as ethical
+                    reviews and blind annotations.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#differentiators"
+                aria-expanded="false"
+                aria-controls="differentiators"
+              >
+                Why should I choose you as my right ecommerce outsourcing
+                service provider?
+              </button>
+            </h2>
+            <div
+              id="differentiators"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                You should partner with us if you are looking for:
+                <ul class="pt-3">
+                  <li>
+                    360-degree assistance that meets your dynamic business needs
+                    round the clock
+                  </li>
+                  <li>Professionally trained employees</li>
+                  <li>Buck-up services at zero additional cost</li>
+                  <li>
+                    Dedicated customer support, vendor management, and much more
+                  </li>
+                </ul>
+                Partnering with us means aligning with the industry excellence.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,57 @@
+<section class="container pb-5 position-relative mb-4">
+  <img
+    appCdnUrl="assets/Icon/blue-square.svg"
+    class="center-right-float vector z-3"
+  />
+  <img
+    appCdnUrl="assets/Icon/snake-vector.svg"
+    class="left-bottom-float vector"
+  />
+  <div class="error-section">
+    <div id="Animationthankyou"></div>
+  </div>
+  <div *ngIf="queryParam.Success">
+    <h1 class="font-128-64 text-primary text-center">Congratulations</h1>
+    <p class="font-24-16 text-center fw-normal my-3">
+      Your Application is successfully submitted
+    </p>
+    <div class="row error-section my-4">
+      <div class="col-12 col-md-6 my-3">
+        <div class="lets-form w-100 font-24-16 fw-500 position-relative">
+          {{ queryParam.ID }}
+          <img
+            appCdnUrl="assets/Icon/clipboard.svg"
+            class="clipIcon cursor-pointer"
+            (click)="copyToClipboard(queryParam.ID)"
+          />
+        </div>
+      </div>
+      <div class="col-12 col-md-6 my-3">
+        <div class="lets-form w-100 font-24-16 fw-500 position-relative">
+          {{ queryParam.Email }}
+          <img
+            appCdnUrl="assets/Icon/clipboard.svg"
+            class="clipIcon cursor-pointer"
+            (click)="copyToClipboard(queryParam.Email)"
+          />
+        </div>
+      </div>
+    </div>
+    <p class="fs-24 text-green text-center my-3 fw-500">
+      Please note down the registration ID and email for your process.
+    </p>
+  </div>
+  <div *ngIf="!queryParam.Success">
+    <p class="fs-24 text-red text-center my-3 fw-500">
+      {{ queryParam.ErrorMessage }}
+    </p>
+  </div>
+  <a routerLink="/careers" class="mt-4">
+    <h6 class="font-48-30 text-primary text-center">
+      Back to Career Page
+      <div class="headingCTA">
+        <button class="blueCTA podcast-card-cta"></button>
+      </div>
+    </h6>
+  </a>
+</section>

@@ -1,0 +1,72 @@
+<div class="container py-4">
+  <div class="mb-5 d-flex justify-content-between">
+    <div class="d-block">
+      <h3 class="mt-5 text-primary font-48-30">Known for the best</h3>
+      <a class="anchor font-20-16" href="/client-testimonial-reviews"
+        >Hear it from our clientele.</a
+      >
+    </div>
+    <img
+      appCdnUrl="assets/Icon/triangle-blue1.svg"
+      style="float: right"
+      class="d-none d-lg-block"
+    />
+  </div>
+
+  <div class="row d-flex blog_slider">
+    <div class="col-12 col-lg-7">
+      <ngx-slick-carousel
+        class="carousel"
+        [config]="slideConfig"
+        (afterChange)="onAfterChange($event)"
+      >
+        <div
+          ngxSlickItem
+          *ngFor="let card of cards; let i = index"
+          class="slide"
+        >
+          <div class="card">
+            <div class="card-content">
+              <div class="video-btn d-block d-lg-none">
+                <button
+                  class="watch-video-btn"
+                  *ngIf="isMobileView && videos[i]?.videoUrl"
+                  (click)="togglePopup(videos[i]?.videoUrl)"
+                >
+                  Watch Video
+                </button>
+              </div>
+              <img
+                appCdnUrl="assets/Icon/invertedcoma.svg"
+                width="90"
+                height="90"
+              />
+              <p class="card-text font-20-16">{{ card.description }}</p>
+              <div class="float-left my-3">
+                <div class="font-20-16 text-primary">
+                  {{ card.name }}
+                </div>
+                <div class="font-20-16">{{ card.designation }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ngx-slick-carousel>
+    </div>
+    <div #iframeWrapper class="col-lg-5 d-none d-lg-block">
+      <div class="frame-wrapper">
+        <div class="card-image">
+          <app-vimeo-player
+            [videoUrl]="currentVideoUrl"
+            [thumbnail]="currentThumbnail"
+            [alt]="currentalt"
+            [useWhitePlayButton]="false"
+          ></app-vimeo-player>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Include the Youtube Modal Component -->
+<app-youtube-modal></app-youtube-modal>

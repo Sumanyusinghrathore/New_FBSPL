@@ -1,0 +1,100 @@
+.center-right-float {
+  position: absolute;
+  top: 9%;
+  right: 0;
+  height: 5.5rem;
+}
+.bottom-left-float {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1.5rem !important;
+}
+.icons {
+  height: 85px;
+}
+
+@media (max-width: 768px) {
+  .center-right-float {
+    height: 3rem;
+    top: 4%;
+  }
+  .slider {
+    overflow-x: scroll;
+  }
+  .icons {
+    height: 70px;
+  }
+}
+
+.slider-text {
+  min-width: max-content;
+  cursor: pointer;
+}
+.slider-text:hover,
+.slider-text.active {
+  color: var(--primary);
+}
+.slider {
+  display: flex;
+  overflow-y: hidden;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: var(--primary) rgba(217, 217, 217, 1); /* For Firefox */
+}
+
+/* Webkit Browsers (Chrome, Safari, Edge) */
+.slider::-webkit-scrollbar {
+  height: 8px; /* Adjust the height as needed */
+}
+
+.slider::-webkit-scrollbar-track {
+  background: rgba(217, 217, 217, 1);
+  border-radius: 4px;
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+.slider {
+  scrollbar-gutter: stable;
+}
+
+@-moz-document url-prefix() {
+  .slider {
+    overflow-x: scroll;
+  }
+}
+
+/* svg-map.component.css */
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+svg {
+  width: 100%;
+  height: auto;
+}
+.tooltip1 {
+  position: absolute;
+  display: none;
+  left: 50%;
+  top: 0;
+  pointer-events: none;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.66);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 16px;
+  border-radius: 10px;
+}
+.pinpointer {
+  cursor: pointer;
+}
+a {
+  color: var(--primary);
+}
+
+
+

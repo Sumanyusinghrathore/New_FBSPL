@@ -1,0 +1,156 @@
+<div class="container text-dark pt-5 d-none d-lg-block">
+  <div class="gradientBanner">
+    <img
+      appCdnUrl="assets/caseStudy/caseStudyBanner.jpg"
+      class="desktop-banner"
+      alt="FBSPL Case Studies"
+    />
+    <div class="bannerText" data-aos="fade-up">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Case Studies
+          </li>
+        </ol>
+      </nav>
+      <h3 class="card-text font-36-24 text-primary pt-3">Case Study</h3>
+      <p class="card-text font-20-16 pt-3">
+        Why do clients choose us? How do we overcome their challenges? Do we add
+        any value to their processes? Do they recommend us? Read our case
+        studies to find out.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Mobile View -->
+<div class="container text-dark slide d-block d-lg-none pt-5">
+  <div class="gradientBannerMob">
+    <img
+      appCdnUrl="assets/caseStudy/caseStudyMobileBanner.jpg"
+      class="card-img-mob"
+      alt="FBSPL Case Studies"
+    />
+    <div class="bannerTextMob" data-aos="fade-up">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Case Studies
+          </li>
+        </ol>
+      </nav>
+      <h3 class="card-text font-36-24 text-primary">Case Study</h3>
+      <p class="card-text font-20-16">
+        Why do clients choose us? How do we overcome their challenges? Do we add
+        any value to their processes? Do they recommend us? Read our case
+        studies to find out.
+      </p>
+    </div>
+  </div>
+</div>
+
+<section class="container pt-5">
+  <div class="menu-container d-flex" data-aos="slide-up">
+    <div class="menu-item d-flex" *ngFor="let item of menuItems">
+      <button (click)="toggleMenu(item)" class="menu-button font-36-24">
+        {{ item.name }}
+        <span>
+          <img
+            *ngIf="!item.isOpen"
+            appCdnUrl="assets/Icon/Layer_1plus vector.svg"
+          />
+          <img
+            *ngIf="item.isOpen"
+            appCdnUrl="assets/Icon/Group 31minus-vector.svg"
+          />
+        </span>
+      </button>
+    </div>
+  </div>
+  <div *ngIf="isAnyMenuOpen()">
+    <div *ngFor="let item of menuItems">
+      <div *ngIf="item.isOpen" class="submenu d-flex">
+        <div
+          *ngFor="let subItem of item.subItems"
+          class="submenu-item"
+          data-aos="slide-up"
+        >
+          <a [routerLink]="'/case-studies'" [fragment]="subItem.href">
+            {{ subItem.text }}
+          </a>
+        </div>
+        <div class="submenu-item" data-aos="slide-up">
+          <a href="/case-studies"> All </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-6" id="top" #top>
+  <div class="row" *ngIf="caseStudies && caseStudies.length && !APIerror">
+    <div class="col-12 col-lg-6 col-md-6" *ngFor="let caseStudy of caseStudies">
+      <div class="" data-aos="zoom-in">
+        <img
+          [src]="caseStudy.feature_image"
+          alt="{{ caseStudy.title }}"
+          class="img-fluid bordered"
+        />
+        <div class="mt-3">
+          <p class="fs-16 fw-bold mb-2">
+            {{ caseStudy.case_study_category.name }}
+          </p>
+          <h4 class="mb-3 font-28-20">{{ caseStudy.title }}</h4>
+
+          <a [routerLink]="['/case-studies', caseStudy.slug]" class="">
+            <h6 class="font-20 text-primary text-md-start mt-3 mb-5">
+              Learn More
+              <div class="headingCTA">
+                <button class="blueCTA podcast-card-cta"></button>
+              </div>
+            </h6>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="APIerror">
+    <h4 class="text-red font-36-24 text-center my-5">
+      {{ Errormessage }}
+    </h4>
+  </div>
+  <div class="row py-5" *ngIf="pages.length >= 1">
+    <nav>
+      <ul class="pagination pagination-lg mb-0 place-content-center">
+        <li
+          class="page-item"
+          aria-current="page"
+          (click)="changePage(currentPage - 1)"
+          [hidden]="currentPage === 1"
+        >
+          <span class="page-link px-3"> Previous</span>
+        </li>
+        <li
+          class="page-item active"
+          aria-current="page"
+          *ngFor="let page of pages"
+          (click)="changePage(page)"
+          [ngClass]="{
+            active: page === currentPage
+          }"
+        >
+          <span class="page-link px-3"> {{ page }}</span>
+        </li>
+        <li
+          class="page-item"
+          aria-current="page"
+          (click)="changePage(currentPage + 1)"
+          [hidden]="currentPage === pages[pages.length - 1]"
+        >
+          <span class="page-link px-3"> Next</span>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>

@@ -1,0 +1,305 @@
+<section class="container d-none d-lg-block">
+  <div class="gradientBanner">
+    <img
+      appCdnUrl="assets/life@fbspl/Life-at-fbspl_banner.jpg"
+      class="desktop-banner"
+      alt="Experience Life at FBSPL"
+    />
+    <div class="bannerText" data-aos="fade-up">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item">
+            <a href="./about-who-we-are">About FBSPL</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            life&#64;FBSPL
+          </li>
+        </ol>
+      </nav>
+      <h3 class="font-48-30 text-primary pt-3">Telling Your Story, Your Way</h3>
+    </div>
+  </div>
+</section>
+<!-- Mobile View -->
+<section class="container text-dark slide d-block d-lg-none pt-5">
+  <div class="gradientBannerMob d-flex justify-content-center">
+    <img
+      appCdnUrl="assets/life@fbspl/Life-at-fbspl_mobile.jpg"
+      class="card-img-mob"
+      alt="Experience Life at FBSPL"
+    />
+    <div class="bannerTextMob">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item">
+            <a href="./about-who-we-are">About FBSPL</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            life&#64;FBSPL
+          </li>
+        </ol>
+      </nav>
+      <h3 class="font-48-30 text-primary">Telling Your Story, Your Way</h3>
+    </div>
+  </div>
+</section>
+
+<section class="container" data-aos="fade-up">
+  <div id="lifefbspl"></div>
+</section>
+
+<!-- Glimpse of FBSPL section starts -->
+
+<section class="container py-5 px-4">
+  <div data-aos="slide-up">
+    <h2 class="text-primary font-48-30">
+      Glimpse of FBSPL - Work, Play, and Everything in Between
+    </h2>
+    <p class="text-black font-20-16">
+      FBSPL is a place where work and play coexist! We believe in maintaining a
+      work-life balance while ensuring a culture of excellence.<br />
+      Shedding light on what makes us the "Great place to work".
+    </p>
+  </div>
+</section>
+<div class="container">
+  <div class="card_container">
+    <div class="card_slider d-none d-sm-block">
+      <ngx-slick-carousel
+        class="carousel py-3"
+        #slickModal="slick-carousel"
+        [config]="GlimpseConfig1"
+      >
+        @for (slide of Glimpse1; track slide.img) {
+        <div ngxSlickItem class="slide">
+          <img class="glimp_img1" src="{{ slide.img }}" alt="{{ slide.alt }}" />
+        </div>
+        }
+      </ngx-slick-carousel>
+    </div>
+    <div class="card_slider my-5">
+      <ngx-slick-carousel
+        class="carousel py-3"
+        #slickModal="slick-carousel"
+        [config]="GlimpseConfig2"
+      >
+        @for (slide of Glimpse2; track slide.img) {
+        <div ngxSlickItem class="slide Learning_Growing_main_container_mobile">
+          <img class="glimp_img2" src="{{ slide.img }}" alt="{{ slide.alt }}" />
+        </div>
+        }
+      </ngx-slick-carousel>
+    </div>
+    <div class="card_slider">
+      <ngx-slick-carousel
+        class="carousel py-3"
+        #slickModal="slick-carousel"
+        [config]="GlimpseConfig3"
+      >
+        @for (slide of Glimpse3; track slide.img) {
+        <div ngxSlickItem class="slide Learning_Growing_main_container_mobile">
+          <img class="glimp_img3" src="{{ slide.img }}" alt="{{ slide.alt }}" />
+        </div>
+        }
+      </ngx-slick-carousel>
+    </div>
+    <div class="card_slider my-5">
+      <ngx-slick-carousel
+        class="carousel py-3"
+        #slickModal="slick-carousel"
+        [config]="GlimpseConfig4"
+      >
+        @for (slide of Glimpse4; track slide.img) {
+        <div ngxSlickItem class="slide Learning_Growing_main_container_mobile">
+          <img class="glimp_img4" src="{{ slide.img }}" alt="{{ slide.alt }}" />
+        </div>
+        }
+      </ngx-slick-carousel>
+    </div>
+    <div class="card_slider d-none d-sm-block">
+      <ngx-slick-carousel
+        class="carousel py-3"
+        #slickModal="slick-carousel"
+        [config]="GlimpseConfig5"
+      >
+        @for (slide of Glimpse5; track slide.img) {
+        <div ngxSlickItem class="slide Learning_Growing_main_container_mobile">
+          <img class="glimp_img5" src="{{ slide.img }}" alt="{{ slide.alt }}" />
+        </div>
+        }
+      </ngx-slick-carousel>
+    </div>
+  </div>
+</div>
+
+<!-- Glimpse of FBSPL section ends -->
+<!-- Growing. And Making a Difference section starts -->
+
+<section class="container">
+  <h2 class="text-primary font-48-30" data-aos="slide-up">
+    Learning. Growing. Making a Difference
+  </h2>
+  <div class="container-lg">
+    <div class="d-none d-md-block pt-5" data-aos="fade-up">
+      <img
+        appCdnUrl="assets/life@fbspl/growing image.png"
+        class="img-fluid w-100"
+        alt="Responsive image"
+      />
+
+      <div class="d-flex justify-content-between pt-3" data-aos="slide-up">
+        <div>
+          <h5 class="font-28-20"><b>Not a Job, But a Journey</b></h5>
+          <p class="font-20-16">
+            Average tenure of our employees exceeds<br />
+            5 years
+          </p>
+        </div>
+        <div>
+          <h5 class="font-28-20"><b>Thinking Out of the Box</b></h5>
+          <p class="font-20-16">
+            With diligent efforts we earned 550+<br />
+            satisfied clients
+          </p>
+        </div>
+        <div>
+          <h5 class="font-28-20"><b>Pushing the Boundaries</b></h5>
+          <p class="font-20-16">
+            Monthly kudos go out to 13+ standout<br />
+            employees
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ngx-slick-carousel
+    class="carousel d-block d-md-none py-3"
+    #slickModal="slick-carousel"
+    [config]="slideConfig1"
+  >
+    @for (slide of slides1; track slide.img) {
+    <div ngxSlickItem class="slide">
+      <div>
+        <img class="" src="{{ slide.img }}" alt="" width="100%" />
+        <div class="py-5">
+          <div class="">
+            <h5>{{ slide.text_h5 }}</h5>
+            <p>{{ slide.text_p1 }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </ngx-slick-carousel>
+</section>
+
+<!-- Growing. And Making a Difference section ends -->
+<!-- Timeless Tales section starts -->
+<section class="container learningLfeFbspl_component py-5">
+  <div class="d-flex justify-content-between">
+    <h3 class="text-primary font-48-30 py-3">Timeless Tales</h3>
+    <img
+      appCdnUrl="assets/Icon/triangle-blue1.svg"
+      class="d-none d-lg-block"
+      style="float: right"
+    />
+  </div>
+  <div class="row d-flex align-items-center">
+    <div class="col-md-7 d-none d-md-block d-lg-block" #iframeWrapper>
+      <app-vimeo-player
+        [videoUrl]="currentVideoUrl"
+        [thumbnail]="currentThumbnail"
+        (click)="frameFreeze()"
+        [useWhitePlayButton]="false"
+        [alt]="currentalt"
+      ></app-vimeo-player>
+    </div>
+    <div class="col-md-5 col-12 px-4 px-md-4">
+      <ngx-slick-carousel
+        class="carousel FBSPL_Talks"
+        [config]="slideConfig"
+        (afterChange)="onChange($event)"
+      >
+        <div
+          ngxSlickItem
+          *ngFor="let slide of slides"
+          class="slide FBSPL_Talks_main_container p-4 p-md-0"
+        >
+          <div class="d-flex align-items-center justify-content-between">
+            <img src="{{ slide.double_nverted_icon }}" />
+            <button
+              class="FBSPL_Talks_watch_video_button my-3"
+              *ngIf="isMobileView"
+              (click)="togglePopup()"
+            >
+              Watch Video
+            </button>
+          </div>
+          <p class="font-20-16">{{ slide.text }}</p>
+          <div class="font-20-16 text-primary">
+            {{ slide.name }}
+          </div>
+          <p class="font-20-16 text-primary">
+            {{ slide.designation }}
+          </p>
+        </div>
+      </ngx-slick-carousel>
+    </div>
+  </div>
+</section>
+
+<!-- FBSPL Talks section ends -->
+<section class="container py-4 my-5">
+  <div class="row">
+    <div class="col-md-12 d-none d-lg-block phoenix_card">
+      <div class="card bg-secondary p-4 becomePhoenix h-100">
+        <div class="my-5">
+          <a
+            href="careers/current-openings"
+            class="CTA-Zindex anchorCTA mb-3 p-3"
+          >
+            <h4 class="text-primary me-3 font-36-24 my-auto clickable-heading">
+              Want to Become a Phoenix?
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h4>
+          </a>
+          <p class="me-3 font-28-20 p-3">
+            Join us and see your career in a whole new light.
+            <br />Let's be unconventional; let's be you.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 d-block d-lg-none">
+      <div class="card bg-secondary p-4">
+        <div>
+          <a
+            href="careers/current-openings"
+            class="CTA-Zindex anchorCTA mb-3 p-3"
+          >
+            <h4
+              class="text-primary me-3 font-36-24 w-75 my-auto clickable-heading"
+            >
+              Want to Become a Phoenix?
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h4>
+          </a>
+          <p class="me-3 font-34-19 p-3">
+            Join us and see your career in a whole new light.
+            <br />Let's be unconventional; let's be you.
+          </p>
+        </div>
+        <div class="bottom-image-container">
+          <div class="bottom-image"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-youtube-modal></app-youtube-modal>

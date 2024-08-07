@@ -1,0 +1,1343 @@
+<div class="container d-none d-lg-block">
+  <div class="gradientBanner">
+    <img appCdnUrl="assets/contact-us/ContactUs.jpg" class="desktop-banner" />
+    <div class="bannerText" data-aos="fade-up">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+        </ol>
+      </nav>
+      <h1 class="font-48-30 pt-3">Contact Us</h1>
+      <h2 class="font-20-16 font-normal pt-2">
+        What Can We Do to Make Things Easier for You?
+      </h2>
+    </div>
+  </div>
+</div>
+<!-- Mobile View -->
+<div class="container text-dark slide d-block d-lg-none pt-5">
+  <div class="gradientBannerMob">
+    <img
+      appCdnUrl="assets/contact-us/ContactUsMobile.jpg"
+      class="card-img-mob"
+    />
+    <div class="bannerTextMob" data-aos="fade-up">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+        </ol>
+      </nav>
+      <h1 class="font-48-30 pt-3">Contact Us</h1>
+      <h2 class="font-20-16 font-normal pt-2">
+        What Can We Do to Make Things Easier for You?
+      </h2>
+    </div>
+  </div>
+</div>
+
+<section class="container pt-5 position-relative" data-aos="slide-up">
+  <img
+    appCdnUrl="assets/Icon/blue-square.svg"
+    class="center-right-float vector"
+  />
+  <h2 class="text-primary font-48-30 pt-3">
+    Let’s Get Started With
+    <span class="text-decoration-line-through">good</span> Great Things!
+  </h2>
+  <p class="font-24-16 mb-md-5 my-4">
+    Please select your area of interest and we will schedule a
+    discussion with you
+  </p>
+</section>
+<section class="bg-secondary-30" data-aos="slide-up">
+  <div class="container slider py-2">
+    <span
+      class="font-34-19 me-5 slider-text"
+      [class.active]="activeSlide === 'Services'"
+      (click)="updateContent('Services')"
+      >Services</span
+    >
+    <span
+      class="font-34-19 me-5 slider-text"
+      [class.active]="activeSlide === 'Careers'"
+      (click)="updateContent('Careers')"
+      >Careers</span
+    >
+    <span
+      class="font-34-19 me-5 slider-text"
+      [class.active]="activeSlide === 'Alliances & Partnerships'"
+      (click)="updateContent('Alliances & Partnerships')"
+      >Alliances & Partnerships</span
+    >
+    <span
+      class="font-34-19 me-5 slider-text"
+      [class.active]="activeSlide === 'Website Feedback'"
+      (click)="updateContent('Website Feedback')"
+      >Website Feedback</span
+    >
+    <span
+      class="font-34-19 slider-text"
+      [class.active]="activeSlide === 'Media & General Query'"
+      (click)="updateContent('Media & General Query')"
+      >Any Other Query
+    </span>
+  </div>
+</section>
+
+<section class="container position-relative py-3 py-xl-5">
+  <img
+    appCdnUrl="assets/Icon/pyramidsvector.svg"
+    class="d-lg-block d-none bottom-left-float vector"
+  />
+
+  <div class="row" *ngIf="activeSlide === 'Services'">
+    <div class="col-lg-4 d-flex align-items-center justify-content-center py-3  d-none d-lg-block">
+      <div class="box">
+        <img
+          appCdnUrl="assets/contact-us/OutsourcingServices.jpg"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+    <div class="col-12 col-lg-8 py-3">
+      <p class="font-20">
+        If you are looking for an efficient team, innovation, and system-driven
+        approach to your process-related challenges, our leading industry
+        professionals are excited to meet you.
+      </p>
+      <form
+        autocomplete="off"
+        [formGroup]="outSourcingService"
+        (ngSubmit)="validateForm(outSourcingService)"
+      >
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mt-3">
+              <input
+                type="text"
+                class="lets-form"
+                placeholder="Name"
+                appNoNumbers
+                formControlName="firstname"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && outSourcingServicef['firstname'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && outSourcingServicef['firstname'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    outSourcingServicef['firstname'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <input
+                type="text"
+                class="lets-form"
+                formControlName="phone"
+                placeholder="Phone"
+                appOnlyNumbers
+                minlength="10"
+                maxlength="10"
+                [ngClass]="{
+                  'is-invalid': submitted && outSourcingServicef['phone'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && outSourcingServicef['phone'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    outSourcingServicef['phone'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+                <div
+                  *ngIf="
+                    !outSourcingServicef['phone'].errors[
+                      'requiredButNotAllowBlank'
+                    ] && outSourcingServicef['phone'].errors['exactLength']
+                  "
+                >
+                  Invalid Phone
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <input
+                type="text"
+                class="lets-form"
+                formControlName="where_did_you_find_us"
+                placeholder="Where did you find us"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted &&
+                    outSourcingServicef['where_did_you_find_us'].errors
+                }"
+              />
+              <div
+                *ngIf="
+                  submitted &&
+                  outSourcingServicef['where_did_you_find_us'].errors
+                "
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    outSourcingServicef['where_did_you_find_us'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mt-3">
+              <input
+                type="email"
+                class="lets-form"
+                formControlName="email"
+                placeholder="Email Address"
+                [ngClass]="{
+                  'is-invalid': submitted && outSourcingServicef['email'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && outSourcingServicef['email'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    outSourcingServicef['email'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+                <div *ngIf="outSourcingServicef['email'].errors['email']">
+                  Invalid email address
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <textarea
+                class="lets-form"
+                rows="4"
+                placeholder="Write a message"
+                formControlName="write_message_to_us"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted &&
+                    outSourcingServicef['write_message_to_us'].errors
+                }"
+              ></textarea>
+              <div
+                *ngIf="
+                  submitted && outSourcingServicef['write_message_to_us'].errors
+                "
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    outSourcingServicef['write_message_to_us'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mt-3">
+            <button class="FormCTA">
+              <h6 class="font-20 text-primary text-md-start">
+                Submit your query
+                <div class="headingCTA">
+                  <div class="blueCTA podcast-card-cta"></div>
+                </div>
+              </h6>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="activeSlide === 'Careers'">
+    <div class="col-lg-4 d-flex align-items-center justify-content-center py-3 d-none d-lg-block">
+      <div class="box">
+        <img appCdnUrl="assets/contact-us/Careers.jpg" class="img-fluid" />
+      </div>
+    </div>
+    <div class="col-12 col-lg-8 py-3">
+      <p class="font-20">
+        Let our HR team know what drives your career's passion. Apply today to
+        see your career in a whole new light. Be unconventional, be You!
+      </p>
+      <form
+        autocomplete="off"
+        [formGroup]="career"
+        (ngSubmit)="validateForm(career)"
+      >
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mt-3">
+              <input
+                type="text"
+                class="lets-form"
+                placeholder="Name"
+                appNoNumbers
+                formControlName="name"
+                [ngClass]="{
+                  'is-invalid': submitted && careerf['name'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && careerf['name'].errors"
+                class="invalid-feedback"
+              >
+                <div *ngIf="careerf['name'].errors['requiredButNotAllowBlank']">
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <input
+                type="text"
+                class="lets-form"
+                formControlName="phone"
+                placeholder="Phone"
+                appOnlyNumbers
+                minlength="10"
+                maxlength="10"
+                [ngClass]="{
+                  'is-invalid': submitted && careerf['phone'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && careerf['phone'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="careerf['phone'].errors['requiredButNotAllowBlank']"
+                >
+                  *This Field is Required
+                </div>
+                <div
+                  *ngIf="
+                    !careerf['phone'].errors['requiredButNotAllowBlank'] &&
+                    careerf['phone'].errors['exactLength']
+                  "
+                >
+                  Invalid Phone
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <select
+                class="form-select lets-form"
+                formControlName="whereDidYouGotToKnow"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && careerf['whereDidYouGotToKnow'].errors
+                }"
+              >
+                <option value="" disabled selected hidden>
+                  Where did you got to know
+                </option>
+                <option value="News">News</option>
+                <option value="Adds">Adds</option>
+                <option value="Social Media">Social Media</option>
+              </select>
+              <div
+                *ngIf="submitted && careerf['whereDidYouGotToKnow'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    careerf['whereDidYouGotToKnow'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mt-3">
+              <input
+                type="email"
+                class="lets-form"
+                formControlName="email"
+                placeholder="Email Address"
+                [ngClass]="{
+                  'is-invalid': submitted && careerf['email'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && careerf['email'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="careerf['email'].errors['requiredButNotAllowBlank']"
+                >
+                  *This Field is Required
+                </div>
+                <div *ngIf="careerf['email'].errors['email']">
+                  Invalid email address
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <input
+                type="text"
+                class="lets-form"
+                formControlName="whereUDoFindUs"
+                placeholder="Where did you find us"
+                [ngClass]="{
+                  'is-invalid': submitted && careerf['whereUDoFindUs'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && careerf['whereUDoFindUs'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    careerf['whereUDoFindUs'].errors['requiredButNotAllowBlank']
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <div class="position-relative">
+                <input
+                  type="file"
+                  id="resume-upload"
+                  class="d-none"
+                  (change)="onResumeFileSelected($event)"
+                  formControlName="resumeupload"
+                />
+                <label  for="resume-upload" class="cursor-pointer lets-form" formControlName="resumeupload" [ngClass]="{
+                  'is-invalid': submitted && careerf['resumeupload'].errors
+                }">
+                  <span  >{{ ResumefileName || "Upload Resume" }}</span>
+                  <img
+                    appCdnUrl="assets/Icon/upload-svg.svg"
+                    alt="Upload Icon"
+                    class="upload-icon"
+                  />
+                </label>
+                <div
+                  *ngIf="submitted && careerf['resumeupload'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="careerf['resumeupload'].errors['requiredButNotAllowBlank']">
+                    *Invalid file format. Only PDF, DOC, and DOCX files are
+                    allowed.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mt-3">
+            <button class="FormCTA">
+              <h6 class="font-20 text-primary text-md-start">
+                Apply Now
+                <div class="headingCTA">
+                  <div class="blueCTA podcast-card-cta"></div>
+                </div>
+              </h6>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row" *ngIf="activeSlide === 'Alliances & Partnerships'">
+    <div class="col-lg-4 d-flex align-items-center justify-content-center py-3 d-none d-lg-block">
+      <div class="box">
+        <img
+          appCdnUrl="assets/contact-us/Alliances & Partnerships.jpg"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+    <div class="col-12 col-lg-8 py-3">
+      <p class="font-20">
+        We are more than happy to forge any collaboration that fosters mutual
+        growth. If you're also looking for such opportunities, please get in
+        touch with us.
+      </p>
+      <form
+        autocomplete="off"
+        [formGroup]="AlliancesPartnerships"
+        (ngSubmit)="validateForm(AlliancesPartnerships)"
+      >
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mt-3">
+              <input
+                type="text"
+                class="lets-form"
+                placeholder="Name"
+                appNoNumbers
+                formControlName="name"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && AlliancesPartnershipsf['name'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && AlliancesPartnershipsf['name'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    AlliancesPartnershipsf['name'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <select
+                class="form-select lets-form"
+                formControlName="position"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && AlliancesPartnershipsf['position'].errors
+                }"
+              >
+                <option value="" disabled selected hidden>Position</option>
+                <option value="Business Owner">Business Owner</option>
+                <option value="C-level Executive">C-level Executive</option>
+                <option value="Freelance / Consultant">
+                  Freelance / Consultant
+                </option>
+              </select>
+              <div
+                *ngIf="submitted && AlliancesPartnershipsf['position'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    AlliancesPartnershipsf['position'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <select
+                class="form-select lets-form"
+                formControlName="country"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && AlliancesPartnershipsf['country'].errors
+                }"
+              >
+                <option value="" disabled selected hidden>Country</option>
+                <option value="India">India</option>
+                <option value="Canada">Canada</option>
+                <option value="US">US</option>
+                <option value="Australia">Australia</option>
+              </select>
+              <div
+                *ngIf="submitted && AlliancesPartnershipsf['country'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="AlliancesPartnershipsf['country'].errors['required']"
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <select
+                class="form-select lets-form"
+                formControlName="partnership"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && AlliancesPartnershipsf['partnership'].errors
+                }"
+              >
+                <option value="" disabled selected hidden>Partnership</option>
+                <option value="Agency">Agency</option>
+                <option value="Solution Partner">Solution Partner</option>
+                <option value="Technology">Technology</option>
+              </select>
+              <div
+                *ngIf="
+                  submitted && AlliancesPartnershipsf['partnership'].errors
+                "
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    AlliancesPartnershipsf['partnership'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mt-3">
+              <input
+                type="email"
+                class="lets-form"
+                formControlName="email"
+                placeholder="Email Address"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && AlliancesPartnershipsf['email'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && AlliancesPartnershipsf['email'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    AlliancesPartnershipsf['email'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+                <div *ngIf="AlliancesPartnershipsf['email'].errors['email']">
+                  Invalid email address
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <input
+                type="text"
+                class="lets-form"
+                formControlName="companyName"
+                placeholder="Company Name"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && AlliancesPartnershipsf['companyName'].errors
+                }"
+              />
+              <div
+                *ngIf="
+                  submitted && AlliancesPartnershipsf['companyName'].errors
+                "
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    AlliancesPartnershipsf['companyName'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <select
+                class="form-select lets-form"
+                formControlName="industry"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && AlliancesPartnershipsf['industry'].errors
+                }"
+              >
+                <option value="" disabled selected hidden>Industry</option>
+                <option value="Ecommerce">Ecommerce</option>
+                <option value="Insurance">Insurance</option>
+                <option value="Real-estate">Real-estate</option>
+              </select>
+              <div
+                *ngIf="submitted && AlliancesPartnershipsf['industry'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    AlliancesPartnershipsf['industry'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <select
+                class="form-select lets-form"
+                formControlName="partnerProgram"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && AlliancesPartnershipsf['partnerProgram'].errors
+                }"
+              >
+                <option value="" disabled selected hidden>
+                  How did you learn about the Make partner program
+                </option>
+                <option value="Make Website">Make Website</option>
+                <option value="Linkedin">Linkedin</option>
+                <option value="Webinars held by partners">
+                  Webinars held by partners
+                </option>
+              </select>
+              <div
+                *ngIf="
+                  submitted && AlliancesPartnershipsf['partnerProgram'].errors
+                "
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    AlliancesPartnershipsf['partnerProgram'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3">
+            <input
+              type="text"
+              class="lets-form"
+              formControlName="motivationToPartner"
+              placeholder="What motivates you to become a partner?"
+              [ngClass]="{
+                'is-invalid':
+                  submitted &&
+                  AlliancesPartnershipsf['motivationToPartner'].errors
+              }"
+            />
+            <div
+              *ngIf="
+                submitted &&
+                AlliancesPartnershipsf['motivationToPartner'].errors
+              "
+              class="invalid-feedback"
+            >
+              <div
+                *ngIf="
+                  AlliancesPartnershipsf['motivationToPartner'].errors[
+                    'requiredButNotAllowBlank'
+                  ]
+                "
+              >
+                *This Field is Required
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mt-3">
+            <button class="FormCTA">
+              <h6 class="font-20 text-primary text-md-start">
+                Submit your query
+                <div class="headingCTA">
+                  <div class="blueCTA podcast-card-cta"></div>
+                </div>
+              </h6>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="activeSlide === 'Website Feedback'">
+    <div class="col-lg-4 d-flex align-items-center justify-content-center py-3 d-none d-lg-block">
+      <div class="box">
+        <img
+          appCdnUrl="assets/contact-us/Website Feedback.jpg"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+    <div class="col-12 col-lg-8 py-3">
+      <p class="font-20">
+        We value your opinion and would appreciate your insights on our website.
+        Please let us know what we did well and where we can improve.
+      </p>
+      <form
+        autocomplete="off"
+        [formGroup]="WebsiteFeedback"
+        (ngSubmit)="validateForm(WebsiteFeedback)"
+      >
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mt-3">
+              <input
+                type="text"
+                class="lets-form"
+                placeholder="Name"
+                appNoNumbers
+                formControlName="name"
+                [ngClass]="{
+                  'is-invalid': submitted && WebsiteFeedbackf['name'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && WebsiteFeedbackf['name'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    WebsiteFeedbackf['name'].errors['requiredButNotAllowBlank']
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <p>Is this your first visit to website</p>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  formControlName="isFirstVisit"
+                  value="Yes"
+                  [ngClass]="{
+                    'is-invalid':
+                      submitted && WebsiteFeedbackf['isFirstVisit'].errors
+                  }"
+                />
+                <label class="form-check-label font-20">Yes</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  formControlName="isFirstVisit"
+                  value="No"
+                  [ngClass]="{
+                    'is-invalid':
+                      submitted && WebsiteFeedbackf['isFirstVisit'].errors
+                  }"
+                />
+                <label class="form-check-label font-20">No</label>
+              </div>
+              <div
+                *ngIf="submitted && WebsiteFeedbackf['isFirstVisit'].errors"
+                class="invalid-feedback d-block"
+              >
+                <div
+                  *ngIf="WebsiteFeedbackf['isFirstVisit'].errors['required']"
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mt-3">
+              <input
+                type="email"
+                class="lets-form"
+                formControlName="email"
+                placeholder="Email Address"
+                [ngClass]="{
+                  'is-invalid': submitted && WebsiteFeedbackf['email'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && WebsiteFeedbackf['email'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    WebsiteFeedbackf['email'].errors['requiredButNotAllowBlank']
+                  "
+                >
+                  *This Field is Required
+                </div>
+                <div *ngIf="WebsiteFeedbackf['email'].errors['email']">
+                  Invalid email address
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <p>Were you able to find what you need?</p>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  formControlName="FindYourNeed"
+                  value="Yes"
+                  [ngClass]="{
+                    'is-invalid':
+                      submitted && WebsiteFeedbackf['FindYourNeed'].errors
+                  }"
+                />
+                <label class="form-check-label font-20">Yes</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  formControlName="FindYourNeed"
+                  value="No"
+                  [ngClass]="{
+                    'is-invalid':
+                      submitted && WebsiteFeedbackf['FindYourNeed'].errors
+                  }"
+                />
+                <label class="form-check-label font-20">No</label>
+              </div>
+              <div
+                *ngIf="submitted && WebsiteFeedbackf['FindYourNeed'].errors"
+                class="invalid-feedback d-block"
+              >
+                <div
+                  *ngIf="WebsiteFeedbackf['FindYourNeed'].errors['required']"
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3">
+            <input
+              type="text"
+              class="lets-form"
+              formControlName="feedback"
+              placeholder="Write you feedback"
+              [ngClass]="{
+                'is-invalid': submitted && WebsiteFeedbackf['feedback'].errors
+              }"
+            />
+            <div
+              *ngIf="submitted && WebsiteFeedbackf['feedback'].errors"
+              class="invalid-feedback"
+            >
+              <div
+                *ngIf="
+                  WebsiteFeedbackf['feedback'].errors[
+                    'requiredButNotAllowBlank'
+                  ]
+                "
+              >
+                *This Field is Required
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mt-3">
+            <button class="FormCTA">
+              <h6 class="font-20 text-primary text-md-start">
+                Submit your feedback
+                <div class="headingCTA">
+                  <div class="blueCTA podcast-card-cta"></div>
+                </div>
+              </h6>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="activeSlide === 'Media & General Query'">
+    <div class="col-lg-4 d-flex align-items-center justify-content-center py-3 d-none d-lg-block">
+      <div class="box">
+        <img appCdnUrl="assets/contact-us/MediaQuery.jpg" class="img-fluid" />
+      </div>
+    </div>
+    <div class="col-12 col-lg-8 py-3">
+      <p class="font-20">
+        In case you want us to know about anything else, please feel free to
+        email your queries at
+        <a href="mailto:support@fbspl.com">support&#64;fbspl.com</a>
+      </p>
+      <form
+        autocomplete="off"
+        [formGroup]="MediaGeneralQuery"
+        (ngSubmit)="validateForm(MediaGeneralQuery)"
+      >
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mt-3">
+              <input
+                type="text"
+                class="lets-form"
+                placeholder="Name"
+                appNoNumbers
+                formControlName="name"
+                [ngClass]="{
+                  'is-invalid': submitted && MediaGeneralQueryf['name'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && MediaGeneralQueryf['name'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    MediaGeneralQueryf['name'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <input
+                type="text"
+                class="lets-form"
+                formControlName="phone"
+                placeholder="Phone"
+                appOnlyNumbers
+                minlength="10"
+                maxlength="10"
+                [ngClass]="{
+                  'is-invalid': submitted && MediaGeneralQueryf['phone'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && MediaGeneralQueryf['phone'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    MediaGeneralQueryf['phone'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+                <div
+                  *ngIf="
+                    !MediaGeneralQueryf['phone'].errors[
+                      'requiredButNotAllowBlank'
+                    ] && MediaGeneralQueryf['phone'].errors['exactLength']
+                  "
+                >
+                  Invalid Phone
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <input
+                type="text"
+                class="lets-form"
+                formControlName="whereUFindUs"
+                placeholder="Where did you find us"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && MediaGeneralQueryf['whereUFindUs'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && MediaGeneralQueryf['whereUFindUs'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    MediaGeneralQueryf['whereUFindUs'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mt-3">
+              <input
+                type="email"
+                class="lets-form"
+                formControlName="email"
+                placeholder="Email Address"
+                [ngClass]="{
+                  'is-invalid': submitted && MediaGeneralQueryf['email'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && MediaGeneralQueryf['email'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    MediaGeneralQueryf['email'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+                <div *ngIf="MediaGeneralQueryf['email'].errors['email']">
+                  Invalid email address
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <textarea
+                class="lets-form"
+                rows="4"
+                placeholder="Write a message"
+                formControlName="message"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && MediaGeneralQueryf['message'].errors
+                }"
+              ></textarea>
+              <div
+                *ngIf="submitted && MediaGeneralQueryf['message'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    MediaGeneralQueryf['message'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mt-3">
+            <button class="FormCTA">
+              <h6 class="font-20 text-primary text-md-start">
+                Submit your query
+                <div class="headingCTA">
+                  <div class="blueCTA podcast-card-cta"></div>
+                </div>
+              </h6>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="container py-6" data-aos="zoom-in">
+  <h3 class="text-primary font-48-30 mb-4 pt-xl-5">Reach Out to Us, Follow and More</h3>
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-3 my-3">
+      <img
+        appCdnUrl="assets/contact-us/big-location.svg"
+        class="img-fluid icons"
+      />
+      <h3 class="font-36-24 text-primary my-3">Corporate Address</h3>
+      <img appCdnUrl="assets/Icon/dotted-border.svg" class="mb-3" />
+      <h3 class="font-24-16 fw-bold mb-3">
+        Fusion Business Solutions (P) Limited
+      </h3>
+      <p class="font-20-16 fw-normal text-light">
+        F-37, IT Park, MIA Extension <br />
+        Udaipur, Rajasthan, India<br />
+        313002<br />
+        <a href="tel:+91-977-227-9996"> +91-977-227-9996</a>
+      </p>
+      <p class="font-20-16 fw-normal text-light">
+        Email: <a href="mailto:support@fbspl.com">support&#64;fbspl.com</a>
+      </p>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3 my-3">
+      <img
+        appCdnUrl="assets/contact-us/phone-call.svg"
+        class="img-fluid icons"
+      />
+      <h3 class="font-36-24 text-primary my-3">Phone Numbers</h3>
+      <img appCdnUrl="assets/Icon/dotted-border.svg" class="mb-3" />
+      <p class="font-20-16 fw-normal text-light">
+        <span class="fw-700">UNITED STATES</span> -
+        <a href="tel:+1-240-979-0061">+1-240-979-0061</a><br />
+        <span class="fw-700">UNITED KINGDOM</span> -
+        <a href="tel:+44-788-331-8386">+44-788-331-8386</a><br />
+        <span class="fw-700">CANADA</span> -
+        <a href="tel:+1-240-979-0061">+1-240-979-0061</a><br />
+      </p>
+      <p class="font-20-16 fw-normal text-light">
+        Email: <a href="mailto:support@fbspl.com">support&#64;fbspl.com</a>
+      </p>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3 my-3">
+      <img appCdnUrl="assets/contact-us/message.svg" class="img-fluid icons" />
+      <h3 class="font-36-24 text-primary my-3">For any escalation</h3>
+      <img appCdnUrl="assets/Icon/dotted-border.svg" class="mb-3" />
+      <p class="font-20-16 fw-normal text-light">
+        Email:
+        <a href="mailto:escalation@fbspl.com">escalation&#64;fbspl.com</a>
+      </p>
+      <p class="font-20-16 fw-normal text-light">
+        <span class="fw-700">For job seekers</span><br />
+        <a href="tel:+91-9602254863">Mo. +91-9602254863</a>,<br />
+        <a href="tel:+91-8619805918">+91-8619805918</a><br />
+        <span class="font-20-16 fw-normal text-light"
+          >Email: <a href="mailto:hr@fbspl.com">hr&#64;fbspl.com</a></span
+        >
+      </p>
+      <p class="font-20-16 fw-normal text-light">
+        <span class="fw-700">For Media-Related Queries</span><br />
+        Mo. <a href="tel:+91-9166118997">+91-9166118997</a><br />
+        <span class="font-20-16 fw-normal text-light"
+          >Email:
+          <a href="mailto:marketing@fbspl.com">marketing&#64;fbspl.com</a></span
+        >
+      </p>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3 my-3">
+      <img
+        appCdnUrl="assets/contact-us/social-icon.svg"
+        class="img-fluid icons"
+      />
+      <h3 class="font-36-24 text-primary my-3">Follow Us</h3>
+      <img appCdnUrl="assets/Icon/dotted-border.svg" class="mb-3" />
+      <div class="d-flex flex-wrap">
+        <div>
+          <a
+            href="https://www.facebook.com/FBSPLTeam"
+            target="_blank"
+            title="Facebook"
+            rel="nofollow"
+            class="footerLink"
+            ><img
+              class="logo upTranslate me-3"
+              appCdnUrl="assets/Icon/facebook.svg"
+              alt="facebook"
+            />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://twitter.com/FBSPLTeam"
+            target="_blank"
+            title="Twitter"
+            class="footerLink"
+            ><img
+              class="logo upTranslate me-3"
+              appCdnUrl="assets/Icon/twitter.svg"
+              alt="twitter"
+            />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.youtube.com/@FBSPLTeam"
+            target="_blank"
+            title="Youtube"
+            rel="nofollow"
+            class="footerLink"
+            ><img
+              class="logo upTranslate me-3"
+              appCdnUrl="assets/Icon/youtube.svg"
+              alt="youtube"
+            />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.instagram.com/fbsplteam/"
+            target="_blank"
+            title="Instagram"
+            rel="nofollow"
+            class="footerLink"
+            ><img
+              class="logo upTranslate me-3"
+              appCdnUrl="assets/Icon/instagram.svg"
+              alt="instagram"
+            />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.linkedin.com/company/fbsplteam"
+            target="_blank"
+            title="LinkedIn"
+            rel="nofollow"
+            class="footerLink"
+            ><img
+              class="logo upTranslate me-3"
+              appCdnUrl="assets/Icon/linkedin.svg"
+              alt="linkedin"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-secondary-30 py-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="row text-center">
+        <div class="col-12 col-md-4">
+          <div class="text-start">
+            <p class="fw-normal font-96-30 mb-0">6+</p>
+            <p class="fw-normal font-36-24">Countries</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="text-start">
+            <p class="fw-normal font-96-30 mb-0">550+</p>
+            <p class="fw-normal font-36-24">Satisfied Clients</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="text-start">
+            <p class="fw-normal font-96-30 mb-0">708+</p>
+            <p class="fw-normal font-36-24">Exceptionally Talented Resources</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container py-3">
+  <div class="map-container">
+    <div id="tooltip" class="tooltip1 p-2">
+      <h2 id="tooltiph2" class="font-28-20"></h2>
+      <p id="tooltipP" class="font-20-16 mb-0"></p>
+    </div>
+    <div id="svg-container"></div>
+  </div>
+</section>

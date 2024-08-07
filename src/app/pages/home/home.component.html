@@ -1,0 +1,873 @@
+<nav
+  class="navbar navbar-expand-lg navbar-light d-none d-lg-flex"
+  id="subNavbarCollapse"
+>
+  <div class="container ms-auto" style="margin: 0 auto">
+    <div class="navbar-nav">
+      <a
+        *ngFor="let section of sections"
+        class="nav-item nav-link"
+        [class.active]="section.active"
+        href="#{{ section.id }}"
+        (click)="activateSection(section.id)"
+      >
+        {{ section.name }}
+      </a>
+    </div>
+  </div>
+</nav>
+<!-- Section 1 insurance-->
+<input
+  type="range"
+  min="-40"
+  max="140"
+  value="0"
+  class="slider"
+  id="myRange"
+  disabled
+  title=""
+/>
+<div class="main_home">
+  <div class="vertical-scroll-snap" id="insurance">
+    <div class="stacking-slide1">
+      <canvas
+        #starCanvas5
+        id="starCanvas5"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+        "
+      ></canvas>
+      <main class="container">
+        <div class="row align-items-center d-flex justify-content-center">
+          <div
+            class="col-lg-6 offset-md-1 d-flex align-items-center justify-content-lg-start"
+          >
+            <div class="insurance-content ms-5">
+              <h1 class="font-24-16" class="text-primary">
+                <span class="font-96-30">A I</span>nsurance
+              </h1>
+              <h2 class="insurance-subtitle font-36-24">
+                Making your insurance<br />
+                business SMART.
+              </h2>
+              <h3 class="CTAs insurance-subtitle d-flex">
+                <a
+                  routerLink="/services/insurance-bpo-outsourcing"
+                  class="fbspl_anchor"
+                >
+                  Make it happen
+                  <button
+                    class="blueCTA"
+                    routerLink="/services/insurance-bpo-outsourcing"
+                  ></button>
+                </a>
+              </h3>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex justify-content-center">
+            <div id="animationInsurance"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="stacking-slide quant_bg">
+      <div class="container">
+        <section class="homepage_client_success">
+          <div class="row align-items-center">
+            <div class="col-md-8 mobile_slide2_w50">
+              <div class="">
+                <!-- <div class="typewriter float-start"> -->
+                <h3 id="insurance2-parra" class="text-primary font-36-24">
+                  Unburden agency operations with platform experts
+                </h3>
+              </div>
+            </div>
+            <div class="col-md-4 mobile_slide2_w50" style="text-align: right">
+              <div class="ms-auto">
+                <img
+                  class="mobile_slide2_img"
+                  [src]="currentLogo"
+                  id="insurance2-img"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="justify-content-between mt-5 d-none d-lg-flex">
+              <div
+                class="image-button"
+                *ngFor="let data of insurance2Data"
+                [class.active]="data.active"
+              >
+                <img
+                  src="{{ data.img }}"
+                  class="img-fluid"
+                  alt="{{ data.alt }}"
+                />
+              </div>
+            </div>
+            <div class="d-lg-none insuranceDataContener row">
+              <div class="col-6 d-grid">
+                <div
+                  *ngFor="let data of insurance2Data.slice(0, 2)"
+                  class="image-button image-button-mob d-flex flex-column align-items-center mb-5"
+                  style="justify-self: center;"
+                  [class.active]="data.active"
+                >
+                  <img
+                    [src]="data.img"
+                    class="img-fluid"
+                    [alt]="data.alt"
+                  />
+                </div>
+              </div>
+
+              <!-- Second Column: Next Two Items -->
+              <div class="col-6 d-grid">
+                <div
+                  *ngFor="let data of insurance2Data.slice(2, 4)"
+                  class="image-button image-button-mob d-flex flex-column align-items-center mb-5"
+                  style="justify-self: center;"
+                  [class.active]="data.active"
+                >
+                  <img
+                    [src]="data.img"
+                    class="img-fluid"
+                    [alt]="data.alt"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!--div  id="particles-js"></div-->
+    <div class="stacking-slide">
+      <!--canvas #starCanvas style="position: absolute; top: 0; left: 0;"></canvas-->
+      <canvas
+        #starCanvas1
+        id="starCanvas1"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+        "
+      ></canvas>
+      <div class="container">
+        <section class="homepage_client_success">
+          <div class="row align-items-center">
+            <div class="col-md-6 mobile_flex">
+              <div class="mobile_slide2_w60">
+                <h2 class="fw-bold font-24-16" style="color: #0f0f10">
+                  Client success
+                </h2>
+                <h3 class="text-primary font-48-30">Sharing your goals</h3>
+                <h3 class="CTAs insurance-subtitle d-flex d-lg-none client_success">
+                  <a
+                    class="fbspl_anchor"
+                    [routerLink]="['/case-studies']"
+                    fragment="insurance"
+                    font-24-16
+                  >
+                    See Our Impact
+                    <button
+                      class="blueCTA"
+                      routerLink="/case-studies#insurance"
+                    ></button>
+                  </a>
+                </h3>
+              </div>
+              <div
+                class="row justify-content-between  mobile_slide2_w40"
+              >
+                <div class="col-6 col-lg-4 pt-5 px-0">
+                  <p class="display-6 fw-bold text-primary pb-3">98%</p>
+                  <p class="fw-bold">Qualified <br />Transactions</p>
+                </div>
+                <div class="col-6 col-lg-4 pt-5 px-0">
+                  <p class="display-6 fw-bold text-primary pb-3">98%</p>
+                  <p class="fw-bold">SLA <br />Compliant</p>
+                </div>
+                <div class="col-6 col-lg-4 pt-5 px-0">
+                  <p class="display-6 fw-bold text-primary pb-3">96%</p>
+                  <p class="fw-bold">Client <br />Retention</p>
+                </div>
+              </div>
+
+              <h3
+                class="CTAs insurance-subtitle d-none d-lg-flex client_success "
+              >
+                <a
+                  class="fbspl_anchor"
+                  [routerLink]="['/case-studies']"
+                  fragment="insurance"
+                  font-24-16
+                >
+                  See Our Impact
+                  <button
+                    class="blueCTA"
+                    [routerLink]="['/case-studies']"
+                    fragment="insurance"
+                  ></button>
+                </a>
+              </h3>
+            </div>
+            <div
+              class="col-md-6 mobile_margin custom_padding d-none d-lg-block"
+            >
+              <div class="position-relative">
+                <div class="imgabovediv">
+                  <img
+                    class="img-fluid custom_img_width"
+                    src="https://d1585q1wairh36.cloudfront.net/assets/Account&bookeping/Insurance_case_study.png"
+                    alt="FBSPL Client Success and Case Study-Insurance"
+                  />
+                </div>
+                <div class="blockquote-wrapper">
+                  <img
+                    class="mt-5"
+                    src="https://d1585q1wairh36.cloudfront.net/assets/Account&bookeping/quote-left.svg"
+                    alt=""
+                  />
+                  <blockquote class="blockquote" style="margin-left: revert">
+                    <p class="mb-0 font-24-16">
+                      They follow a clear methodology, learn quickly, and
+                      deliver fast results.
+                    </p>
+                    <footer class="blockquote-footer pt-3 font-20-16">
+                      Bruce Jones<br />
+                      <cite title="Source Title">Owner & President</cite>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2 Accounting & book kepping-->
+  <div class="vertical-scroll-snap" id="accounting">
+    <div class="stacking-slide">
+      <canvas
+        #starCanvas6
+        id="starCanvas6"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+        "
+      ></canvas>
+      <main class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-md-1 d-flex align-items-center">
+            <div class="">
+              <h2 class="insurance-title font-36-24" class="text-primary">
+                <span class="insurance-title-big font-96-30">A</span>ccount<span
+                  class="insurance-title-big font-96-30"
+                  >I</span
+                >ng & Bookkeeping
+              </h2>
+              <h2 class="insurance-subtitle font-36-24">
+                Creating a whole new accounting era.<br />
+                Intelligently yours.
+              </h2>
+              <h3 class="CTAs insurance-subtitle d-flex">
+                <a
+                  routerLink="/services/accounting-bookkeeping-services"
+                  class="fbspl_anchor"
+                >
+                  Be the future
+                  <button
+                    class="blueCTA"
+                    routerLink="/services/accounting-bookkeeping-services"
+                  ></button>
+                </a>
+              </h3>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="d-flex justify-content-center align-items-center">
+              <img
+                src="https://d1585q1wairh36.cloudfront.net/assets/insurance-logo/accountingAndEcomerceBanner.png"
+                class="middleSectionHome"
+                alt="Outsource accounting & bookeeping services"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="stacking-slide quant_bg">
+      <div class="container">
+        <section class="homepage_client_success">
+          <div class="row align-items-center">
+            <div class="col-md-8 mobile_slide2_w50">
+              <div class="">
+                <h3 id="accounting2-parra" class="text-primary font-36-24">
+                  Generate precise and detailed financial reports
+                </h3>
+              </div>
+            </div>
+            <div class="col-md-4 mobile_slide2_w50" style="text-align: right">
+              <div class="ms-auto">
+                <img
+                  class="mobile_slide2_img"
+                  [src]="currentLogo1"
+                  id="accounting2-img"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="justify-content-between mt-5 d-none d-lg-flex">
+              <div
+                class="image-button1"
+                *ngFor="let data of accounting2Data"
+                [class.active]="data.active"
+              >
+                <img
+                  [src]="data.active ? data.img3 : data.img"
+                  class="img-fluid1"
+                  alt="{{ data.alt1 }}"
+                />
+              </div>
+            </div>
+            <!-- <div class="d-lg-none">
+              <div
+                class="image-button1 image-button-mob my-3"
+                *ngFor="let data of accounting2Data"
+                [class.active]="data.active"
+              >
+                <img
+                  [src]="data.active ? data.img3 : data.img"
+                  class="img-fluid1"
+                  alt="{{ data.alt1 }}"
+                />
+              </div>
+            </div> -->
+            <div class="d-lg-none insuranceDataContener row">
+              <div class="col-6 d-grid">
+                <div
+                  *ngFor="let data of accounting2Data.slice(0, 2)"
+                  class="image-button1 image-button-mob d-flex flex-column align-items-center mb-5"
+                  style="justify-self: center;"
+                  [class.active]="data.active"
+                >
+                  <img
+                    [src]="data.active ? data.img3 : data.img"
+                    class="img-fluid1"
+                    [alt]="data.alt1"
+                  />
+                </div>
+              </div>
+
+              <!-- Second Column: Next Two Items -->
+              <div class="col-6 d-grid">
+                <div
+                  *ngFor="let data of accounting2Data.slice(2, 4)"
+                  class="image-button1 image-button-mob d-flex flex-column align-items-center mb-5"
+                  style="justify-self: center;"
+                  [class.active]="data.active"
+                >
+                  <img
+                    [src]="data.active ? data.img3 : data.img"
+                    class="img-fluid1"
+                    [alt]="data.alt1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="stacking-slide">
+      <canvas
+        #starCanvas2
+        id="starCanvas2"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+        "
+      ></canvas>
+      <div class="container">
+        <section class="homepage_client_success">
+          <div class="row align-items-center">
+            <div class="col-md-6 mobile_flex">
+              <div class="mobile_slide2_w60">
+                <h2 class="fw-bold font-24-16" style="color: #0f0f10">
+                  Client success
+                </h2>
+                <h3 class="text-primary font-48-30">
+                  Staying true to<br />
+                  our promises
+                </h3>
+                <h3 class="CTAs insurance-subtitle d-flex d-lg-none client_success">
+                  <a
+                    [routerLink]="['/case-studies']"
+                    fragment="accounting&bookkeeping"
+                    class="fbspl_anchor font-24-16"
+                  >
+                    See Our Impact
+                    <button
+                      class="blueCTA"
+                      [routerLink]="['/case-studies']"
+                      fragment="accounting&bookkeeping"
+                    ></button>
+                  </a>
+                </h3>
+              </div>
+              <div
+                class="row justify-content-between  mobile_slide2_w40"
+              >
+                <div class="col-6 col-lg-4 pt-5 px-0">
+                  <p class="display-6 fw-bold text-primary pb-3">100%</p>
+                  <p class="fw-bold">
+                    Precision with earnout<br />and clawback models
+                  </p>
+                </div>
+                <div class="col-6 col-lg-4 pt-5 px-0">
+                  <p class="display-6 fw-bold text-primary pb-3">98%</p>
+                  <p class="fw-bold">Improved First<br />Call Resolution</p>
+                </div>
+                <div class="col-6 col-lg-4 pt-5 px-0">
+                  <p class="display-6 fw-bold text-primary pb-3">2 hours </p>
+                  <p class="fw-bold">
+                    Reduced payroll processing<br />time from 3 days to 2 hours
+                  </p>
+                </div>
+              </div>
+              <h3
+                class="CTAs insurance-subtitle d-none d-lg-flex client_success "
+              >
+                <a
+                  [routerLink]="['/case-studies']"
+                  fragment="accounting&bookkeeping"
+                  class="fbspl_anchor font-24-16"
+                >
+                  See Our Impact
+                  <button
+                    class="blueCTA"
+                    [routerLink]="['/case-studies']"
+                    fragment="accounting&bookkeeping"
+                  ></button>
+                </a>
+              </h3>
+            </div>
+            <div class="col-md-6 custom_padding">
+              <div class="position-relative">
+                <div class="imgabovediv">
+                  <img
+                    class="img-fluid custom_img_width"
+                    src="https://d1585q1wairh36.cloudfront.net/assets/Account&bookeping/Accouting_bookiping_case_study.png"
+                    alt="FBSPL Client Success and Case Study-Accounting & Bookkeeping"
+                  />
+                </div>
+                <div class="blockquote-wrapper">
+                  <img
+                    class="mt-5"
+                    src="https://d1585q1wairh36.cloudfront.net/assets/Account&bookeping/quote-left.svg"
+                    alt=""
+                  />
+                  <blockquote class="blockquote" style="margin-left: revert">
+                    <p class="mb-0 font-24-16">
+                      FBSPL transformed our operations quickly.
+                    </p>
+                    <footer class="blockquote-footer pt-3 font-20-16">
+                      Francesca Furlanetto <br />
+                      <cite title="Source Title">Founder</cite>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3 eCommerce -->
+  <!-- <div class="vertical-scroll-snap" id="ecommerce">
+    <div class="stacking-slide">
+      <canvas
+        #starCanvas7
+        id="starCanvas7"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+        "
+      ></canvas>
+      <main class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-md-1 d-flex align-items-center">
+            <div class="">
+              <h2 class="insurance-title" class="text-primary">
+                <span class="insurance-title-big font-96-30">E-</span>Commerce
+              </h2>
+              <h2 class="insurance-subtitle font-36-24">
+                Empowering the experience.<br />
+                Going beyond what is possible.
+              </h2>
+              <h3 class="CTAs insurance-subtitle d-flex">
+                <a
+                  routerLink="/services/e-commerce-outsourcing-services"
+                  class="fbspl_anchor"
+                >
+                  Let's know the unknown
+                  <button
+                    class="blueCTA"
+                    routerLink="/services/e-commerce-outsourcing-services"
+                  ></button>
+                </a>
+              </h3>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex justify-content-center">
+            <div id="animationEcommerce"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="stacking-slide quant_bg">
+      <div id="JiraAnimation"></div>
+      <div id="JiraAnimationMob"></div>
+    </div>
+
+    <div class="stacking-slide">
+      <canvas
+        #starCanvas3
+        id="starCanvas3"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+        "
+      ></canvas>
+      <div class="container">
+        <section class="homepage_client_success">
+          <div class="row align-items-center">
+            <div class="col-md-6 mobile_flex">
+              <div class="mobile_slide2_w60">
+                <h2 class="fw-bold font-24-16" style="color: #0f0f10">
+                  Client success
+                </h2>
+                <h3 class="text-primary font-48-30">Success that speaks</h3>
+                <h3 class="CTAs insurance-subtitle d-flex d-lg-none client_success">
+                  <a
+                    [routerLink]="['/case-studies']"
+                    fragment="ecommerce"
+                    class="fbspl_anchor font-24-16"
+                  >
+                    See Our Impact
+                    <button
+                      class="blueCTA"
+                      [routerLink]="['/case-studies']"
+                      fragment="ecommerce"
+                    ></button>
+                  </a>
+                </h3>
+              </div>
+              <div
+                class="row justify-content-between  mobile_slide2_w40"
+              >
+                <div class="col-6 col-lg-4 pt-5 px-0">
+                  <p class="display-6 fw-bold text-primary pb-3">52%</p>
+                  <p class="fw-bold">Increase<br />in sales</p>
+                </div>
+                <div class="col-6 col-lg-4 pt-5 px-0">
+                  <p class="display-6 fw-bold text-primary pb-3">40%</p>
+                  <p class="fw-bold">More revenue<br />generated</p>
+                </div>
+                <div class="col-6 col-lg-4 pt-5 px-0">
+                  <p class="display-6 fw-bold text-primary pb-3">4.9</p>
+                  <p class="fw-bold">Increased NPS<br />from 3.4</p>
+                </div>
+              </div>
+              <h3
+                class="CTAs insurance-subtitle d-none d-lg-flex client_success "
+              >
+                <a
+                  [routerLink]="['/case-studies']"
+                  fragment="ecommerce"
+                  class="fbspl_anchor font-24-16"
+                >
+                  See Our Impact
+                  <button
+                    class="blueCTA"
+                    [routerLink]="['/case-studies']"
+                    fragment="ecommerce"
+                  ></button>
+                </a>
+              </h3>
+            </div>
+            <div class="col-md-6 mobile_margin custom_padding">
+              <div class="position-relative">
+                <div class="imgabovediv">
+                  <img
+                    class="img-fluid custom_img_width"
+                    src="https://d1585q1wairh36.cloudfront.net/assets/Account&bookeping/E-commerce-case_study.png"
+                    alt="FBSPL Client Success and Case Study-eCommerce"
+                  />
+                </div>
+                <div class="blockquote-wrapper">
+                  <img
+                    class="mt-5"
+                    src="https://d1585q1wairh36.cloudfront.net/assets/Account&bookeping/quote-left.svg"
+                    alt=""
+                  />
+                  <blockquote class="blockquote" style="margin-left: revert">
+                    <p class="mb-0 font-24-16">
+                      Exceptional assistance from team; <br />your ethos sets
+                      you apart in the e-commerce domain.
+                    </p>
+                    <footer class="blockquote-footer pt-3 font-20-16">
+                      Chief Marketing Officer<br />
+                      <cite title="Source Title">Bombinate</cite>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Section 4 Data Annotation -->
+  <div class="vertical-scroll-snap" id="data-annotation">
+    <div class="stacking-slide1" style="overflow: hidden">
+      <div>
+        <div id="comparison">
+          <figure>
+            <div id="divisor"></div>
+          </figure>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            class="sliderHorizontal"
+            id="slider"
+            (input)="moveDivisor($event)"
+          />
+        </div>
+      </div>
+
+      <div
+        class="container position-absolute dataAnnotationContent start-50 translate-middle"
+        style="transform: translate(-50%, -80%) !important"
+      >
+        <div class="row">
+          <div class="col-md-8 col-lg-6">
+            <!-- Adjusted for better responsiveness -->
+            <div class="text">
+              <h2 class="insurance-title" class="text-primary font-48-30">
+                Dat<span class="insurance-title-big font-96-30">A</span>
+                Annotat<span class="insurance-title-big font-96-30">I</span>on
+              </h2>
+              <h2 class="insurance-subtitle font-36-24">
+                More accurate.<br />More responsible than before.
+              </h2>
+              <h3 class="CTAs insurance-subtitle d-flex">
+                <a
+                  routerLink="/services/data-annotation-services"
+                  class="fbspl_anchor"
+                >
+                  Experience the difference
+                  <button
+                    class="blueCTA"
+                    routerLink="/services/data-annotation-services"
+                  ></button>
+                </a>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stacking-slide1">
+      <canvas
+        #starCanvas4
+        id="starCanvas4"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+        "
+      ></canvas>
+      <div class="container">
+        <section class="homepage_client_success">
+          <div class="row align-items-center">
+            <div class="col-md-6 mobile_flex">
+              <div class="mobile_slide2_w60">
+                <h2 class="fw-bold font-24-16" style="color: #0f0f10">
+                  Client success
+                </h2>
+                <h3 class="text-primary font-48-30">You asked, we delivered</h3>
+                <h3 class="CTAs insurance-subtitle d-flex d-lg-none client_success">
+                  <a
+                    [routerLink]="['/case-studies']"
+                    fragment="dataAnnotation"
+                    class="fbspl_anchor font-24-16"
+                  >
+                    See Our Impact
+                    <button
+                      class="blueCTA"
+                      [routerLink]="['/case-studies']"
+                      fragment="dataAnnotation"
+                    ></button>
+                  </a>
+                </h3>
+              </div>
+              <div
+                class="row justify-content-between  mobile_slide2_w40"
+              >
+                <div class="col-6 col-lg-4 pt-5 px-0">
+                  <p class="display-6 fw-bold text-primary pb-3">2000</p>
+                  <p class="fw-bold">Processed leads<br />daily</p>
+                </div>
+                <div class="col-6 col-lg-4 pt-5 px-0">
+                  <p class="display-6 fw-bold text-primary pb-3">50%</p>
+                  <p class="fw-bold">Reduction<br />in errors</p>
+                </div>
+                <div class="col-6 col-lg-4 pt-5 px-0">
+                  <p class="display-6 fw-bold text-primary pb-3">45</p>
+                  <p class="fw-bold">Exceeded target<br />expectation of 20</p>
+                </div>
+              </div>
+
+              <h3
+                class="CTAs insurance-subtitle d-none d-lg-flex client_success "
+              >
+                <a
+                  [routerLink]="['/case-studies']"
+                  fragment="dataAnnotation"
+                  class="fbspl_anchor font-24-16"
+                >
+                  See Our Impact
+                  <button
+                    class="blueCTA"
+                    [routerLink]="['/case-studies']"
+                    fragment="dataAnnotation"
+                  ></button>
+                </a>
+              </h3>
+            </div>
+            <div class="col-md-6 mobile_margin custom_padding">
+              <div class="position-relative">
+                <div class="imgabovediv">
+                  <img
+                    class="img-fluid custom_img_width"
+                    src="https://d1585q1wairh36.cloudfront.net/assets/Account&bookeping/Data-anotation_case_study.png"
+                    alt="FBSPL Client Success and Case Study-Data Annotation"
+                  />
+                </div>
+                <div class="blockquote-wrapper">
+                  <img
+                    class="mt-5"
+                    src="https://d1585q1wairh36.cloudfront.net/assets/Account&bookeping/quote-left.svg"
+                    alt=""
+                  />
+                  <blockquote class="blockquote" style="margin-left: revert">
+                    <p class="mb-0 font-24-16">
+                      I must say that our partnership with Fusion Business
+                      Solutions<br />
+                      (FBSPL) has been truly exceptional.
+                    </p>
+                    <footer class="blockquote-footer pt-3 font-20-16">
+                      Chin Ma<br />
+                      <cite title="Source Title">Founder & President</cite>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <!-- Section 5 Digital Marketing -->
+  <div class="next-block vertical-scroll-snap" id="digital-marketing">
+    <div class="slide">
+      <canvas
+        #starCanvas8
+        id="starCanvas8"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+        "
+      ></canvas>
+      <main class="container">
+        <div class="row">
+          <div class="col-lg-4 offset-md-1 d-flex align-items-center">
+            <div class="insurance-content">
+              <h2 class="insurance-title" class="text-primary font-48-30">
+                Digit<span class="insurance-title-big font-96-30">A</span>I
+                Market<span class="insurance-title-big font-96-30">I</span>ng
+              </h2>
+              <h2 class="insurance-subtitle font-36-24">
+                Your new digital way.
+              </h2>
+
+              <h3 class="CTAs insurance-subtitle d-flex">
+                <a
+                  routerLink="/services/digital-marketing"
+                  class="fbspl_anchor"
+                >
+                  Like never before
+                  <button
+                    class="blueCTA"
+                    routerLink="/services/digital-marketing"
+                  ></button>
+                </a>
+              </h3>
+            </div>
+          </div>
+          <div class="col-lg-8 mobile_mt5">
+            <div id="DigitalMarketing"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</div>
+<app-connect></app-connect>

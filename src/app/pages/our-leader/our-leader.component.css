@@ -1,0 +1,179 @@
+.imageWrapperCard {
+  background: #f8f8ff;
+  border: 1px solid #e1e1e1;
+  height: 320px;
+  border-radius: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 1190px) {
+  .imageWrapperCard {
+    height: 250px;
+  }
+}
+/* @media (max-width: 980px) {
+  .imageWrapperCard {
+    height: 160px;
+  }
+} */
+
+.linkedinicon {
+  transition: transform 0.2s ease-in-out;
+}
+
+.linkedinicon :hover {
+  transform: translateY(-5px);
+}
+
+.imageWrapperCard:hover {
+  .imageText {
+    display: block;
+  }
+  background-size: 79%;
+  background-position: bottom right -1rem;
+}
+
+@media (max-width: 770px) {
+  .imageWrapperCard:hover {
+    background-size: 61%;
+  }
+}
+@media (max-width: 470px) {
+  .imageWrapperCard:hover {
+    background-size: 80%;
+  }
+}
+
+.imageText {
+  display: none;
+  transition: display 0.3s ease-in-out;
+}
+
+.sh-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/Shweta Maam.png");
+}
+
+.sh-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/ShwetaMaam.png");
+}
+
+.vv-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/vermasir1.png");
+}
+
+.vv-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/vermasir2.png");
+}
+
+.kb-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/KB Sir.png");
+}
+
+.kb-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/KBSir.png");
+}
+
+.ss-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/Shakti Sir.png");
+}
+
+.ss-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/ShaktiSir.png");
+}
+
+.sd-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/Shekhar Sir.png");
+}
+
+.sd-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/ShekharSir.png");
+}
+
+.ac-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/Ankur Sir.png");
+}
+
+.ac-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/AnkurSir.png");
+}
+
+.db-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/Divya Maam.png");
+}
+
+.db-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/DivyaMaam.png");
+}
+
+.kv-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/Kumar\ Sir.png");
+}
+
+.kv-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/KumarSir.png");
+}
+
+.as-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/Avinash\ Sir.png");
+}
+
+.as-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/AvinashSir.png");
+}
+.md-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/Madhukar-sir.png");
+}
+.md-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/Madhukar Sir.png");
+}
+.fo-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/FakhruddinSir.png");
+}
+.fo-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/FakhruddinSir1.png");
+}
+.ag-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/aakashSir.png");
+}
+.ag-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/aakashSir1.png");
+}
+.tracy-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/tracy.png");
+}
+.tracy-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/tracy1.png");
+}
+.laura-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/laura.png");
+}
+.laura-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/laura1.png");
+}
+.bharat-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/bharat.png");
+}
+.bharat-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/bharat1.png");
+}
+.chetan-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/chetansir.png");
+}
+.chetan-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/chetansir2.png");
+}
+.tarun-card {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/transparent/tarunsir.png");
+}
+.tarun-card:hover {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/leaders/icon-image/tarunsir2.png");
+}
+
+.linkedicon {
+  height: 30px;
+  width: 30px;
+}

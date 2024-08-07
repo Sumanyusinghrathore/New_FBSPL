@@ -1,0 +1,26 @@
+/* Mobile devices (small screens) */
+@media only screen and (max-width: 767px) {
+    /* Styles for mobile devices */
+    .error-section{
+        margin-top: 100px;
+    }
+  }
+  
+  /* Tablet devices (medium screens) */
+  @media only screen and (min-width: 768px) and (max-width: 1000px) {
+    /* Styles for tablet devices */
+    .error-section{
+        margin-top: 100px;
+    }
+  }
+  
+  /* Laptop devices (large screens) */
+  @media only screen and (min-width: 1001px) and (max-width: 1440px) {
+    /* Styles for laptop devices */
+  }
+  
+  /* Desktop devices (extra large screens) */
+  @media only screen and (min-width: 1441px) {
+    /* Styles for desktop devices */
+  }
+  

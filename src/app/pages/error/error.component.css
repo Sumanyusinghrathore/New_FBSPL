@@ -1,0 +1,26 @@
+.center-right-float {
+  position: absolute;
+  top: 9%;
+  right: 0;
+  height: 5.5rem;
+}
+.left-bottom-float {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .center-right-float {
+    height: 4rem;
+    top: 6%;
+  }
+}
+.left-bottom-float {
+  height: 1rem !important;
+}
+.error-section {
+  max-width: 800px;
+  margin-inline: auto;
+}

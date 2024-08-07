@@ -1,0 +1,70 @@
+<section class="container d-none d-lg-block">
+  <div class="gradientBanner">
+    <img appCdnUrl="assets/news/news_Banner.png" class="desktop-banner" />
+    <div class="bannerText" data-aos="fade-up">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">News</li>
+        </ol>
+      </nav>
+      <h3 class="font-48-30 text-primary pt-3">Newsroom</h3>
+      <p class="card-text font-20-16 pt-3">
+        Discover What’s New At FBSPL. Stay updated on trending events, <br />
+        latest news, press releases, and more.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Mobile View -->
+<section class="container text-dark slide d-block d-lg-none pt-5">
+  <div class="gradientBannerMob">
+    <img appCdnUrl="assets/news/News_mobile_banner.png" class="card-img-mob" />
+    <div class="bannerTextMob">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">News</li>
+        </ol>
+      </nav>
+      <h3 class="font-48-30 text-primary">Newsroom</h3>
+    </div>
+  </div>
+</section>
+
+<section class="container py-6">
+  <h2 class="text-primary font-48-30" data-aos="slide-up">Trending Events</h2>
+
+  <hr class="news_line d-none d-md-block" />
+
+  <div class="container py-6">
+    <div class="row mt-3">
+      <div class="col-lg-4 col-12" *ngFor="let news of newsData; let i = index">
+        <a [routerLink]="['/news', news.slug]">
+          <div class="card trending_card" data-aos="zoom-in">
+            <img
+              class="card-img-top img-fluid"
+              [src]="news.feature_image"
+              [ngClass]="{
+                'd-lg-none d-lg-none': i == 1
+              }"
+            />
+            <div class="card-body">
+              <h3 class="fs-24 fw-bolder">{{ news.title }}</h3>
+              <time class="fs-16">{{ news.publish_date }}</time>
+              <p class="fs-16">{{ news.short_description }}</p>
+            </div>
+            <img
+              class="card-img-top img-fluid"
+              [src]="news.feature_image"
+              *ngIf="i == 1"
+              [ngClass]="{
+                'd-none d-lg-block': i == 1
+              }"
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

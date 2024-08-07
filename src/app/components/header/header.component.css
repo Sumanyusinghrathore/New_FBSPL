@@ -1,0 +1,513 @@
+.navbar-toggler-icon {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Icon/navBtn.svg");
+}
+
+.navbar .megamenu {
+  padding: 1rem;
+  border-radius: 0px 0px 20px 20px;
+  left: 0;
+  right: 0;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.navbar .nav-link {
+  cursor: pointer;
+}
+.header-logo {
+  max-width: 214px;
+}
+.navbar .nav-pills .nav-link {
+  border-radius: 0;
+  background: none !important;
+  color: var(--primary) !important;
+}
+
+.navbar .nav-pills {
+  background-color: #e4e4ff80;
+  color: var(--primary);
+}
+
+.navbar .nav-pills {
+  background: none !important;
+  color: var(--primary);
+}
+
+.nav-border {
+  border-right: 1px solid var(--primary);
+  padding: 0 0px;
+  height: auto;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: var(--primary) !important;
+  background: none !important;
+  font-weight: 600;
+}
+
+/* Add this to your header.component.css file */
+.active-link {
+  color: var(--primary);
+  font-weight: 600; /* Optional, to make the active link stand out */
+  text-decoration: underline !important;
+}
+
+.div_btn {
+  border: 1px solid var(--primary);
+  border-radius: 20px;
+  padding: 5px 15px;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.div_text {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.view {
+  text-align: right;
+  padding: 0px 30px;
+  color: var(--primary);
+  padding-top: 20px;
+}
+
+.dropdown-hover:hover > .dropdown-menu > .nav-link-item {
+  display: inline-block;
+}
+
+.dropdown-hover > .dropdown-toggle:active {
+  pointer-events: none;
+}
+.dropdown-menu {
+  z-index: 9999;
+  /* width: 80%; */
+}
+.dropdown-toggle:after {
+  content: "" !important;
+  border-right: none !important;
+  border-left: none !important;
+}
+
+.megamenu-image-about {
+  height: 225px;
+  border-radius: 20px;
+}
+
+.nav-link-item:hover {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 25px;
+}
+
+.title {
+  color: var(--primary);
+  padding: 10px;
+  font-weight: 600;
+}
+
+.list-unstyled {
+  padding: 0px 10px;
+}
+.list-unstyled i {
+  float: right;
+}
+
+.list-unstyled li:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.know-more {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.nav_btn {
+  display: contents;
+}
+
+@media all and (min-width: 992px) {
+  .navbar .has-megamenu {
+    position: static !important;
+  }
+
+  .navbar .megamenu {
+    left: 0;
+    right: 0;
+    margin-top: 0px;
+    border-radius: 0px 0px 20px 20px;
+  }
+  .offcanvas-end {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar.fixed-top .navbar-collapse,
+  .navbar.sticky-top .navbar-collapse {
+    overflow-y: auto;
+    max-height: 90vh;
+    margin-top: 10px;
+  }
+}
+
+.tab-content > .tab-pane {
+  display: none;
+}
+
+.tab-content > .tab-pane.show {
+  display: block;
+}
+
+.offcanvas-end {
+  width: 275px;
+  overflow-x: scroll;
+}
+
+.offcanvas-header {
+  padding: 2rem 1rem 0rem 1rem;
+}
+
+.offcanvas-body {
+  padding: 0;
+}
+
+.btn-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 0.375rem 1.25rem;
+  border: none;
+  background: none;
+  color: black;
+  text-decoration: none;
+}
+
+.btn-toggle:not(.collapsed) {
+  color: var(--primary) !important;
+}
+
+.btn-toggle.collapsed {
+  color: var(--black);
+}
+
+.btn-toggle:hover {
+  color: var(--primary);
+}
+
+.btn-toggle:focus {
+  color: var(--black) !important;
+}
+
+.btn-toggle-nav a {
+  display: block;
+  padding: 0.25rem 1.25rem;
+  color: var(--primary);
+}
+
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+  background: white;
+}
+
+.collapse.show {
+  display: block;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+}
+
+.fa-chevron-right,
+.fa-chevron-down {
+  transition: transform 0.3s ease;
+}
+
+.offcanvas_scroll {
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+.offcanvas-end {
+  display: none;
+}
+
+/* Display sidebar in mobile view */
+@media (max-width: 767px) {
+  .offcanvas-end {
+    display: block;
+    width: 50vh;
+  }
+  .mymenuhide {
+    display: block;
+  }
+  .header-logo {
+    max-width: 140px;
+  }
+}
+
+.nga-nav-link.active,
+.nga-nav-link:hover {
+  color: var(--primary);
+  border-bottom: 4px solid var(--primary);
+}
+
+.img_podcast {
+  width: 100%;
+  height: 120px;
+  border-radius: 20px 20px 0px 0px;
+  object-fit: contain !important;
+}
+
+.podcast_card {
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(228, 228, 255, 0.5),
+    rgb(191, 191, 255, 0.5)
+  );
+  border: none !important;
+  border-radius: 20px;
+}
+.blog_card {
+  background: linear-gradient(
+    to bottom,
+    rgba(228, 228, 255, 0.5),
+    rgb(191, 191, 255, 0.5)
+  );
+  border: none !important;
+  border-radius: 20px;
+  max-height: 280px;
+}
+.img_header {
+  /* width: 250px; */
+  border-radius: 20px;
+  max-height: 250px;
+}
+.mymenuhide {
+  display: none;
+}
+
+.career_margin{
+  margin-left: 25px;
+}
+/* iPad Air Landscape */
+@media only screen and (min-device-width: 820px) and (max-device-width: 1180px) and (orientation: portrait) {
+  .career_margin{
+    margin-left: 45px !important;
+  }
+}
+
+/* iPad Mini Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 834px) and (orientation: portrait) {
+  .career_margin{
+    margin-left: 25px;
+  }
+}
+
+.image_blog {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+  display: block;
+}
+
+.active_main {
+  color: var(--primary);
+  text-decoration: underline !important;
+}
+
+/* .btn_hide {
+  opacity: 0;
+}
+
+.anchorCTA .btn_hide {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+} */
+
+/* Hover effect on .anchorCTA */
+.anchorCTA:hover .btn_hide {
+  opacity: 1;
+}
+
+/* .nga-nav-link {
+  color: var(--black);
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+  border-bottom: 4px solid transparent;
+}
+
+
+.navbar-toggler-icon {
+  background-image: var(--bs-navbar-toggler-icon-bg);
+}
+
+.nav {
+  background-color: transparent;
+  transition: background-color 0.3s;
+  height: 140px;
+}
+.nga-logo {
+  font-weight: 500;
+}
+
+.nga-logo:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar {
+  transform: translateY(0);
+  transition: background-color 0.3s ease-in-out, transform 0.5s ease;
+  background-color: white;
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar-toggler {
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .navbar-expand-lg .navbar-toggler {
+    display: flex;
+  }
+} */
+
+/* iPad Pro Portrait and Landscape */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* .podcast_card {
+    height: 95%;
+  } */
+  /* .blog_card {
+    height: 220px;
+  } */
+}
+
+/* iPad Mini Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) and (-webkit-min-device-pixel-ratio: 2) {
+  .offcanvas-end {
+    display: block;
+    width: 430px;
+  }
+}
+.Header-card-cta {
+  margin-left: 6px;
+  height: 30px;
+  width: 30px;
+}
+
+.accordion-button::after {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Icon/Right_Vector.svg");
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-left: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Icon/Down_Vector.svg");
+  transform: rotate(0deg); /* Remove this line if no rotation is needed */
+}
+
+.header_padding {
+  line-height: 20px;
+  padding-top: 10px;
+}
+
+.header_img {
+  position: absolute;
+  margin-top: -5vh;
+  right: 2%;
+  width: 50px;
+}
+
+.nga-nav-link {
+  color: var(--black);
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+  border-bottom: 4px solid transparent;
+}
+.nav-link.active {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.nav {
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+.nga-logo {
+  font-weight: 500;
+}
+
+.nga-logo:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar {
+  /* transform: translateY(0); */
+  transition: background-color 0.3s ease-in-out, transform 0.5s ease;
+  background-color: white; /* Background color when scrolled */
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar-toggler {
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+}
+.img_vector {
+  position: absolute;
+  bottom: 15px;
+  margin-left: -50px;
+  width: 70px;
+  margin-bottom: 0px;
+}
+
+.blog_card:hover .text_highlight {
+  color: var(--primary) !important;
+}
+
+.podcast_card:hover .text_highlight {
+  color: var(--primary) !important;
+}
+
+.img_icon{
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  cursor: pointer;
+}
+.fit_content{
+  width: fit-content;
+}
+.btn-close {
+  --bs-btn-close-bg: url("https://d1585q1wairh36.cloudfront.net/assets/Icon/Accord-open.svg") !important;
+  opacity: 1 !important;
+}

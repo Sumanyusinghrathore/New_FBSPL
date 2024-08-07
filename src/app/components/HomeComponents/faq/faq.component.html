@@ -1,0 +1,76 @@
+<div class="col-12 col-md-12 col-lg-10">
+  <div class="faqHeadline">
+    <h3 class="text-primary font-48-30">Frequently Asked Questions</h3>
+    <div class="button" class=""></div>
+  </div>
+  <div *ngIf="successfull">
+    <p class="font-20 text-green fw-bold mt-4">
+      Thank you for your message we will reach out you soon
+    </p>
+  </div>
+  <div *ngIf="!successfull">
+    <p class="font-20-16">
+      Couldn’t find your query? Drop your requirements straight to our inbox,
+      and one of our team members will get in touch with you soon.
+    </p>
+    <form autocomplete="off" [formGroup]="FaqForm" (ngSubmit)="validateForm()">
+      <div class="pt-4">
+        <input
+          type="email"
+          class="lets-form"
+          formControlName="email"
+          placeholder="Email Address"
+          [ngClass]="{
+            'is-invalid': submitted && FaqFormf['email'].errors
+          }"
+        />
+        <div
+          *ngIf="submitted && FaqFormf['email'].errors"
+          class="invalid-feedback"
+        >
+          <div *ngIf="FaqFormf['email'].errors['requiredButNotAllowBlank']">
+            *This Field is Required
+          </div>
+          <div *ngIf="FaqFormf['email'].errors['email']">
+            Invalid email address
+          </div>
+        </div>
+      </div>
+      <div class="mt-2">
+        <textarea
+          class="lets-form"
+          placeholder="Brief Requirement"
+          formControlName="write_your_message"
+          [ngClass]="{
+            'is-invalid': submitted && FaqFormf['write_your_message'].errors
+          }"
+          rows="4"
+        ></textarea>
+
+        <div
+          *ngIf="submitted && FaqFormf['write_your_message'].errors"
+          class="invalid-feedback"
+        >
+          <div
+            *ngIf="
+              FaqFormf['write_your_message'].errors['requiredButNotAllowBlank']
+            "
+          >
+            *This Field is Required
+          </div>
+        </div>
+      </div>
+
+      <div class="headingCTA mt-3">
+        <button class="FormCTA">
+          <h3 class="CTAs font-20">
+            Submit your query
+            <div class="headingCTA">
+              <div class="blueCTA podcast-card-cta"></div>
+            </div>
+          </h3>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

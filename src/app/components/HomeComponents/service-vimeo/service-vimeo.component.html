@@ -1,0 +1,15 @@
+<section class="container-fluid mb-5 mt-5 d-flex background_color">
+  <div class="container iframe">
+    <div class="iframe_container">
+      <div class="o-video">
+        <iframe
+          *ngIf="currentVideoUrl"
+          [src]="sanitizedVideoUrl"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+        >
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>

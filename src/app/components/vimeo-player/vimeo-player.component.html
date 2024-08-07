@@ -1,0 +1,27 @@
+<div class="video-container" [class.no-click]="!videoUrl">
+  <div class="overlay" *ngIf="showOverlay" (click)="playVideo()">
+    <img class="thumbnails" [src]="cdnThumbnail" [alt]="alt">
+    <div
+      *ngIf="videoUrl"
+      class="play-button"
+      [ngClass]="{
+        'white-button': useWhitePlayButton,
+        'blue-button': !useWhitePlayButton
+      }"
+    >
+      <img
+        src="https://d1585q1wairh36.cloudfront.net/assets/Icon/playicon.svg"
+      />
+    </div>
+  </div>
+  <iframe
+    #videoPlayer
+    *ngIf="safeVideoUrl && videoUrl"
+    class="video-iframe | safe"
+    allowfullscreen
+    allow="clipboard-write"
+    title="Vimeo Video Player"
+    [src]="safeVideoUrl"
+    frameborder="0"
+  ></iframe>
+</div>

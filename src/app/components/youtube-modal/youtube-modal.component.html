@@ -1,0 +1,38 @@
+<div
+  class="modal fade"
+  id="youtubeModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+  (shown.bs.modal)="onModalShown()"
+  (hidden.bs.modal)="onModalHidden()"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bordered bg-secondary overflow-visible">
+      <button
+        type="button"
+        class="btn-close ms-auto position-absolute z-3 modalCrossButton"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+        (click)="onClose()"
+      ></button>
+      <div class="modal-body">
+        <div class="ratio ratio-16x9">
+          <iframe
+            id="youtubeIframe"
+            width="560"
+            height="315"
+            *ngIf="safeUrl"
+            [src]="safeUrl"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

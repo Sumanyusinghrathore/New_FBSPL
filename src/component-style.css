@@ -1,0 +1,65 @@
+/* Tools Section */
+
+@keyframes trustedScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 10));
+  }
+}
+
+.trusted-slider-logo {
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.trusted-slider-logo .trusted-slide-track {
+  animation: trustedScroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.trusted-slider-logo .trust-slide {
+  height: 150px;
+  width: 240px;
+}
+.trust-slide {
+  margin: 18px;
+  border-radius: 20px;
+  border: 2px solid #f3f3ff;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trust-slide img {
+  height: fit-content;
+}
+/* Tools Section */
+/* error component */
+.error-section {
+  max-width: 880px;
+  margin-inline: auto;
+}
+/* error component */
+
+/* modal css */
+.btn-close {
+  --bs-btn-close-bg: url("https://d1585q1wairh36.cloudfront.net/assets/Icon/Modalclose.svg") !important;
+  opacity: 1 !important;
+}
+.modalCrossButton {
+  top: -13px;
+  right: -16px;
+  background-color: lavender;
+  border-radius: 50%;
+  padding: 10px;
+}
+.overflow-visible {
+  overflow: visible;
+}
+/* modal css */

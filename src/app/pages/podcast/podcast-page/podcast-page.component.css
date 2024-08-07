@@ -1,0 +1,168 @@
+.whiteNoteDiv {
+  /* max-width: 1280px; */
+  border-radius: 20px;
+  background-color: var(--tertiary);
+}
+.whiteNoteImg {
+  border-radius: 50%;
+  height: 130px;
+}
+.borderUp {
+  border-top: 1px solid rgba(0, 0, 0, 1);
+}
+.trRow:is(.active) {
+  color: var(--primary) !important;
+}
+.card-custom {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: var(--tertiary);
+}
+.scrollbar {
+  height: 200px;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: var(--secondary);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+/* .scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
+.PossibilitiesBtn:is(.active) {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.PossibilitiesBtn {
+  background-color: var(--secondary);
+  font-size: 24px;
+  font-weight: 450;
+  width: 276px;
+  height: 74px;
+  color: #1b1b1b;
+  border-radius: 20px;
+  border: none;
+}
+
+.newPossibilitiesDiv {
+  background-color: var(--bg-30);
+  border-radius: 20px;
+}
+
+.PossibilitiesImage {
+  border: none;
+  border-radius: 20px;
+  background: var(--secondary);
+}
+.card {
+  border: none;
+  text-align: center;
+  height: 100%;
+}
+
+.card img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 20px auto 50px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.podcast-inner-card {
+  background-color: var(--bg-20);
+  border: 1px solid rgba(0, 45, 213, 0.2);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /* Ensure padding and border are included in the height */
+  height: 442px;
+}
+
+.card-text {
+  font-size: 14px;
+}
+
+@media (max-width: 1370px) {
+  .PossibilitiesBtn {
+    font-size: 22px;
+  }
+}
+@media (max-width: 980px) {
+  .place-start {
+    place-content: center;
+  }
+}
+@media (max-width: 450px) {
+  .podcast-inner-card {
+    height: 352px;
+  }
+}
+.modal-header {
+  border-bottom: 0px;
+}
+.ModalTrans {
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+.ModalTrans::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  background-color: var(--secondary);
+}
+
+.ModalTrans::-webkit-scrollbar {
+  width: 6px;
+  background-color: var(--secondary);
+}
+
+.ModalTrans::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--primary);
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+  padding-bottom: 3rem;
+}
+
+.ModalTrans .transcriptLines {
+  margin-top: 10px;
+}
+
+.transcriptLines .text-black {
+  font-weight: 500;
+  color: var(--primary);
+}
+::ng-deep .ModalTrans .text-black {
+  color: var(--primary) !important;
+  font-weight: bolder;
+}
+::ng-deep .ModalTrans b {
+  color: var(--primary) !important;
+  font-weight: bolder;
+}
+::ng-deep .trRow span {
+  font-weight: bolder;
+}
+::ng-deep .transcriptLines p{
+  padding-bottom: 1 0px;
+}

@@ -1,0 +1,93 @@
+<div class="container d-none d-lg-block">
+  <div class="gradientBanner">
+    <img
+      appCdnUrl="assets/Current-oppning/CurrentOpp.Banner.jpg"
+      class="desktop-banner" alt="Current Openings at FBSPL "
+    />
+    <div class="bannerText" data-aos="slide-up">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item"><a href="/careers">Careers</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Current Opening
+          </li>
+        </ol>
+      </nav>
+      <h3 class="font-48-30 pt-3">Current Opening</h3>
+    </div>
+  </div>
+</div>
+<!-- Mobile View -->
+<div class="container text-dark slide d-block d-lg-none pt-5">
+  <div class="gradientBannerMob">
+    <img
+      appCdnUrl="assets/Current-oppning/CurrentOpp.MobileBanner.jpg"
+      class="card-img-mob" alt="Current Openings at FBSPL "
+    />
+    <div class="bannerTextMob" data-aos="slide-up">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item"><a href="/careers">Careers</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Current Opening
+          </li>
+        </ol>
+      </nav>
+      <h3 class="font-48-30">Current Opening</h3>
+    </div>
+  </div>
+</div>
+
+<section class="container py-6 position-relative mb-4">
+  <img
+    appCdnUrl="assets/Icon/blue-square.svg"
+    class="center-right-float vector"
+  />
+  <img
+    appCdnUrl="assets/Icon/snake-vector.svg"
+    class="left-bottom-float vector"
+  />
+  <div data-aos="slide-up">
+    <h2 class="text-primary font-48-30">
+      Find the Workplace of your Dreams with FBSPL
+    </h2>
+    <p class="font-24-16 mb-md-5 col-md-8">
+      Your brilliance has a home here. At FBSPL, you can do more than join; you
+      can add something and leave a mark. Explore our current openings and
+      discover where you fit best.
+    </p>
+  </div>
+  <div class="row">
+    <div
+      class="col-lg-6 col-md-12 p-3 p-md-3 d-flex"
+      *ngFor="let opening of openings"
+    >
+      <div class="current-card p-4 flex-fill" data-aos="zoom-in">
+        <a
+          [routerLink]="'/jd'"
+          [fragment]="opening.position_name"
+          class="anchorCTA"
+        >
+          <h2
+            class="font-36-24 text-primary text-md-start fw-500 clickable-heading"
+          >
+            {{ opening.position_name }}
+            <div class="headingCTA">
+              <button class="blueCTA"></button>
+            </div>
+          </h2>
+        </a>
+        <div class="d-flex align-items-center my-3">
+          <img appCdnUrl="assets/Icon/location.svg" class="locationimg me-2" />
+          <p class="font-24-16 fw-normal mb-0">{{ opening.location }}</p>
+        </div>
+
+        <p class="font-24-16 fw-normal">
+          {{ opening.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

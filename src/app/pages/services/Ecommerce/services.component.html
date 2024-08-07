@@ -1,0 +1,977 @@
+<ngx-slick-carousel
+  class="service_slider carousel d-none d-lg-block container-fluid"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+>
+  <div
+    class="container-fluid text-dark"
+    ngxSlickItem
+    *ngFor="let slides of slides"
+  >
+    <div class="container gradientBanner">
+      <img  src="{{ slides.img }}" alt="{{slides.alt}}" class="card-img-desktop desktop-banner" />
+      <div class="card-img-overlay overlay-text bannerText">
+          <div class="main_bannar my-4 ms-3" >
+            <div data-aos="fade-up">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
+                  <li class="breadcrumb-item" aria-current="page">
+                    <a href="/bpm-and-bpo-services">Services</a>
+                  </li>
+                  <li class="breadcrumb-item active">
+                    <a aria-current="page">E-commerce Management</a>
+                  </li>
+                </ol>
+              </nav>
+              <a  href={{slides.Link}} class="CTA-Zindex anchorCTA">
+                <h3 *ngIf="!slides.banner" class="text-primary font-34-19 my-auto clickable-heading">
+                  {{ slides.Title }}
+                  <div class="headingCTA">
+                    <button class="blueCTA"></button>
+                  </div>
+                </h3>
+                <h3 *ngIf="slides.banner" class="text-primary font-34-19 my-auto mb-2">
+                  {{ slides.Title }}
+                </h3>
+              </a>
+              <p class="card-text font-20-16 mt-3">{{ slides.Description }}</p>
+              <a *ngIf="slides.banner" [routerLink]="slides.Link" class="CTA-Zindex anchorCTA">
+                <h3 class="text-primary font-24-16 clickable-heading mt-3">
+                  {{ slides.Ecommerce }}
+                  <div class="headingCTA">
+                    <button class="blueCTA"></button>
+                  </div>
+                </h3>
+              </a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>
+<!-- Mobile View -->
+<ngx-slick-carousel
+  class="container carousel d-block d-lg-none pb-5"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+>
+  <div class="text-dark slide" ngxSlickItem *ngFor="let slidesmob of slides">
+    <div class="gradientBannerMob d-flex justify-content-center">
+      <img  src="{{ slidesmob.img_mob }}" alt="{{slidesmob.alt}}" class="card-img-mob" />
+      <div class="overlay-text-Mob bannerTextMob">
+        <div  data-aos="fade-up">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item" aria-current="page">
+              <a href="/bpm-and-bpo-services">Services</a>
+            </li>
+            <li class="breadcrumb-item active">
+              <a aria-current="page">E-commerce Management</a>
+            </li>
+          </ol>
+        </nav>
+        <a  href={{slidesmob.Link}} class="CTA-Zindex anchorCTA">
+          <h3 *ngIf="!slidesmob.banner" class="text-primary font-34-19 my-auto clickable-heading">
+            {{ slidesmob.Title }}
+            <div class="headingCTA">
+              <button class="blueCTA"></button>
+            </div>
+          </h3>
+          <h3 *ngIf="slidesmob.banner" class="text-primary font-34-19 my-auto">
+            {{ slidesmob.Title }}
+          </h3>
+        </a>
+        <p class="card-text font-20-16 pt-4">{{ slidesmob.Description }}</p>
+        <a *ngIf="slidesmob.banner"  [routerLink]="slidesmob.Link" class="CTA-Zindex anchorCTA">
+          <h3 class="text-primary font-24-16 clickable-heading mt-3">
+            {{ slidesmob.Ecommerce }}
+            <div class="headingCTA">
+              <button class="blueCTA "></button>
+            </div>
+          </h3>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>
+<app-ourAssets></app-ourAssets>
+
+<section class="bg-primary text-white py-6">
+  <div class="container px-4">
+    <h4 class="font-48-30 mb-3 text-white"  data-aos="fade-up" >Currently in E-commerce</h4>
+    <div class="row">
+      <div class="row text-center d-none d-md-flex">
+        <div class="col-3"  data-aos="fade-right" data-aos-delay="0">
+          <div class="text-white text-start" >
+            <p class="font-48-30 fw-bolder mb-1">70%</p>
+            <p class="">
+              Success rate comes from selling to existing customers.
+            </p>
+          </div>
+        </div>
+        <div class="col-3" data-aos="fade-right" data-aos-delay="200">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">60%</p>
+            <p class="">
+              Online shoppers review return policy before making a purchase.
+            </p>
+          </div>
+        </div>
+        <div class="col-3" data-aos="fade-right" data-aos-delay="400">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">53%</p>
+            <p class="">
+              E-commerce retailers find shipping and logistics processes
+              challenging.
+            </p>
+          </div>
+        </div>
+        <div class="col-3" data-aos="fade-right" data-aos-delay="600">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">47%</p>
+            <p class="">
+              Shoppers investigate a website's credibility before purchasing.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="d-md-none">
+        <div class="text-white text-start" data-aos="fade-right" data-aos-delay="0">
+          <p class="font-48-30 fw-bolder mb-1">70%</p>
+          <p class="">Success rate comes from selling to existing customers.</p>
+        </div>
+        <div class="text-white text-start" data-aos="fade-right" data-aos-delay="200">
+          <p class="font-48-30 fw-bolder mb-1">60%</p>
+          <p class="">
+            Online shoppers review return policy before making a purchase.
+          </p>
+        </div>
+        <div class="text-white text-start" data-aos="fade-right" data-aos-delay="400">
+          <p class="font-48-30 fw-bolder mb-1">53%</p>
+          <p class="">
+            E-commerce retailers find shipping and logistics processes
+            challenging.
+          </p>
+        </div>
+        <div class="text-white text-start" data-aos="fade-right" data-aos-delay="600">
+          <p class="font-48-30 fw-bolder mb-1">47%</p>
+          <p class="">
+            Shoppers investigate a website's credibility before purchasing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-2 pt-5" id="let’sLeadtheChange">
+  <h2 class="text-primary font-48-30 mb-4" data-aos="fade-up">
+    How Are We Driving Change with Our E-commerce Outsourcing Services?   
+  </h2>
+  <div class="d-none d-lg-block">
+    <div class="row">
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div
+          class="card insurance-card policy-process-card p-3 Policy_Processing" 
+        >
+          <a
+            routerLink="/services/e-commerce-pre-sales-support"
+            class="CTA-Zindex anchorCTA mb-3 p-2"
+          >
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Pre-Sales Support
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2 ">
+              Why invest in
+              <a
+                class="anchor"
+                target="_blank"
+                routerLink="/services/e-commerce-pre-sales-support"
+                >pre-sales support?</a
+              >
+              According to Harvard Business Review, pre-sales strategies
+              significantly enhance customer conversion by 40-50%. Know more.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div
+          class="card insurance-card policy-process-card p-3 Claims_Management"
+        >
+          <a
+            routerLink="/services/e-commerce-order-management"
+            class="CTA-Zindex anchorCTA mb-3 p-2"
+          >
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Order Management
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Our
+              <a
+                class="anchor"
+                target="_blank"
+                routerLink="/services/e-commerce-order-management"
+                >order management services</a
+              >
+              optimize and automate processes, from accepting orders to tracking
+              them until they get delivered. Learn more.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div
+          class="card insurance-card policy-process-card p-3 Insurance_Accounting"
+        >
+          <a
+            routerLink="/services/e-commerce-catalog-management"
+            class="CTA-Zindex anchorCTA mb-3 p-2"
+          >
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Catalog Management
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              The trickiest aspect of
+              <a
+                class="anchor"
+                target="_blank"
+                routerLink="/services/e-commerce-catalog-management"
+                >catalog management</a
+              >
+              is managing the parent-child relationship. But what if we say our
+              experts have perfected this art?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div
+          class="card insurance-card policy-process-card p-3 Agency_Management"
+        >
+          <a
+            routerLink="/services/e-commerce-inventory-management"
+            class="CTA-Zindex anchorCTA mb-3 p-2"
+          >
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Inventory Management
+              <div class="headingCTA">
+                <button class="blueCTA "></button>
+              </div>
+            </h3>
+          </a>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Do your warehouse and distribution activities account for 25% to 30% of overall cost? You must explore our
+              <a
+                class="anchor"
+                target="_blank"
+                routerLink="/services/e-commerce-inventory-management"
+                >inventory management services</a
+              >
+              Begin here.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div class="card insurance-card policy-process-card p-3 New_Business">
+          <a
+            routerLink="/services/e-commerce-logistic-management"
+            class="CTA-Zindex anchorCTA mb-3 p-2"
+          >
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Logistics Management
+              <div class="headingCTA">
+                <button class="blueCTA "></button>
+              </div>
+            </h3>
+          </a>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              If you are looking for cost savings, personalized services,
+              customer satisfaction, efficiency, and expertise, then choose us
+              for your
+              <a
+                class="anchor"
+                target="_blank"
+                routerLink="/services/e-commerce-logistic-management"
+                >logistic management</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div
+          class="card insurance-card policy-process-card p-3 data_management"
+        >
+          <a
+            routerLink="/services/e-commerce-data-management"
+            class="CTA-Zindex anchorCTA mb-3 p-2"
+          >
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Data Management
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              The AI
+              <a
+                class="anchor"
+                target="_blank"
+                routerLink="/services/e-commerce-data-management"
+                >data management</a
+              >
+              market will grow from $34.7 billion in 2024 to $260.3 billion by
+              2033, making it crucial. Here is how we outperform traditional
+              ways.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div class="card insurance-card policy-process-card p-3 account_bookeeping">
+          <a
+            routerLink="/services/accounting-bookkeeping-services"
+            class="CTA-Zindex anchorCTA mb-3 p-2"
+          >
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Accounting & Bookkeeping
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Manage it effortlessly. From
+              <a
+                class="anchor"
+                target="_blank"
+                routerLink="/services/accounting-bookkeeping-services"
+                >accounts payable and receivable</a
+              >
+              to reconciliation, we handle everything with ease. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div class="card insurance-card policy-process-card p-3 Customer_Support">
+          <a
+            routerLink="/services/customer-support-outsourcing"
+            class="CTA-Zindex anchorCTA mb-3 p-2"
+          >
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Customer Support
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Major U.S. companies like Target and Bank of America have
+              <a
+                class="anchor"
+                target="_blank"
+                routerLink="/services/customer-support-outsourcing"
+                >outsourced customer support</a
+              >
+              to leverage proven strategies. They have embraced a 'Customer
+              First' approach. Have you?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Mobile View -->
+<div class="container d-block d-lg-none">
+  <div class="row">
+    <div class="col-12 mt-0 mt-sm-4">
+      <div class="accordion" id="ServicePage">
+        <div class="policy-processing" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#Policy_Processing"
+            aria-expanded="true"
+            aria-controls="Policy_Processing"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">Pre-Sales Support</h3>
+            <button class="blueCTA service_btn">
+              <a
+                routerLink="/services/e-commerce-pre-sales-support"
+                class="CTA-Zindex anchorCTA mb-3 p-3"
+              >
+              </a>
+            </button>
+          </div>
+          <div
+            id="Policy_Processing"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Why invest in
+              <a
+                class="anchor"
+                target="_blank"
+                href="/services/e-commerce-pre-sales-support"
+                >pre-sales support?</a
+              >
+              According to Harvard Business Review, pre-sales strategies
+              significantly enhance customer conversion by 40-50%. Know more.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#Claims_Management"
+            aria-expanded="true"
+            aria-controls="Claims_Management"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">Order Management</h3>
+            <button class="blueCTA service_btn">
+              <a
+                routerLink="/services/e-commerce-order-management"
+                class="CTA-Zindex anchorCTA mb-3 p-3"
+              >
+              </a>
+            </button>
+          </div>
+          <div
+            id="Claims_Management"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingtwo"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Our
+              <a
+                class="anchor"
+                target="_blank"
+                href="/services/e-commerce-order-management"
+                >order management services</a
+              >
+              optimize and automate processes, from accepting orders to tracking
+              them until they get delivered. Learn more.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#About1"
+            aria-expanded="true"
+            aria-controls="About1"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">Catalog Management</h3>
+            <button class="blueCTA service_btn">
+              <a
+                routerLink="/services/e-commerce-catalog-management"
+                class="CTA-Zindex anchorCTA mb-3 p-3"
+              >
+              </a>
+            </button>
+          </div>
+          <div
+            id="About1"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                The trickiest aspect of
+              <a
+                class="anchor"
+                target="_blank"
+                href="/services/e-commerce-catalog-management"
+                >catalog management</a
+              >
+              is managing the parent-child relationship. But what if we say our
+              experts have perfected this art?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#About2"
+            aria-expanded="true"
+            aria-controls="About2"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">
+              Inventory Management
+            </h3>
+            <button class="blueCTA service_btn">
+              <a
+                routerLink="/services/e-commerce-inventory-management"
+                class="CTA-Zindex anchorCTA mb-3 p-3"
+              >
+              </a>
+            </button>
+          </div>
+          <div
+            id="About2"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingfour"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Do your warehouse and distribution activities account for 25% to 30% of overall cost? You must explore our
+                <a
+                  class="anchor"
+                  target="_blank"
+                  href="/services/e-commerce-inventory-management"
+                  >inventory management services</a
+                >
+                Begin here.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#About3"
+            aria-expanded="true"
+            aria-controls="About3"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">
+              Logistics Management
+            </h3>
+            <button class="blueCTA service_btn">
+              <a
+                routerLink="/services/e-commerce-logistic-management"
+                class="CTA-Zindex anchorCTA mb-3 p-3"
+              >
+              </a>
+            </button>
+          </div>
+          <div
+            id="About3"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingfour"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                If you are looking for cost savings, personalized services,
+              customer satisfaction, efficiency, and expertise, then choose us
+              for your
+              <a
+                class="anchor"
+                target="_blank"
+                href="/e-commerce-logistic-management"
+                >logistic management</a
+              >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#About4"
+            aria-expanded="true"
+            aria-controls="About4"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">Data Management</h3>
+            <button class="blueCTA service_btn">
+              <a
+                routerLink="/services/e-commerce-data-management"
+                class="CTA-Zindex anchorCTA mb-3 p-3"
+              >
+              </a>
+            </button>
+          </div>
+          <div
+            id="About4"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingfour"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                The AI
+              <a
+                class="anchor"
+                target="_blank"
+                href="/services/e-commerce-data-management"
+                >data management</a
+              >
+              market will grow from $34.7 billion in 2024 to $260.3 billion by
+              2033, making it crucial. Here is how we outperform traditional
+              ways.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#About5"
+            aria-expanded="true"
+            aria-controls="About5"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">
+              Accounting & Bookkeeping
+            </h3>
+            <button class="blueCTA service_btn">
+              <a
+                routerLink="/services/accounting-bookkeeping-services"
+                class="CTA-Zindex anchorCTA mb-3 p-3"
+              >
+              </a>
+            </button>
+          </div>
+          <div
+            id="About5"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingfour"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Manage it effortlessly. From
+                <a
+                  class="anchor"
+                  target="_blank"
+                  href="/services/accounting-bookkeeping-services"
+                  >accounts payable and receivable</a
+                >
+                to reconciliation, we handle everything with ease. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#About6"
+            aria-expanded="true"
+            aria-controls="About6"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">Customer Support</h3>
+            <button class="blueCTA service_btn">
+              <a
+                routerLink="/services/customer-support-outsourcing"
+                class="CTA-Zindex anchorCTA mb-3 p-3"
+              >
+              </a>
+            </button>
+          </div>
+          <div
+            id="About6"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingfour"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                  Major U.S. companies like Target and Bank of America have
+                  <a
+                    class="anchor"
+                    target="_blank"
+                    href="/services/customer-support-outsourcing"
+                    >outsourced customer support</a
+                  >
+                  to leverage proven strategies. They have embraced a 'Customer
+                  First' approach. Have you?
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="container py-5">
+  <h2 class="text-primary font-48-30 mb-4" data-aos="fade-up">Tools That Drive Excellence</h2>
+  <div class="d-none d-xl-flex">
+    <div class="row">
+      <div class="col-2" data-aos="fade-right" data-aos-delay="0">
+        <img class="img-fluid" alt="ecommerce tool Jira" appCdnUrl="assets/Tools/jira.svg" />
+      </div>
+      <div class="col-2"  data-aos="fade-right" data-aos-delay="100">
+        <img class="img-fluid" alt="ecommerce tool Magento" appCdnUrl="assets/Tools/magneto.svg" />
+      </div>
+      <div class="col-2"  data-aos="fade-right" data-aos-delay="200">
+        <img class="img-fluid" alt="ecommerce tool Salesforce" appCdnUrl="assets/Tools/salesforce.svg"/>
+      </div>
+      <div class="col-2"  data-aos="fade-right" data-aos-delay="300">
+        <img class="img-fluid" alt="ecommerce tool HubSpot" appCdnUrl="assets/Tools/hubspot.svg"/>
+      </div>
+      <div class="col-2"  data-aos="fade-right" data-aos-delay="400">
+        <img class="img-fluid" alt="ecommerce tool Zendesk" appCdnUrl="assets/Tools/zendesk.svg"/>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex d-xl-none">
+    <div class="trusted-slider-logo">
+      <div class="trusted-slide-track">
+        <div class="trust-slide"  data-aos="fade-right" data-aos-delay="0">
+          <img class="img-fluid" alt="ecommerce tool Jira" appCdnUrl="assets/Tools/jira.svg" />
+        </div>
+        <div class="trust-slide"  data-aos="fade-right" data-aos-delay="100">
+          <img class="img-fluid" alt="ecommerce tool Magento" appCdnUrl="assets/Tools/magneto.svg" />
+        </div>
+        <div class="trust-slide"  data-aos="fade-right" data-aos-delay="200">
+          <img class="img-fluid" alt="ecommerce tool Salesforce" appCdnUrl="assets/Tools/salesforce.svg"/>
+        </div>
+        <div class="trust-slide"  data-aos="fade-right" data-aos-delay="300">
+          <img class="img-fluid" alt=" ecommerce tool HubSpot" appCdnUrl="assets/Tools/hubspot.svg"/>
+        </div>
+        <div class="trust-slide"  data-aos="fade-right" data-aos-delay="400">
+          <img class="img-fluid" alt="ecommerce tool Zendesk " appCdnUrl="assets/Tools/zendesk.svg"/>
+        </div>
+        <div class="trust-slide"  data-aos="fade-right" data-aos-delay="0">
+          <img class="img-fluid" alt="ecommerce tool Jira" appCdnUrl="assets/Tools/jira.svg" />
+        </div>
+        <div class="trust-slide"  data-aos="fade-right" data-aos-delay="100">
+          <img class="img-fluid" alt="ecommerce tool Magento" appCdnUrl="assets/Tools/magneto.svg" />
+        </div>
+        <div class="trust-slide"  data-aos="fade-right" data-aos-delay="200">
+          <img class="img-fluid" alt="ecommerce tool Salesforce" appCdnUrl="assets/Tools/salesforce.svg"/>
+        </div>
+        <div class="trust-slide"  data-aos="fade-right" data-aos-delay="300">
+          <img class="img-fluid" alt="ecommerce tool HubSpot" appCdnUrl="assets/Tools/hubspot.svg"/>
+        </div>
+        <div class="trust-slide"  data-aos="fade-right" data-aos-delay="400">
+          <img class="img-fluid" alt="ecommerce tool Zendesk" appCdnUrl="assets/Tools/zendesk.svg"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Thinking -->
+<app-service-case-study  [category]="[{ category: 'ecommerce' }]"></app-service-case-study>
+<!-- Know best -->
+<app-know-best
+[cards]="[
+  { description: 'We have had an incredible experience with fusion so far. We have actually increased our fusion team size twice now. And the process has been very seamless, very easy. The fusion team is very communicative, and the quality of the work has rivaled that of any employee we could have in-house. ',
+  name: 'Joey Cumley', designation: 'Chief Merchandising Officer'
+ },
+]"
+[videos]="[
+  { videoUrl: 'https://player.vimeo.com/video/963295022',
+  thumbnail:'assets/thumbnail-know-best/Client Testimonials YT 03 Joey Cumley.jpg',
+  alt:'Listen to our client'
+
+   },
+]">
+</app-know-best>
+<section class="py-6">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6" data-aos="fade-right">
+        <app-faq></app-faq>
+      </div>
+      <div class="col-12 col-md-6 mt-3 mt-md-0" data-aos="fade-left">
+        <div class="accordion" id="accordionFAQ">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button font-28-20"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Industries"
+                aria-expanded="true"
+                aria-controls="Industries"
+              >
+                How can you assist me in revenue generation?
+              </button>
+            </h2>
+            <div
+              id="Industries"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Our multi-dimensional strategy enhances profitability by deeply
+                analyzing your business, market trends, and target audience to
+                create tailored plans and campaigns that capitalize on every
+                opportunity.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Services"
+                aria-expanded="false"
+                aria-controls="Services"
+              >
+                How do your ecommerce support services ensure I maintain a
+                competitive edge?
+              </button>
+            </h2>
+            <div
+              id="Services"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                We undertake thorough market evaluation and competitive
+                benchmarking to recognize pivotal trends and innovative
+                technologies and develop strategies that are bound to keep you
+                at the forefront.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#About"
+                aria-expanded="false"
+                aria-controls="About"
+              >
+                How does your ecommerce outsourcing team aid in customer
+                nurturing and up-selling?
+              </button>
+            </h2>
+            <div
+              id="About"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                We begin this journey with a profound <a class="anchor" target="_blank" href="/blogs/how-to-improve-ecommerce-customer-support-service">understanding of your
+                  ideal customers' needs and preferences</a>. Then, proceed with
+                tailoring email campaigns and loyalty initiatives. The final
+                step involves stimulating revenue growth through data analysis
+                and segmentation strategies.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Resources"
+                aria-expanded="false"
+                aria-controls="Resources"
+              >
+                How do your ecommerce management services guarantee brand
+                consistency across channels?
+              </button>
+            </h2>
+            <div
+              id="Resources"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                We recognize the importance of maintaining a cohesive and
+                captivating brand voice across every platform. From creating
+                solid brand governance protocols and guidelines to developing
+                brand assets and communication templates that embody your
+                identity, we help strengthen your brand image effectively.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Ecommerce"
+                aria-expanded="false"
+                aria-controls="Resources"
+              >
+                Why should I choose you as my right ecommerce outsourcing
+                service provider?
+              </button>
+            </h2>
+            <div
+              id="Ecommerce"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                You should partner with us if you are looking for:
+                <ul>
+                  <li>
+                    360-degree assistance that meets your dynamic business needs
+                    round the clock
+                  </li>
+                  <li>Professionally trained employees</li>
+                  <li>Buck-up services at zero additional cost</li>
+                  <li>
+                    Dedicated customer support, vendor management, and much more
+                  </li>
+                </ul>
+                Partnering with us means aligning with the industry excellence.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

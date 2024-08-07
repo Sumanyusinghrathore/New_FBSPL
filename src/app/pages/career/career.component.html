@@ -1,0 +1,644 @@
+<div class="container d-none d-md-block">
+  <div class="gradientBanner">
+    <img
+      appCdnUrl="assets/Career/Career_Banner_desktop.png"
+      class="desktop-banner"
+    />
+    <div class="bannerText">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Career</li>
+        </ol>
+      </nav>
+      <!-- <h3 class="font-48-30  pt-3">Together <span class="font-48-30 text-primary">We Make a
+                    Difference</span></h3>        -->
+      <!-- <div class="col-md-2 align-content-center position-relative">
+             <h2 class="text-primary font-48-30 text-center slidingVertical mb-0 mt-3">
+             <span>Education</span>
+             <span>Healthcare</span>
+            <span>Dreams</span>
+            <span>Women Empowerment</span>
+             <span>starts</span>
+             <span>Sonu</span>
+             <span>Tushar</span>
+             </h2>
+             </div>          -->
+      <h2 class="font-48-30 pt-3">
+        <span>Together</span>
+        <div class="words words-1">
+          <span class="font-48-30 text-primary"> We Work</span>
+          <span class="font-48-30 text-primary">We Grow</span>
+          <span class="font-48-30 text-primary">We Have Fun </span>
+          <span class="font-48-30 text-primary">We Excel </span>
+          <span class="font-48-30 text-primary">We Take Challenges </span>
+          <span class="font-48-30 text-primary">We Dream</span>
+          <span class="font-48-30 text-primary">We Make a Difference</span>
+        </div>
+      </h2>
+    </div>
+  </div>
+</div>
+<!-- Mobile View -->
+<div class="container slide d-block d-md-none pt-5">
+  <div class="gradientBannerMob">
+    <img
+      appCdnUrl="assets/Career/Career_Banner_Mob.png"
+      class="card-img-mob"
+      alt="Policy"
+    />
+    <div class="bannerTextMob">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Career</li>
+        </ol>
+      </nav>
+      <h2 class="font-48-30 pt-3">
+        <span>Together</span>
+        <div class="words words-1">
+          <span class="font-48-30 text-primary"> We Work</span>
+          <span class="font-48-30 text-primary">We Grow</span>
+          <span class="font-48-30 text-primary">We Have Fun </span>
+          <span class="font-48-30 text-primary">We Excel </span>
+          <span class="font-48-30 text-primary">We Dream</span>
+          <span class="font-48-30 text-primary">We Take Challenges </span>
+          <span class="font-48-30 text-primary">We Make a Difference</span>
+        </div>
+      </h2>
+    </div>
+  </div>
+</div>
+
+<section class="container">
+  <div class="text-left pt-5 profession_width">
+    <h1 class="font-48-30 text-primary">
+      More Than a Profession, We Strive for a Greater Purpose
+    </h1>
+    <p class="font-20-16">
+      FBSPL is committed to a mission where we work beyond just the job titles.
+      We seek to make a difference, to bring about change, and to contribute
+      positively to the world. Our purpose drives us, and it’s so much more than
+      a profession. With us, you work and make a difference!
+    </p>
+  </div>
+  <div>
+    <div>
+      <div class="career-slider py-6">
+        <ngx-slick-carousel
+          #slickModal="slick-carousel"
+          [config]="Greater_PurposeConfig"
+          class="blog_slider"
+        >
+          <div ngxSlickItem *ngFor="let slide of Greater_Purpose" class="slide">
+            <div class="card career-card">
+              <div class="card-body">
+                <div class="text-center p-3">
+                  <h5 class="text-primary fs-48">
+                    <span
+                      class="counter"
+                      [attr.data-target]="slide.target"
+                    ></span
+                    >%
+                  </h5>
+                  <p class="font-28-20">{{ slide.text }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ngx-slick-carousel>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Choose Us, Choose Excellence -->
+<section class="container py-6">
+  <h2 class="font-48-30 text-primary">Choose Us, Choose Excellence</h2>
+  <div class="d-none d-lg-block">
+    <div class="container_horizontal pt-3">
+      <div
+        class="card choice_accordion choice_accordion1 mx-2 impact_img expand"
+      >
+        <button
+          class="accordion-button accordion-button-horizontal"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="true"
+          aria-controls="collapseOne"
+        >
+          <h3 class="text-white font-48-30">Impact</h3>
+        </button>
+        <div id="collapseOne" class="accordion-collapse collapse show">
+          <div class="card-body accordion_body pt-0">
+            <h4 class="text-primary font-36-24">Progressing with Purpose</h4>
+            <p class="font-20-16">
+              We offer every Phoenix an opportunity to think of how they can
+              deliver the best outcome benefiting our clientele and leave a
+              mark.
+            </p>
+          </div>
+        </div>
+        <img
+          class="mt-auto me-auto ps-5 ms-5"
+          appCdnUrl="assets/Icon/triangle-blue.svg"
+        />
+      </div>
+      <div
+        class="card choice_accordion choice_accordion2 mx-2 impact_img small"
+      >
+        <button
+          class="accordion-button accordion-button-horizontal"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseTwo"
+          aria-expanded="true"
+          aria-controls="collapseTwo"
+        >
+          <h3 class="text-white font-48-30">Growth</h3>
+        </button>
+        <div id="collapseTwo" class="accordion-collapse collapse show">
+          <div class="card-body accordion_body pt-0">
+            <h4 class="text-primary font-36-24">Growing with Vision</h4>
+            <p class="font-20-16">
+              We believe growth is a shared journey, with each employee
+              contributing significantly. Every step we take reflects our
+              collective vision.
+            </p>
+          </div>
+        </div>
+        <img
+          class="mt-auto me-auto ps-5 ms-5"
+          appCdnUrl="assets/Icon/triangle-blue.svg"
+        />
+      </div>
+
+      <div class="card choice_accordion mx-2 impact_img small">
+        <button
+          class="accordion-button accordion-button-horizontal"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseThree"
+          aria-expanded="true"
+          aria-controls="collapseThree"
+        >
+          <h3 class="text-white font-48-30">Support</h3>
+        </button>
+        <div id="collapseThree" class="accordion-collapse collapse show">
+          <div class="card-body accordion_body pt-0">
+            <h4 class="text-primary font-36-24">Helping with Determination</h4>
+            <p class="font-20-16">
+              Our strength lies in the heart of our team, where every employee
+              helps to make a difference. Together we support and succeed.
+            </p>
+          </div>
+        </div>
+        <img
+          class="mt-auto me-auto ps-5 ms-5"
+          appCdnUrl="assets/Icon/triangle-blue.svg"
+        />
+      </div>
+    </div>
+  </div>
+  <!-- mobile View -->
+  <div class="d-block d-lg-none">
+    <div class="accordion pt-3" id="accordionMob">
+      <div class="accordion-item accordion-mob accordion-radius1">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button mobile_accordion accordion-radius1"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobcollapseOne"
+            aria-expanded="true"
+            aria-controls="mobcollapseOne"
+          >
+            <h3 class="text-primary font-48-30 text_hide ms-3">Impact</h3>
+          </button>
+        </h2>
+        <div
+          id="mobcollapseOne"
+          class="accordion-collapse collapse show"
+          data-bs-parent="#accordionMob"
+        >
+          <div class="accordion_body">
+            <h4 class="text-primary font-36-24 ps-3">
+              Progressing with Purpose
+            </h4>
+            <p class="text-dark font-20-16 ps-3">
+              We offer every Phoenix an opportunity to think of how they can
+              deliver the best outcome benefiting our clientele and leave a
+              mark.
+            </p>
+          </div>
+          <div class="image-container">
+            <img
+              class="img_triangle"
+              appCdnUrl="assets/Icon/triangle-blue.svg"
+            />
+            <img appCdnUrl="assets/Career/Arrow.png" class="img_acordion" />
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item accordion-mob">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button mobile_accordion collapsed accordion-radius2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobcollapseTwo"
+            aria-expanded="false"
+            aria-controls="mobcollapseTwo"
+          >
+            <h3 class="text-primary font-48-30 text_hide ms-3">Growth</h3>
+          </button>
+        </h2>
+        <div
+          id="mobcollapseTwo"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionMob"
+        >
+          <div class="accordion_body">
+            <h4 class="text-primary font-36-24 ps-3">Growing with Vision</h4>
+            <p class="text-dark font-20-16 ps-3">
+              We believe growth is a shared journey, with each employee
+              contributing significantly. Every step we take reflects our
+              collective vision
+            </p>
+          </div>
+          <div class="image-container">
+            <img
+              class="img_triangle"
+              appCdnUrl="assets/Icon/triangle-blue.svg"
+            />
+            <img appCdnUrl="assets/Career/Arrow.png" class="img_acordion" />
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item accordion-mob">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button mobile_accordion collapsed accordion-radius3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobcollapseThree"
+            aria-expanded="false"
+            aria-controls="mobcollapseThree"
+          >
+            <h3 class="text-primary font-48-30 text_hide ms-3">Support</h3>
+          </button>
+        </h2>
+        <div
+          id="mobcollapseThree"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionMob"
+        >
+          <div class="accordion_body">
+            <h4 class="text-primary font-36-24 ps-3">
+              Helping with Determination
+            </h4>
+            <p class="text-dark font-20-16 ps-3">
+              Our strength lies in the heart of our team, where every employee
+              helps to make a difference. Together we support and succeed.
+            </p>
+          </div>
+          <div class="image-container">
+            <img
+              class="img_triangle"
+              appCdnUrl="assets/Icon/triangle-blue.svg"
+            />
+            <img appCdnUrl="assets/Career/Arrow.png" class="img_acordion" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Choose Us, Choose Excellence -->
+
+<!-- Our Commitment to Lifelong Learning -->
+<section class="container py-6">
+  <h3 class="font-48-30 text-primary text-left">
+    Our Commitment to Lifelong Learning
+  </h3>
+  <p class="font-20-16 text-left">
+    We believe that continuous learning is crucial to ensure a successful
+    professional journey. We invest in our teams’ growth by providing robust L&D
+    programs. From communication training to leadership acceleration, elementary
+    skill-building, and external certifications, we provide a comprehensive
+    suite of opportunities. Our communication training fosters a sense of
+    purpose, while our internship programs nurture fresh talent. We offer
+    everyone an equal opportunity to grow personally and professionally. If you
+    aspire to be a great leader, join our dynamic team!
+  </p>
+  <img
+    appCdnUrl="assets/Career/Lifelong_Learning.png"
+    class="img-fluid d-none d-md-block"
+  />
+  <img
+    appCdnUrl="assets/Career/Lifelong_Learning_mob.png"
+    class="img-fluid d-block d-md-none"
+  />
+</section>
+<!-- End Our Commitment to Lifelong Learning -->
+
+<!-- Our Key Beliefs Keep Us Inspired -->
+<section class="container inspired_container py-6">
+  <h3 class="font-48-30 text-primary mb-3">Our Key Beliefs Keep Us Inspired</h3>
+  <!-- <ngx-slick-carousel
+    #slickModal="slick-carousel"
+    [config]="InspiredConfig"
+    class="blog_slider"
+  >
+    <div ngxSlickItem *ngFor="let Inspired_item of Inspired">
+      <div class="core-div pt-4">
+        <div [ngClass]="Inspired_item.class" class="text-center">
+          <div class="core-img-div mx-auto">
+            <img
+              [
+              appCdnUrl]="Inspired_item.img appCdnUrl"
+              [alt]="Inspired_item.alt"
+              class="svg-logo"
+            />
+          </div>
+          <div class="">
+            <h5 class="text-primary font-36-24 pt-3">
+              {{ Inspired_item.title }}
+            </h5>
+            <p class="font-28-20">{{ Inspired_item.text }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ngx-slick-carousel> -->
+  <div>
+    <ngx-slick-carousel
+    #slickModal="slick-carousel"
+    [config]="InspiredConfig"
+    class="blog_slider"
+  >
+    <div ngxSlickItem *ngFor="let Inspired_item of Inspired">
+      <div class="core-div pt-4">
+        <div [ngClass]="Inspired_item.class" class="text-center">
+          <div class="core-img-div mx-auto">
+            <img
+              [src]= "Inspired_item.imgSrc"
+              [alt]="Inspired_item.alt"
+              class="svg-logo"
+            />
+          </div>
+          <div class="">
+            <h5 class="text-primary font-36-24 pt-3">
+              {{ Inspired_item.title }}
+            </h5>
+            <p class="font-28-20">{{ Inspired_item.text }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ngx-slick-carousel>
+  </div>
+</section>
+<!-- Our Key Beliefs Keep Us Inspired -->
+
+<section class="container pt-5 fixed-section">
+  <div class="image-container-workplace">
+    <img
+      appCdnUrl="assets/Career/Life-At-FBSPL-Desktop.png"
+      class="img-fluid image_container_img d-lg-flex d-md-flex d-none w-100 bordered"
+    />
+    <img
+      appCdnUrl="assets/Career/carrearmobileImg.png"
+      class="img-fluid image_container_img d-lg-none d-md-none d-flex"
+    />
+    <div class="card-overlay-workplace">
+      <div class="card-workplace">
+        <div class="card-body-workplace">
+          <h3 class="font-36-24 my-auto clickable-heading">Life At FBSPL</h3>
+          <br />
+          <a routerLink="/life-at-fbspl" class="CTA-Zindex anchorCTA mb-3 p-3">
+            <h4 class="text-primary font-36-24 my-auto clickable-heading">
+              More Than Just <br />A Workplace
+              <div class="headingCTA">
+                <button class="blueCTA ms-2"></button>
+              </div>
+            </h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Employee Speaks -->
+
+<section class="container py-6 mt-5">
+  <h3 class="font-48-30 text-primary">Employee Speaks</h3>
+  <ngx-slick-carousel
+    #slickModal="slick-carousel"
+    [config]="employeConfig"
+    class="blog_slider"
+  >
+    <div ngxSlickItem *ngFor="let employe of employe">
+      <div class="pt-3">
+        <div class="">
+          <div class="card employees_have_to_say mb-4 mx-2">
+            <div class="card-body">
+              <img appCdnUrl="assets/Career/double_quots.png" />
+              <div class="p-3">
+                <p class="font-20-16">{{ employe.description }}</p>
+              </div>
+              <div class="p-3 employees_footer">
+                <p class="text-primary font-20-16">{{ employe.name }}</p>
+                <p class="font-20-16">{{ employe.title }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ngx-slick-carousel>
+</section>
+
+<section class="container py-4">
+  <div class="row">
+    <div class="col-md-12 d-none d-lg-block phoenix_card">
+      <div class="card bg-secondary p-4 becomePhoenix h-100">
+        <div class="my-5">
+          <a
+            routerLink="/careers/current-openings"
+            class="CTA-Zindex anchorCTA mb-3 p-3"
+          >
+            <h4 class="text-primary me-3 font-36-24 my-auto clickable-heading">
+              Want to be the next Phoenix?
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h4>
+          </a>
+          <p class="me-3 font-28-20 p-3">
+            Join us and see your career in a whole new light.
+            <br />Let's be unconventional; let's be you.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 d-block d-lg-none">
+      <div class="card bg-secondary px-3">
+        <div class="pt-4">
+          <a
+            routerLink="/careers/current-openings"
+            class="CTA-Zindex anchorCTA mb-3 p-3"
+          >
+            <h4
+              class="text-primary me-3 font-36-24 w-75 my-auto clickable-heading"
+            >
+              Want to Become a Phoenix?
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h4>
+          </a>
+          <p class="me-3 font-28-20 p-3">
+            Join us and see your career in a whole new light.
+            <br />Let's be unconventional; let's be you.
+          </p>
+        </div>
+        <div class="bottom-image-container">
+          <div class="bottom-image"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-6">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <app-faq></app-faq>
+      </div>
+      <div class="col-12 col-md-6 mt-3 mt-md-0">
+        <div class="accordion" id="accordionFAQ">
+          <div class="accordion-item">
+            <h4 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button font-28-20"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Industries"
+                aria-expanded="true"
+                aria-controls="Industries"
+              >
+                How Can I Apply for a Job?
+              </button>
+            </h4>
+            <div
+              id="Industries"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body font-24-16">
+                You can check the open positions available on our career page.
+                If you can’t find the position you’ve been looking for, send
+                your CV to
+                <a class="anchor" href="mailto:hr@fusionfirst.com"
+                  >hr&#64;fusionfirst.com.</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Services"
+                aria-expanded="false"
+                aria-controls="Services"
+              >
+                What Are the Benefits of Joining FBSPL?
+              </button>
+            </h2>
+            <div
+              id="Services"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body font-24-16">
+                Keeping you first is what we believe. With us, you will get
+                exposure to not only professional development but personal
+                development as well. Here are the major perks of joining us.
+                <ul class="pt-3">
+                  <li>
+                    5-day working with an attractive US/UK shift allowance
+                  </li>
+                  <li>Performance-based incentives</li>
+                  <li>Comprehensive L&D training program</li>
+                  <li>Exposure to work with international clients</li>
+                  <li>Weekly employee engagement activities</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h4 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#About"
+                aria-expanded="false"
+                aria-controls="About"
+              >
+                Are There Any Opportunities for Freshers?
+              </button>
+            </h4>
+            <div
+              id="About"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body font-24-16">
+                Yes, we offer an equal opportunity to both freshers and
+                experienced candidates. You can check our current openings or
+                mail your CV. Get ready to give wings to your career dreams.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Resources"
+                aria-expanded="false"
+                aria-controls="Resources"
+              >
+                How is the Work Environment At FBSPL?
+              </button>
+            </h2>
+            <div
+              id="Resources"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body font-24-16">
+                We focus on collaboration and teamwork. Our members are not just
+                colleagues; they’re like family. We believe that a motivated and
+                happy team is essential for success. Our leaders actively listen
+                to every employee’s concern and work together to find the best
+                solutions.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

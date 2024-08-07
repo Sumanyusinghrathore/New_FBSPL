@@ -1,0 +1,8 @@
+.clutch-widget-container {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+.test-img {
+  border: 1px solid #e4e4ff;
+  border-radius: 20px;
+}

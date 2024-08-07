@@ -1,0 +1,234 @@
+<main *ngIf="hasApiData()">
+  <div class="container d-none d-lg-block">
+    <div class="gradientBanner">
+      <img
+        appCdnUrl="assets/blog/BlogBanner.jpg"
+        class="desktop-banner"
+        alt="FBSPL Blogs & Latest Trends"
+      />
+      <div class="bannerText" data-aos="slide-up">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Blogs</li>
+          </ol>
+        </nav>
+        <h3 class="font-48-30 text-primary pt-3">Blogs</h3>
+        <p class="font-20 mt-3">
+          Stay ahead of the curve with our expert insights. From insurance and
+          e-commerce to accounting, data annotation, and digital marketing, our
+          blog covers the latest trends and advancements in the industry.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile View -->
+  <div class="container text-dark slide d-block d-lg-none pt-5">
+    <div class="gradientBannerMob">
+      <img
+        appCdnUrl="assets/blog/BlogBannerMobile.jpg"
+        class="card-img-mob"
+        alt="FBSPL Blogs & Latest Trends "
+      />
+      <div class="bannerTextMob" data-aos="slide-up">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Blogs</li>
+          </ol>
+        </nav>
+        <h3 class="font-48-30 text-primary">Blogs</h3>
+        <p class="font-20 mt-3">
+          Stay ahead of the curve with our expert insights. From insurance and
+          e-commerce to accounting, data annotation, and digital marketing, our
+          blog covers the latest trends and advancements in the industry.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <section class="container py-5">
+    <h3 class="font-48-30 text-primary">Featured</h3>
+    <ngx-slick-carousel
+      class="carousel blog_slider"
+      #slickModal="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div class="container" ngxSlickItem *ngFor="let slides of featuredBlogs">
+        <div class="row">
+          <div class="col-12 col-md-12 my-3">
+            <a [routerLink]="['/blogs', slides.slug]">
+              <div class="card blog-cards">
+                <img [src]="slides.feature_image" class="blog-cards-image" />
+                <div class="description">
+                  <p class="fw-bold">{{ slides.blog_category.name }}</p>
+                  <h4 class="font-28-20" [title]="slides.title">
+                    {{ slides.showTitle }}
+                  </h4>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </ngx-slick-carousel>
+  </section>
+  <section class="container py-4" id="top" #top>
+    <div class="row">
+      <h3 class="font-48-30 text-primary col-12 col-lg-4 my-3">Blog</h3>
+      <div class="col-12 col-lg-8 d-flex justify-content-end row">
+        <div class="col-12 col-md-6 my-3">
+          <div class="search-container ms-auto">
+            <input
+              type="text"
+              placeholder="Enter your Keywords"
+              id="search-input"
+              [(ngModel)]="searchTerm"
+              (keyup.enter)="onSearch()"
+            />
+            <button type="submit" id="search-button" (click)="onSearch()">
+              <img appCdnUrl="assets/Icon/search.svg" alt="Search" />
+            </button>
+          </div>
+        </div>
+        <div class="dropdown col-6 col-md-3 my-3">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            By Services
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <a class="dropdown-item" href="./blogs#insurance">Insurance</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="./blogs#accountingandbookkeeping"
+                >Accounting & Bookkeeping</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="./blogs#ecommerce">E-commerce</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="./blogs#recruitment"
+                >Recruitment</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="./blogs#customerSupport"
+                >Customer Support</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="./blogs#dataAnnotation"
+                >Data Annotation</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="./blogs#insuranceagencyoptimization"
+                >Insurance Agency Optimization</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="./blogs#digitalmarketing"
+                >Digital Marketing</a
+              >
+            </li>
+            <li><a class="dropdown-item" href="./blogs#other">Other</a></li>
+            <li>
+              <a class="dropdown-item" href="./blogs">All</a>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown col-6 col-md-3 my-3">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            By Industries
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <a class="dropdown-item" href="./blogs#ecommerce">E-commerce</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="./blogs#insurance">Insurance</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="./blogs#realestate">Real estate</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="./blogs">All</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5" *ngIf="!APIerror">
+      <div
+        class="col-12 col-md-6 my-3"
+        *ngFor="let blog of blogData"
+        data-aos="zoom-in"
+      >
+        <a [routerLink]="['/blogs', blog.slug]">
+          <div class="card blog-cards">
+            <img [src]="blog.feature_image" class="blog-cards-image" />
+            <div class="description">
+              <p class="fw-bold">{{ blog.blog_category.name }}</p>
+              <h4 class="font-28-20" [title]="blog.title">
+                {{ blog.showTitle }}
+              </h4>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div *ngIf="APIerror">
+      <h4 class="text-red font-36-24 text-center my-5">
+        {{ Errormessage }}
+      </h4>
+    </div>
+    <div class="row py-5" *ngIf="pages.length >= 1">
+      <nav>
+        <ul class="pagination pagination-lg mb-0 place-content-center">
+          <li
+            class="page-item"
+            aria-current="page"
+            (click)="changePage(currentPage - 1)"
+            [hidden]="currentPage === 1"
+          >
+            <span class="page-link px-3"> Previous</span>
+          </li>
+          <li
+            class="page-item active"
+            aria-current="page"
+            *ngFor="let page of pages"
+            (click)="changePage(page)"
+            [ngClass]="{
+              active: page === currentPage
+            }"
+          >
+            <span class="page-link px-3"> {{ page }}</span>
+          </li>
+          <li
+            class="page-item"
+            aria-current="page"
+            (click)="changePage(currentPage + 1)"
+            [hidden]="currentPage === pages[pages.length - 1]"
+          >
+            <span class="page-link px-3"> Next</span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+</main>

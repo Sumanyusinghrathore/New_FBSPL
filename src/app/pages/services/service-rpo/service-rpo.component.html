@@ -1,0 +1,865 @@
+<ngx-slick-carousel
+  class="service_slider carousel d-none d-lg-block container-fluid"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+>
+  <div
+    class="container-fluid text-dark"
+    ngxSlickItem
+    *ngFor="let slides of slides"
+  >
+    <div class="container gradientBanner">
+      <img alt="{{slides.alt}}" src="{{ slides.img }}" class="card-img-desktop desktop-banner" />
+      <div class="card-img-overlay overlay-text bannerText">
+        <div class="main_bannar my-4 ms-3" data-aos="fade-up">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item" aria-current="page">
+                <a href="/bpm-and-bpo-services">Services</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                <a href="./">RPO</a>
+              </li>
+            </ol>
+          </nav>
+          <a href="{{ slides.Link }}" class="CTA-Zindex anchorCTA pt-3">
+            <h3
+              *ngIf="!slides.banner"
+              class="text-primary font-34-19 my-auto clickable-heading"
+            >
+              {{ slides.Title }}
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+            <h3 *ngIf="slides.banner" class="text-primary font-34-19 my-auto">
+              {{ slides.Title }}
+            </h3>
+          </a>
+          <p class="card-text font-20-16 pt-3">{{ slides.Description }}</p>
+          <a
+            *ngIf="slides.banner"
+            href="{{ slides.Link }}"
+            class="CTA-Zindex anchorCTA pt-3"
+          >
+            <h3 class="text-primary font-24-16 clickable-heading">
+              {{ slides.serviceRPO }}
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>
+<!-- Mobile View -->
+<ngx-slick-carousel
+  class="container carousel d-block d-lg-none pb-5"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+>
+  <div class="text-dark slide" ngxSlickItem *ngFor="let slidesmob of slides">
+    <div class="gradientBannerMob d-flex justify-content-center">
+      <img alt="{{slidesmob.alt}}" src="{{ slidesmob.img_mob }}" class="card-img-mob" />
+      <div class="overlay-text-Mob bannerTextMob">
+        <div data-aos="fade-up">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item" aria-current="page">
+                <a href="/bpm-and-bpo-services">Services</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                <a href="./">RPO</a>
+              </li>
+            </ol>
+          </nav>
+          <a href="{{ slidesmob.Link }}" class="CTA-Zindex anchorCTA mb-3">
+            <h3
+              *ngIf="!slidesmob.banner"
+              class="text-primary font-34-19 my-auto clickable-heading"
+            >
+              {{ slidesmob.Title }}
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+            <h3
+              *ngIf="slidesmob.banner"
+              class="text-primary font-34-19 my-auto"
+            >
+              {{ slidesmob.Title }}
+            </h3>
+          </a>
+          <p class="card-text font-20-16">{{ slidesmob.Description }}</p>
+          <a
+            *ngIf="slidesmob.banner"
+            routerLink="{{ slidesmob.Link }}"
+            class="CTA-Zindex anchorCTA p-3"
+          >
+            <h3 class="text-primary font-24-16 clickable-heading">
+              {{ slidesmob.serviceRPO }}
+              <div class="headingCTA">
+                <button class="blueCTA ms-0"></button>
+              </div>
+            </h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>
+<app-ourAssets></app-ourAssets>
+<section class="bg-primary text-white py-6">
+  <div class="container px-4">
+    <h4 class="font-48-30 mb-3 text-white" data-aos="fade-up">
+      Recruitment Process Challenges These Days
+    </h4>
+    <div class="row">
+      <div class="row text-center d-none d-md-flex">
+        <div class="col-3" data-aos="fade-right" data-aos-delay="0">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">52%</p>
+            <p class="">
+              Talent acquisition leaders say the most challenging part of
+              recruitment is identifying suitable candidates.
+            </p>
+          </div>
+        </div>
+        <div class="col-3" data-aos="fade-right" data-aos-delay="200">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">45%</p>
+            <p class="">
+              Hiring managers face difficulties filling much-needed positions
+              due to the lack of qualified talent.
+            </p>
+          </div>
+        </div>
+        <div class="col-3" data-aos="fade-right" data-aos-delay="400">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">72%</p>
+            <p class="">
+              Recruiters grapple with the challenge of locating candidates who
+              best fit the positions they are trying to fill.
+            </p>
+          </div>
+        </div>
+        <div class="col-3" data-aos="fade-right" data-aos-delay="600">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">54%</p>
+            <p class="">
+              Companies report talent shortages directly impacting their ability
+              to serve clients and grow.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="d-md-none">
+        <div
+          class="text-white text-start"
+          data-aos="fade-right"
+          data-aos-delay="0"
+        >
+          <p class="font-48-30 fw-bolder mb-1">52%</p>
+          <p class="">
+            Talent acquisition leaders say the most challenging part of
+            recruitment is identifying suitable candidates.
+          </p>
+        </div>
+        <div
+          class="text-white text-start"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
+          <p class="font-48-30 fw-bolder mb-1">45%</p>
+          <p class="">
+            Hiring managers face difficulties filling much-needed positions due
+            to the lack of qualified talent.
+          </p>
+        </div>
+        <div
+          class="text-white text-start"
+          data-aos="fade-right"
+          data-aos-delay="400"
+        >
+          <p class="font-48-30 fw-bolder mb-1">72%</p>
+          <p class="">
+            Recruiters grapple with the challenge of locating candidates who
+            best fit the positions they are trying to fill.
+          </p>
+        </div>
+        <div
+          class="text-white text-start"
+          data-aos="fade-right"
+          data-aos-delay="600"
+        >
+          <p class="font-48-30 fw-bolder mb-1">54%</p>
+          <p class="">
+            Companies report talent shortages directly impacting their ability
+            to serve clients and grow.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-2 pt-5" id="recruitmentprocessoutsourcingservices">
+  <h2 class="text-primary font-48-30 mb-4" data-aos="fade-up">
+    Empower Change with Recruitment Process Outsourcing
+  </h2>
+  <div class="d-none d-lg-block">
+    <div class="row">
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3">
+        <div
+          class="card insurance-card policy-process-card p-3 Policy_Processing"
+          data-aos="zoom-in"
+        >
+          <h3
+            class="text-black me-3 font-28-20 clickable-heading CTA-Zindex p-2"
+          >
+            Administrative Support
+          </h3>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Manage your daily recruitment tasks efficiently. From scheduling
+              interviews to maintaining databases, resume formatting, and ATS
+              management support, we ensure seamless administrative support
+              services.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3">
+        <div
+          class="card insurance-card policy-process-card p-3 Claims_Management"
+          data-aos="zoom-in"
+        >
+          <h3
+            class="text-black me-3 font-28-20 clickable-heading CTA-Zindex p-2"
+          >
+            Talent Acquisition
+          </h3>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Couldn’t find the right talent? Our talent acquisition services
+              experts use a strategic approach to identify, attract, and onboard
+              top talent. Avail our RPO services to get the best candidate you
+              have been looking for.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div
+          class="card insurance-card policy-process-card p-3 Insurance_Accounting"
+        >
+          <h3
+            class="text-black me-3 font-28-20 clickable-heading CTA-Zindex p-2"
+          >
+            Half & Full Cycle Recruitment
+          </h3>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Whether you need specific recruitment support or end-to-end RPO
+              services, we can offer it all. Get half-cycle recruitment and
+              full-cycle recruitment support under one roof.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div
+          class="card insurance-card policy-process-card p-3 Agency_Management"
+        >
+          <h3
+            class="text-black me-3 font-28-20 clickable-heading CTA-Zindex p-2"
+          >
+            Demand-based Recruitment
+          </h3>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Are you looking for demand-based recruitment services? We are just
+              a click away. Do you have specific recruitment needs? Our
+              recruitment outsourcing solutions are flexible and tailored to
+              your needs.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div class="card insurance-card policy-process-card p-3 New_Business">
+          <h3
+            class="text-black me-3 font-28-20 clickable-heading CTA-Zindex p-2"
+          >
+            Bench Sales Recruitment
+          </h3>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Seamlessly connect top-tier talent to IT companies for
+              contract-based or permanent roles. We ensure a smooth transition
+              for clients and the candidates with our bench sales recruitment
+              solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-4 col-md-6 py-3" data-aos="zoom-in">
+        <div
+          class="card insurance-card policy-process-card p-3 Customer_Support"
+        >
+          <h3
+            class="text-black me-3 font-28-20 clickable-heading CTA-Zindex p-2"
+          >
+            Business Development Support
+          </h3>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Drive your business growth with our business development support
+              services. Let us help you identify new market opportunities,
+              develop strategic partnerships, and implement effective business
+              strategies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Mobile View -->
+<div class="container d-block d-lg-none">
+  <div class="row">
+    <div class="col-12 mt-0 mt-sm-4">
+      <div class="accordion" id="ServicePage">
+        <div class="policy-processing" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#Policy_Processing"
+            aria-expanded="true"
+            aria-controls="Policy_Processing"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">
+              Administrative Support
+            </h3>
+          </div>
+          <div
+            id="Policy_Processing"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Manage your daily recruitment tasks efficiently. From scheduling
+                interviews to maintaining databases, resume formatting, and ATS
+                management support, we ensure seamless administrative support
+                services.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#Claims_Management"
+            aria-expanded="true"
+            aria-controls="Claims_Management"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">Talent Acquisition</h3>
+          </div>
+          <div
+            id="Claims_Management"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingtwo"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Couldn’t find the right talent? Our talent acquisition services
+                experts use a strategic approach to identify, attract, and
+                onboard top talent. Avail our RPO services to get the best
+                candidate you have been looking for.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#About1"
+            aria-expanded="true"
+            aria-controls="About1"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">
+              Half & Full Cycle Recruitment
+            </h3>
+          </div>
+          <div
+            id="About1"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Whether you need specific recruitment support or end-to-end RPO
+                services, we can offer it all. Get half-cycle recruitment and
+                full-cycle recruitment support under one roof.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#About2"
+            aria-expanded="true"
+            aria-controls="About2"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">
+              Demand-based Recruitment
+            </h3>
+          </div>
+          <div
+            id="About2"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingfour"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Are you looking for demand-based recruitment services? We are
+                just a click away. Do you have specific recruitment needs? Our
+                recruitment outsourcing solutions are flexible and tailored to
+                your needs.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#About3"
+            aria-expanded="true"
+            aria-controls="About3"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">
+              Bench Sales Recruitment
+            </h3>
+          </div>
+          <div
+            id="About3"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingfour"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Seamlessly connect top-tier talent to IT companies for
+                contract-based or permanent roles. We ensure a smooth transition
+                for clients and the candidates with our bench sales recruitment
+                solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#About4"
+            aria-expanded="true"
+            aria-controls="About4"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">
+              Business Development Support
+            </h3>
+          </div>
+          <div
+            id="About4"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingfour"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Drive your business growth with our business development support
+                services. Let us help you identify new market opportunities,
+                develop strategic partnerships, and implement effective business
+                strategies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="container py-5">
+  <h2 class="text-primary font-48-30 mb-4" data-aos="fade-up">
+    Tools That Drive Excellence
+  </h2>
+  <div class="d-none d-xl-flex">
+    <div class="row">
+      <div class="col-3" data-aos="fade-right" data-aos-delay="0">
+        <img class="img-fluid" 
+        appCdnUrl="assets/services/assets-logos/Zoho.png"
+         alt="Zoho"
+         />
+      </div>
+      <div class="col-3" data-aos="fade-right" data-aos-delay="100">
+        <img class="img-fluid" 
+        appCdnUrl="assets/services/assets-logos/Big Biller.png"
+       
+          alt="Big billar"/>
+      </div>
+
+      <div class="col-3" data-aos="fade-right" data-aos-delay="200">
+        <img class="img-fluid" 
+        appCdnUrl="assets/services/assets-logos/Crelate.png"
+         
+         alt="Crelate "/>
+      </div>
+      <div class="col-3" data-aos="fade-right" data-aos-delay="300">
+        <img class="img-fluid" 
+        appCdnUrl="assets/services/assets-logos/Bullhorn.png"
+         alt="Bullhorn"
+           />
+      </div>
+    </div>
+    </div>
+  <div class="d-flex d-xl-none">
+    <div class="trusted-slider-logo">
+      <div class="trusted-slide-track">
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            appCdnUrl="assets/services/assets-logos/Zoho.png"
+            alt="Zoho"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            appCdnUrl="assets/services/assets-logos/Big Biller.png"
+            alt="Big Biller"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            appCdnUrl="assets/services/assets-logos/Crelate.png"
+            alt="Crelate"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            appCdnUrl="assets/services/assets-logos/Bullhorn.png"
+            alt="Bullhorn"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            appCdnUrl="assets/services/assets-logos/Zoho.png"
+            alt="Zoho"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            appCdnUrl="assets/services/assets-logos/Big Biller.png"
+            alt="Big Biller"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            appCdnUrl="assets/services/assets-logos/Crelate.png"
+            alt="Crelate"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            appCdnUrl="assets/services/assets-logos/Bullhorn.png"
+            alt="Bullhorn"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            appCdnUrl="assets/services/assets-logos/Zoho.png"
+            alt="Zoho"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            appCdnUrl="assets/services/assets-logos/Big Biller.png"
+            alt="Big Biller"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            appCdnUrl="assets/services/assets-logos/Crelate.png"
+            alt="Crelate"
+          />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid"
+            appCdnUrl="assets/services/assets-logos/Bullhorn.png"
+            alt="Bullhorn"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Thinking -->
+<app-service-case-study
+  [category]="[{ category: 'insurance' }]"
+></app-service-case-study>
+<!-- Know best -->
+<app-know-best
+  [cards]="[
+    {
+      description:
+        'I must say that our partnership with Fusion Business Solutions (FBSPL) has been truly exceptional. What sets FBSPL apart is their remarkable ability to not only grasp our ever-evolving business needs but also their genuine curiosity to understand our culture. Their flexibility and agility have been invaluable. FBSPL’s proactive approach, coupled with their rigorous processes and scalability, has significantly enhanced our customer experiences and AI operations.',
+      name: 'Chin Ma',
+      designation: 'Founder & President'
+    },
+    {
+      description:
+        'We reached out to Fusion in the Fall of 2022 as we were having issues recruiting a skilled and motivated workforce locally to fill back-office roles in our organization. What started as a simple documentation validation exercise quickly grew into the team supporting more strategic review and reconciliation activities. The team has shown repeatedly that they are willing to take on more and more complicated tasks, and the leadership team is quick to rally and support their employees when things fall off track.',
+      name: 'James Oickle',
+      designation: 'President & CEO'
+    },
+    {
+      description:
+        'Fusion Business Solutions has been a game-changer for our company. Their responsive team, seamless onboarding, and commitment to excellence have significantly reduced our stress levels, allowing us to focus on what matters most – our clients. We\'ve experienced measurable improvements in client retention and employee satisfaction since partnering with Fusion, making them the top choice for any business seeking efficient virtual assistant services.',
+      name: 'Isom Rigell M. Ed.',
+      designation: 'Chief People Officer'
+    }
+  ]"
+  [videos]="[
+    {
+      videoUrl: 'https://player.vimeo.com/video/969702390',
+      thumbnail:
+        'assets/thumbnail-know-best/Client Testimonials YT 01 Chin Ma.jpg'
+    },
+    {
+      thumbnail:
+        'assets/thumbnail-know-best/Client Testimonials YT 10  James Oickle.jpg'
+    },
+    {
+      videoUrl: 'https://player.vimeo.com/video/962238538',
+      thumbnail:
+        'assets/thumbnail-know-best/Client Testimonials YT 07 Stacey DiSpigno copy.jpg'
+    }
+  ]"
+>
+</app-know-best>
+<section class="py-6">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6" data-aos="fade-right">
+        <app-faq></app-faq>
+      </div>
+      <div class="col-12 col-md-6 mt-3 mt-md-0" data-aos="fade-left">
+        <div class="accordion" id="accordionFAQ">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button font-28-20"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Industries"
+                aria-expanded="true"
+                aria-controls="Industries"
+              >
+                How does recruitment process outsourcing benefit my business?
+              </button>
+            </h2>
+            <div
+              id="Industries"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                With the industry-best recruitment process outsourcing services
+                and solutions, you can reduce costs, find better candidates,
+                increase hiring efficiency, and greatly minimize hiring time.
+                Overall, you can focus on the core business competencies while
+                the RPO services provider will tackle the talent acquisition
+                process for you.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Services"
+                aria-expanded="false"
+                aria-controls="Services"
+              >
+                In what sectors do you offer RPO services?
+              </button>
+            </h2>
+            <div
+              id="Services"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                We offer the industry's best
+                <a
+                  class="anchor"
+                  href="/services/recruitment-process-outsourcing-services#recruitmentprocessoutsourcingservices"
+                >
+                  recruitment process outsourcing services
+                </a>
+                for various sectors. Here are the major areas in which we offer
+                RPO services.
+
+                <ul>
+                  <li>Healthcare / Pharmaceuticals/ Bio Tech/Bio Medical.</li>
+                  <li>Legal support</li>
+                  <li>Construction / Manufacturing</li>
+                  <li>Technology/IT sector</li>
+                  <li>Banking</li>
+                  <li>Consumer Goods / Retail</li>
+                  <li>Automotive</li>
+                  <li>Professional Services</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#recruitment"
+                aria-expanded="false"
+                aria-controls="recruitment"
+              >
+                Why should I choose FBSPL for recruitment outsourcing services?
+              </button>
+            </h2>
+            <div
+              id="recruitment"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Though there are ample recruitment outsourcing services
+                providers, the following key pointers set us apart.
+                <ul>
+                  <li>Huge internal database</li>
+                  <li>15+ industrial experience</li>
+                  <li>Trained recruiters</li>
+                  <li>Industry knowledge</li>
+                  <li>Quality over quantity</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Resources"
+                aria-expanded="false"
+                aria-controls="Resources"
+              >
+                What are the different RPO activities you follow?
+              </button>
+            </h2>
+            <div
+              id="Resources"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Our area of expertise and common activities that we do for our
+                clients are as follows -
+                <ul>
+                  <li>Job analysis</li>
+                  <li>Candidate sourcing and job postings</li>
+                  <li>Contact details searching and verification</li>
+                  <li>ATS/database management</li>
+                  <li>Outreach (Email/call/SMS)</li>
+                  <li>Resume and candidate screening</li>
+                  <li>Resume formatting</li>
+                  <li>Candidate information submission</li>
+                  <li>Interview scheduling and feedback</li>
+                  <li>Offer, onboarding, and placement</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#differentiators"
+                aria-expanded="false"
+                aria-controls="differentiators"
+              >
+                What are your key differentiators?
+              </button>
+            </h2>
+            <div
+              id="differentiators"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                <ul>
+                  <li>Availability As Per Your Time Zone</li>
+                  <li>All-in One Expertise</li>
+                  <li>Dedicated Staff</li>
+                  <li>99% Accuracy</li>
+                  <li>Tailor-Made Solutions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,174 @@
+<section class="container py-5">
+  <div class="row d-flex">
+    <div class="col-12 col-md-4">
+      <p class="font-20-16">
+        Waiting for the right time? We must then tell you there is no perfect
+        timing in this highly competitive world. Winners only have the edge of
+        acting today. Talk to our leading industrial experts now!
+      </p>
+    </div>
+
+    <div class="col-12 col-md-8 pe-md-4">
+      <form
+        autocomplete="off"
+        [formGroup]="LetsConnectForm"
+        (ngSubmit)="validateForm(LetsConnectForm)"
+      >
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="mt-3 mt-md-0">
+              <input
+                type="text"
+                class="lets-form"
+                formControlName="firstname"
+                autocomplete="off"
+                placeholder="Name"
+                appNoNumbers
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && LetsConnectFormf['firstname'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && LetsConnectFormf['firstname'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    LetsConnectFormf['firstname'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <input
+                type="text"
+                class="lets-form"
+                formControlName="company"
+                autocomplete="off"
+                placeholder="Company Name"
+                [ngClass]="{
+                  'is-invalid': submitted && LetsConnectFormf['company'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && LetsConnectFormf['company'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    LetsConnectFormf['company'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <input
+                type="text"
+                class="lets-form"
+                formControlName="phone"
+                placeholder="Phone"
+                minlength="10"
+                appOnlyNumbers
+                maxlength="10"
+                [ngClass]="{
+                  'is-invalid': submitted && LetsConnectFormf['phone'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && LetsConnectFormf['phone'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    LetsConnectFormf['phone'].errors['requiredButNotAllowBlank']
+                  "
+                >
+                  *This Field is Required
+                </div>
+                <div
+                  *ngIf="
+                    !LetsConnectFormf['phone'].errors[
+                      'requiredButNotAllowBlank'
+                    ] && LetsConnectFormf['phone'].errors['exactLength']
+                  "
+                >
+                  Invalid Phone
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="mt-3 mt-md-0">
+              <input
+                type="email"
+                class="lets-form"
+                formControlName="email"
+                placeholder="Email Address"
+                [ngClass]="{
+                  'is-invalid': submitted && LetsConnectFormf['email'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && LetsConnectFormf['email'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    LetsConnectFormf['email'].errors['requiredButNotAllowBlank']
+                  "
+                >
+                  *This Field is Required
+                </div>
+                <div *ngIf="LetsConnectFormf['email'].errors['email']">
+                  Invalid email address
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <textarea
+                placeholder="Brief Requirement"
+                formControlName="write_us"
+                class="lets-form"
+                rows="3"
+                [ngClass]="{
+                  'is-invalid': submitted && LetsConnectFormf['write_us'].errors
+                }"
+              ></textarea>
+              <div
+                *ngIf="submitted && LetsConnectFormf['write_us'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    LetsConnectFormf['write_us'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="FormCTA float-end">
+          <h6 class="font-48-30 text-primary text-md-end mt-4 mt-md-3">
+            Let’s Connect
+            <div class="headingCTA">
+              <div class="blueCTA podcast-card-cta"></div>
+            </div>
+          </h6>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,43 @@
+.logo {
+  height: 38px;
+  width: 38px;
+}
+
+.img-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-heading {
+  color: var(--primary);
+}
+.footer-logo {
+  height: 45px;
+  width: 176px;
+}
+
+.accordion-button {
+  color: #002ede;
+}
+.lastParra {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  .footerLink {
+    color: var(--primary) !important;
+  }
+}
+.footer-text {
+  color: var(--black);
+}
+
+.footerLink:hover {
+  color: var(--primary) !important;
+  text-decoration: underline;
+}
+@media (max-width: 1024px) {
+  .footerEndingLinks {
+    justify-content: center;
+  }
+}

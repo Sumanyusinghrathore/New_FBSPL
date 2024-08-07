@@ -1,0 +1,108 @@
+<section class="container d-none d-lg-block">
+  <div class="gradientBanner">
+    <img
+      [src]="NewsData.news_desktop_banner"
+      class="desktop-banner"
+      alt="{{ NewsData.alt_tag }}"
+    />
+    <!-- appCdnUrl="assets/news/news_Banner.png" -->
+    <div class="bannerText" data-aos="fade-up">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Newsroom</li>
+        </ol>
+      </nav>
+      <h3 class="font-48-30 text-primary pt-3">{{ NewsData.title }}</h3>
+    </div>
+  </div>
+</section>
+<!-- Mobile View -->
+<section class="container text-dark slide d-block d-lg-none pt-5">
+  <div class="gradientBannerMob">
+    <img
+      [src]="NewsData.news_mobile_banner"
+      class="card-img-mob"
+      alt="{{ NewsData.alt_tag }}"
+    />
+
+    <div class="bannerTextMob">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Newsroom</li>
+        </ol>
+      </nav>
+      <h3 class="font-48-30 text-primary">{{ NewsData.title }}</h3>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+  <div class="row mt-5">
+    <div class="col-12 col-md-8 mb-3">
+      <article [innerHTML]="NewsData.description"></article>
+    </div>
+    <aside class="col-12 col-lg-3 mb-3">
+      <div class="sticky-aside" id="blog-aside">
+        <div class="mb-3">
+          <p class="text-primary font-34 my-3">Share</p>
+          <div class="d-flex">
+            <img
+              class="logo upTranslate me-3"
+              appCdnUrl="assets/Icon/facebook.svg"
+              alt="facebook"
+              (click)="shareOnFacebook()"
+            />
+            <img
+              class="logo upTranslate me-3"
+              appCdnUrl="assets/Icon/twitter.svg"
+              alt="twitter"
+              (click)="shareOnTwitter()"
+            />
+            <img
+              class="logo upTranslate me-3"
+              appCdnUrl="assets/Icon/pinterest.svg"
+              alt="pinterest"
+              (click)="shareOnPinterest()"
+            />
+            <img
+              class="logo upTranslate me-3"
+              appCdnUrl="assets/Icon/linkedin.svg"
+              alt="linkedin"
+              (click)="shareOnLinkedIn()"
+            />
+          </div>
+
+          <!-- <div class="subscribe-container">
+                        <input type="text" placeholder="Enter your email address" id="subscribe-input" />
+                        <button type="submit" id="subscribe-button">GO</button>
+                    </div> -->
+        </div>
+        <!-- <div>
+          <p class="text-primary font-34 blue-border my-3">Industry Tag</p>
+          <p class="font-34-19 mb-4 mb-3">What is Lorem Ipsum?</p>
+        </div> -->
+        <!-- <div>
+          <p class="text-primary font-34 blue-border my-3">Subject Tag</p>
+          <div class="d-flex">
+            <div class="tag-card">
+              <span># Lorum ipsum</span>
+            </div>
+            <div class="tag-card">
+              <span># Lorum ipsum</span>
+            </div>
+          </div>
+          <div class="d-flex">
+            <div class="tag-card">
+              <span># Lorum ipsum</span>
+            </div>
+            <div class="tag-card">
+              <span># Lorum ipsum</span>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </aside>
+  </div>
+</main>

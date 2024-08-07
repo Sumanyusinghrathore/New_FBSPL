@@ -1,0 +1,99 @@
+.carousel {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slide {
+  padding: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  min-height: 360px;
+  border:1px solid #E9E9E9;
+}
+
+.card-text {
+  width: 80%;
+}
+
+.card-image {
+  margin-left: -25%;
+  margin-top: -5%;
+  transition: zoomInOut;
+}
+.video-btn {
+  float: right;
+  margin: 20px 0px;
+}
+.watch-video-btn {
+  background-color: #002dd5;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.zoom-in-out {
+  animation: zoomInOut 0.6s ease-in-out;
+}
+@media only screen and (max-width: 1080px) {
+  .card-content {
+    margin-right: 0%;
+    padding: 0px;
+  }
+  .card-text {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1740px) and (min-width:1400px) {
+  .card-image {
+    margin-top:6%;
+    margin-right:5%
+  }
+}
+@media only screen and (min-width:1210px) and (max-width:1410px)  {
+  .card-image {
+    margin-top: 8%;
+    margin-right: 7%;
+
+    
+  }
+}
+
+/* @media only screen and (min-device-width: 1400px) and (max-device-width: 1750px) {
+  .card-image {
+    margin-top: 1%;
+  }
+} */
+@media only screen and (min-device-width: 990px) and (max-device-width: 1200px) {
+  .card-image {
+    margin-top: 16%;
+  }
+  .card-text {
+    width: 89%;
+  }
+}

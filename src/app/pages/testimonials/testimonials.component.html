@@ -1,0 +1,116 @@
+<div class="container d-none d-lg-block">
+  <div class="gradientBanner">
+    <img
+      appCdnUrl="assets/testimonial/TestimonialsBanner.jpg"
+      class="desktop-banner"
+      alt="Client Testimonials"
+    />
+    <div class="bannerText" data-aos="slide-up">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li aria-current="page" class="breadcrumb-item active">
+            Testimonials
+          </li>
+        </ol>
+      </nav>
+      <h3 class="font-48-30 text-primary pt-3">Testimonials</h3>
+    </div>
+  </div>
+</div>
+<!-- Mobile View -->
+<div class="container text-dark slide d-block d-lg-none pt-5">
+  <div class="gradientBannerMob">
+    <img
+      appCdnUrl="assets/testimonial/TestimonialsMobileBanner.jpg"
+      class="card-img-mob"
+      alt="Client Testimonials"
+    />
+    <div class="bannerTextMob">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li aria-current="page" class="breadcrumb-item active">
+            Testimonials
+          </li>
+        </ol>
+      </nav>
+      <h3 class="font-48-30 text-primary">Testimonials</h3>
+    </div>
+  </div>
+</div>
+<section class="container py-6">
+  <div data-aos="slide-up">
+    <h1 class="text-primary pb-3 font-48-30">Hear it From Our Clients</h1>
+    <p class="font-20-16 font-20-16 w-100 w-md-50">
+      Want to know how we outperformed our potential clients and helped them
+      climb the ladder of success? Know what our clients have to say.
+    </p>
+  </div>
+  <ngx-slick-carousel
+    class="carousel testimonial_right pt-5 blog_slider"
+    #slickModal="slick-carousel"
+    [config]="slideConfig"
+  >
+    <div
+      class="container text-dark"
+      ngxSlickItem
+      *ngFor="let slides of testimonial_slide"
+    >
+      <div class="row px-3">
+        <div
+          class="col-md-12 col-xl-3 col-lg-4 d-flex justify-content-center my-auto"
+        >
+          <img
+            class="test-img img-fluid"
+            src="{{ slides.img }}"
+            alt="{{ slides.alt }}"
+          />
+        </div>
+        <div
+          class="col-md-12 col-lg-8 col-xl-8 d-flex flex-column align-items-start justify-content-center"
+        >
+          <img appCdnUrl="assets/Icon/invertedcoma.svg" />
+          <p>{{ slides.description }}</p>
+          <h3 class="text-primary mt-5">{{ slides.Name }}</h3>
+          <p>{{ slides.Title }}</p>
+        </div>
+      </div>
+    </div>
+  </ngx-slick-carousel>
+</section>
+<section class="bg-secondary">
+  <div class="container py-6">
+    <h3 class="text-primary text-md-start font-48-30 mb-3">
+      Watch, Know, Decide!
+    </h3>
+    <div class="row">
+      <div *ngFor="let video of videos" class="col-md-6 mb-4">
+        <app-vimeo-player
+          [videoUrl]="video.videoUrl"
+          [thumbnail]="video.thumbnail"
+          [alt]="video.alt"
+        ></app-vimeo-player>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container py-6">
+  <h3 class="text-primary text-md-start font-48-30">
+    Reliable and Top-notch: Clutch Review
+  </h3>
+  <div class="clutch-widget-container">
+    <div
+      class="clutch-widget"
+      data-url="https://widget.clutch.co"
+      data-widget-type="12"
+      data-height="375"
+      data-nofollow="true"
+      data-expandifr="true"
+      data-scale="100"
+      data-scale="100"
+      data-reviews="2154825,2125473,2112865,2111887,2104862,2097696,2084463,2076200,2062529,2062525,2054071,2050525"
+      data-clutchcompany-id="907308"
+    ></div>
+  </div>
+</section>

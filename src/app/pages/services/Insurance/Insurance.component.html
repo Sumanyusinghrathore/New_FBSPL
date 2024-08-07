@@ -1,0 +1,1032 @@
+<ngx-slick-carousel
+  class="service_slider carousel d-none d-lg-block container-fluid"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+>
+  <div
+    class="container-fluid text-dark"
+    ngxSlickItem
+    *ngFor="let slides of slides"
+  >
+    <div class="container gradientBanner">
+      <img  src="{{ slides.img }}" alt="{{slides.alt}}" class="card-img-desktop desktop-banner" />
+      <div class="card-img-overlay overlay-text bannerText">
+        <div class="main_bannar my-4 ms-3" data-aos="fade-up">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item" aria-current="page">
+                <a href="/bpm-and-bpo-services">Services</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                <a aria-current="page">Insurance BPO</a>
+              </li>
+            </ol>
+          </nav>
+          <a href={{slides.Link}} class="CTA-Zindex anchorCTA">
+            <h3
+              *ngIf="!slides.banner"
+              class="text-primary font-34-19 my-auto clickable-heading"
+            >
+              {{ slides.Title }}
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+            <h3
+              *ngIf="slides.banner"
+              class="text-primary font-34-19 my-auto"
+            >
+              {{ slides.Title }}
+            </h3>
+          </a>
+          <p class="card-text font-20-16 pt-4">{{ slides.Description }}</p>
+          <a
+            *ngIf="slides.banner"
+            [routerLink]="slides.Link"
+            class="CTA-Zindex anchorCTA"
+          >
+            <h3 class="text-primary font-24-16 clickable-heading">
+              {{ slides.Bookaconsultation }}
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>
+<!-- Mobile View -->
+<ngx-slick-carousel
+  class="container carousel d-block d-lg-none pb-5"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+>
+  <div class="text-dark slide" ngxSlickItem *ngFor="let slidesmob of slides">
+    <div class="gradientBannerMob d-flex justify-content-center">
+      <img  src="{{ slidesmob.img_mob }}" alt="{{slidesmob.alt}}" class="card-img-mob" />
+      <div class="overlay-text-Mob bannerTextMob">
+        <div data-aos="fade-up">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item" aria-current="page">
+              <a href="/bpm-and-bpo-services">Services</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              <a aria-current="page">Insurance BPO</a>
+            </li>
+          </ol>
+        </nav>
+        <a href={{slidesmob.Link}} class="CTA-Zindex anchorCTA">
+          <h3
+            *ngIf="!slidesmob.banner"
+            class="text-primary font-34-19 my-auto clickable-heading"
+          >
+            {{ slidesmob.Title }}
+            <div class="headingCTA">
+              <button class="blueCTA"></button>
+            </div>
+          </h3>
+          <h3 *ngIf="slidesmob.banner" class="text-primary font-34-19 my-auto">
+            {{ slidesmob.Title }}
+          </h3>
+        </a>
+        <p class="card-text font-20-16">{{ slidesmob.Description }}</p>
+        <a
+          *ngIf="slidesmob.banner"
+          [routerLink]="slidesmob.Link"
+          class="CTA-Zindex anchorCTA"
+        >
+          <h3 class="text-primary font-24-16 clickable-heading">
+            {{ slidesmob.Bookaconsultation }}
+            <div class="headingCTA">
+              <button class="blueCTA"></button>
+            </div>
+          </h3>
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+</ngx-slick-carousel>
+<app-ourAssets></app-ourAssets>
+<section class="bg-primary text-white py-6">
+  <div class="container px-4">
+    <h4 class="font-48-30 mb-3 text-white" data-aos="fade-up">
+      Biggest Challenges Faced by Insurers
+    </h4>
+    <div class="row">
+      <div class="row text-center d-none d-md-flex">
+        <div class="col-lg-3 col-6" data-aos="fade-right" fade-aos-delay="0">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">43%</p>
+            <p class="">
+              Insurance talent teams find it challenging to recruit skilled
+              candidates, especially in areas like claims.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6" data-aos="fade-right" fade-aos-delay="200">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">61%</p>
+            <p class="">
+              Insurance executives claim that shifts in consumer preferences are
+              expediting the need for strategic reinvention.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6" data-aos="fade-right" fade-aos-delay="400">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">40%</p>
+            <p class="">
+              Insurance underwriters spend more time on administrative tasks and
+              non-core activities, reducing their productivity.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6" data-aos="fade-right" fade-aos-delay="600">
+          <div class="text-white text-start">
+            <p class="font-48-30 fw-bolder mb-1">54%</p>
+            <p class="">
+              CFOs claim that hiring skilled employees and staff retention are
+              the most formidable challenges for them.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="d-md-none">
+        <div class="text-white text-start" data-aos="fade-right" fade-aos-delay="0">
+          <p class="font-48-30 fw-bolder mb-1">43%</p>
+          <p class="">
+            Insurance talent teams find it challenging to recruit skilled
+            candidates, especially in areas like claims.
+          </p>
+        </div>
+        <div class="text-white text-start" data-aos="fade-right" fade-aos-delay="200">
+          <p class="font-48-30 fw-bolder mb-1">61%</p>
+          <p class="">
+            Insurance executives claim that shifts in consumer preferences are
+            expediting the need for strategic reinvention.
+          </p>
+        </div>
+        <div class="text-white text-start" data-aos="fade-right" fade-aos-delay="400">
+          <p class="font-48-30 fw-bolder mb-1">40%</p>
+          <p class="">
+            Insurance underwriters spend more time on administrative tasks and
+            non-core activities, reducing their productivity.
+          </p>
+        </div>
+        <div class="text-white text-start" data-aos="fade-right" fade-aos-delay="600">
+          <p class="font-48-30 fw-bolder mb-1">54%</p>
+          <p class="">
+            CFOs claim that hiring skilled employees and staff retention are the
+            most formidable challenges for them.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-2 pt-5" id="empowerchangewithinsuranceoutsourcing">
+  <h2 class="text-primary font-48-30 mb-4" data-aos="fade-up" >
+    Empower Change with Insurance Outsourcing
+  </h2>
+  <div class="d-none d-lg-block">
+    <div class="row">
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3">
+        <div
+          class="card insurance-card policy-process-card p-3 Policy_Processing"  data-aos="zoom-in"
+        >
+          <a
+            routerLink="/services/insurance-policy-processing"
+            class="CTA-Zindex anchorCTA mb-3 p-2"
+          >
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Policy Processing
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Your policies, our expertise. Ensure accuracy and speed with our
+              <a
+                class="anchor"
+                target="_blank"
+                href="/services/insurance-policy-processing"
+                >policy processing services.</a
+              >
+              Reduce the risk of E&O with human-verified policy checking.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3">
+        <div
+          class="card insurance-card policy-process-card p-3 Claims_Management" data-aos="zoom-in"
+        >
+          <a
+            routerLink="/services/insurance-claim-management"
+            class="CTA-Zindex anchorCTA mb-3 p-2"
+          >
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Claims Management
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Claims are the heartbeat of insurance. Our
+              <a
+                class="anchor"
+                target="_blank"
+                href="/services/insurance-claim-management"
+                >claims management services</a
+              >
+              ensure faster settlements and longer client relationships.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3">
+        <div
+          class="card insurance-card policy-process-card p-3 Insurance_Accounting" data-aos="zoom-in"
+        >
+          <a
+            routerLink="/services/accounting-bookkeeping-services"
+            class="CTA-Zindex anchorCTA mb-3 p-2"
+          >
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Insurance Accounting
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Say goodbye to accounting errors. Let us
+              <a
+                class="anchor"
+                target="_blank"
+                href="/services/accounting-bookkeeping-services"
+                >manage your insurance accounting</a
+              >
+              services and financial reporting while you focus on strategic
+              growth initiatives.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3">
+        <div
+          class="card insurance-card policy-process-card p-3 Agency_Management" data-aos="zoom-in"
+        >
+          <a
+            routerLink="/services/insurance-agency-optimization-services"
+            class="CTA-Zindex anchorCTA mb-3 p-2"
+          >
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Agency Optimization
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Manage your insurance agency like a pro. Be ready to re-purpose
+              your P&C operations with the industry-best insurance
+              <a
+                class="anchor"
+                target="_blank"
+                href="/services/insurance-agency-optimization-services"
+                >agency optimization services.</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-md-6 py-3">
+        <div class="card insurance-card policy-process-card p-3 New_Business" data-aos="zoom-in">
+          <a
+            routerLink="/services/insurance-new-business-servicing"
+            class="CTA-Zindex anchorCTA mb-3 p-2"
+          >
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              New Business
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              Grow your
+              <a
+                class="anchor"
+                target="_blank"
+                href="/services/insurance-new-business-servicing"
+                >new business</a
+              >
+              in the right direction. From policy quotes, to checking and
+              issuance, let us deliver the best insurance experience.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-4 col-md-6 py-3">
+        <div
+          class="card insurance-card policy-process-card p-3 Customer_Support" data-aos="zoom-in"
+        >
+          <a
+            routerLink="/services/customer-support-outsourcing"
+            class="CTA-Zindex anchorCTA mb-3 p-2"
+          >
+            <h3 class="text-black font-28-20 my-auto clickable-heading">
+              Customer Support
+              <div class="headingCTA">
+                <button class="blueCTA"></button>
+              </div>
+            </h3>
+          </a>
+          <div class="card-body-policy">
+            <p class="text-black font-20-16 ms-2">
+              We are here for you round the clock.
+              <a
+                class="anchor"
+                target="_blank"
+                href="/services/customer-support-outsourcing"
+                >Get expert assistance
+              </a>
+              and strategic guidance for more optimized insurance operations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Mobile View -->
+<div class="container d-block d-lg-none">
+  <div class="row">
+    <div class="col-12 mt-0 mt-sm-4">
+      <div class="accordion" id="ServicePage">
+        <div class="policy-processing" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#Policy_Processing"
+            aria-expanded="true"
+            aria-controls="Policy_Processing"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"
+          >
+            <h3 class="CTAs text-black fs-24  me-3">Policy Processing</h3>
+            <button class="blueCTA service_btn">
+              <a
+                routerLink="/services/insurance-policy-processing"
+                class="CTA-Zindex anchorCTA mb-3 p-3"
+              >
+              </a>
+            </button>
+          </div>
+          <div
+            id="Policy_Processing"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Your policies, our expertise. Ensure accuracy and speed with our
+                <a
+                  class="anchor"
+                  target="_blank"
+                  href="/services/insurance-policy-processing"
+                  >policy processing services.</a
+                >
+                Reduce the risk of E&O with human-verified policy checking.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#Claims_Management"
+            aria-expanded="true"
+            aria-controls="Claims_Management"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3" 
+          >
+            <h3 class="CTAs text-black fs-24  me-3">Claims Management</h3>
+            <button class="blueCTA service_btn">
+              <a
+                routerLink="/services/insurance-claim-management"
+                class="CTA-Zindex anchorCTA mb-3 p-3"
+              >
+              </a>
+            </button>
+          </div>
+          <div
+            id="Claims_Management"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingtwo"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Claims are the heartbeat of insurance. Our
+                <a
+                  class="anchor"
+                  target="_blank"
+                  href="/services/insurance-claim-management"
+                  >claims management services</a
+                >
+                ensure faster settlements and longer client relationships.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#About1"
+            aria-expanded="true"
+            aria-controls="About1"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3" 
+          >
+            <h3 class="CTAs text-black fs-24  me-3">
+              Insurance Accounting
+            </h3>
+            <button class="blueCTA service_btn">
+              <a
+                routerLink="/services/accounting-bookkeeping-services"
+                class="CTA-Zindex anchorCTA mb-3 p-3"
+              >
+              </a>
+            </button>
+          </div>
+          <div
+            id="About1"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Say goodbye to accounting errors. Let us
+                <a
+                  class="anchor"
+                  target="_blank"
+                  href="/services/accounting-bookkeeping-services"
+                  >manage your insurance accounting</a
+                >
+                services and financial reporting while you focus on strategic
+                growth initiatives.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#About2"
+            aria-expanded="true"
+            aria-controls="About2"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3"  
+          >
+            <h3 class="CTAs text-black fs-24  me-3">Agency Optimization</h3>
+            <button class="blueCTA service_btn">
+              <a
+                routerLink="/services/insurance-agency-optimization-services"
+                class="CTA-Zindex anchorCTA mb-3 p-3"
+              >
+              </a>
+            </button>
+          </div>
+          <div
+            id="About2"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingfour"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Manage your insurance agency like a pro. Be ready to re-purpose
+                your P&C operations with the industry-best insurance
+                <a
+                  class="anchor"
+                  target="_blank"
+                  href="/services/insurance-agency-optimization-services"
+                  >agency optimization services.</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#About3"
+            aria-expanded="true"
+            aria-controls="About3"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3" 
+          >
+            <h3 class="CTAs text-black fs-24  me-3">New Business</h3>
+            <button class="blueCTA service_btn">
+              <a
+                routerLink="/services/insurance-new-business-servicing"
+                class="CTA-Zindex anchorCTA mb-3 p-3"
+              >
+              </a>
+            </button>
+          </div>
+          <div
+            id="About3"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingfour"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                Grow your
+                <a
+                  class="anchor"
+                  target="_blank"
+                  href="/services/insurance-new-business-servicing"
+                  >new business</a
+                >
+                in the right direction. From policy quotes, to checking and
+                issuance, let us deliver the best insurance experience.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="policy-processing mt-4" data-aos="zoom-in">
+          <div
+            data-bs-toggle="collapse"
+            data-bs-target="#About4"
+            aria-expanded="true"
+            aria-controls="About4"
+            id="headingOne"
+            class="headingCTA CTA-Zindex d-flex p-3" 
+          >
+            <h3 class="CTAs text-black fs-24  me-3">Customer Support</h3>
+            <button class="blueCTA service_btn">
+              <a
+                routerLink="/services/customer-support-outsourcing"
+                class="CTA-Zindex anchorCTA mb-3 p-3"
+              >
+              </a>
+            </button>
+          </div>
+          <div
+            id="About4"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingfour"
+            data-bs-parent="#ServicePage"
+          >
+            <div class="accordion-body pt-0">
+              <p class="text-black font-20-16">
+                We are here for you round the clock.
+                <a
+                  class="anchor"
+                  target="_blank"
+                  href="/services/customer-support-outsourcing"
+                  >Get expert assistance</a
+                >
+                and strategic guidance for more optimized insurance operations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="container py-5">
+  <h2 class="text-primary font-48-30 mb-4" data-aos="fade-up">Tools That Drive Excellence</h2>
+  <div class="d-none d-xl-flex">
+    <div class="row g-5">
+      <div class="col-2"  data-aos="fade-right" data-aos-delay="0">
+        <img class="img-fluid" alt="Insurance tool Applied System  "  appCdnUrl="assets/Tools/applied.svg" />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="100">
+        <img class="img-fluid" alt="Insurance tool Hawksoft   "  appCdnUrl="assets/Tools/hawksoft.svg" />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="200">
+        <img
+          class="img-fluid" alt="Insurance tool PL Rating "
+           appCdnUrl="assets/Tools/pl rating.svg"
+         
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="300">
+        <img class="img-fluid" alt="Insurance tool QQCatalyst "  appCdnUrl="assets/Tools/catalyst.svg"  />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="400">
+        <img class="img-fluid" alt="Insurance tool AMS 360 "  appCdnUrl="assets/Tools/ams360.svg"  />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="500">
+        <img class="img-fluid" alt="Insurance tool EZLynx " appCdnUrl="assets/Tools/ezlynx.svg"  />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="600">
+        <img class="img-fluid" alt="Insurance tool CSR24"  appCdnUrl="assets/Tools/csr27.svg"  />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="700">
+        <img class="img-fluid" alt="Insurance tool NowCerts"  appCdnUrl="assets/Tools/nowcerts.svg"  />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="800">
+        <img alt="Insurance tool Power Broker "
+          class="img-fluid"
+           appCdnUrl="assets/Tools/powerbroker.svg"
+         
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="800">
+        <img alt="Insurance tool AgencyMatrix "
+          class="img-fluid"
+           appCdnUrl="assets/Tools/agencymatrix.svg"
+          
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="900">
+        <img alt="Insurance tool employeeNavigator "
+          class="img-fluid"
+           appCdnUrl="assets/Tools/employeeNavigator.svg"
+       
+        />
+      </div>
+      <div class="col-2" data-aos="fade-right" data-aos-delay="1000">
+        <img class="img-fluid" alt=" Insurance tool indio " appCdnUrl="assets/Tools/indio.svg"  />
+      </div>
+    </div>
+  </div>
+  <div class="d-flex d-xl-none">
+    <div class="trusted-slider-logo">
+      <div class="trusted-slide-track">
+        <div class="trust-slide">
+          <img class="img-fluid" alt="Insurance tool Applied System  "  appCdnUrl="assets/Tools/applied.svg" data-aos="fade-right" data-aos-delay="0" />
+        </div>
+        <div class="trust-slide">
+          <img data-aos="fade-right" data-aos-delay="100"
+            class="img-fluid" alt="Insurance tool Hawksoft  "
+             appCdnUrl="assets/Tools/hawksoft.svg"
+           
+          />
+        </div>
+        <div class="trust-slide">
+          <img data-aos="fade-right" data-aos-delay="200"
+            class="img-fluid" alt="Insurance tool PL Rating "
+             appCdnUrl="assets/Tools/pl rating.svg"
+           
+          />
+        </div>
+        <div class="trust-slide">
+          <img class="img-fluid" alt="Insurance tool QQCatalyst " data-aos="fade-right" data-aos-delay="300"  appCdnUrl="assets/Tools/catalyst.svg" />
+        </div>
+        <div class="trust-slide">
+          <img class="img-fluid" alt=" Insurance tool AMS 360 "  appCdnUrl="assets/Tools/ams360.svg" data-aos="fade-right" data-aos-delay="400" />
+        </div>
+        <div class="trust-slide">
+          <img class="img-fluid" alt=" Insurance tool EZLynx " appCdnUrl="assets/Tools/ezlynx.svg" data-aos="fade-right" data-aos-delay="500" />
+        </div>
+        <div class="trust-slide">
+          <img class="img-fluid" alt="Insurance tool CSR24  " appCdnUrl="assets/Tools/csr27.svg" data-aos="fade-right" data-aos-delay="600" />
+        </div>
+        <div class="trust-slide">
+          <img class="img-fluid" alt="Insurance tool NowCerts " appCdnUrl="assets/Tools/nowcerts.svg" data-aos="fade-right" data-aos-delay="700" />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid" alt=" Insurance tool Power Broker" data-aos="fade-right" data-aos-delay="800"
+             appCdnUrl="assets/Tools/powerbroker.svg"
+           
+          />
+        </div>
+        <div class="trust-slide">
+          <img data-aos="fade-right" data-aos-delay="900"
+            class="img-fluid" alt="Insurance tool AgencyMatrix "
+             appCdnUrl="assets/Tools/agencymatrix.svg"
+            
+          />
+        </div>
+        <div class="trust-slide">
+          <img data-aos="fade-right" data-aos-delay="1000"
+            class="img-fluid" aria-multiline=" Insurance tool employeeNavigator "
+             appCdnUrl="assets/Tools/employeeNavigator.svg"
+            alt="Employee Navigator"
+          />
+        </div>
+        <div class="trust-slide">
+          <img class="img-fluid" aria-multiline=" Insurance tool indio " data-aos="fade-right" data-aos-delay="1100"  appCdnUrl="assets/Tools/indio.svg" alt="Indio" />
+        </div>
+        <div class="trust-slide">
+          <img class="img-fluid" alt=" Insurance tool Applied System"  appCdnUrl="assets/Tools/applied.svg" data-aos="fade-right" data-aos-delay="0" />
+        </div>
+        <div class="trust-slide">
+          <img data-aos="fade-right" data-aos-delay="100"
+            class="img-fluid" alt="Insurance tool Hawksoft   "
+             appCdnUrl="assets/Tools/hawksoft.svg"
+           
+          />
+        </div>
+        <div class="trust-slide">
+          <img data-aos="fade-right" data-aos-delay="200"
+            class="img-fluid" alt="Insurance tool PL Rating "
+             appCdnUrl="assets/Tools/pl rating.svg"
+           
+          />
+        </div>
+        <div class="trust-slide">
+          <img class="img-fluid" alt="Insurance tool QQCatalyst " data-aos="fade-right" data-aos-delay="300"  appCdnUrl="assets/Tools/catalyst.svg" />
+        </div>
+        <div class="trust-slide">
+          <img class="img-fluid" alt="Insurance tool AMS 360 "  appCdnUrl="assets/Tools/ams360.svg" data-aos="fade-right" data-aos-delay="400" />
+        </div>
+        <div class="trust-slide">
+          <img class="img-fluid" alt="Insurance tool EZLynx " appCdnUrl="assets/Tools/ezlynx.svg" data-aos="fade-right" data-aos-delay="500" />
+        </div>
+        <div class="trust-slide">
+          <img class="img-fluid" alt="Insurance tool CSR24  " appCdnUrl="assets/Tools/csr27.svg" data-aos="fade-right" data-aos-delay="600" />
+        </div>
+        <div class="trust-slide">
+          <img class="img-fluid" alt=" Insurance tool NowCerts  "  appCdnUrl="assets/Tools/nowcerts.svg" data-aos="fade-right" data-aos-delay="700" />
+        </div>
+        <div class="trust-slide">
+          <img
+            class="img-fluid" data-aos="fade-right" data-aos-delay="800"
+             appCdnUrl="assets/Tools/powerbroker.svg" alt="Insurance tool Power Broker "
+           
+          />
+        </div>
+        <div class="trust-slide">
+          <img data-aos="fade-right" data-aos-delay="900"
+            class="img-fluid" alt="Insurance tool AgencyMatrix "
+             appCdnUrl="assets/Tools/agencymatrix.svg"
+            
+          />
+        </div>
+        <div class="trust-slide">
+          <img data-aos="fade-right" data-aos-delay="1000"
+            class="img-fluid" alt="Insurance tool employeeNavigator "
+             appCdnUrl="assets/Tools/employeeNavigator.svg"
+            alt="Employee Navigator"
+          />
+        </div>
+        <div class="trust-slide">
+          <img class="img-fluid" alt=" Insurance tool indio " data-aos="fade-right" data-aos-delay="1100"  appCdnUrl="assets/Tools/indio.svg" alt="Indio" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Thinking -->
+<app-service-case-study  [category]="[{ category: 'insurance' }]"></app-service-case-study>
+
+<!-- Know best -->
+<app-know-best
+  [cards]="[
+    {
+      description:
+        'I must say that our partnership with Fusion Business Solutions (FBSPL) has been truly exceptional. What sets FBSPL apart is their remarkable ability to not only grasp our ever-evolving business needs but also their genuine curiosity to understand our culture. Their flexibility and agility have been invaluable. FBSPL’s proactive approach, coupled with their rigorous processes and scalability, has significantly enhanced our customer experiences and AI operations.',
+      name: 'Chin Ma',
+      designation: 'Founder & President'
+    },
+    {
+      description:
+        'We reached out to Fusion in the Fall of 2022 as we were having issues recruiting a skilled and motivated workforce locally to fill back-office roles in our organization. What started as a simple documentation validation exercise quickly grew into the team supporting more strategic review and reconciliation activities. The team has shown repeatedly that they are willing to take on more and more complicated tasks, and the leadership team is quick to rally and support their employees when things fall off track.',
+      name: 'James Oickle',
+      designation: 'President & CEO'
+    },
+    {
+      description:
+        'Fusion Business Solutions has been a game-changer for our company. Their responsive team, seamless onboarding, and commitment to excellence have significantly reduced our stress levels, allowing us to focus on what matters most – our clients. We\'ve experienced measurable improvements in client retention and employee satisfaction since partnering with Fusion, making them the top choice for any business seeking efficient virtual assistant services.',
+      name: 'Isom Rigell M. Ed.',
+      designation: 'Chief People Officer'
+    }
+  ]"
+ [videos]="[
+    {
+      videoUrl:
+        'https://player.vimeo.com/video/969702390',
+      thumbnail:
+        'assets/thumbnail-know-best/Client Testimonials YT 01 Chin Ma.jpg',
+        alt:'Listen to our client '
+    },
+    {
+      thumbnail:
+        'assets/thumbnail-know-best/Client Testimonials YT 10  James Oickle.jpg',
+        alt:'Our Success Stories '
+    },
+    {
+      videoUrl:
+        'https://player.vimeo.com/video/962238538',
+      thumbnail:
+        'assets/thumbnail-know-best/Client Testimonials YT 07 Stacey DiSpigno copy.jpg',
+        alt:'FBSPL Client Testimonial '
+    },
+   
+  ]"
+>
+</app-know-best>
+<section class="py-6">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6" data-aos="fade-right">
+        <app-faq></app-faq>
+      </div>
+      <div class="col-12 col-md-6 mt-3 mt-md-0" data-aos="fade-left">
+        <div class="accordion" id="accordionFAQ">
+          <div class="accordion-item">
+            <h4 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button font-28-20"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Industries"
+                aria-expanded="true"
+                aria-controls="Industries"
+              >
+                What are the benefits of insurance outsourcing services?
+              </button>
+            </h4>
+            <div
+              id="Industries"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                We strive for client satisfaction and quality services. Here are
+                the major perks businesses can avail while seeking insurance
+                business process outsourcing services.
+                <ul class="pt-3">
+                  <li>Cost-effective business solutions</li>
+                  <li>All-in-one expertise</li>
+                  <li>Maximized operational efficiency</li>
+                  <li>Improved customer experience</li>
+                  <li>Scalable solutions</li>
+                  <li>On-time delivery and 100% accuracy</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h4 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Services"
+                aria-expanded="false"
+                aria-controls="Services"
+              >
+                What are the major technologies you have worked on?
+              </button>
+            </h4>
+            <div
+              id="Services"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Although our
+                <a
+                  class="anchor"
+                  href="/services/insurance-bpo-outsourcing#empowerchangewithinsuranceoutsourcing"
+                  >insurance bpo services</a
+                >
+                are not restricted to a specific tool or technology, here are a
+                few tools with which we have hands-on experience.
+                <ul class="pt-3">
+                  <li>Applied Net</li>
+                  <li>India TM</li>
+                  <li>CSR 24</li>
+                  <li>AMS 360</li>
+                  <li>QQCatalyst</li>
+                  <li>PowerBroker</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h4 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#About"
+                aria-expanded="false"
+                aria-controls="About"
+              >
+                What is the process to seek insurance outsourcing services?
+              </button>
+            </h4>
+            <div
+              id="About"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                We follow a streamlined and transparent process to help
+                businesses get the best results they’ve aimed for. Here’s how
+                you can avail our insurance operations management support.
+                <ul class="pt-3">
+                  <li>
+                    <a
+                      class="anchor"
+                      target="_blank"
+                      href="/book-free-consultation-call"
+                      >Book a consultation
+                    </a>
+                  </li>
+                  <li>Review & assessment of agency needs</li>
+                  <li>Get customized services proposal</li>
+                  <li>Discussion of expectation and implementation</li>
+                  <li>Staff introduction</li>
+                  <li>Quarterly discussions of real time results</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h4 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Resources"
+                aria-expanded="false"
+                aria-controls="Resources"
+              >
+                Will outsourcing insurance back-office services help cut
+                operational costs?
+              </button>
+            </h4>
+            <div
+              id="Resources"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Insurance back-office support and services are very
+                time-consuming and costly. But, when you outsource back-office activities
+                like policy processing, certifications, CMS updates, and more,
+                you can save a lot of your time and focus on your business while
+                we take care of your operations.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h4 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button font-28-20 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#outsourcing"
+                aria-expanded="false"
+                aria-controls="outsourcing"
+              >
+                What are your key differentiators?
+              </button>
+            </h4>
+            <div
+              id="outsourcing"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                <ul class="pt-3">
+                  <li>Availability As Per Your Time Zone</li>
+                  <li>All-in One Expertise</li>
+                  <li>Dedicated Staff</li>
+                  <li>99% Accuracy</li>
+                  <li>Tailor-Made Solutions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

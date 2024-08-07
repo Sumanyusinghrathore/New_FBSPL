@@ -1,0 +1,60 @@
+<div class="container-fluid Thinking_section mt-3">
+  <div class="container">
+    <h2 class="text-primary" data-aos="fade-up">Thinking</h2>
+    <div class="row">
+      <div class="col-lg-4" data-aos="fade-right">
+        <div class="card mb-4"*ngIf="caseStudies.length">
+          <div class="card-body" *ngFor="let caseStudy of caseStudies" style="padding: 0px;">
+            <a [href]="'/case-studies/' + caseStudy.slug">
+              <img [src]="caseStudy.caseStudy_mobile_banner" alt="{{ caseStudy.title }}" class="card-img-top img-fluid image_thinking">
+              <div class="card-img-overlay" style="background-color: rgba(0, 0, 0, 0.6)">
+                <h1 class="card-title text-white font-28-20 text-start">Case Study</h1>
+                  <div class="case_text pt-1">
+                <h5 class="card-title text-white font-24-16 text-start">{{caseStudy.title}}</h5>
+               </div>
+              </div>  
+            </a>
+            </div>
+        </div>
+      </div>
+      <div class="col-lg-8" data-aos="fade-left">
+        <div class="row g-4">
+          <div class="col-lg-6 col-12" *ngIf="podcasts.length">
+          <div class="card image_podcast" *ngFor="let podcast of podcasts">
+              <a [href]="'/podcast/' + podcast.slug" target="_blank">
+                <div class="card-img podcast_img thinking_desktop" style="background-image: url('{{ podcast.megamenu_image }}'); background-size: cover; background-repeat: no-repeat; background-position-x: right;">
+                  <img [src]="podcast.megamenu_image" alt="{{ podcast.title }}" class="card-img podcast_img thinking_mobile">
+                  <div class="card-img-overlay" style="background-color: rgba(0, 0, 0, 0.6)">
+                  <h1 class="card-title text-white font-28-20 text-start">Podcast</h1>
+                    <div class="hover_text pt-1">
+                  <h5 class="card-title text-white font-24-16 text-start">{{podcast.main_page_title}}</h5>
+                </div>
+                </div>
+                </div>
+              </a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12" *ngFor="let blog of blogs; let i = index">
+          <div class="card image_podcast">
+            <a [href]="'/blogs/' + blog.slug">
+              <div class="card-img thinking_desktop" style="background-image: url('{{ blog.feature_image }}'); background-size: cover; background-repeat: no-repeat; background-position-x: right;">
+              <img [src]="blog.feature_image" class="card-img thinking_mobile" alt="Stony Beach"/>
+              <div class="card-img-overlay" style="background-color: rgba(0, 0, 0, 0.6)">
+                <h1 class="card-title text-white font-28-20 text-start">Blog</h1>
+                  <div class="hover_text pt-1">
+                <h5 class="card-title text-white font-24-16 text-start">{{ blog.title }}</h5>
+              </div>
+              </div>
+            </div>
+          </a>
+          </div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+

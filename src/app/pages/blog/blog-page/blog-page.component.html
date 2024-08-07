@@ -1,0 +1,416 @@
+<main *ngIf="hasApiData()">
+  <section class="container d-none d-lg-block">
+    <div class="gradientBanner">
+      <img
+        [src]="BlogData.feature_image"
+        class="desktop-banner"
+        alt="{{ BlogData.alt_tag }}"
+      />
+      <div class="bannerText">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Home</a></li>
+            <li class="breadcrumb-item"><a href="./blogs">Blogs</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              {{ BlogData.category_name }}
+            </li>
+          </ol>
+        </nav>
+        <h3 class="font-48-30 text-primary pt-3">Blog</h3>
+        <h3 class="font-28-20 pt-3">
+          {{ BlogData.title }}
+        </h3>
+      </div>
+    </div>
+  </section>
+  <section class="container text-dark slide d-block d-lg-none pt-5">
+    <div class="gradientBannerMob">
+      <img
+        [src]="BlogData.blog_mobile_banner"
+        class="card-img-mob"
+        alt="{{ BlogData.alt_tag }}"
+      />
+      <div class="bannerTextMob">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Home</a></li>
+            <li class="breadcrumb-item"><a href="./blogs">Blogs</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              {{ BlogData.category_name }}
+            </li>
+          </ol>
+        </nav>
+        <h3 class="font-48-30 text-primary">Blog</h3>
+        <h3 class="font-28-20 pt-3">
+          {{ BlogData.title }}
+        </h3>
+      </div>
+    </div>
+  </section>
+
+  <main class="container mt-5">
+    <span class="font-24-16">
+      {{ BlogData?.min_read }} / {{ BlogData?.publish_date }}
+    </span>
+    <div class="row mt-4">
+      <div class="col-12 col-lg-9">
+        <article>
+          <div
+            #htmlContent
+            [innerHTML]="processedHtml"
+            class="blogDescription"
+          ></div>
+          <div class="tag-wrapper my-4" *ngIf="BlogData.tags">
+            <a href="./blogs#Insurance" class="me-2"># Insurance</a>
+            <a href="./blogs#Ecommerce" class="me-2"># Ecommerce</a>
+            <a href="./blogs#Accounting" class="me-2"># Accounting</a>
+            <a href="./blogs#CustomerSupport" class="me-2"
+              ># Customer Support</a
+            >
+          </div>
+          <div class="d-flex">
+            <span class="font-28-20 fw-500 me-3 align-content-center"
+              >Share
+            </span>
+            <div class="d-flex">
+              <img
+                class="logo upTranslate me-3"
+                appCdnUrl="assets/Icon/facebook.svg"
+                alt="facebook"
+                (click)="shareOnFacebook()"
+              />
+              <img
+                class="logo upTranslate me-3"
+                appCdnUrl="assets/Icon/twitter.svg"
+                alt="twitter"
+                (click)="shareOnTwitter()"
+              />
+              <img
+                class="logo upTranslate me-3"
+                appCdnUrl="assets/Icon/pinterest.svg"
+                alt="pinterest"
+                (click)="shareOnPinterest()"
+              />
+              <img
+                class="logo upTranslate me-3"
+                appCdnUrl="assets/Icon/linkedin.svg"
+                alt="linkedin"
+                (click)="shareOnLinkedIn()"
+              />
+            </div>
+          </div>
+          <section class="py-6" *ngIf="BlogData.written_by">
+            <h4 class="font-36-24 fw-normal mb-4">Written by</h4>
+            <div class="writter-container">
+              <h4 class="font-36-24">{{ BlogData?.written_by }}</h4>
+              <span class="font-20-16">
+                {{ BlogData?.written_about }}
+              </span>
+            </div>
+          </section>
+          <section class="py-6" *ngIf="BlogData.faq">
+            <h2 class="text-primary font-48-30 mb-4">
+              Frequently Asked Questions
+            </h2>
+
+            <div class="accordion" id="faqAccordian">
+              <div
+                *ngFor="let faq of BlogData.faq; let i = index"
+                class="accordion-item"
+              >
+                <h2 class="accordion-header" [attr.id]="'heading' + i">
+                  <button
+                    class="accordion-button font-28-20"
+                    type="button"
+                    [attr.data-bs-toggle]="'collapse'"
+                    [attr.data-bs-target]="'#collapse' + i"
+                    [attr.aria-expanded]="i === 0 ? 'true' : 'false'"
+                    [attr.aria-controls]="'collapse' + i"
+                    [class.collapsed]="i !== 0"
+                  >
+                    {{ faq.f_question }}
+                  </button>
+                </h2>
+                <div
+                  [attr.id]="'collapse' + i"
+                  class="accordion-collapse collapse"
+                  [class.show]="i === 0"
+                  [attr.aria-labelledby]="'heading' + i"
+                  data-bs-parent="#faqAccordian"
+                >
+                  <div class="accordion-body">
+                    {{ faq.f_answer }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+        <section class="py-6">
+          <h4 class="font-36-24 fw-normal mb-4">Leave a Comment</h4>
+          <form
+            autocomplete="off"
+            [formGroup]="CommentForm"
+            (ngSubmit)="validateForm()"
+          >
+            <div class="mb-2">
+              <textarea
+                class="lets-form"
+                formControlName="comments"
+                placeholder="Write your Comment"
+                [ngClass]="{
+                  'is-invalid': submitted && CommentFormf['comments'].errors
+                }"
+                rows="4"
+              ></textarea>
+
+              <div
+                *ngIf="submitted && CommentFormf['comments'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    CommentFormf['comments'].errors['requiredButNotAllowBlank']
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-4 mt-4">
+                <input
+                  type="text"
+                  class="lets-form"
+                  placeholder="Name*"
+                  formControlName="name"
+                  appNoNumbers
+                  [ngClass]="{
+                    'is-invalid': submitted && CommentFormf['name'].errors
+                  }"
+                />
+                <div
+                  *ngIf="submitted && CommentFormf['name'].errors"
+                  class="invalid-feedback"
+                >
+                  <div
+                    *ngIf="
+                      CommentFormf['name'].errors['requiredButNotAllowBlank']
+                    "
+                  >
+                    *This Field is Required
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 mt-4">
+                <input
+                  type="email"
+                  class="lets-form"
+                  formControlName="email"
+                  placeholder="Email*"
+                  [ngClass]="{
+                    'is-invalid': submitted && CommentFormf['email'].errors
+                  }"
+                />
+                <div
+                  *ngIf="submitted && CommentFormf['email'].errors"
+                  class="invalid-feedback"
+                >
+                  <div
+                    *ngIf="
+                      CommentFormf['email'].errors['requiredButNotAllowBlank']
+                    "
+                  >
+                    *This Field is Required
+                  </div>
+                  <div *ngIf="CommentFormf['email'].errors['email']">
+                    Invalid email address
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 mt-4">
+                <input
+                  type="text"
+                  class="lets-form"
+                  formControlName="mobile"
+                  placeholder="Mobile*"
+                  minlength="10"
+                  appOnlyNumbers
+                  maxlength="10"
+                  [ngClass]="{
+                    'is-invalid': submitted && CommentFormf['mobile'].errors
+                  }"
+                />
+                <div
+                  *ngIf="submitted && CommentFormf['mobile'].errors"
+                  class="invalid-feedback"
+                >
+                  <div
+                    *ngIf="
+                      CommentFormf['mobile'].errors['requiredButNotAllowBlank']
+                    "
+                  >
+                    *This Field is Required
+                  </div>
+                  <div *ngIf="CommentFormf['mobile'].errors!['minlength']">
+                    Invalid mobile number
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-5">
+              <button class="FormCTA">
+                <h3 class="CTAs">
+                  Submit
+                  <div class="headingCTA">
+                    <div class="blueCTA podcast-card-cta"></div>
+                  </div>
+                </h3>
+              </button>
+            </div>
+          </form>
+          <p class="font-34-19 fw-normal text-green" *ngIf="commentSubmission">
+            *Thank you for submitting your comment
+          </p>
+          <section
+            class="border-top-primary my-5 py-6"
+            *ngIf="BlogData.comment_count >= 1"
+          >
+            <div class="d-flex">
+              <img appCdnUrl="assets/Icon/comment.svg" class="me-3" />
+              <h6 class="font-36-24">
+                Total {{ BlogData.comment_count }} comments
+              </h6>
+            </div>
+            <div *ngFor="let comment of BlogData.blog_comment; let last = last">
+              <div [ngClass]="{ 'comment-wrapper': !last }" class="py-4">
+                <p class="font-28-20 fw-500 mb-2">{{ comment.name }}</p>
+                <p class="fs-18 mb-2">{{ comment.comment_date }}</p>
+                <p class="font-24-16">
+                  {{ comment.comments }}
+                </p>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+      <aside class="col-12 col-lg-3 mb-3">
+        <div class="sticky-aside" id="blog-aside">
+          <div>
+            <p class="text-primary fs-26">Subscribe our Newsletter</p>
+            <form
+              [formGroup]="SubscribeForm"
+              (ngSubmit)="validateSubscribeForm()"
+            >
+              <div
+                class="subscribe-container"
+                [ngClass]="{
+                  'is-invalid':
+                    SubscribeFormsubmitted && SubscribeFormf['email'].errors
+                }"
+              >
+                <input
+                  type="text"
+                  placeholder="Enter your email address"
+                  id="subscribe-input"
+                  formControlName="email"
+                  class="lets-form"
+                />
+
+                <button type="submit" id="subscribe-button">GO</button>
+              </div>
+              <div
+                *ngIf="SubscribeFormsubmitted && SubscribeFormf['email'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    SubscribeFormf['email'].errors['requiredButNotAllowBlank']
+                  "
+                >
+                  *This Field is Required
+                </div>
+                <div *ngIf="SubscribeFormf['email'].errors['email']">
+                  Invalid email address
+                </div>
+              </div>
+            </form>
+            <span
+              class="font-20-16 fw-500 text-green mt-3 mb-0"
+              *ngIf="subscribeSuccess"
+            >
+              *Thank you for subscribing us.
+            </span>
+          </div>
+          <div>
+            <p class="text-primary fs-26 blue-border mt-5">Featured Post</p>
+            <div
+              class="blog-post row bordered"
+              *ngFor="let blog of featuredBlogs"
+            >
+              <a [routerLink]="['/blogs', blog.slug]">
+                <div class="bordered">
+                  <img
+                    [src]="blog.feature_image"
+                    class="img-fluid post-thumb"
+                  />
+                  <div class="align-content-center my-3">
+                    <p class="font-20-16 mb-0 fw-bold">
+                      {{ blog.title }}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <p class="text-primary fs-26 blue-border mt-5">Related Post</p>
+            <div
+              class="blog-post row bordered"
+              *ngFor="let blog of relatedBlogs"
+            >
+              <a [routerLink]="['/blogs', blog.slug]">
+                <div class="bordered">
+                  <img
+                    [src]="blog.feature_image"
+                    class="img-fluid post-thumb"
+                  />
+                  <div class="align-content-center my-3">
+                    <p class="font-20-16 mb-0 fw-bold">
+                      {{ blog.title }}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <section class="container py-6">
+    <h2 class="text-primary font-48-30 mb-4">Recent Blog</h2>
+    <ngx-slick-carousel
+      class="carousel blog_slider"
+      #slickModal="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div class="m-3" ngxSlickItem *ngFor="let slide of recentBlogs">
+        <a [routerLink]="['/blogs', slide.slug]">
+          <div class="card blog-cards">
+            <img
+              [src]="slide.feature_image"
+              class="card-image carousel-img img-fluid"
+            />
+            <div class="description">
+              <p class="fw-bold">{{ slide.category_name }}</p>
+              <h4 class="font-28-20">
+                {{ slide.title }}
+              </h4>
+            </div>
+          </div>
+        </a>
+      </div>
+    </ngx-slick-carousel>
+  </section>
+</main>

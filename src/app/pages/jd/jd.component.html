@@ -1,0 +1,172 @@
+<main *ngIf="hasApiData()">
+  <div class="container d-none d-lg-block">
+    <div class="gradientBanner">
+      <img
+        appCdnUrl="assets/Career/JobdescriptionBanner.jpg"
+        class="desktop-banner"
+        alt="Job Opening for {{ jdData.position_name }}"
+      />
+      <div class="bannerText" data-aos="fade-up">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="./careers/current-openings">Current Opening Page</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              {{ jdData.position_name }}
+            </li>
+          </ol>
+        </nav>
+        <h3 class="font-48-30 text-primary fw-500 pt-3">
+          {{ jdData.position_name }}
+        </h3>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile View -->
+  <div class="container text-dark slide d-block d-lg-none pt-5">
+    <div class="gradientBannerMob">
+      <img
+        appCdnUrl="assets/Career/JobdescriptionBannerMobile.jpg"
+        class="card-img-mob"
+        alt="Job Opening for {{ jdData.position_name }}"
+      />
+      <div class="bannerTextMob" data-aos="fade-up">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="./careers/current-openings">Current Opening Page</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              {{ jdData.position_name }}
+            </li>
+          </ol>
+        </nav>
+        <h3 class="font-48-30 text-primary fw-500 pt-3">
+          {{ jdData.position_name }}
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <section class="container py-6 position-relative">
+    <img
+      appCdnUrl="assets/Icon/blue-square.svg"
+      class="center-right-float vector"
+    />
+
+    <h3 class="font-32-30" data-aos="slide-up">About the Role</h3>
+    <p class="font-24-16 fw-normal w-90" data-aos="slide-up">
+      {{ jdData.about_role }}
+    </p>
+  </section>
+  <section class="bg-secondary-30">
+    <div class="container position-relative py-6">
+      <img
+        appCdnUrl="assets/Icon/snake-vector.svg"
+        class="left-bottom-float vector"
+      />
+      <div class="row">
+        <div class="col-md-8" data-aos="slide-up">
+          <h3 class="font-32-30">Key Responsibilities:</h3>
+          <div
+            class="font-24-16 fw-normal"
+            [innerHTML]="jdData.key_responsibiliy"
+          ></div>
+          <!-- <ul class="font-24-16 fw-normal">
+          <li>
+            Communicating with global clients on the internet through mail, chat
+            and phone.
+          </li>
+          <li>
+            Understanding client’s requirement and delivering the output in
+            desired time, with expected quality of work.
+          </li>
+          <li>Sharing scheduled reports to Clients, Team Lead and Manager.</li>
+          <li>Collecting timely performance feedback from the client.</li>
+          <li>
+            Promptly acting and closing every requirement. Quality Assurance and
+            Reporting.
+          </li>
+        </ul> -->
+        </div>
+        <div class="col-md-4 d-none d-md-block">
+          <img
+            appCdnUrl="assets/Career/KeyResponsibilities.jpg"
+            class="img-fluid bordered"
+            data-aos="zoom-in"
+            alt="Key Responsibility for {{ jdData.position_name }}"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-6 tech-section">
+    <div class="container">
+      <!-- <h3 class="font-32-30">
+      Technical Skills Required (To Guide Team & Remove Obstacles):
+    </h3>
+    <ul class="font-24-16 fw-normal">
+      <li>
+        2-5 years’ experience in C#, ASP.Net, WinForms.NET, .NET, MS SQL/Oracle
+      </li>
+      <li>OOPS, Crystal Reports awareness</li>
+      <li>PL/SQL experts</li>
+      <li>HTML, CSS, JavaScript, HTML5, CSS3</li>
+      <li>jQuery, Bootstrap</li>
+      <li>3-tier/n-tier Architecture Programming experienced</li>
+      <li>Payment Gateway Integration familiars</li>
+      <li>Self-Managed, Self-Responsible</li>
+      <li>Quick Learner, Adaptive</li>
+      <li>Good Researcher, Learning Desire</li>
+      <li>Active Team Member, Optimistic</li>
+      <li>Open to learn new technologies</li>
+      <li>Willingness to put extra efforts to meet deadlines</li>
+      <li>Very confident, Voracious reader of technical content</li>
+      <li>Constantly honing his/her skills by both reading and tinkering</li>
+      <li>Excellent Problem-solving skills</li>
+    </ul> -->
+      <div class="pt-5" *ngFor="let obj of jdData.jobDescription_data">
+        <div data-aos="slide-up">
+          <h3 class="font-32-30">{{ obj.heading }}:</h3>
+          <div
+            class="font-24-16 fw-normal"
+            [innerHTML]="obj.heading_description"
+          ></div>
+        </div>
+      </div>
+
+      <a
+        routerLink="/apply-now"
+        class="anchorCTA"
+        *ngIf="jdData.job_active_status === '1'"
+      >
+        <h2
+          class="font-36 text-primary my-5 clickable-heading"
+          data-aos="slide-up"
+        >
+          Apply Now
+          <div class="headingCTA">
+            <button class="blueCTA"></button>
+          </div>
+        </h2>
+      </a>
+
+      <div class="disable" *ngIf="jdData.job_active_status !== '1'">
+        <h2 class="font-36 text-primary my-5 clickable-heading">
+          Apply Now
+          <div class="headingCTA">
+            <button class="blueCTA"></button>
+          </div>
+        </h2>
+        <div class="alert-message">
+          <span class="text-danger fs-24">
+            *The job role you are applying is currently closed!
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

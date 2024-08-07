@@ -1,0 +1,150 @@
+<main *ngIf="hasApiData()">
+  <div class="container mt-5" data-aos="fade-up">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="./">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Case Studies</li>
+      </ol>
+    </nav>
+    <h3 class="font-48-30 pt-1 fw-bold w-md-70 mb-5">
+      {{ caseStudyDetail.title }}
+    </h3>
+    <img
+      [src]="caseStudyDetail.caseStudy_desktop_banner"
+      class="w-100 d-none d-md-block bordered"
+      data-aos="zoom-in"
+      alt="{{caseStudyDetail.alt_tag}}"
+    />
+    <img
+      [src]="caseStudyDetail.caseStudy_mobile_banner"
+      class="w-100 d-block d-md-none bordered"
+      data-aos="zoom-in"
+      alt="{{caseStudyDetail.alt_tag}}"
+    />
+  </div>
+
+  <section
+    class="container pt-5 pb-0"
+    [innerHTML]="caseStudyDetail.long_description"
+  ></section>
+
+  <section class="container py-5">
+    <button class="FormCTA">
+      <h6
+        class="font-20 text-primary my-5 clickable-heading cursor-pointer"
+        data-bs-toggle="modal"
+        data-bs-target="#CaseStudyFormModal"
+      >
+        {{
+          caseStudyDetail.cta_button ?? "Download the detailed version here."
+        }}
+
+        <div class="headingCTA">
+          <div class="blueCTA"></div>
+        </div>
+      </h6>
+    </button>
+  </section>
+
+  <div
+    class="modal fade modal-lg"
+    id="CaseStudyFormModal"
+    tabindex="-1"
+    aria-labelledby="CaseStudyForm"
+    aria-hidden="true"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bordered p-3 overflow-visible">
+        <div class="modal-header pb-0">
+          <h5 class="modal-title font-48-30" id="CaseStudyForm">Case Study</h5>
+          <button
+            #closeButton
+            type="button"
+            class="btn-close modalCrossButton"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form
+            autocomplete="off"
+            [formGroup]="caseStudyDownloadForm"
+            (ngSubmit)="validateForm(caseStudyDownloadForm)"
+          >
+            <div class="">
+              <input
+                type="text"
+                class="lets-form"
+                placeholder="Enter Your Name"
+                formControlName="firstname"
+                appNoNumbers
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && caseStudyDownloadFormf['firstname'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && caseStudyDownloadFormf['firstname'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    caseStudyDownloadFormf['firstname'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="mt-4">
+              <input
+                type="email"
+                class="lets-form"
+                formControlName="email"
+                placeholder="Enter Email Address"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && caseStudyDownloadFormf['email'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && caseStudyDownloadFormf['email'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    caseStudyDownloadFormf['email'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+                <div *ngIf="caseStudyDownloadFormf['email'].errors['email']">
+                  Invalid email address
+                </div>
+              </div>
+            </div>
+            <div class="mt-4">
+              <button class="FormCTA">
+                <h6
+                  class="fs-24 text-primary clickable-heading"
+                  onclick="validateForm(caseStudyDownloadForm)"
+                >
+                  Download Case Study
+                  <div class="headingCTA">
+                    <div class="blueCTA"></div>
+                  </div>
+                </h6>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,268 @@
+@keyframes trustedScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.trusted-slider-logo {
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.trusted-slider-logo .trusted-slide-track {
+  animation: trustedScroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.trusted-slider-logo .trust-slide {
+  height: 150px;
+  /* min-width: 240px; */
+  border: none;
+}
+.trust-slide {
+  margin: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.3s ease;
+}
+.trust-slide img {
+  height: fit-content;
+}
+  .overlay-text {
+    position: absolute;
+    top: 38%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+  }
+
+  .card.insurance-card.policy-process-card {
+    position: relative;
+    max-height: 350px;
+    overflow: hidden;
+    height: 310px;
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #e6e6ff;
+    border-radius: 20px;
+}
+
+.card.insurance-card.policy-process-card img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+
+.card.insurance-card.policy-process-card .card-body-policy {
+    position: absolute;
+    top: 0;
+    right: -100%;  /* Start off-screen to the right */
+    height: 100%;
+    width: 100%;  /* Ensure it covers the entire card */
+    background: rgba(228, 228, 255, .90);
+    padding: 20px;
+    transition: right 0.5s ease, opacity 0.5s ease; /* Combined transitions */
+    opacity: 0;  /* Initially hidden */
+    margin-top: 75px;
+}
+
+.card.insurance-card.policy-process-card:hover .card-body-policy {
+    right: 0;  /* Slide in from the right */
+    opacity: 1;  /* Make it visible */
+}
+
+.policy-dialog {
+  max-width: inherit;
+}
+
+.modal-content {
+  border: none;
+  border-radius: 10px;
+  background-color: #f3f3ff;
+}
+
+.arrow-img {
+  padding-right: 10px;
+}
+
+.policy-processing-services-card {
+  position: relative;
+  min-height: 100vh;
+  background-color: #f3f3ff;
+  margin: 10px;
+  box-sizing: border-box;
+  border: none;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+
+.btn_hover{
+  display: none;
+}
+
+.insurance-card:hover .btn_hover {
+  display: block; /* Show the button on card hover */
+}
+
+.policy-processing-services-card-mob {
+  position: relative;
+  min-height: 100vh;
+  background-color: #f3f3ff;
+  margin: 10px;
+  box-sizing: border-box;
+  border: none;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.policy-processing-services-card .imgBx {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  right: 0;
+}
+
+.policy-processing-services-card .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  object-fit: cover;
+}
+
+.policy-processing-services-card .details {
+  position: absolute;
+  left: 0; /* Changed from right: 0 */
+  width: 65%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.policy-processing-services-card .details .content {
+  box-sizing: border-box;
+}
+
+
+
+  .Policy_Processing {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Accounting Main Page/Div Section/Account_Payable.png");
+    background-size: 70% !important;
+    background-position: bottom right 0rem !important;
+    
+  }
+  .Policy_Processing:hover {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Accounting Main Page/Div Section/Account_Payable.png");
+    background-size: 60% !important;
+    background-position: bottom right 0rem !important; 
+  }
+  
+  .Claims_Management {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Accounting Main Page/Div Section/Account_Receivable.png");
+    background-position: bottom right 0rem !important;
+    background-size: 70% !important;
+  }
+
+  .Claims_Management:hover  {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Accounting Main Page/Div Section/Account_Receivable.png");
+    background-size: 60% !important;
+    background-position: bottom right 0rem !important; 
+  }
+
+  .Insurance_Accounting {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Accounting Main Page/Div Section/Financial_Reporting.png");
+    background-position: bottom right 0rem !important;
+    background-size: 70% !important;
+  }
+
+  .Insurance_Accounting:hover  {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Accounting Main Page/Div Section/Financial_Reporting.png");
+    background-size: 60% !important;
+    background-position: bottom right 0rem !important; 
+  }
+
+  .Agency_Management {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Accounting Main Page/Div Section/Payroll_Processing.png");
+    background-position: bottom right 0rem !important;
+    background-size: 70% !important;
+  }
+
+  .Agency_Management:hover  {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Accounting Main Page/Div Section/Payroll_Processing.png");
+    background-size: 60% !important;
+    background-position: bottom right 0rem !important; 
+  }
+
+  .New_Business {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Accounting Main Page/Div Section/Account_Reconciliation.png");
+    background-position: bottom right 0rem !important;
+    background-size: 70% !important;
+  }
+
+  .New_Business:hover  {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Accounting Main Page/Div Section/Account_Reconciliation.png");
+    background-size: 60% !important;
+    background-position: bottom right 0rem !important; 
+  }
+
+  .Customer_Support {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Accounting Main Page/Div Section/General_Ledger_Accounting.png");
+    background-position: bottom right 0rem !important;
+    background-size: 70% !important;
+  }
+ 
+  .Customer_Support:hover  {
+    background-image: url("https://d1585q1wairh36.cloudfront.net/assets/Accounting Main Page/Div Section/General_Ledger_Accounting.png");
+    background-size: 60% !important;
+    background-position: bottom right 0rem !important; 
+  }
+  
+  .slides-best {
+    width: 100%;
+    height: 400px;
+    border: 1px solid;
+  }
+  .PaddingCTA {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .policy-processing {
+    background: linear-gradient(
+  to right, 
+  rgba(230, 230, 255, 0.15), 
+  rgba(230, 230, 255, 1)
+);
+    border-radius: 20px;
+    position: static;
+  }
+  
+  .CTA-Zindex {
+    z-index: 2;
+  }
+  
+  .service_btn{
+    margin-left: auto;
+    padding: 0.5rem 1rem;
+  }
+  @media (max-width:768px){
+
+    .trusted-slider-logo .trust-slide {
+      min-width:180px !important;
+      width:180px !important;
+    }
+    .trust-slide {
+      margin: 10px;
+    }
+  
+  }

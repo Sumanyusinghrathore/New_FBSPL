@@ -1,0 +1,211 @@
+<div class="container d-none d-lg-block">
+  <div class="gradientBanner">
+    <img
+      appCdnUrl="assets/BookAConsultation/BookConsultation.jpg"
+      class="desktop-banner"
+      alt="Book Free Consultation with FBSPL Experts"
+    />
+    <div class="bannerText" data-aos="slide-up">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Book Free Consultation
+          </li>
+        </ol>
+      </nav>
+      <h3 class="font-48-30 pt-3">Book Free Consultation</h3>
+    </div>
+  </div>
+</div>
+<!-- Mobile View -->
+<div class="container text-dark slide d-block d-lg-none pt-5">
+  <div class="gradientBannerMob">
+    <img
+      appCdnUrl="assets/BookAConsultation/BookConsultationMob.jpg"
+      class="card-img-mob"
+      alt="Book Free Consultation with FBSPL Experts"
+    />
+    <div class="bannerTextMob" data-aos="slide-up">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Book Free Consultation
+          </li>
+        </ol>
+      </nav>
+      <h3 class="font-48-30">Book Free Consultation</h3>
+    </div>
+  </div>
+</div>
+
+<section class="container py-6 position-relative">
+  <img
+    appCdnUrl="assets/Icon/blue-square.svg"
+    class="center-right-float vector"
+  />
+  <div data-aos="slide-up">
+    <h2 class="text-primary font-48-30">Inquire now</h2>
+    <p class="font-24-16 mb-md-5">Write to us, we'll respond promptly!</p>
+  </div>
+  <form
+    autocomplete="off"
+    [formGroup]="consultationForm"
+    (ngSubmit)="validateForm(consultationForm)"
+  >
+    <div class="row">
+      <div class="col-md-6 mt-3">
+        <input
+          type="text"
+          class="lets-form"
+          formControlName="firstname"
+          appNoNumbers
+          autocomplete="off"
+          placeholder="Name"
+          [ngClass]="{
+            'is-invalid': submitted && consultationFormf['firstname'].errors
+          }"
+        />
+        <div
+          *ngIf="submitted && consultationFormf['firstname'].errors"
+          class="invalid-feedback"
+        >
+          <div
+            *ngIf="
+              consultationFormf['firstname'].errors['requiredButNotAllowBlank']
+            "
+          >
+            *This Field is Required
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <input
+          type="email"
+          class="lets-form"
+          formControlName="email"
+          placeholder="Email Address"
+          [ngClass]="{
+            'is-invalid': submitted && consultationFormf['email'].errors
+          }"
+        />
+        <div
+          *ngIf="submitted && consultationFormf['email'].errors"
+          class="invalid-feedback"
+        >
+          <div
+            *ngIf="
+              consultationFormf['email'].errors['requiredButNotAllowBlank']
+            "
+          >
+            *This Field is Required
+          </div>
+          <div *ngIf="consultationFormf['email'].errors['email']">
+            Invalid email address
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <input
+          type="text"
+          class="lets-form"
+          formControlName="company"
+          autocomplete="off"
+          placeholder="Company Name"
+          [ngClass]="{
+            'is-invalid': submitted && consultationFormf['company'].errors
+          }"
+        />
+        <div
+          *ngIf="submitted && consultationFormf['company'].errors"
+          class="invalid-feedback"
+        >
+          <div
+            *ngIf="
+              consultationFormf['company'].errors['requiredButNotAllowBlank']
+            "
+          >
+            *This Field is Required
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <select
+          class="form-select lets-form"
+          formControlName="services"
+          [ngClass]="{
+            'is-invalid': submitted && consultationFormf['services'].errors
+          }"
+        >
+          <option value="" selected hidden>Services</option>
+          <option value="insurance">Insurance</option>
+          <option value="recruitment">Recruitment</option>
+          <option value="accounting bookkeeping">
+            Accounting & Bookkeeping
+          </option>
+          <option value="e commerce">E-commerce</option>
+          <option value="insurance agency optimization">
+            Insurance Agency Optimization
+          </option>
+          <option value="data annotation">Data Annotation</option>
+          <option value="customer support">Customer Support</option>
+          <option value="digital marketing">Digital Marketing</option>
+        </select>
+        <div
+          *ngIf="submitted && consultationFormf['services'].errors"
+          class="invalid-feedback"
+        >
+          <div
+            *ngIf="
+              consultationFormf['services'].errors['requiredButNotAllowBlank']
+            "
+          >
+            *This Field is Required
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 p-2 mt-3">
+        <textarea
+          class="lets-form"
+          formControlName="write_your_message"
+          placeholder="Brief Requirement"
+          [ngClass]="{
+            'is-invalid':
+              submitted && consultationFormf['write_your_message'].errors
+          }"
+          rows="4"
+        ></textarea>
+
+        <div
+          *ngIf="submitted && consultationFormf['write_your_message'].errors"
+          class="invalid-feedback"
+        >
+          <div
+            *ngIf="
+              consultationFormf['write_your_message'].errors[
+                'requiredButNotAllowBlank'
+              ]
+            "
+          >
+            *This Field is Required
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 mt-3 p-2">
+        <div class="headingCTA">
+          <button class="FormCTA">
+            <h6 class="font-20 CTAs">
+              Submit your query
+              <div class="headingCTA">
+                <div class="blueCTA podcast-card-cta"></div>
+              </div>
+            </h6>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>

@@ -1,0 +1,2498 @@
+<div class="container d-none d-lg-block">
+  <div class="gradientBanner">
+    <img
+      appCdnUrl="assets/Career/CareerApplyFormBanner.jpg"
+      class="desktop-banner"
+      alt="Career Opportunities at FBSPL "
+    />
+    <div class="bannerText">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item">
+            <a href="./careers/current-openings">Careers</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Career Apply Form
+          </li>
+        </ol>
+      </nav>
+      <h3 class="font-48-30 text-primary fw-500 pt-3">Career Apply Form</h3>
+    </div>
+  </div>
+</div>
+<div class="container text-dark slide d-block d-lg-none pt-5">
+  <div class="gradientBannerMob">
+    <img
+      appCdnUrl="assets/Career/CareerApplyFormMobileBanner.jpg"
+      class="card-img-mob"
+      alt="Career Opportunities at FBSPL "
+    />
+    <div class="bannerTextMob">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item">
+            <a href="./careers/current-openings">Careers</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Career Apply Form
+          </li>
+        </ol>
+      </nav>
+      <h3 class="font-48-30 text-primary fw-500 pt-3">Career Apply Form</h3>
+    </div>
+  </div>
+</div>
+<div id="top" #top></div>
+<section class="py-6 container position-relative d-none d-md-block">
+  <div
+    class="progress"
+    role="progressbar"
+    aria-label="Basic example"
+    [attr.aria-valuenow]="(currentFormIndex / 3) * 100"
+    aria-valuemin="0"
+    aria-valuemax="100"
+  >
+    <div class="progress-bar" [style.width]="getProgressWidth()"></div>
+  </div>
+  <div class="row position-relative z-1">
+    <div class="col-12 col-md-3">
+      <div
+        class="logo-wrapper mx-auto"
+        [ngClass]="{
+          active: currentFormIndex === 0
+        }"
+      >
+        <img appCdnUrl="assets/Icon/positionform.svg" class="svg-logo" />
+      </div>
+      <h3 class="text-light font-34-19 mt-3 text-center">Position Details</h3>
+    </div>
+    <div class="col-12 col-md-3">
+      <div
+        class="logo-wrapper mx-auto"
+        [ngClass]="{
+          active: currentFormIndex === 1
+        }"
+      >
+        <img appCdnUrl="assets/Icon/personalform.svg" class="svg-logo" />
+      </div>
+      <h3 class="text-light font-34-19 mt-3 text-center">Personal Details</h3>
+    </div>
+    <div class="col-12 col-md-3">
+      <div
+        class="logo-wrapper mx-auto"
+        [ngClass]="{
+          active: currentFormIndex === 2
+        }"
+      >
+        <img appCdnUrl="assets/Icon/educationform.svg" class="svg-logo" />
+      </div>
+      <h3 class="text-light font-34-19 mt-3 text-center">Education Details</h3>
+    </div>
+    <div class="col-12 col-md-3">
+      <div
+        class="logo-wrapper mx-auto"
+        [ngClass]="{
+          active: currentFormIndex === 3
+        }"
+      >
+        <img appCdnUrl="assets/Icon/workform.svg" class="svg-logo" />
+      </div>
+      <h3 class="text-light font-34-19 mt-3 text-center">Work Experience</h3>
+    </div>
+  </div>
+</section>
+
+<section class="container py-6">
+  <ng-container *ngIf="currentFormIndex === 0">
+    <div class="col-12 my-4 d-md-none">
+      <div class="logo-wrapper mx-auto sm-logo-wrapper active">
+        <img appCdnUrl="assets/Icon/positionform.svg" class="svg-logo" />
+      </div>
+      <h3 class="text-light font-34-19 mt-3 text-center">Position Details</h3>
+    </div>
+
+    <form
+      autocomplete="off"
+      [formGroup]="PositionDetails"
+      (ngSubmit)="validateForm(PositionDetails)"
+    >
+      <div class="row d-flex align-items-center">
+        <div class="col-md-6 col-lg-4 my-2">
+          <input
+            type="text"
+            class="lets-form"
+            readonly
+            placeholder="Department"
+            id="deptType"
+            formControlName="deptType"
+            [ngClass]="{
+              'is-invalid': submitted && PositionDetailsf['deptType'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PositionDetailsf['deptType'].errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="PositionDetailsf['deptType'].errors['required']">
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 my-2">
+          <input
+            type="text"
+            class="lets-form"
+            readonly
+            placeholder="Poistion"
+            id="position"
+            formControlName="PositionApplied"
+            [ngClass]="{
+              'is-invalid':
+                submitted && PositionDetailsf['PositionApplied'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PositionDetailsf['PositionApplied'].errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="PositionDetailsf['PositionApplied'].errors['required']">
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 my-2">
+          <p class="font-20 mb-1">Willingness for night shift?</p>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="WillingnessforNightShiftYes"
+              formControlName="WillingnessforNightShift"
+              value="Yes"
+              [ngClass]="{
+                'is-invalid':
+                  (submitted &&
+                    PositionDetailsf['WillingnessforNightShift'].errors) ||
+                  PositionDetailsf['WillingnessforNightShift'].value === 'No'
+              }"
+            />
+            <label
+              class="form-check-label font-20"
+              for="WillingnessforNightShiftYes"
+              >Yes</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="WillingnessforNightShiftNo"
+              formControlName="WillingnessforNightShift"
+              value="No"
+              [ngClass]="{
+                'is-invalid':
+                  submitted &&
+                  PositionDetailsf['WillingnessforNightShift'].errors
+              }"
+            />
+            <label
+              class="form-check-label font-20"
+              for="WillingnessforNightShiftNo"
+              >No</label
+            >
+          </div>
+          <div
+            *ngIf="
+              submitted && PositionDetailsf['WillingnessforNightShift'].errors
+            "
+            class="invalid-feedback d-block"
+          >
+            <div
+              *ngIf="
+                PositionDetailsf['WillingnessforNightShift'].errors['required']
+              "
+            >
+              Please indicate your willingness for night shift
+            </div>
+          </div>
+          <div
+            *ngIf="PositionDetailsf['WillingnessforNightShift'].value === 'No'"
+            class="invalid-feedback d-block"
+          >
+            Unfortunately, currently we don't have openings for the day shift.
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 my-2">
+          <select
+            class="form-select lets-form"
+            id="SourceOfInformationType"
+            formControlName="SourceOfInformationType"
+            [ngClass]="{
+              'is-invalid':
+                submitted && PositionDetailsf['SourceOfInformationType'].errors
+            }"
+            aria-label="Source of Information"
+          >
+            <option value="" disabled selected hidden>
+              How did you know about this opening?
+            </option>
+            <option value="Job Portals">Job Portals</option>
+            <option value="Social Media">Social Media</option>
+            <option value="Walk-In">Walk-In</option>
+            <option value="Referral">Referral</option>
+            <option value="Campus">Campus</option>
+            <option value="Job Fair">Job Fair</option>
+            <option value="Billboard">Billboard</option>
+            <option value="Consultancy">Consultancy</option>
+          </select>
+          <div
+            *ngIf="
+              submitted && PositionDetailsf['SourceOfInformationType'].errors
+            "
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PositionDetailsf['SourceOfInformationType'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="row"
+        *ngIf="
+          PositionDetails.get('SourceOfInformationType')!.value ===
+          'Job Portals'
+        "
+      >
+        <div class="col-md-6 col-lg-4 my-2">
+          <select
+            class="form-select lets-form"
+            id="jobportalname"
+            formControlName="jobportalname"
+            [ngClass]="{
+              'is-invalid':
+                submitted && PositionDetailsf['jobportalname'].errors
+            }"
+            aria-label="Source of Information"
+          >
+            <option value="" disabled selected hidden>
+              Name of the Job Portal?
+            </option>
+            <option value="Naukri.com">Naukri.com</option>
+            <option value="Indeed.com">Indeed.com</option>
+            <option value="Linkedin.com">Linkedin.com</option>
+            <option value="Other">Other</option>
+          </select>
+          <div
+            *ngIf="submitted && PositionDetailsf['jobportalname'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PositionDetailsf['jobportalname'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="row"
+        *ngIf="
+          PositionDetails.get('SourceOfInformationType')!.value ===
+          'Social Media'
+        "
+      >
+        <div class="col-md-6 col-lg-4 my-2">
+          <select
+            class="form-select lets-form"
+            id="socialmedianame"
+            formControlName="socialmedianame"
+            [ngClass]="{
+              'is-invalid':
+                submitted && PositionDetailsf['socialmedianame'].errors
+            }"
+            aria-label="Source of Information"
+          >
+            <option value="" disabled selected hidden>
+              Name of the Social Media?
+            </option>
+            <option value="Facebook.com">Facebook.com</option>
+            <option value="Linkedin.com">Linkedin.com</option>
+            <option value="Instagram.com">Instagram.com</option>
+          </select>
+          <div
+            *ngIf="submitted && PositionDetailsf['socialmedianame'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PositionDetailsf['socialmedianame'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="row"
+        *ngIf="
+          PositionDetails.get('SourceOfInformationType')!.value === 'Referral'
+        "
+      >
+        <div class="col-md-6 col-lg-4 my-2">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="R1Person"
+            placeholder="Referral Name"
+            [ngClass]="{
+              'is-invalid': submitted && PositionDetailsf['R1Person'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PositionDetailsf['R1Person'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PositionDetailsf['R1Person'].errors['requiredButNotAllowBlank']
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 my-2">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="R1Designation"
+            placeholder="Designation at Fusion"
+            [ngClass]="{
+              'is-invalid':
+                submitted && PositionDetailsf['R1Designation'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PositionDetailsf['R1Designation'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PositionDetailsf['R1Designation'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 my-2">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="R1Contact"
+            placeholder="Phone"
+            minlength="10"
+            maxlength="10"
+            [ngClass]="{
+              'is-invalid': submitted && PositionDetailsf['R1Contact'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PositionDetailsf['R1Contact'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PositionDetailsf['R1Contact'].errors['requiredButNotAllowBlank']
+              "
+            >
+              *This Field is Required
+            </div>
+            <div
+              *ngIf="
+                !PositionDetailsf['R1Contact'].errors[
+                  'requiredButNotAllowBlank'
+                ] && PositionDetailsf['R1Contact'].errors['exactLength']
+              "
+            >
+              Invalid Phone
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="row"
+        *ngIf="
+          PositionDetails.get('SourceOfInformationType')!.value === 'Campus'
+        "
+      >
+        <div class="col-md-6 col-lg-4 my-2">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="campusname"
+            placeholder="Name of the Campus"
+            [ngClass]="{
+              'is-invalid': submitted && PositionDetailsf['campusname'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PositionDetailsf['campusname'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PositionDetailsf['campusname'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 my-2">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="campuslocation"
+            placeholder="Location of the Campus"
+            [ngClass]="{
+              'is-invalid':
+                submitted && PositionDetailsf['campuslocation'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PositionDetailsf['campuslocation'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PositionDetailsf['campuslocation'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-start mt-5">
+        <button class="FormCTA" type="submit">
+          <h6 class="font-20 text-primary text-md-end">
+            Next Step
+            <div class="headingCTA">
+              <div class="blueCTA"></div>
+            </div>
+          </h6>
+        </button>
+      </div>
+    </form>
+  </ng-container>
+
+  <ng-container *ngIf="currentFormIndex === 1">
+    <div class="col-12 my-4 d-md-none">
+      <div class="logo-wrapper mx-auto sm-logo-wrapper active">
+        <img appCdnUrl="assets/Icon/personalform.svg" class="svg-logo" />
+      </div>
+      <h3 class="text-light font-34-19 mt-3 text-center">Personal Details</h3>
+    </div>
+
+    <form
+      autocomplete="off"
+      [formGroup]="PersonalDetails"
+      (ngSubmit)="validateForm(PersonalDetails)"
+    >
+      <div class="row">
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="firstName"
+            autocomplete="off"
+            appNoNumbers
+            placeholder="First Name"
+            [ngClass]="{
+              'is-invalid': submitted && PersonalDetailsf['firstName'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PersonalDetailsf['firstName'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['firstName'].errors['requiredButNotAllowBlank']
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="lastName"
+            placeholder="Last Name"
+            appNoNumbers
+            [ngClass]="{
+              'is-invalid': submitted && PersonalDetailsf['lastName'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PersonalDetailsf['lastName'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['lastName'].errors['requiredButNotAllowBlank']
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="fatherName"
+            placeholder="Father Name"
+            appNoNumbers
+            [ngClass]="{
+              'is-invalid': submitted && PersonalDetailsf['fatherName'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PersonalDetailsf['fatherName'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['fatherName'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4 ps-4">
+          <p class="mb-0">Gender</p>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              formControlName="gender"
+              value="male"
+              [ngClass]="{
+                'is-invalid': submitted && PersonalDetailsf['gender'].errors
+              }"
+            />
+            <label class="form-check-label font-20">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              formControlName="gender"
+              value="female"
+              [ngClass]="{
+                'is-invalid': submitted && PersonalDetailsf['gender'].errors
+              }"
+            />
+            <label class="form-check-label font-20">Female</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              formControlName="gender"
+              value="other"
+              [ngClass]="{
+                'is-invalid': submitted && PersonalDetailsf['gender'].errors
+              }"
+            />
+            <label class="form-check-label font-20">Other</label>
+          </div>
+          <div
+            *ngIf="submitted && PersonalDetailsf['gender'].errors"
+            class="invalid-feedback d-block"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['gender'].errors['requiredButNotAllowBlank']
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <div class="position-relative">
+            <label
+              for="dob"
+              class="form-place-label"
+              (click)="onFocus()"
+              [ngClass]="{
+                'd-none': isFocused || dobValue
+              }"
+            >
+              Date of Birth
+            </label>
+            <input
+              type="date"
+              class="lets-form"
+              formControlName="dob"
+              [attr.max]="maxDate"
+              placeholder="Date"
+              (focus)="onFocus()"
+              (blur)="onBlur()"
+              [(ngModel)]="dobValue"
+              (change)="createYearList()"
+              [ngClass]="{
+                'is-invalid': submitted && PersonalDetailsf['dob'].errors
+              }"
+            />
+            <div
+              *ngIf="submitted && PersonalDetailsf['dob'].errors"
+              class="invalid-feedback"
+            >
+              <div
+                *ngIf="
+                  PersonalDetailsf['dob'].errors['requiredButNotAllowBlank']
+                "
+              >
+                *This Field is Required
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 pt-4">
+          <select
+            class="form-select lets-form"
+            formControlName="maritalStatus"
+            [ngClass]="{
+              'is-invalid':
+                submitted && PersonalDetailsf['maritalStatus'].errors
+            }"
+          >
+            <option value="" disabled selected hidden>Marital Status</option>
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+            <option value="Widow">Widow</option>
+            <option value="Separated">Separated</option>
+            <option value="Divorced">Divorced</option>
+          </select>
+          <div
+            *ngIf="submitted && PersonalDetailsf['maritalStatus'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['maritalStatus'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <!-- row 3 -->
+        <div
+          class="col-md-6 col-lg-4 pt-4"
+          *ngIf="PersonalDetails.get('maritalStatus')!.value === 'Married'"
+        >
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="spouseName"
+            id="spouseName"
+            name="spouseName"
+            placeholder="Spouse Name"
+            [ngClass]="{
+              'is-invalid': submitted && PersonalDetailsf['spouseName'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PersonalDetailsf['spouseName'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['spouseName'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="aadhaar"
+            id="aadhaar"
+            name="aadhaar"
+            placeholder="Aadhar Number"
+            (input)="formatAadhaar($event)"
+            maxlength="14"
+            appOnlyNumbers
+            [(ngModel)]="aadhaarValue"
+            [ngClass]="{
+              'is-invalid': submitted && PersonalDetailsf['aadhaar'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PersonalDetailsf['aadhaar'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['aadhaar'].errors['requiredButNotAllowBlank']
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="email"
+            class="lets-form"
+            formControlName="email"
+            placeholder="Email Address"
+            [ngClass]="{
+              'is-invalid': submitted && PersonalDetailsf['email'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PersonalDetailsf['email'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['email'].errors['requiredButNotAllowBlank']
+              "
+            >
+              *This Field is Required
+            </div>
+            <div *ngIf="PersonalDetailsf['email'].errors['email']">
+              Invalid email address
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="mobile"
+            placeholder="Phone Number"
+            name="mobile"
+            id="mobile"
+            minlength="10"
+            maxlength="10"
+            appOnlyNumbers
+            [ngClass]="{
+              'is-invalid': submitted && PersonalDetailsf['mobile'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PersonalDetailsf['mobile'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['mobile'].errors['requiredButNotAllowBlank']
+              "
+            >
+              *This Field is Required
+            </div>
+            <div *ngIf="PersonalDetailsf['mobile'].errors?.['minlength']">
+              Invalid phone number
+            </div>
+          </div>
+        </div>
+        <!-- row 4 -->
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="home_phone"
+            placeholder="Alternate Number"
+            minlength="10"
+            maxlength="10"
+            appOnlyNumbers
+            [ngClass]="{
+              'is-invalid': submitted && PersonalDetailsf['home_phone'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PersonalDetailsf['home_phone'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['home_phone'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+            <div *ngIf="PersonalDetailsf['home_phone'].errors!['minlength']">
+              Invalid phone number
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <div class="position-relative">
+            <input
+              type="file"
+              id="photo-upload"
+              class="d-none"
+              (change)="onPhotoFileSelected($event)"
+            />
+            <label
+              for="photo-upload"
+              class="cursor-pointer lets-form"
+              [ngClass]="{
+                'is-invalid': submitted && PersonalDetailsf['image_url'].errors
+              }"
+            >
+              <span>{{ PhotofileName || "Upload Photo" }}</span>
+              <img
+                appCdnUrl="assets/Icon/upload-svg.svg"
+                alt="Upload Icon"
+                class="upload-icon"
+              />
+            </label>
+            <div
+              *ngIf="submitted && PersonalDetailsf['image_url'].errors"
+              class="invalid-feedback"
+            >
+              *Invalid file format. Only JPG, and PNG files are allowed.
+              <div
+                *ngIf="
+                  PersonalDetailsf['image_url'].errors['fileExtensionValidator']
+                "
+              >
+                *Invalid file format. Only JPG, and PNG files are allowed.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <div class="position-relative">
+            <input
+              type="file"
+              id="resume-upload"
+              class="d-none"
+              (change)="onResumeFileSelected($event)"
+            />
+            <label
+              for="resume-upload"
+              class="cursor-pointer lets-form"
+              [ngClass]="{
+                'is-invalid': submitted && PersonalDetailsf['resume_url'].errors
+              }"
+            >
+              <span>{{ ResumefileName || "Upload Resume" }}</span>
+              <img
+                appCdnUrl="assets/Icon/upload-svg.svg"
+                alt="Upload Icon"
+                class="upload-icon"
+              />
+            </label>
+            <div
+              *ngIf="submitted && PersonalDetailsf['resume_url'].errors"
+              class="invalid-feedback"
+            >
+              *Invalid file format. Only PDF, DOC, and DOCX files are allowed.
+              <div
+                *ngIf="
+                  PersonalDetailsf['resume_url'].errors[
+                    'fileExtensionValidator'
+                  ]
+                "
+              >
+                *Invalid file format. Only PDF, DOC, and DOCX files are allowed.
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Current Address -->
+        <h2 class="text-primary pt-5 font-48-30">Current Address</h2>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="currentAddress"
+            placeholder="Street Address"
+            [ngClass]="{
+              'is-invalid':
+                submitted && PersonalDetailsf['currentAddress'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PersonalDetailsf['currentAddress'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['currentAddress'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <select
+            class="form-select lets-form"
+            formControlName="State"
+            [ngClass]="{
+              'is-invalid': submitted && PersonalDetailsf['State'].errors
+            }"
+          >
+            <option value="" disabled selected hidden>State / UT</option>
+            <option *ngFor="let state of stateList" [value]="state">
+              {{ state }}
+            </option>
+          </select>
+          <div
+            *ngIf="submitted && PersonalDetailsf['State'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['State'].errors['requiredButNotAllowBlank']
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="City"
+            placeholder="City"
+            [ngClass]="{
+              'is-invalid': submitted && PersonalDetailsf['City'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PersonalDetailsf['City'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['City'].errors['requiredButNotAllowBlank']
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="pin"
+            appOnlyNumbers
+            minlength="6"
+            maxlength="6"
+            placeholder="Zip Code"
+            [ngClass]="{
+              'is-invalid': submitted && PersonalDetailsf['pin'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PersonalDetailsf['pin'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="PersonalDetailsf['pin'].errors['requiredButNotAllowBlank']"
+            >
+              *This Field is Required
+            </div>
+            <div *ngIf="PersonalDetailsf['pin'].errors?.['minlength']">
+              Invalid Zip Code
+            </div>
+          </div>
+        </div>
+
+        <!-- Permanent Address -->
+        <h2 class="text-primary pt-5 font-48-30">Permanent Address</h2>
+        <div class="col-12 ms-3 pt-2">
+          <div class="px-2 form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              formControlName="permanentAddressSame"
+              value="yes"
+            />
+            <label class="form-check-label font-20">Same as Current</label>
+          </div>
+        </div>
+        <!-- row 5 -->
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="permanentAddress"
+            placeholder="Street Address"
+            [ngClass]="{
+              'is-invalid':
+                submitted && PersonalDetailsf['permanentAddress'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PersonalDetailsf['permanentAddress'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['permanentAddress'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <select
+            class="form-select lets-form"
+            formControlName="permanentState"
+            [ngClass]="{
+              'is-invalid':
+                submitted && PersonalDetailsf['permanentState'].errors
+            }"
+          >
+            <option value="" disabled selected hidden>State / UT</option>
+            <option *ngFor="let state of stateList" [value]="state">
+              {{ state }}
+            </option>
+          </select>
+          <div
+            *ngIf="submitted && PersonalDetailsf['permanentState'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['permanentState'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="permanentCity"
+            placeholder="City"
+            [ngClass]="{
+              'is-invalid':
+                submitted && PersonalDetailsf['permanentCity'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PersonalDetailsf['permanentCity'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['permanentCity'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            formControlName="permanentPin"
+            placeholder="Zip Code"
+            appOnlyNumbers
+            minlength="6"
+            maxlength="6"
+            appOnlyNumbers
+            [ngClass]="{
+              'is-invalid': submitted && PersonalDetailsf['permanentPin'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && PersonalDetailsf['permanentPin'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                PersonalDetailsf['permanentPin'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+            <div *ngIf="PersonalDetailsf['permanentPin'].errors?.['minlength']">
+              Invalid Zip Code
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end mt-5">
+        <button class="FormCTA">
+          <h6
+            class="font-20 text-md-start PreviousBtn"
+            (click)="goToBackForm()"
+          >
+            Previous Step
+            <div class="headingCTA">
+              <div class="blueCTA m-0"></div>
+            </div>
+          </h6>
+        </button>
+        <button class="FormCTA" type="submit">
+          <h6 class="font-20 text-primary text-md-start">
+            Next Step
+            <div class="headingCTA">
+              <div class="blueCTA"></div>
+            </div>
+          </h6>
+        </button>
+      </div>
+    </form>
+  </ng-container>
+
+  <ng-container *ngIf="currentFormIndex === 2">
+    <div class="col-12 my-4 d-md-none">
+      <div class="logo-wrapper mx-auto sm-logo-wrapper active">
+        <img appCdnUrl="assets/Icon/educationform.svg" class="svg-logo" />
+      </div>
+      <h3 class="text-light font-34-19 mt-3 text-center">Education Details</h3>
+    </div>
+
+    <form
+      autocomplete="off"
+      [formGroup]="EducationDetails"
+      (ngSubmit)="validateForm(EducationDetails)"
+    >
+      <div class="row">
+        <h2 class="text-primary pt-5 font-48-30">10th Standard</h2>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            placeholder="School Name"
+            formControlName="SchoolName10th"
+            appNoNumbers
+            [ngClass]="{
+              'is-invalid':
+                submitted && EducationDetailsf['SchoolName10th'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && EducationDetailsf['SchoolName10th'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                EducationDetailsf['SchoolName10th'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            placeholder="Board"
+            appNoNumbers
+            formControlName="Board10th"
+            [ngClass]="{
+              'is-invalid': submitted && EducationDetailsf['Board10th'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && EducationDetailsf['Board10th'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                EducationDetailsf['Board10th'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            appDecimalNumbers
+            class="lets-form"
+            placeholder="Percentage"
+            formControlName="Percentage10th"
+            [ngClass]="{
+              'is-invalid':
+                submitted && EducationDetailsf['Percentage10th'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && EducationDetailsf['Percentage10th'].errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="EducationDetailsf['Percentage10th'].errors['required']">
+              *This Field is Required
+            </div>
+            <div
+              *ngIf="!EducationDetailsf['Percentage10th'].errors['required'] && EducationDetailsf['Percentage10th'].errors?.['numberGreaterThan45']"
+            >
+              Unfortunately, you are not eligible. The eligibility criteria is
+              45 or above percentage.
+            </div>
+            <div
+              *ngIf="
+                EducationDetailsf['Percentage10th'].errors?.['maxPercentage']
+              "
+            >
+              The value cannot exceed 100.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 pt-4">
+          <select
+            class="form-select lets-form"
+            formControlName="YearofPassing10th"
+            [ngClass]="{
+              'is-invalid':
+                submitted && EducationDetailsf['YearofPassing10th'].errors
+            }"
+          >
+            <option value="" disabled selected hidden>Year of Passing</option>
+            <option *ngFor="let year of yearsList" [value]="year">
+              {{ year }}
+            </option>
+          </select>
+          <div
+            *ngIf="submitted && EducationDetailsf['YearofPassing10th'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                EducationDetailsf['YearofPassing10th'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-primary pt-5 font-48-30">12th Standard</h2>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            placeholder="School Name"
+            appNoNumbers
+            formControlName="SchoolName12th"
+            [ngClass]="{
+              'is-invalid':
+                submitted && EducationDetailsf['SchoolName12th'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && EducationDetailsf['SchoolName12th'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                EducationDetailsf['SchoolName12th'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            appNoNumbers
+            placeholder="Board"
+            formControlName="Board12th"
+            [ngClass]="{
+              'is-invalid': submitted && EducationDetailsf['Board12th'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && EducationDetailsf['Board12th'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                EducationDetailsf['Board12th'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            appDecimalNumbers
+            class="lets-form"
+            placeholder="Percentage"
+            formControlName="Percentage12th"
+            [ngClass]="{
+              'is-invalid':
+                submitted && EducationDetailsf['Percentage12th'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && EducationDetailsf['Percentage12th'].errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="EducationDetailsf['Percentage12th'].errors['required']">
+              *This Field is Required
+            </div>
+            <div
+              *ngIf="!EducationDetailsf['Percentage12th'].errors['required'] && EducationDetailsf['Percentage12th'].errors?.['numberGreaterThan45']"
+            >
+              Unfortunately, you are not eligible. The eligibility criteria is
+              45 or above percentage.
+            </div>
+            <div
+              *ngIf="
+                EducationDetailsf['Percentage12th'].errors?.['maxPercentage']
+              "
+            >
+              The value cannot exceed 100.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 pt-4">
+          <select
+            class="form-select lets-form"
+            formControlName="YearofPassing12th"
+            [ngClass]="{
+              'is-invalid':
+                submitted && EducationDetailsf['YearofPassing12th'].errors
+            }"
+          >
+            <option value="" disabled selected hidden>Year of Passing</option>
+            <option
+              *ngFor="let year of filteredYearsList('YearofPassing10th')"
+              [value]="year"
+            >
+              {{ year }}
+            </option>
+          </select>
+          <div
+            *ngIf="submitted && EducationDetailsf['YearofPassing12th'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                EducationDetailsf['YearofPassing12th'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-primary pt-5 font-48-30">Graduation</h2>
+
+        <div class="col-md-6 col-lg-4 pt-4">
+          <select
+            class="form-select lets-form"
+            formControlName="GraduationDegree"
+            [ngClass]="{
+              'is-invalid':
+                submitted && EducationDetailsf['GraduationDegree'].errors
+            }"
+          >
+            <option value="" disabled selected hidden>Degree</option>
+            <option value="BA">Bachelor of Arts - B.A.</option>
+            <option value="BBA">
+              Bachelor of Business Administration - B.B.A.
+            </option>
+            <option value="BCOM">Bachelor of Commerce - B.Com.</option>
+            <option value="BCA">
+              Bachelor of Computer Applications - B.C.A.
+            </option>
+            <option value="BE">
+              Bachelor of Engineering / Bachelor of Technology - B.E./B.Tech.
+            </option>
+            <option value="BFA">Bachelor of Fine Arts - BFA / BVA</option>
+            <option value="BSC">Bachelor of Science - B.Sc.</option>
+            <option value="Diploma">Diploma (10+2)</option>
+            <option value="Diploma12th">After 12th Diploma</option>
+            <option value="Other">Other</option>
+          </select>
+          <div
+            *ngIf="submitted && EducationDetailsf['GraduationDegree'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="EducationDetailsf['GraduationDegree'].errors['required']"
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 pt-4 ps-4">
+          <p class="font-20">Status of Completion</p>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              formControlName="Graduation_Status_of_Completion"
+              value="Completed"
+              [ngClass]="{
+                'is-invalid':
+                  submitted &&
+                  EducationDetailsf['Graduation_Status_of_Completion'].errors
+              }"
+            />
+            <label class="form-check-label font-20">Completed</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              formControlName="Graduation_Status_of_Completion"
+              value="Result Awaited"
+              [ngClass]="{
+                'is-invalid':
+                  submitted &&
+                  EducationDetailsf['Graduation_Status_of_Completion'].errors
+              }"
+            />
+            <label class="form-check-label font-20">Result Awaited</label>
+          </div>
+          <div
+            *ngIf="
+              submitted &&
+              EducationDetailsf['Graduation_Status_of_Completion'].errors
+            "
+            class="invalid-feedback d-block"
+          >
+            <div
+              *ngIf="
+                EducationDetailsf['Graduation_Status_of_Completion'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div
+          *ngIf="
+            EducationDetails.get('Graduation_Status_of_Completion')!.value ===
+            'Completed'
+          "
+        >
+          <h2 class="text-primary pt-5 font-48-30">If Completed?</h2>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 pt-4">
+              <input
+                type="text"
+                class="lets-form"
+                appNoNumbers
+                placeholder="University/College"
+                appNoNumbers
+                formControlName="GBoard"
+                [ngClass]="{
+                  'is-invalid': submitted && EducationDetailsf['GBoard'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && EducationDetailsf['GBoard'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    EducationDetailsf['GBoard'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 pt-4">
+              <input
+                type="text"
+                class="lets-form"
+                appDecimalNumbers
+                placeholder="Graduation Percentage"
+                formControlName="GPercentage"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && EducationDetailsf['GPercentage'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && EducationDetailsf['GPercentage'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="EducationDetailsf['GPercentage'].errors['required']"
+                >
+                  *This Field is Required
+                </div>
+                <div
+                  *ngIf="!EducationDetailsf['GPercentage'].errors['required'] && EducationDetailsf['GPercentage'].errors?.['numberGreaterThan45']"
+                >
+                  Unfortunately, you are not eligible. The eligibility criteria
+                  is 45 or above percentage.
+                </div>
+                <div
+                  *ngIf="
+                  EducationDetailsf['GPercentage'].errors?.['maxPercentage']
+                "
+                >
+                  The value cannot exceed 100.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 pt-4">
+              <select
+                class="form-select lets-form"
+                formControlName="GYearofPassing"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && EducationDetailsf['GYearofPassing'].errors
+                }"
+              >
+                <option value="" disabled selected hidden>
+                  Year of Passing
+                </option>
+                <option
+                  *ngFor="let year of filteredYearsList('YearofPassing12th')"
+                  [value]="year"
+                >
+                  {{ year }}
+                </option>
+              </select>
+              <div
+                *ngIf="submitted && EducationDetailsf['GYearofPassing'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    EducationDetailsf['GYearofPassing'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          *ngIf="
+            EducationDetails.get('Graduation_Status_of_Completion')!.value ===
+            'Result Awaited'
+          "
+        >
+          <h2 class="text-primary pt-5 font-48-30">If Results awaited?</h2>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 pt-4">
+              <input
+                type="text"
+                class="lets-form"
+                placeholder="Semester"
+                formControlName="GCurrentSemester"
+                appNoNumbers
+                readonly
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && EducationDetailsf['GCurrentSemester'].errors
+                }"
+              />
+              <div
+                *ngIf="
+                  submitted && EducationDetailsf['GCurrentSemester'].errors
+                "
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    EducationDetailsf['GCurrentSemester'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 pt-4">
+              <div class="position-relative">
+                <label
+                  for="GCurrentPassingYear"
+                  class="form-place-label"
+                  (click)="onFocus()"
+                  [ngClass]="{
+                    'd-none':
+                      isFocused ||
+                      EducationDetailsf['GCurrentPassingYear'].value
+                  }"
+                >
+                  Tentative Date of Passing
+                </label>
+                <input
+                  type="date"
+                  class="lets-form"
+                  formControlName="GCurrentPassingYear"
+                  [attr.min]="minDate"
+                  placeholder="Date"
+                  (focus)="onFocus()"
+                  (blur)="onBlur()"
+                  [ngClass]="{
+                    'is-invalid':
+                      submitted &&
+                      EducationDetailsf['GCurrentPassingYear'].errors
+                  }"
+                />
+                <div
+                  *ngIf="
+                    submitted && EducationDetailsf['GCurrentPassingYear'].errors
+                  "
+                  class="invalid-feedback"
+                >
+                  <div
+                    *ngIf="
+                      EducationDetailsf['GCurrentPassingYear'].errors[
+                        'requiredButNotAllowBlank'
+                      ]
+                    "
+                  >
+                    *This Field is Required
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-primary pt-5 font-48-30">Post Graduation</h2>
+        <div class="col-md-6 col-lg-4 pt-4 ps-4">
+          <p class="mb-0">Have you done post graduation?</p>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              formControlName="PostGraduation"
+              value="yes"
+              [ngClass]="{
+                'is-invalid':
+                  submitted && EducationDetailsf['PostGraduation'].errors
+              }"
+            />
+            <label class="form-check-label font-20">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              formControlName="PostGraduation"
+              value="no"
+              [ngClass]="{
+                'is-invalid':
+                  submitted && EducationDetailsf['PostGraduation'].errors
+              }"
+            />
+            <label class="form-check-label font-20">No</label>
+          </div>
+          <div
+            *ngIf="submitted && EducationDetailsf['PostGraduation'].errors"
+            class="invalid-feedback d-block"
+          >
+            <div *ngIf="EducationDetailsf['PostGraduation'].errors['required']">
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div
+          class="row"
+          *ngIf="EducationDetails.get('PostGraduation')!.value === 'yes'"
+        >
+          <div class="col-md-6 col-lg-4 pt-4">
+            <select
+              class="form-select lets-form"
+              formControlName="PostGraduationDegree"
+              [ngClass]="{
+                'is-invalid':
+                  submitted && EducationDetailsf['PostGraduationDegree'].errors
+              }"
+            >
+              <option value="" disabled selected hidden>Degree</option>
+              <option value="MA">Master of Arts (MA)</option>
+              <option value="MSC">Master of Science (M.Sc)</option>
+              <option value="MCOM">Master of Commerce (M.Com)</option>
+              <option value="ME">
+                Master of Engineering/Technology (ME/M.Tech)
+              </option>
+              <option value="MLAW">Master of Law (LLM)</option>
+              <option value="MCA">Master of Computer Application (MCA)</option>
+              <option value="MBA">
+                Master of Business Administration (MBA)
+              </option>
+              <option value="PGM">Post Graduate Program in Management</option>
+              <option value="EXM">Executive Management Program</option>
+              <option value="MPSE">
+                Post Graduate Diploma in Software Engineering
+              </option>
+              <option value="MPGPEX">
+                Post Graduate Programs for Executives (PGPEX)
+              </option>
+              <option value="Other">Other</option>
+            </select>
+            <div
+              *ngIf="
+                submitted && EducationDetailsf['PostGraduationDegree'].errors
+              "
+              class="invalid-feedback"
+            >
+              <div
+                *ngIf="
+                  EducationDetailsf['PostGraduationDegree'].errors['required']
+                "
+              >
+                *This Field is Required
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 pt-4 ps-4">
+            <p class="font-20">Status of Completion</p>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                formControlName="PostGraduation_Status_of_Completion"
+                value="Completed"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted &&
+                    EducationDetailsf['PostGraduation_Status_of_Completion']
+                      .errors
+                }"
+              />
+              <label class="form-check-label font-20">Completed</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                formControlName="PostGraduation_Status_of_Completion"
+                value="Result Awaited"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted &&
+                    EducationDetailsf['PostGraduation_Status_of_Completion']
+                      .errors
+                }"
+              />
+              <label class="form-check-label font-20">Result Awaited</label>
+            </div>
+            <div
+              *ngIf="
+                submitted &&
+                EducationDetailsf['PostGraduation_Status_of_Completion'].errors
+              "
+              class="invalid-feedback d-block"
+            >
+              <div
+                *ngIf="
+                  EducationDetailsf['PostGraduation_Status_of_Completion']
+                    .errors['requiredButNotAllowBlank']
+                "
+              >
+                *This Field is Required
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          *ngIf="
+            EducationDetails.get('PostGraduation_Status_of_Completion')!
+              .value === 'Completed' &&
+            EducationDetails.get('PostGraduation')!.value === 'yes'
+          "
+        >
+          <h2 class="text-primary pt-5 font-48-30">If Completed?</h2>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 pt-4">
+              <input
+                type="text"
+                class="lets-form"
+                placeholder="University/College"
+                appNoNumbers
+                formControlName="PBoard"
+                [ngClass]="{
+                  'is-invalid': submitted && EducationDetailsf['PBoard'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && EducationDetailsf['PBoard'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    EducationDetailsf['PBoard'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 pt-4">
+              <input
+                type="text"
+                appDecimalNumbers
+                class="lets-form"
+                placeholder="Graduation Percentage"
+                formControlName="PPercentage"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && EducationDetailsf['PPercentage'].errors
+                }"
+              />
+              <div
+                *ngIf="submitted && EducationDetailsf['PPercentage'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="EducationDetailsf['PPercentage'].errors['required']"
+                >
+                  *This Field is Required
+                </div>
+                <div
+                  *ngIf="!EducationDetailsf['PPercentage'].errors['required'] && EducationDetailsf['PPercentage'].errors?.['numberGreaterThan45']"
+                >
+                  Unfortunately, you are not eligible. The eligibility criteria
+                  is 45 or above percentage.
+                </div>
+                <div
+                  *ngIf="
+                  EducationDetailsf['PPercentage'].errors?.['maxPercentage']
+                "
+                >
+                  The value cannot exceed 100.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 pt-4">
+              <select
+                class="form-select lets-form"
+                formControlName="PYearofPassing"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && EducationDetailsf['PYearofPassing'].errors
+                }"
+              >
+                <option value="" disabled selected hidden>
+                  Year of Passing
+                </option>
+                <option
+                  *ngFor="let year of filteredYearsList('GYearofPassing')"
+                  [value]="year"
+                >
+                  {{ year }}
+                </option>
+              </select>
+              <div
+                *ngIf="submitted && EducationDetailsf['PYearofPassing'].errors"
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    EducationDetailsf['PYearofPassing'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          *ngIf="
+            EducationDetails.get('PostGraduation_Status_of_Completion')!
+              .value === 'Result Awaited' &&
+            EducationDetails.get('PostGraduation')!.value === 'yes'
+          "
+        >
+          <h2 class="text-primary pt-5 font-48-30">If Results awaited?</h2>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 pt-4">
+              <input
+                type="text"
+                class="lets-form"
+                placeholder="Semester"
+                formControlName="PCurrentSemester"
+                readonly
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && EducationDetailsf['PCurrentSemester'].errors
+                }"
+              />
+              <div
+                *ngIf="
+                  submitted && EducationDetailsf['PCurrentSemester'].errors
+                "
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    EducationDetailsf['PCurrentSemester'].errors[
+                      'requiredButNotAllowBlank'
+                    ]
+                  "
+                >
+                  *This Field is Required
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 pt-4">
+              <div class="position-relative">
+                <label
+                  for="PCurrentPassingYear"
+                  class="form-place-label"
+                  (click)="onFocus()"
+                  [ngClass]="{
+                    'd-none':
+                      isFocused ||
+                      EducationDetailsf['PCurrentPassingYear'].value
+                  }"
+                >
+                  Tentative Date of Passing
+                </label>
+                <input
+                  type="date"
+                  class="lets-form"
+                  formControlName="PCurrentPassingYear"
+                  [attr.min]="minDate"
+                  placeholder="Date"
+                  (focus)="onFocus()"
+                  (blur)="onBlur()"
+                  [ngClass]="{
+                    'is-invalid':
+                      submitted &&
+                      EducationDetailsf['PCurrentPassingYear'].errors
+                  }"
+                />
+                <div
+                  *ngIf="
+                    submitted && EducationDetailsf['PCurrentPassingYear'].errors
+                  "
+                  class="invalid-feedback"
+                >
+                  <div
+                    *ngIf="
+                      EducationDetailsf['PCurrentPassingYear'].errors[
+                        'requiredButNotAllowBlank'
+                      ]
+                    "
+                  >
+                    *This Field is Required
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-primary pt-5 font-48-30">
+          Certificates/Diploma/Courses
+        </h2>
+        <div class="col-md-6 col-lg-4 pt-4 ps-4">
+          <p class="mb-0">Do you have any other Courses?</p>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              formControlName="otherCouseEnrolled"
+              value="Yes"
+              [ngClass]="{
+                'is-invalid':
+                  submitted && EducationDetailsf['otherCouseEnrolled'].errors
+              }"
+            />
+            <label class="form-check-label font-20">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              formControlName="otherCouseEnrolled"
+              value="No"
+              [ngClass]="{
+                'is-invalid':
+                  submitted && EducationDetailsf['otherCouseEnrolled'].errors
+              }"
+            />
+            <label class="form-check-label font-20">No</label>
+          </div>
+          <div
+            *ngIf="submitted && EducationDetailsf['otherCouseEnrolled'].errors"
+            class="invalid-feedback d-block"
+          >
+            <div
+              *ngIf="EducationDetailsf['otherCouseEnrolled'].errors['required']"
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div
+          class="row"
+          *ngIf="EducationDetails.get('otherCouseEnrolled')!.value === 'Yes'"
+        >
+          <div class="col-md-6 col-lg-4 pt-4">
+            <input
+              type="text"
+              class="lets-form"
+              placeholder="Name"
+              appNoNumbers
+              formControlName="otherCourses"
+              [ngClass]="{
+                'is-invalid':
+                  submitted && EducationDetailsf['otherCourses'].errors
+              }"
+            />
+            <div
+              *ngIf="submitted && EducationDetailsf['otherCourses'].errors"
+              class="invalid-feedback"
+            >
+              <div
+                *ngIf="
+                  EducationDetailsf['otherCourses'].errors[
+                    'requiredButNotAllowBlank'
+                  ]
+                "
+              >
+                *This Field is Required
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 pt-4 ps-4">
+            <p class="font-20">Status of Completion</p>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                formControlName="OStatus"
+                value="Completed"
+                [ngClass]="{
+                  'is-invalid': submitted && EducationDetailsf['OStatus'].errors
+                }"
+              />
+              <label class="form-check-label font-20">Completed</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                formControlName="OStatus"
+                value="Result Awaited"
+                [ngClass]="{
+                  'is-invalid': submitted && EducationDetailsf['OStatus'].errors
+                }"
+              />
+              <label class="form-check-label font-20">Result Awaited</label>
+            </div>
+            <div
+              *ngIf="submitted && EducationDetailsf['OStatus'].errors"
+              class="invalid-feedback d-block"
+            >
+              <div
+                *ngIf="
+                  EducationDetailsf['OStatus'].errors[
+                    'requiredButNotAllowBlank'
+                  ]
+                "
+              >
+                *This Field is Required
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-end mt-5">
+          <button class="FormCTA">
+            <h6
+              class="font-20 text-md-start PreviousBtn"
+              (click)="goToBackForm()"
+            >
+              Previous Step
+              <div class="headingCTA">
+                <div class="blueCTA m-0"></div>
+              </div>
+            </h6>
+          </button>
+
+          <button class="FormCTA" type="submit">
+            <h6 class="font-20 text-primary text-md-start">
+              Next Step
+              <div class="headingCTA">
+                <div class="blueCTA"></div>
+              </div>
+            </h6>
+          </button>
+        </div>
+      </div>
+    </form>
+  </ng-container>
+
+  <ng-container *ngIf="currentFormIndex === 3">
+    <div class="col-12 my-4 d-md-none">
+      <div class="logo-wrapper mx-auto sm-logo-wrapper active">
+        <img appCdnUrl="assets/Icon/workform.svg" class="svg-logo" />
+      </div>
+      <h3 class="text-light font-34-19 mt-3 text-center">Work Details</h3>
+    </div>
+
+    <form
+      autocomplete="off"
+      [formGroup]="WorkExperience"
+      (ngSubmit)="validateForm(WorkExperience)"
+    >
+      <h2 class="text-primary pt-5 font-48-30">Working Experience</h2>
+
+      <div class="col-md-6 col-lg-4 pt-4 ps-4">
+        <p class="font-20">Working Experience</p>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            formControlName="isExperienced"
+            value="Yes"
+            [ngClass]="{
+              'is-invalid': submitted && WorkExperiencef['isExperienced'].errors
+            }"
+          />
+          <label class="form-check-label font-20">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            formControlName="isExperienced"
+            value="No"
+            [ngClass]="{
+              'is-invalid': submitted && WorkExperiencef['isExperienced'].errors
+            }"
+          />
+          <label class="form-check-label font-20">No</label>
+        </div>
+        <div
+          *ngIf="submitted && WorkExperiencef['isExperienced'].errors"
+          class="invalid-feedback d-block"
+        >
+          <div *ngIf="WorkExperiencef['isExperienced'].errors['required']">
+            *This Field is Required
+          </div>
+        </div>
+      </div>
+      <div
+        class="row"
+        *ngIf="WorkExperience.get('isExperienced')!.value === 'Yes'"
+      >
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            placeholder="Company Name"
+            formControlName="WE1CompanyName"
+            [ngClass]="{
+              'is-invalid':
+                submitted && WorkExperiencef['WE1CompanyName'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && WorkExperiencef['WE1CompanyName'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                WorkExperiencef['WE1CompanyName'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            placeholder="Department"
+            formControlName="WE1Departement"
+            [ngClass]="{
+              'is-invalid':
+                submitted && WorkExperiencef['WE1Departement'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && WorkExperiencef['WE1Departement'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                WorkExperiencef['WE1Departement'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            placeholder="Roles and Responsibilities"
+            formControlName="WE1RoleandResposibilities"
+            [ngClass]="{
+              'is-invalid':
+                submitted && WorkExperiencef['WE1RoleandResposibilities'].errors
+            }"
+          />
+          <div
+            *ngIf="
+              submitted && WorkExperiencef['WE1RoleandResposibilities'].errors
+            "
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                WorkExperiencef['WE1RoleandResposibilities'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            placeholder="Last Drawn Montlhy CTC"
+            appOnlyNumbers
+            formControlName="WE1LastDrawnSalary"
+            (input)="
+              limitInputLength($event, WorkExperience, 'WE1LastDrawnSalary', 9)
+            "
+            [ngClass]="{
+              'is-invalid':
+                submitted && WorkExperiencef['WE1LastDrawnSalary'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && WorkExperiencef['WE1LastDrawnSalary'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                WorkExperiencef['WE1LastDrawnSalary'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pt-4">
+          <input
+            type="text"
+            class="lets-form"
+            placeholder="Experience (In Years)"
+            appOnlyNumbers
+            formControlName="WE1ExperienceInYears"
+            (input)="
+              limitInputLength(
+                $event,
+                WorkExperience,
+                'WE1ExperienceInYears',
+                2
+              )
+            "
+            [ngClass]="{
+              'is-invalid':
+                submitted && WorkExperiencef['WE1ExperienceInYears'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && WorkExperiencef['WE1ExperienceInYears'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              *ngIf="
+                WorkExperiencef['WE1ExperienceInYears'].errors[
+                  'requiredButNotAllowBlank'
+                ]
+              "
+            >
+              *This Field is Required
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-primary pt-5 font-48-30">
+        Have you previously worked with FBSPL?
+      </h2>
+
+      <div class="col-md-6 col-lg-4 pt-4 ps-4">
+        <p class="font-20">Working Experience</p>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            formControlName="previouslyWorked"
+            value="Yes"
+            [ngClass]="{
+              'is-invalid':
+                submitted && WorkExperiencef['previouslyWorked'].errors
+            }"
+          />
+          <label class="form-check-label font-20">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            formControlName="previouslyWorked"
+            value="No"
+            [ngClass]="{
+              'is-invalid':
+                submitted && WorkExperiencef['previouslyWorked'].errors
+            }"
+          />
+          <label class="form-check-label font-20">No</label>
+        </div>
+        <div
+          *ngIf="submitted && WorkExperiencef['previouslyWorked'].errors"
+          class="invalid-feedback d-block"
+        >
+          <div *ngIf="WorkExperiencef['previouslyWorked'].errors['required']">
+            *This Field is Required
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-end mt-5">
+        <button class="FormCTA">
+          <h6
+            class="font-20 text-md-start PreviousBtn"
+            (click)="goToBackForm()"
+          >
+            Previous Step
+            <div class="headingCTA">
+              <div class="blueCTA m-0"></div>
+            </div>
+          </h6>
+        </button>
+
+        <button class="FormCTA" type="submit">
+          <h6 class="font-20 text-primary text-md-start">
+            Submit
+            <div class="headingCTA">
+              <div class="blueCTA"></div>
+            </div>
+          </h6>
+        </button>
+      </div>
+    </form>
+  </ng-container>
+</section>

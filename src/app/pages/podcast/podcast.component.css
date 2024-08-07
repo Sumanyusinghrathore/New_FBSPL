@@ -1,0 +1,110 @@
+.center-right-float {
+  position: absolute;
+  top: 6%;
+  right: 0;
+  height: 6rem;
+}
+.bottom-left-float {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.top-right-float {
+  position: absolute;
+  top: 4%;
+  right: 0;
+  height: 6rem;
+}
+
+.podcast-inner-card {
+  background-color: var(--bg-20);
+  border: 1px solid rgba(0, 45, 213, 0.2);
+  border-radius: 20px;
+  height: 100%;
+}
+.podcast-inner-card:hover {
+  .fs-24 {
+    color: var(--primary);
+  }
+}
+.podcast-card-cta {
+  margin-left: 6px;
+  height: 18px;
+  width: 18px;
+}
+
+.smallIcon {
+  height: 25px;
+  width: 25px;
+}
+.guest-image {
+  border-radius: 50%;
+}
+
+.carousel .slick-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.podcast-inner-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.container-fluid.podcast-slide {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.pagination {
+  place-content: center;
+}
+.page-link {
+  border: none;
+  font-size: 18px;
+  font-weight: 450;
+  color: black;
+  cursor: pointer;
+}
+.page-link:hover {
+  color: var(--primary);
+  background-color: transparent;
+}
+.active > .page-link,
+.page-link.active {
+  z-index: 3;
+  color: var(--primary);
+  background-color: transparent;
+  border-color: var(--bs-pagination-active-border-color);
+}
+
+@media (max-width: 768px) {
+  .center-right-float {
+    display: none;
+  }
+  .bottom-left-float {
+    display: none;
+  }
+  .top-right-float {
+    top: 3%;
+  }
+  .guest-image {
+    width: 180px;
+  }
+}
+.slider {
+  flex-wrap: nowrap;
+  display: flex;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: hidden;
+  height: 190px;
+}
+.mobile-inner-card {
+  min-width: 500px;
+}
